@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{092FF3D6-8792-4047-8665-BDAA01ADC1DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPS.Reporting</RootNamespace>
+    <AssemblyName>BPS.Reporting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cellar\rptCellarShippingFull.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCellarShippingFull.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\rptCellarShippingFullShort.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCellarShippingFullShort.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\rptCellarShippingUnified.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCellarShippingUnified.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\rptMaquileShipping.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMaquileShipping.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\rptMillShipping.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMillShipping.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryCellar.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryCellar.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryShortDeliveryBopp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortDeliveryBopp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryShortOutSalesOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortOutSalesOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryShortOutStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortOutStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryShortSalesOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortSalesOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\Bopp\rptSummaryShortStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\External\rptSummaryCellarOpp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryCellarOpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\External\rptSummaryShortDeliveryOpp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortDeliveryOpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\External\rptSummaryShortOutSalesOrderOpp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortOutSalesOrderOpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\External\rptSummaryShortSalesOrderOpp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortSalesOrderOpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Cellar\SummaryMonth\External\rptSummaryShortStockOpp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryShortStockOpp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extruder\rptMainCoilByDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMainCoilByDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Managers\frmManagerReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manager\Managers\frmManagerReport.Designer.cs">
+      <DependentUpon>frmManagerReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Managers\rptManager.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptManager.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetalCut\frmMainCoilQualityReportMetal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetalCut\frmMainCoilQualityReportMetal.Designer.cs">
+      <DependentUpon>frmMainCoilQualityReportMetal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetalCut\rptMainCoilQualityMetal_PL.cs">
+      <DependentUpon>rptMainCoilQualityMetal_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetalCut\rptMainCoilQualityMetal.cs">
+      <DependentUpon>rptMainCoilQualityMetal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\frmMainCoilQualityReportMetalCut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\frmMainCoilQualityReportMetalCut.Designer.cs">
+      <DependentUpon>frmMainCoilQualityReportMetalCut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCut_PL.cs">
+      <DependentUpon>rptMainCoilQualityMetalCut_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCut.cs">
+      <DependentUpon>rptMainCoilQualityMetalCut.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCutAverage.cs">
+      <DependentUpon>rptMainCoilQualityMetalCutAverage.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCutPhisyc.cs">
+      <DependentUpon>rptMainCoilQualityMetalCutPhisyc.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MetalizedPressionDeadTime\rptMetalizedDeadTimeShort.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedDeadTimeShort.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Metal\MetalizedPressionDeadTime\rptMetalizedPressionDeadTime.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedPressionDeadTime.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Metal\MetalizedProduction\rptMetalizedProduction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedProduction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Metal\MetalizedSummary\rptSummaryMetallizedOpp.cs">
+      <DependentUpon>rptSummaryMetallizedOpp.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Metal\MetalizedSummary\rptSummaryMetallized.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryMetallized.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Metal\MetlizedProduction\rptMetalizedOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mill\rptSummaryMillDetail.cs">
+      <DependentUpon>rptSummaryMillDetail.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Mill\rptSummaryMill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryMill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Mill\rptSummaryReProcessByMill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryReProcessByMill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\DeadTime\rptProductionDeadTimeByDateDetails.cs">
+      <DependentUpon>rptProductionDeadTimeByDateDetails.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProductionReports\DeadTime\frmProductionReportByDeadTimeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\DeadTime\frmProductionReportByDeadTimeReport.Designer.cs">
+      <DependentUpon>frmProductionReportByDeadTimeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReports\DeadTime\rptProductionDeadTimeByDate.cs">
+      <DependentUpon>rptProductionDeadTimeByDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\Formulation\frmFormulation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\Formulation\frmFormulation.Designer.cs">
+      <DependentUpon>frmFormulation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReports\Formulation\rptFormulationH_PL.cs">
+      <DependentUpon>rptFormulationH_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ProductionReports\Formulation\rptFormulationH.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptFormulationH.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\DMT\frmRecordDMT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\DMT\frmRecordDMT.Designer.cs">
+      <DependentUpon>frmRecordDMT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\DMT\rptRecordDMT1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecordDMT.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\MW\frmRecordMW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\MW\frmRecordMW.Designer.cs">
+      <DependentUpon>frmRecordMW.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReports\RecordProduction\MW\rptRecordMW1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRecordMW.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\SalesOrderEffience\rptEffienceSalesOrder.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEffienceSalesOrder.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\SummaryExtruder\frmSummaryExtruder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\SummaryExtruder\frmSummaryExtruder.Designer.cs">
+      <DependentUpon>frmSummaryExtruder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductionReports\SummaryExtruder\rptSummaryExtruderDetails1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryExtruderDetails.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ProductionReports\SummaryExtruder\rptSummaryExtruderUnit1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryExtruderUnit.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportBackup\Copia de rptCertificateSC.cs">
+      <DependentUpon>Copia de rptCertificateSC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportBackup\Copy of Copia de rptCoilLabel.cs">
+      <DependentUpon>Copy of Copia de rptCoilLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportBackup\Copy of rptCertificate.cs">
+      <DependentUpon>Copy of rptCertificate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportBackup\rptCoilLabelBCK2.cs">
+      <DependentUpon>rptCoilLabelBCK2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ReportBackup\rptReturn.cs">
+      <DependentUpon>rptReturn.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SalesOrder\International\rptSalesOrderCountry.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesOrderCountry.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\International\rptSalesOrderQuantityByCustomer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesOrderQuantityByCustomer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\International\rptSalesOrderQuantityByMonth.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesOrderQuantityByMonth.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSalesOrderReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSalesOrderReport.Designer.cs">
+      <DependentUpon>frmSalesOrderReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSalesorderreportII.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSalesorderreportII.Designer.cs">
+      <DependentUpon>frmSalesorderreportII.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSummarySalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesOrder\National\frmSummarySalesOrder.Designer.cs">
+      <DependentUpon>frmSummarySalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesOrder\National\rptSalesOrderReportShort.cs">
+      <DependentUpon>rptSalesOrderReportShort.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SalesOrder\National\rptSalesOrderReportShortSales.cs">
+      <DependentUpon>rptSalesOrderReportShortSales.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SalesOrder\Summary\rptSummaryOrderD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSummaryOrderD.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SummaryCutterMothReport\frmSummaryCutterReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SummaryCutterMothReport\frmSummaryCutterReport.Designer.cs">
+      <DependentUpon>frmSummaryCutterReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SummaryCutterMothReport\Report\rptCutter1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCutter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Cellar\rptCellarShippingFull.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCellarShippingFull.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\rptCellarShippingFullShort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCellarShippingFullShort.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\rptCellarShippingUnified.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCellarShippingUnified.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\rptMaquileShipping.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMaquileShipping.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\rptMillShipping.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMillShipping.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryCellar.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryCellar.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryShortDeliveryBopp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortDeliveryBopp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryShortOutSalesOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortOutSalesOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryShortOutStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortOutStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryShortSalesOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortSalesOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\Bopp\rptSummaryShortStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\External\rptSummaryCellarOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryCellarOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\External\rptSummaryShortDeliveryOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortDeliveryOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\External\rptSummaryShortOutSalesOrderOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortOutSalesOrderOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\External\rptSummaryShortSalesOrderOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortSalesOrderOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cellar\SummaryMonth\External\rptSummaryShortStockOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryShortStockOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Extruder\rptMainCoilByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilByDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Managers\frmManagerReport.resx">
+      <DependentUpon>frmManagerReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manager\Managers\rptManager.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptManager.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetalCut\frmMainCoilQualityReportMetal.resx">
+      <DependentUpon>frmMainCoilQualityReportMetal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetalCut\rptMainCoilQualityMetal_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetal_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetalCut\rptMainCoilQualityMetal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetal\frmMainCoilQualityReportMetalCut.resx">
+      <DependentUpon>frmMainCoilQualityReportMetalCut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCut_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetalCut_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCut.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetalCut.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCutAverage.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetalCutAverage.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MainCoilQualityReportMetal\rptMainCoilQualityMetalCutPhisyc.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityMetalCutPhisyc.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetalizedPressionDeadTime\rptMetalizedDeadTimeShort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedDeadTimeShort.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetalizedPressionDeadTime\rptMetalizedPressionDeadTime.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedPressionDeadTime.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetalizedProduction\rptMetalizedProduction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedProduction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetalizedSummary\rptSummaryMetallizedOpp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryMetallizedOpp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetalizedSummary\rptSummaryMetallized.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryMetallized.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metal\MetlizedProduction\rptMetalizedOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mill\rptSummaryMillDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryMillDetail.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mill\rptSummaryMill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryMill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mill\rptSummaryReProcessByMill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryReProcessByMill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\DeadTime\rptProductionDeadTimeByDateDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductionDeadTimeByDateDetails.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\DeadTime\frmProductionReportByDeadTimeReport.resx">
+      <DependentUpon>frmProductionReportByDeadTimeReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\DeadTime\rptProductionDeadTimeByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProductionDeadTimeByDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\Formulation\frmFormulation.resx">
+      <DependentUpon>frmFormulation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\Formulation\rptFormulationH_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFormulationH_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\Formulation\rptFormulationH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFormulationH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\RecordProduction\DMT\frmRecordDMT.resx">
+      <DependentUpon>frmRecordDMT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\RecordProduction\DMT\rptRecordDMT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecordDMT1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\RecordProduction\MW\frmRecordMW.resx">
+      <DependentUpon>frmRecordMW.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\RecordProduction\MW\rptRecordMW.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecordMW1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\SalesOrderEffience\rptEffienceSalesOrder.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEffienceSalesOrder.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\SummaryExtruder\frmSummaryExtruder.resx">
+      <DependentUpon>frmSummaryExtruder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\SummaryExtruder\rptSummaryExtruderDetails.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryExtruderDetails1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductionReports\SummaryExtruder\rptSummaryExtruderUnit.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryExtruderUnit1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReportBackup\Copia de rptCertificateSC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copia de rptCertificateSC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBackup\Copy of Copia de rptCoilLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of Copia de rptCoilLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBackup\Copy of rptCertificate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Copy of rptCertificate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBackup\rptCoilLabelBCK2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelBCK2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportBackup\rptReturn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptReturn.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\International\rptSalesOrderCountry.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrderCountry.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\International\rptSalesOrderQuantityByCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrderQuantityByCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\International\rptSalesOrderQuantityByMonth.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrderQuantityByMonth.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\National\frmSalesOrderReport.resx">
+      <DependentUpon>frmSalesOrderReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\National\frmSalesorderreportII.resx">
+      <DependentUpon>frmSalesorderreportII.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\National\frmSummarySalesOrder.resx">
+      <DependentUpon>frmSummarySalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\National\rptSalesOrderReportShort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrderReportShort.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\National\rptSalesOrderReportShortSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrderReportShortSales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesOrder\Summary\rptSummaryOrderD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSummaryOrderD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryCutterMothReport\frmSummaryCutterReport.resx">
+      <DependentUpon>frmSummaryCutterReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryCutterMothReport\Report\rptCutter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCutter1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Service Include="{FE73BB80-53F4-4AD0-A5F9-6A0BCE662292}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Manager\Request\Report\" />
+    <Folder Include="Manager\User\Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BoppLog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\report.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

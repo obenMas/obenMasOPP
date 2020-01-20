@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config title="Configuración del sistema">
+  <Company title="Empresa">
+    <companyInfo title="Información General" action="companyInfo"/>    
+  </Company>
+  <General title="Información General">
+    <geographic title="Información Geográfica" action="geographic" />
+    <currency title="Moneda" action="currency" />
+    <language title="Idiomas" action="languages" />
+    <commercialCondition title="Condición comercial" action="commercialCondition" />
+    <incoterm title="Incoterm" action="incoterm" />
+    <transpor title="Tipo Transportes" action="transports" />
+    <commercialCondition title="Tipo Documentos" action="idtypes" />    
+  </General>
+  <plant title="Planta">
+    <plants title="Plantas">
+      <plant title="Plantas" action="plants" />
+    </plants>
+    <cellars title="Depósitos">
+      <cellar title="Depósito" action="cellars" />
+    </cellars>
+    <sectors title="Sectores">
+      <sector title="Sectores" action="sectors" />
+    </sectors>
+    <lines title="Lineas">
+      <line title="Lineas" action="lines" />
+    </lines>
+    <decreases title="Mermas">
+      <decrease title="Mermas" action="decrease" />
+    </decreases>
+    <mainCoilsTypes title="Tipo Rollo Madre">
+      <mainCoilsType title="Tipo Rollo Madre" action="mainCoilsType" />
+    </mainCoilsTypes>
+    <machines title="Maquinas">      
+      <extruders title="Extrusoras" action="extruders">
+        <extruder title="Extrusoras" action="extruders" />
+        <extruderTherm title="Extrusoras Termoformado" action="thermoformerextruders" />
+        <winders title="Bobinadoras" action="coiler"/>
+      </extruders>
+      <cellarbyextruder title="Bodega Produccion" action="cellarbyextruder" />
+      <cutter title="Cortadoras" action="cutters" />
+      <metallizer title="Metalizadoras" action="metallizer" />
+      <mill title="Molinos" action="mills" />
+      <thermoformer title="Termoformadoras" action="thermoformers" />
+      <balance title="Balanzas" action="balance" />
+    </machines>
+    <films title="Peliculas">
+      <Bopp title="BOPP Film" action="boppFilm" />
+      <Cast title="Cast Film" action="castFilm" />
+      <Coating title="Coating Film" action="coatingFilm" />
+      <Coating title="Capas" action="layers" />
+    </films>
+    <materias title="Materias Primas">
+      <Tipo title="Tipo Materia Prima" action="tipomp" />
+      <TipoxProveedor title="Tipo MP. Proveedor" action="tipoxprov" />
+      <MateriaPrima title="Materias Primas" action="matprima" />
+    </materias>
+    <supplies title="Suministros">
+      <Suministro title="Suministro Por Proveedor" action="supplybyentity" />
+      <Suministro title="Suministro" action="supply" />
+    </supplies>
+    <units title="Unidades">
+      <unit title="Unidades" action="units" />
+    </units>
+    <cores title="Cores">
+      <core title="Cores" action="cores" />
+    </cores>
+    <diameters title="Diametros">
+      <core title="Diametros" action="diameters" />
+    </diameters>
+    <packagings title="Tipo Empaque">
+      <packaging title="Empaques" action="packaging" />
+    </packagings>
+    <colors title="Colores">
+      <color title="Color" action="color" />
+    </colors>
+    <ounces title="Onzas">
+      <ounce title="Onza" action="ounce" />
+    </ounces>
+   </plant>
+  <thermoformed title="Termoformado">
+      <machines title="Maquinas">
+      <thermoformer title="Termoformadoras" action="thermoformers" />
+      <balance title="Balanzas" action="balance" />
+    </machines>
+    <defects title="Defectos / T.M.">
+      <defect title="Defectos / T.M." action="defect" />
+    </defects>
+    <units title="Unidades">
+      <unit title="Unidades" action="units" />
+    </units>
+    <colors title="Colores">
+      <color title="Color" action="color" />
+    </colors>
+    <ounces title="Onzas">
+      <ounce title="Onza" action="ounce" />
+    </ounces>
+    <molds title="Moldes">
+      <mold title="Molde" action="mold" />
+    </molds>
+  </thermoformed>
+  <state title="Estados">
+    <status title="Grupo Estados" action="statusgroup" />
+    <status title="Estados" action="status" />
+  </state>
+  <user title="Usuarios">
+      <role title="Roles" action="role" />
+      <inning title="Turnos" action="inning" />
+      <user title="Usuarios" action="user" />
+  </user>
+</Config>

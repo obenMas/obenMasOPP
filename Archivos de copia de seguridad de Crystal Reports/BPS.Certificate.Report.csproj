@@ -1,0 +1,696 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2C278CE5-9529-46EB-87AE-D14CC0A0AB60}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPS.Certificate.Report</RootNamespace>
+    <AssemblyName>BPS.Certificate.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UpgradeBackupLocation />
+    <PublishUrl>publicar\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateFCH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateFCH.Designer.cs">
+      <DependentUpon>frmCertificateFCH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateFH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateFH.Designer.cs">
+      <DependentUpon>frmCertificateFH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateFHE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateFHE.Designer.cs">
+      <DependentUpon>frmCertificateFHE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMA.Designer.cs">
+      <DependentUpon>frmCertificateMA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMC.Designer.cs">
+      <DependentUpon>frmCertificateMC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMCD.Designer.cs">
+      <DependentUpon>frmCertificateMCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMCTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMCTT.Designer.cs">
+      <DependentUpon>frmCertificateMCTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMOHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMOHH.Designer.cs">
+      <DependentUpon>frmCertificateMOHH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateMOHHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateMOHHD.Designer.cs">
+      <DependentUpon>frmCertificateMOHHD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateOHTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateOHTT.Designer.cs">
+      <DependentUpon>frmCertificateOHTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateOH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateOH.Designer.cs">
+      <DependentUpon>frmCertificateOH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateOHX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateOHX.Designer.cs">
+      <DependentUpon>frmCertificateOHX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateODPH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateODPH.Designer.cs">
+      <DependentUpon>frmCertificateODPH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificatePC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificatePC.Designer.cs">
+      <DependentUpon>frmCertificatePC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificatePCX.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificatePCX.Designer.cs">
+      <DependentUpon>frmCertificatePCX.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificatePL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificatePL.Designer.cs">
+      <DependentUpon>frmCertificatePL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateQC.Designer.cs">
+      <DependentUpon>frmCertificateQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateLH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateLH.Designer.cs">
+      <DependentUpon>frmCertificateLH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateLHTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateLHTT.Designer.cs">
+      <DependentUpon>frmCertificateLHTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateSCTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateSCTT.Designer.cs">
+      <DependentUpon>frmCertificateSCTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateTH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateTH.Designer.cs">
+      <DependentUpon>frmCertificateTH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateSC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateSC.Designer.cs">
+      <DependentUpon>frmCertificateSC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateSD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateSD.Designer.cs">
+      <DependentUpon>frmCertificateSD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCertificateWC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCertificateWC.Designer.cs">
+      <DependentUpon>frmCertificateWC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Pilar\rptCertificateLH_PL.cs">
+      <DependentUpon>rptCertificateLH_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateLHTT_PL.cs">
+      <DependentUpon>rptCertificateLHTT_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateMC_PL.cs">
+      <DependentUpon>rptCertificateMC_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateMCD_PL.cs">
+      <DependentUpon>rptCertificateMCD_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificatePC_PL.cs">
+      <DependentUpon>rptCertificatePC_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificatePCX_PL.cs">
+      <DependentUpon>rptCertificatePCX_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateSC_PL.cs">
+      <DependentUpon>rptCertificateSC_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateSD_PL.cs">
+      <DependentUpon>rptCertificateSD_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateTH_PL.cs">
+      <DependentUpon>rptCertificateTH_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCertificateWC_PL.cs">
+      <DependentUpon>rptCertificateWC_PL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateFCH.cs">
+      <DependentUpon>rptCertificateFCH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateFH.cs">
+      <DependentUpon>rptCertificateFH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateFHE.cs">
+      <DependentUpon>rptCertificateFHE.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMCTT1.cs">
+      <DependentUpon>rptCertificateMCTT1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateSCTT.cs">
+      <DependentUpon>rptCertificateSCTT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMA.cs">
+      <DependentUpon>rptCertificateMA.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMC.cs">
+      <DependentUpon>rptCertificateMC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMCD.cs">
+      <DependentUpon>rptCertificateMCD.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMOHH.cs">
+      <DependentUpon>rptCertificateMOHH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateMOHHD.cs">
+      <DependentUpon>rptCertificateMOHHD.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateOHTT.cs">
+      <DependentUpon>rptCertificateOHTT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateOH.cs">
+      <DependentUpon>rptCertificateOH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateOHX.cs">
+      <DependentUpon>rptCertificateOHX.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateODPH.cs">
+      <DependentUpon>rptCertificateODPH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificatePC.cs">
+      <DependentUpon>rptCertificatePC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificatePCX.cs">
+      <DependentUpon>rptCertificatePCX.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificatePL.cs">
+      <DependentUpon>rptCertificatePL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateQC.cs">
+      <DependentUpon>rptCertificateQC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateLH.cs">
+      <DependentUpon>rptCertificateLH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateLHTT.cs">
+      <DependentUpon>rptCertificateLHTT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateTH.cs">
+      <DependentUpon>rptCertificateTH.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateSC.cs">
+      <DependentUpon>rptCertificateSC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateSD.cs">
+      <DependentUpon>rptCertificateSD.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCertificateWC.cs">
+      <DependentUpon>rptCertificateWC.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateFCH.resx">
+      <DependentUpon>frmCertificateFCH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateFH.resx">
+      <DependentUpon>frmCertificateFH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateFHE.resx">
+      <DependentUpon>frmCertificateFHE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMA.resx">
+      <DependentUpon>frmCertificateMA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMC.resx">
+      <DependentUpon>frmCertificateMC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMCD.resx">
+      <DependentUpon>frmCertificateMCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMCTT.resx">
+      <DependentUpon>frmCertificateMCTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMOHH.resx">
+      <DependentUpon>frmCertificateMOHH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateMOHHD.resx">
+      <DependentUpon>frmCertificateMOHHD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateOHTT.resx">
+      <DependentUpon>frmCertificateOHTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateOH.resx">
+      <DependentUpon>frmCertificateOH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateOHX.resx">
+      <DependentUpon>frmCertificateOHX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateODPH.resx">
+      <DependentUpon>frmCertificateODPH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificatePC.resx">
+      <DependentUpon>frmCertificatePC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificatePCX.resx">
+      <DependentUpon>frmCertificatePCX.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificatePL.resx">
+      <DependentUpon>frmCertificatePL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateQC.resx">
+      <DependentUpon>frmCertificateQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateLH.resx">
+      <DependentUpon>frmCertificateLH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateLHTT.resx">
+      <DependentUpon>frmCertificateLHTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateSCTT.resx">
+      <DependentUpon>frmCertificateSCTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateTH.resx">
+      <DependentUpon>frmCertificateTH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateSC.resx">
+      <DependentUpon>frmCertificateSC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateSD.resx">
+      <DependentUpon>frmCertificateSD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCertificateWC.resx">
+      <DependentUpon>frmCertificateWC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateLH_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateLH_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateLHTT_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateLHTT_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateMC_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMC_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateMCD_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMCD_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificatePC_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificatePC_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificatePCX_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificatePCX_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateSC_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateSC_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateSD_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateSD_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateTH_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateTH_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCertificateWC_PL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateWC_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateFCH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateFCH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateFH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateFH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateFHE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateFHE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMCTT1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMCTT1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateSCTT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateSCTT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMA.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMA.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMCD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMCD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMOHH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMOHH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateMOHHD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateMOHHD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateOHTT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateOHTT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateOH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateOH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateOHX.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateOHX.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateODPH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateODPH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificatePC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificatePC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificatePCX.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificatePCX.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificatePL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificatePL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateQC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateQC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateLH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateLH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateLHTT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateLHTT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateTH.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateTH.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateSC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateSC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateSD.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateSD.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCertificateWC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCertificateWC.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+    <Service Include="{FE73BB80-53F4-4AD0-A5F9-6A0BCE662292}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

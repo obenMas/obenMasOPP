@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <databaseConnection>
+    <!--<server value="AR0266"/>-->
+    <server value="186.122.150.13" />
+    <!--<server value="erwin-pc\sqlexpress" />--> 
+    <database value="obenMas_v1" />
+    <userName value="obenMas" />
+    <password value="Bopp2010" />
+  </databaseConnection>
+</config>

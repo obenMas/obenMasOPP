@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{327BEEB2-FFAB-4E05-BA38-2EBC4E11A1D3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPS.Business</RootNamespace>
+    <AssemblyName>BPS.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector Net 6.9.4\Assemblies\v4.0\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsAceptationRange.cs" />
+    <Compile Include="clsAdditivation.cs" />
+    <Compile Include="clsAux.cs" />
+    <Compile Include="clsAymasDepot.cs" />
+    <Compile Include="clsAymasSalesOrder.cs" />
+    <Compile Include="clsBalance.cs" />
+    <Compile Include="clsBaseCoilProductionDetail.cs" />
+    <Compile Include="clsBaseToMetalEquivalence.cs" />
+    <Compile Include="clsBonus.cs" />
+    <Compile Include="clsBonusDetail.cs" />
+    <Compile Include="clsBonusParameters.cs" />
+    <Compile Include="clsBopp.cs" />
+    <Compile Include="clsBoppCoil.cs" />
+    <Compile Include="clsBoxing.cs" />
+    <Compile Include="clsCast.cs" />
+    <Compile Include="clsCastCoil.cs" />
+    <Compile Include="clsCellar.cs" />
+    <Compile Include="clsCellarByExtruder.cs" />
+    <Compile Include="clsCertificate.cs" />
+    <Compile Include="clsChangeSalesOrder.cs" />
+    <Compile Include="clsChangeSalesOrderDetail.cs" />
+    <Compile Include="clsCity.cs" />
+    <Compile Include="clsCoating.cs" />
+    <Compile Include="clsCoatingCoil.cs" />
+    <Compile Include="clsCoil.cs" />
+    <Compile Include="clsCoilByBaseConsuption.cs" />
+    <Compile Include="clsCoilMovements.cs" />
+    <Compile Include="clsCoilByCoilCellar.cs" />
+    <Compile Include="clsCoilByPalletAditional.cs" />
+    <Compile Include="clsCoilBySecundaryCuttingStop.cs" />
+    <Compile Include="clsCoilCellar.cs" />
+    <Compile Include="clsCoilCellarMovement.cs" />
+    <Compile Include="clsCoilChanges.cs" />
+    <Compile Include="clsCoilDetailByPalletDetail.cs" />
+    <Compile Include="clsCoilInformationByCuttingStop.cs" />
+    <Compile Include="clsColor.cs" />
+    <Compile Include="clsCommercialCondition.cs" />
+    <Compile Include="clsCompany.cs" />
+    <Compile Include="clsCompanyAddress.cs" />
+    <Compile Include="clsComparator.cs" />
+    <Compile Include="clsConnection.cs" />
+    <Compile Include="clsConnectionAccess.cs" />
+    <Compile Include="clsCore.cs" />
+    <Compile Include="clsCountry.cs" />
+    <Compile Include="clsCube.cs" />
+    <Compile Include="clsCubeData.cs" />
+    <Compile Include="clsCubeDetail.cs" />
+    <Compile Include="clsCurrency.cs" />
+    <Compile Include="clsCutter.cs" />
+    <Compile Include="clsCuttingDefinition.cs" />
+    <Compile Include="clsCuttingDefinitionDetail.cs" />
+    <Compile Include="clsCuttingOrder.cs" />
+    <Compile Include="clsCuttingOrderDetail.cs" />
+    <Compile Include="clsCuttingPlan.cs" />
+    <Compile Include="clsCuttingPlanParameters.cs" />
+    <Compile Include="clsCuttingProccess.cs" />
+    <Compile Include="clsCuttingQuality.cs" />
+    <Compile Include="clsCuttingStop.cs" />
+    <Compile Include="clsDeadTimeByFilmProductionPlan.cs" />
+    <Compile Include="clsDeadTimeByMainCoilMetal.cs" />
+    <Compile Include="clsDeadTimeData.cs" />
+    <Compile Include="clsDeadTimeFilmProductionPlanByGroup.cs" />
+    <Compile Include="clsDeadTimeGroup.cs" />
+    <Compile Include="clsDeadTimeType.cs" />
+    <Compile Include="clsDeadTimeTypePlus.cs" />
+    <Compile Include="clsDecrease.cs" />
+    <Compile Include="clsDecreaseByFilmProductionPlan.cs" />
+    <Compile Include="clsDecreaseByMainCoil.cs" />
+    <Compile Include="clsDecreaseByProductionOrder.cs" />
+    <Compile Include="clsDeliverRawMaterial.cs" />
+    <Compile Include="clsDetailInventory.cs" />
+    <Compile Include="clsDiameter.cs" />
+    <Compile Include="clsEfficiencyCutExtruder.cs" />
+    <Compile Include="clsEmail.cs" />
+    <Compile Include="clsEntity.cs" />
+    <Compile Include="clsEntityAddress.cs" />
+    <Compile Include="clsErrorByInventory.cs" />
+    <Compile Include="clsExportData.cs" />
+    <Compile Include="clsExtruder.cs" />
+    <Compile Include="clsFamily.cs" />
+    <Compile Include="clsFilmByCustomer.cs" />
+    <Compile Include="clsFilmEquivalence.cs" />
+    <Compile Include="clsFilmProductionPlan.cs" />
+    <Compile Include="clsFilmProductionPlanByProductionOrder.cs" />
+    <Compile Include="clsFilmProductionPlanMetal.cs" />
+    <Compile Include="clsFilmProductionPlanMetalByProductionOrderMetal.cs" />
+    <Compile Include="clsFilter.cs" />
+    <Compile Include="clsFormulation.cs" />
+    <Compile Include="clsFormulationByFilmProductionPlan.cs" />
+    <Compile Include="clsFormulationCentralLayer.cs" />
+    <Compile Include="clsFormulationData.cs" />
+    <Compile Include="clsFormulationExtrusor1.cs" />
+    <Compile Include="clsFormulationExtrusor4.cs" />
+    <Compile Include="clsFormulationExtrusor3.cs" />
+    <Compile Include="clsFormulationExtrusor2.cs" />
+    <Compile Include="clsFormulationRawMaterial.cs" />
+    <Compile Include="clsFormulationReport.cs" />
+    <Compile Include="clsGlobal.cs" />
+    <Compile Include="clsIdType.cs" />
+    <Compile Include="clsImportedCoil.cs" />
+    <Compile Include="clsImportedPallet.cs" />
+    <Compile Include="clsImportedRange.cs" />
+    <Compile Include="clsIncoterms.cs" />
+    <Compile Include="clsInning.cs" />
+    <Compile Include="clsInProcessCoils.cs" />
+    <Compile Include="clsKardex.cs" />
+    <Compile Include="clsKpis.cs" />
+    <Compile Include="clsLanguage.cs" />
+    <Compile Include="clsLayer.cs" />
+    <Compile Include="clsLayerThickByNewFormulation.cs" />
+    <Compile Include="clsLog.cs" />
+    <Compile Include="clsMachine.cs" />
+    <Compile Include="clsMachineActivities.cs" />
+    <Compile Include="clsMachineActivity.cs" />
+    <Compile Include="clsMachineActivityTypes.cs" />
+    <Compile Include="clsMainCoil.cs" />
+    <Compile Include="clsMainCoilByCuttingStop.cs" />
+    <Compile Include="clsMainCoilByOrder.cs" />
+    <Compile Include="clsMainCoilCores.cs" />
+    <Compile Include="clsMainCoilLabel.cs" />
+    <Compile Include="clsMainCoilMetal.cs" />
+    <Compile Include="clsMainCoilQuality.cs" />
+    <Compile Include="clsMainCoilQualityMetal.cs" />
+    <Compile Include="clsMainCoilQualityMetalCut.cs" />
+    <Compile Include="clsMaquile.cs" />
+    <Compile Include="clsMaquileProduct.cs" />
+    <Compile Include="clsMaterialCost.cs" />
+    <Compile Include="clsMetalizaedDeadTimeGroup.cs" />
+    <Compile Include="clsMetalizedDeadTime.cs" />
+    <Compile Include="clsMetalizedDeadTimeMillPallet.cs" />
+    <Compile Include="clsMetalizedDeadTimeValues.cs" />
+    <Compile Include="clsMetalizedPressure.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMetalizedProduct.cs" />
+    <Compile Include="clsMetallizedOrder.cs" />
+    <Compile Include="clsMetallizedOrderDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsMetallizer.cs" />
+    <Compile Include="clsMill.cs" />
+    <Compile Include="clsMillPallet.cs" />
+    <Compile Include="clsMillProduction.cs" />
+    <Compile Include="clsNewFormulation.cs" />
+    <Compile Include="clsNewFormulationDetail.cs" />
+    <Compile Include="clsNewPreShipping.cs" />
+    <Compile Include="clsNewPreShippingDetail.cs" />
+    <Compile Include="clsNewProductionOrderMetal.cs" />
+    <Compile Include="clsNewProductionOrderMetalDetail.cs" />
+    <Compile Include="clsPalletMovements.cs" />
+    <Compile Include="clspMaterial.cs" />
+    <Compile Include="clsQualityControls.cs" />
+    <Compile Include="clsQualityControlsByFilm.cs" />
+    <Compile Include="clsQualityControlsByMainCoil.cs" />
+    <Compile Include="clsQualityControlsTypes.cs" />
+    <Compile Include="clsRawMaterialBySiloCellar.cs" />
+    <Compile Include="clsRawMaterialMovements.cs" />
+    <Compile Include="clsRawMaterialPallet.cs" />
+    <Compile Include="clsMoldByThermoformed.cs" />
+    <Compile Include="clsMyHerency.cs" />
+    <Compile Include="clsOunce.cs" />
+    <Compile Include="clsPackagingType.cs" />
+    <Compile Include="clsPallet.cs" />
+    <Compile Include="clsPalletbyCoilCellar.cs" />
+    <Compile Include="clsPalletCoilTransfer.cs" />
+    <Compile Include="clsPalletDetailByPalletType.cs" />
+    <Compile Include="clsPalletDimentions.cs" />
+    <Compile Include="clsPalletPreShipping.cs" />
+    <Compile Include="clsPalletPreShippingPL.cs" />
+    <Compile Include="clsPalletType.cs" />
+    <Compile Include="clsPalletTypeByCuttingOrderDetail.cs" />
+    <Compile Include="clsPalletTypeBySalesOrderDetail.cs" />
+    <Compile Include="clsPaper.cs" />
+    <Compile Include="clsParameterMontana.cs" />
+    <Compile Include="clsParameters.cs" />
+    <Compile Include="clsPhotoBackload.cs" />
+    <Compile Include="clsPlant.cs" />
+    <Compile Include="clsPreseaShippings.cs" />
+    <Compile Include="clsProcess.cs" />
+    <Compile Include="clsProduct.cs" />
+    <Compile Include="clsProductDisplacement.cs" />
+    <Compile Include="clsProductionLine.cs" />
+    <Compile Include="clsProductionOrder.cs" />
+    <Compile Include="clsProductionOrderDetail.cs" />
+    <Compile Include="clsProductionOrderMetal.cs" />
+    <Compile Include="clsProductType.cs" />
+    <Compile Include="clsPurchaseOrder.cs" />
+    <Compile Include="clsPurchaseOrderDetail.cs" />
+    <Compile Include="clsRawMaterial.cs" />
+    <Compile Include="clsRawMaterialbySilo.cs" />
+    <Compile Include="clsRawMaterialByEntity.cs" />
+    <Compile Include="clsRawMaterialByFormulation.cs" />
+    <Compile Include="clsRawMaterialByTypeRawMaterial.cs" />
+    <Compile Include="clsRawMaterialConsumption.cs" />
+    <Compile Include="clsRawMaterialConsumptionByExtruder.cs" />
+    <Compile Include="clsRawMaterialConsumptionByFormulation.cs" />
+    <Compile Include="clsRawMaterialConsumptionDetail.cs" />
+    <Compile Include="clsRawMaterialEquivalence.cs" />
+    <Compile Include="clsRawMaterialExtruder.cs" />
+    <Compile Include="clsRawMaterialFromScrap.cs" />
+    <Compile Include="clsRawMaterialProductionStock.cs" />
+    <Compile Include="clsRawMaterialStock.cs" />
+    <Compile Include="clsRawMaterialStockProduction.cs" />
+    <Compile Include="clsRawMaterialtype.cs" />
+    <Compile Include="clsRawMaterialTypeByEntity.cs" />
+    <Compile Include="clsRawPalletByCoilCellar.cs" />
+    <Compile Include="clsReassignPL.cs" />
+    <Compile Include="clsReception.cs" />
+    <Compile Include="clsReceptionRawMaterialDetail.cs" />
+    <Compile Include="clsRecordDMT.cs" />
+    <Compile Include="clsRecordProduction.cs" />
+    <Compile Include="clsRecordProductionCoil.cs" />
+    <Compile Include="clsRecordProductionHead.cs" />
+    <Compile Include="clsRecordProductionHeadMw.cs" />
+    <Compile Include="clsRecordProductionLaboratory.cs" />
+    <Compile Include="clsRecordProductionLaboratoryMw.cs" />
+    <Compile Include="clsRecordProductionMdo.cs" />
+    <Compile Include="clsRecordProductionMdoMw.cs" />
+    <Compile Include="clsRecordProductionMw.cs" />
+    <Compile Include="clsRecordProductionPressure.cs" />
+    <Compile Include="clsRecordProductionPrs.cs" />
+    <Compile Include="clsRecordProductionPrsMw.cs" />
+    <Compile Include="clsRecordProductionSatellite.cs" />
+    <Compile Include="clsRecordProductionSatelliteMw.cs" />
+    <Compile Include="clsRecordProductionTdo.cs" />
+    <Compile Include="clsRecordProductionTdoMw.cs" />
+    <Compile Include="clsRecordProductionThickness.cs" />
+    <Compile Include="clsRecordProductionThicknessMw.cs" />
+    <Compile Include="clsRelabelEquivalencesMov.cs" />
+    <Compile Include="clsRequestUser.cs" />
+    <Compile Include="clsReturn.cs" />
+    <Compile Include="clsReturnDetail.cs" />
+    <Compile Include="clsReassign.cs" />
+    <Compile Include="clsSaleOrderObjetive.cs" />
+    <Compile Include="clsScrap.cs" />
+    <Compile Include="clsScrapByExtruderCellar.cs" />
+    <Compile Include="clsScrapMovements.cs" />
+    <Compile Include="clsScrapPallet.cs" />
+    <Compile Include="clsSegmentation.cs" />
+    <Compile Include="clsShippings.cs" />
+    <Compile Include="clsReturns.cs" />
+    <Compile Include="clsRole.cs" />
+    <Compile Include="clsSalesOrder.cs" />
+    <Compile Include="clsSalesOrderByReport.cs" />
+    <Compile Include="clsSalesOrderDetail.cs" />
+    <Compile Include="clsSalesOrderPalletsTree.cs" />
+    <Compile Include="clsSeal.cs" />
+    <Compile Include="clsSector.cs" />
+    <Compile Include="clsSectorPlant.cs" />
+    <Compile Include="clsSecundaryJoint.cs" />
+    <Compile Include="clsSequential.cs" />
+    <Compile Include="clsSequentialMovementSiigo.cs" />
+    <Compile Include="clsShiping.cs" />
+    <Compile Include="clsShippingBuilding.cs" />
+    <Compile Include="clsSilo.cs" />
+    <Compile Include="clsSrapPalletByCoilCellar.cs" />
+    <Compile Include="clsState.cs" />
+    <Compile Include="clsStatus.cs" />
+    <Compile Include="clsStatusGroup.cs" />
+    <Compile Include="clsStructure.cs" />
+    <Compile Include="clsSubProcessOrder.cs" />
+    <Compile Include="clsSubProcessType.cs" />
+    <Compile Include="clsSummaryCellar.cs" />
+    <Compile Include="clsSummaryRM.cs" />
+    <Compile Include="clsSummarySalesOrder.cs" />
+    <Compile Include="clsSupplier.cs" />
+    <Compile Include="clsSupply.cs" />
+    <Compile Include="clsSupplyByEntity.cs" />
+    <Compile Include="clsSupplyKardex.cs" />
+    <Compile Include="clsSupplyReception.cs" />
+    <Compile Include="clsSupplyReceptionDetail.cs" />
+    <Compile Include="clsSupplyTransfer.cs" />
+    <Compile Include="clsSwap.cs" />
+    <Compile Include="clsSystemMenu.cs" />
+    <Compile Include="clsSystemMenuByUserRole.cs" />
+    <Compile Include="clsThermaincoil.cs" />
+    <Compile Include="clsThermByExtruder.cs" />
+    <Compile Include="clsThermDefects.cs" />
+    <Compile Include="clsThermExtProductionOrder.cs" />
+    <Compile Include="clsThermExtruder.cs" />
+    <Compile Include="clsThermFormulation.cs" />
+    <Compile Include="clsThermMold.cs" />
+    <Compile Include="clsThermoformer.cs" />
+    <Compile Include="clsThermoforming.cs" />
+    <Compile Include="clsThickness.cs" />
+    <Compile Include="clsTransfer.cs" />
+    <Compile Include="clsTransport.cs" />
+    <Compile Include="clsTransportBySalesOrder.cs" />
+    <Compile Include="clsTreatment.cs" />
+    <Compile Include="clsTypeMainCoil.cs" />
+    <Compile Include="clsTypePMaterial.cs" />
+    <Compile Include="clsTypeRequest.cs" />
+    <Compile Include="clsUnit.cs" />
+    <Compile Include="clsUser.cs" />
+    <Compile Include="clsUserRole.cs" />
+    <Compile Include="clsValidatePackingList.cs" />
+    <Compile Include="clsValidation.cs" />
+    <Compile Include="clsVapor.cs" />
+    <Compile Include="clsXportCellarMovementsToSIIGO.cs" />
+    <Compile Include="clsXportSalesOrderToSIIGO.cs" />
+    <Compile Include="clsXproMainCoil.cs" />
+    <Compile Include="clsXproRawMaterialConsumption.cs" />
+    <Compile Include="clsMillProduct.cs" />
+    <Compile Include="clsMillPalletbyCoilCellar.cs" />
+    <Compile Include="clsRawMaterialbyCoilCellar.cs" />
+    <Compile Include="DataGridViewPrinter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BPS.Bussiness.csproj" />
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DLLMYSQL\MySql.Data.dll" />
+    <Content Include="DLLMYSQL\MySql.Data.Entity.dll" />
+    <Content Include="DLLMYSQL\MySql.Data.Entity.EF6.dll" />
+    <Content Include="DLLMYSQL\MySql.Fabric.Plugin.dll" />
+    <Content Include="DLLMYSQL\MySql.Web.dll" />
+    <Content Include="engine.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="xmlSystemConfigTree.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

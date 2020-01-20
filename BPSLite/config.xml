@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<config>
+  <databaseConnection>
+    <!--<server value="SRV-OPP-OBEN\SQL_OBEN"/>-->
+    <!--<server value="186.122.150.12" />-->
+    <server value="SRV-OPP-OBEN"/>
+    <!--<server value="AR0266" />-->
+    <!--<server value="erwin-pc\sqlexpress" />-->
+    <database value="obenmas_v1" />
+    <userName value="obenMas" />
+    <password value="Bopp2010" />
+  </databaseConnection>
+</config>

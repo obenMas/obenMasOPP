@@ -1,0 +1,3194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E6E9EDC2-D133-4C26-A5B5-A4DA4BB555DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BPS.Lite</RootNamespace>
+    <AssemblyName>BPSLite</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>T:\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\AR0266\inetpub\wwwroot\obenMasLiteDeploy\</InstallUrl>
+    <PublisherName>Oben Holding Group</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>install.htm</WebPage>
+    <ApplicationRevision>7</ApplicationRevision>
+    <ApplicationVersion>2.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C6B94182DA617B5A29C96C3AC7DBFD233FEB96E5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BPS.Lite_1_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Factory-Yellow.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsCuttingOrderResume.cs" />
+    <Compile Include="clsPrintLabels.cs" />
+    <Compile Include="clsShortcutsLayout.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmABMSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmABMSupplier.Designer.cs">
+      <DependentUpon>frmABMSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewPalletType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewPalletType.Designer.cs">
+      <DependentUpon>frmAddNewPalletType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddRawMaterialSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddRawMaterialSelector.Designer.cs">
+      <DependentUpon>frmAddRawMaterialSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAltaSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAltaSupplier.Designer.cs">
+      <DependentUpon>frmAltaSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBackLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBackLoad.Designer.cs">
+      <DependentUpon>frmBackLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChangeMetalLotNumber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChangeMetalLotNumber.Designer.cs">
+      <DependentUpon>frmChangeMetalLotNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilCellarMovementsA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilCellarMovementsA.Designer.cs">
+      <DependentUpon>frmCoilCellarMovementsA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilCellarMovements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilCellarMovements.Designer.cs">
+      <DependentUpon>frmCoilCellarMovements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilCellarReturnsD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilCellarReturnsD.Designer.cs">
+      <DependentUpon>frmCoilCellarReturnsD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilCellarReturnsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilCellarReturnsReport.Designer.cs">
+      <DependentUpon>frmCoilCellarReturnsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilDetail.Designer.cs">
+      <DependentUpon>frmCoilDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilEditor.Designer.cs">
+      <DependentUpon>frmCoilEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilHistory.Designer.cs">
+      <DependentUpon>frmCoilHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilRegistration.Designer.cs">
+      <DependentUpon>frmCoilRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilsInProcess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilsInProcess.Designer.cs">
+      <DependentUpon>frmCoilsInProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilsWhitoutPallets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilsWhitoutPallets.Designer.cs">
+      <DependentUpon>frmCoilsWhitoutPallets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilToInProcessCoilCellar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilToInProcessCoilCellar.Designer.cs">
+      <DependentUpon>frmCoilToInProcessCoilCellar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilToMetallizedRack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilToMetallizedRack.Designer.cs">
+      <DependentUpon>frmCoilToMetallizedRack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilTraceability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilTraceability.Designer.cs">
+      <DependentUpon>frmCoilTraceability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerForm.Designer.cs">
+      <DependentUpon>frmCustomerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerList.Designer.cs">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomizedMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomizedMessageBox.Designer.cs">
+      <DependentUpon>frmCustomizedMessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCutterSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCutterSelector.Designer.cs">
+      <DependentUpon>frmCutterSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrder.Designer.cs">
+      <DependentUpon>frmCuttingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderDetail.Designer.cs">
+      <DependentUpon>frmCuttingOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderList.Designer.cs">
+      <DependentUpon>frmCuttingOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderListReport.Designer.cs">
+      <DependentUpon>frmCuttingOrderListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderMultiple.Designer.cs">
+      <DependentUpon>frmCuttingOrderMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderMultipleCast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderMultipleCast.Designer.cs">
+      <DependentUpon>frmCuttingOrderMultipleCast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderNotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderNotes.Designer.cs">
+      <DependentUpon>frmCuttingOrderNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderNotification.Designer.cs">
+      <DependentUpon>frmCuttingOrderNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderPalletType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderPalletType.Designer.cs">
+      <DependentUpon>frmCuttingOrderPalletType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderReportView.Designer.cs">
+      <DependentUpon>frmCuttingOrderReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrdersReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrdersReport.Designer.cs">
+      <DependentUpon>frmCuttingOrdersReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingTrazability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingTrazability.Designer.cs">
+      <DependentUpon>frmCuttingTrazability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompleteCoilInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompleteCoilInventory.Designer.cs">
+      <DependentUpon>frmCompleteCoilInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepotHistoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepotHistoryReport.Designer.cs">
+      <DependentUpon>frmDepotHistoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepotPalletHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepotPalletHistory.Designer.cs">
+      <DependentUpon>frmDepotPalletHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportacionPeru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportacionPeru.Designer.cs">
+      <DependentUpon>frmImportacionPeru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportReport.Designer.cs">
+      <DependentUpon>frmImportReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewMetalCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewMetalCoil.Designer.cs">
+      <DependentUpon>frmNewMetalCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewMetallizedCoils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewMetallizedCoils.Designer.cs">
+      <DependentUpon>frmNewMetallizedCoils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPallet.Designer.cs">
+      <DependentUpon>frmNewPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPalletMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPalletMovement.Designer.cs">
+      <DependentUpon>frmNewPalletMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPreShippingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPreShippingList.Designer.cs">
+      <DependentUpon>frmNewPreShippingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPreshippingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPreshippingReport.Designer.cs">
+      <DependentUpon>frmNewPreshippingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewShippings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewShippings.Designer.cs">
+      <DependentUpon>frmNewShippings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperativeConditionMetalizedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperativeConditionMetalizedReport.Designer.cs">
+      <DependentUpon>frmOperativeConditionMetalizedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOperativeConditionsMetalized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOperativeConditionsMetalized.Designer.cs">
+      <DependentUpon>frmOperativeConditionsMetalized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPaletized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPaletized.Designer.cs">
+      <DependentUpon>frmPaletized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCompletePalletInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompletePalletInventory.Designer.cs">
+      <DependentUpon>frmCompletePalletInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletCellarReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletCellarReturn.Designer.cs">
+      <DependentUpon>frmPalletCellarReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletForDispatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletForDispatch.Designer.cs">
+      <DependentUpon>frmPalletForDispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletMovement.Designer.cs">
+      <DependentUpon>frmPalletMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletQuery.Designer.cs">
+      <DependentUpon>frmPalletQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPCPTProductionControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPCPTProductionControl.Designer.cs">
+      <DependentUpon>frmPCPTProductionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPCPTProductionControlMP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPCPTProductionControlMP.Designer.cs">
+      <DependentUpon>frmPCPTProductionControlMP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPDSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPDSelect.Designer.cs">
+      <DependentUpon>frmPDSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionControl.Designer.cs">
+      <DependentUpon>frmProductionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionControlPerDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionControlPerDate.Designer.cs">
+      <DependentUpon>frmProductionControlPerDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionControlPerTurn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionControlPerTurn.Designer.cs">
+      <DependentUpon>frmProductionControlPerTurn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRackHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRackHistory.Designer.cs">
+      <DependentUpon>frmRackHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletMovementReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletMovementReport.Designer.cs">
+      <DependentUpon>frmPalletMovementReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawDepotHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawDepotHistory.Designer.cs">
+      <DependentUpon>frmRawDepotHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialDepositState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialDepositState.Designer.cs">
+      <DependentUpon>frmRawMaterialDepositState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatch.Designer.cs">
+      <DependentUpon>frmRawMaterialDispatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatchReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatchReport.Designer.cs">
+      <DependentUpon>frmRawMaterialDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialEntryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialEntryReport.Designer.cs">
+      <DependentUpon>frmRawMaterialEntryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialInputManualCopy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialInputManualCopy.Designer.cs">
+      <DependentUpon>frmRawMaterialInputManualCopy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialInputManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialInputManual.Designer.cs">
+      <DependentUpon>frmRawMaterialInputManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialPalletSon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialPalletSon.Designer.cs">
+      <DependentUpon>frmRawMaterialPalletSon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialRePrintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialRePrintLabel.Designer.cs">
+      <DependentUpon>frmRawMaterialRePrintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialStockByDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialStockByDate.Designer.cs">
+      <DependentUpon>frmRawMaterialStockByDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialSwapReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialSwapReport.Designer.cs">
+      <DependentUpon>frmRawMaterialSwapReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelabelFilmEquivalences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelabelFilmEquivalences.Designer.cs">
+      <DependentUpon>frmRelabelFilmEquivalences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRelabelToStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRelabelToStock.Designer.cs">
+      <DependentUpon>frmRelabelToStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReprocessCoilReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReprocessCoilReport.Designer.cs">
+      <DependentUpon>frmReprocessCoilReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReviveOrKillCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReviveOrKillCoil.Designer.cs">
+      <DependentUpon>frmReviveOrKillCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapIntercellarMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapIntercellarMovement.Designer.cs">
+      <DependentUpon>frmScrapIntercellarMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapPalletSwapReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapPalletSwapReport.Designer.cs">
+      <DependentUpon>frmScrapPalletSwapReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecundaryRackHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecundaryRackHistory.Designer.cs">
+      <DependentUpon>frmSecundaryRackHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShippingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShippingReport.Designer.cs">
+      <DependentUpon>frmShippingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShippingReportByCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShippingReportByCoil.Designer.cs">
+      <DependentUpon>frmShippingReportByCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwapPalletPositionCamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwapPalletPositionCamp.Designer.cs">
+      <DependentUpon>frmSwapPalletPositionCamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwapRawPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwapRawPallet.Designer.cs">
+      <DependentUpon>frmSwapRawPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwapReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwapReport.Designer.cs">
+      <DependentUpon>frmSwapReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExtrusionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExtrusionReport.Designer.cs">
+      <DependentUpon>frmExtrusionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingReport.Designer.cs">
+      <DependentUpon>frmCuttingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeadTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeadTime.Designer.cs">
+      <DependentUpon>frmDeadTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeadTimeGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeadTimeGroup.Designer.cs">
+      <DependentUpon>frmDeadTimeGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDeadTimeMill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDeadTimeMill.Designer.cs">
+      <DependentUpon>frmDeadTimeMill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDecreaseSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDecreaseSelector.Designer.cs">
+      <DependentUpon>frmDecreaseSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepotIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepotIn.Designer.cs">
+      <DependentUpon>frmDepotIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepotOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepotOut.Designer.cs">
+      <DependentUpon>frmDepotOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDepotState.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDepotState.Designer.cs">
+      <DependentUpon>frmDepotState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEfficiencyPerCuttingNumberAndPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEfficiencyPerCuttingNumberAndPosition.Designer.cs">
+      <DependentUpon>frmEfficiencyPerCuttingNumberAndPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExecuteChangeSalesOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExecuteChangeSalesOrder.Designer.cs">
+      <DependentUpon>frmExecuteChangeSalesOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormulationReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormulationReport.Designer.cs">
+      <DependentUpon>frmFormulationReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormulationsBoppForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormulationsBoppForm.Designer.cs">
+      <DependentUpon>frmFormulationsBoppForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormulationsCastForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFormulationsCastForm.Designer.cs">
+      <DependentUpon>frmFormulationsCastForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportRawMaterial.Designer.cs">
+      <DependentUpon>frmImportRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmImportRawMaterialGranel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmImportRawMaterialGranel.Designer.cs">
+      <DependentUpon>frmImportRawMaterialGranel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInProcessCoils.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInProcessCoils.Designer.cs">
+      <DependentUpon>frmInProcessCoils.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInterCellarMovement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterCellarMovement.Designer.cs">
+      <DependentUpon>frmInterCellarMovement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderDetail.Designer.cs">
+      <DependentUpon>frmInternationalSalesOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderForm.Designer.cs">
+      <DependentUpon>frmInternationalSalesOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInternationalSalesOrderList.Designer.cs">
+      <DependentUpon>frmInternationalSalesOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoil.Designer.cs">
+      <DependentUpon>frmMainCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilMetalized.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilMetalized.Designer.cs">
+      <DependentUpon>frmMainCoilMetalized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilMetalList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilMetalList.Designer.cs">
+      <DependentUpon>frmMainCoilMetalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilMetalStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilMetalStock.Designer.cs">
+      <DependentUpon>frmMainCoilMetalStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilOutline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilOutline.Designer.cs">
+      <DependentUpon>frmMainCoilOutline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilQualityReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilQualityReport.Designer.cs">
+      <DependentUpon>frmMainCoilQualityReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilRegister.Designer.cs">
+      <DependentUpon>frmMainCoilRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilStock.Designer.cs">
+      <DependentUpon>frmMainCoilStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilStockReport.Designer.cs">
+      <DependentUpon>frmMainCoilStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMainCoilWegith.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilWegith.Designer.cs">
+      <DependentUpon>frmMainCoilWegith.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManagerList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManagerList.Designer.cs">
+      <DependentUpon>frmManagerList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetalizedOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetalizedOrderDetail.Designer.cs">
+      <DependentUpon>frmMetalizedOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetalizedPressionDeadTimeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetalizedPressionDeadTimeReport.Designer.cs">
+      <DependentUpon>frmMetalizedPressionDeadTimeReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetalizedProdutionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetalizedProdutionReport.Designer.cs">
+      <DependentUpon>frmMetalizedProdutionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetalizedWegithRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetalizedWegithRegistration.Designer.cs">
+      <DependentUpon>frmMetalizedWegithRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetalizeOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetalizeOrderList.Designer.cs">
+      <DependentUpon>frmMetalizeOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetallizedOrderReaload.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetallizedOrderReaload.Designer.cs">
+      <DependentUpon>frmMetallizedOrderReaload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMetallizedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMetallizedReport.Designer.cs">
+      <DependentUpon>frmMetallizedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillList.Designer.cs">
+      <DependentUpon>frmMillList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillMaterialSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillMaterialSend.Designer.cs">
+      <DependentUpon>frmMillMaterialSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillOrder.Designer.cs">
+      <DependentUpon>frmMillOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillPalletReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillPalletReport.Designer.cs">
+      <DependentUpon>frmMillPalletReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillProduction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillProduction.Designer.cs">
+      <DependentUpon>frmMillProduction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMillProductionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMillProductionReport.Designer.cs">
+      <DependentUpon>frmMillProductionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovementReportbyDate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovementReportbyDate.Designer.cs">
+      <DependentUpon>frmMovementReportbyDate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMovementReportbyDateView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMovementReportbyDateView.Designer.cs">
+      <DependentUpon>frmMovementReportbyDateView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNationalPalletShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNationalPalletShipping.Designer.cs">
+      <DependentUpon>frmNationalPalletShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCoil.Designer.cs">
+      <DependentUpon>frmNewCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewCoilRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewCoilRegistration.Designer.cs">
+      <DependentUpon>frmNewCoilRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewMainCoilRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewMainCoilRegister.Designer.cs">
+      <DependentUpon>frmNewMainCoilRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewPalletRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPalletRegistration.Designer.cs">
+      <DependentUpon>frmNewPalletRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingList.Designer.cs">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackingListReportPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingListReportPL.Designer.cs">
+      <DependentUpon>frmPackingListReportPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletDetail.Designer.cs">
+      <DependentUpon>frmPalletDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletDetailTraceability.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletDetailTraceability.Designer.cs">
+      <DependentUpon>frmPalletDetailTraceability.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletList.Designer.cs">
+      <DependentUpon>frmPalletList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletListPreShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletListPreShipping.Designer.cs">
+      <DependentUpon>frmPalletListPreShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletListReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletListReportView.Designer.cs">
+      <DependentUpon>frmPalletListReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletPreShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletPreShipping.Designer.cs">
+      <DependentUpon>frmPalletPreShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletPreShippingDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletPreShippingDetail.Designer.cs">
+      <DependentUpon>frmPalletPreShippingDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackingListReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingListReport.Designer.cs">
+      <DependentUpon>frmPackingListReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletPreShippingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletPreShippingReport.Designer.cs">
+      <DependentUpon>frmPalletPreShippingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletPreShippingReportPL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletPreShippingReportPL.Designer.cs">
+      <DependentUpon>frmPalletPreShippingReportPL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPLChile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPLChile.Designer.cs">
+      <DependentUpon>frmPLChile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPosition.Designer.cs">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionOrderClose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionOrderClose.Designer.cs">
+      <DependentUpon>frmProductionOrderClose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductionOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductionOrderDetails.Designer.cs">
+      <DependentUpon>frmProductionOrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductList.Designer.cs">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductListShort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductListShort.Designer.cs">
+      <DependentUpon>frmProductListShort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProductsForm.Designer.cs">
+      <DependentUpon>frmProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProviderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProviderForm.Designer.cs">
+      <DependentUpon>frmProviderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProviderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProviderList.Designer.cs">
+      <DependentUpon>frmProviderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurchaseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurchaseOrder.Designer.cs">
+      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterial.Designer.cs">
+      <DependentUpon>frmRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialConsumptionByExtruder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialConsumptionByExtruder.Designer.cs">
+      <DependentUpon>frmRawMaterialConsumptionByExtruder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialEdit.Designer.cs">
+      <DependentUpon>frmRawMaterialEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialMovementsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialMovementsReport.Designer.cs">
+      <DependentUpon>frmRawMaterialMovementsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialSelector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialSelector.Designer.cs">
+      <DependentUpon>frmRawMaterialSelector.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecordProductionMwView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecordProductionMwView.Designer.cs">
+      <DependentUpon>frmRecordProductionMwView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRecordProductionReportView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecordProductionReportView.Designer.cs">
+      <DependentUpon>frmRecordProductionReportView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegisterCoilPalletsImported.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegisterCoilPalletsImported.Designer.cs">
+      <DependentUpon>frmRegisterCoilPalletsImported.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRewindCoil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRewindCoil.Designer.cs">
+      <DependentUpon>frmRewindCoil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRewinedReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRewinedReport.Designer.cs">
+      <DependentUpon>frmRewinedReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesOrderDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesOrderDetail.Designer.cs">
+      <DependentUpon>frmSalesOrderDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesOrderForm.Designer.cs">
+      <DependentUpon>frmSalesOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesOrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesOrderList.Designer.cs">
+      <DependentUpon>frmSalesOrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSalesOrderListForPackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSalesOrderListForPackingList.Designer.cs">
+      <DependentUpon>frmSalesOrderListForPackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapExtrusionReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapExtrusionReport.Designer.cs">
+      <DependentUpon>frmScrapExtrusionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapMainCoilSend.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapMainCoilSend.Designer.cs">
+      <DependentUpon>frmScrapMainCoilSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapMovementsReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapMovementsReport.Designer.cs">
+      <DependentUpon>frmScrapMovementsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapNotifications.Designer.cs">
+      <DependentUpon>frmScrapNotifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapPalletReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapPalletReport.Designer.cs">
+      <DependentUpon>frmScrapPalletReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScrapPalletStockReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScrapPalletStockReport.Designer.cs">
+      <DependentUpon>frmScrapPalletStockReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwapPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwapPallet.Designer.cs">
+      <DependentUpon>frmSwapPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSwapScrapPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSwapScrapPallet.Designer.cs">
+      <DependentUpon>frmSwapScrapPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecundaryCuttingOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecundaryCuttingOrder.Designer.cs">
+      <DependentUpon>frmSecundaryCuttingOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecundaryCuttingOrderMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecundaryCuttingOrderMultiple.Designer.cs">
+      <DependentUpon>frmSecundaryCuttingOrderMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShippingManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShippingManager.Designer.cs">
+      <DependentUpon>frmShippingManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleStockPalletsRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleStockPalletsRegistration.Designer.cs">
+      <DependentUpon>frmSingleStockPalletsRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCoilCellarMovementsBCK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCoilCellarMovementsBCK.Designer.cs">
+      <DependentUpon>frmCoilCellarMovementsBCK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockPalletsRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockPalletsRegistration.Designer.cs">
+      <DependentUpon>frmStockPalletsRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletRegistration.Designer.cs">
+      <DependentUpon>frmPalletRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddNewStockPallet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddNewStockPallet.Designer.cs">
+      <DependentUpon>frmAddNewStockPallet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCuttingOrderSummary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderSummary.Designer.cs">
+      <DependentUpon>frmCuttingOrderSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDatabaseConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDatabaseConfig.Designer.cs">
+      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletsRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletsRegistration.Designer.cs">
+      <DependentUpon>frmPalletsRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmValidatePackingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmValidatePackingList.Designer.cs">
+      <DependentUpon>frmValidatePackingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWidth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWidth.Designer.cs">
+      <DependentUpon>frmWidth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\frmTempLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Helper\frmTempLogin.Designer.cs">
+      <DependentUpon>frmTempLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputRawMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputRawMaterial.Designer.cs">
+      <DependentUpon>frmInputRawMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioPallets.cs">
+      <DependentUpon>InventarioPallets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InventarioPallets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InventarioPallets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PruebaFechas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PruebaFechas.Designer.cs">
+      <DependentUpon>PruebaFechas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PruebaMail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PruebaMail.Designer.cs">
+      <DependentUpon>PruebaMail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\rptCodigosBodegas.cs">
+      <DependentUpon>rptCodigosBodegas.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderSummaryD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCuttingOrderSummaryD.Designer.cs">
+      <DependentUpon>frmCuttingOrderSummaryD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletRegistrationD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletRegistrationD.Designer.cs">
+      <DependentUpon>frmPalletRegistrationD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPalletsRegistrationD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPalletsRegistrationD.Designer.cs">
+      <DependentUpon>frmPalletsRegistrationD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCoilLabelPL.cs">
+      <DependentUpon>rptCoilLabelPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCoilLabelEPL.cs">
+      <DependentUpon>rptCoilLabelEPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCoilLabelObservationPL.cs">
+      <DependentUpon>rptCoilLabelObservationPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptMetalizedCoilPL.cs">
+      <DependentUpon>rptMetalizedCoilPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptPackingListPL.cs">
+      <DependentUpon>rptPackingListPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptPalletLabelPL.cs">
+      <DependentUpon>rptPalletLabelPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptPalletLabelSpecialPL.cs">
+      <DependentUpon>rptPalletLabelSpecialPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptPalletPreShippingPL.cs">
+      <DependentUpon>rptPalletPreShippingPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptRawPalletLabelPL.cs">
+      <DependentUpon>rptRawPalletLabelPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptScrapLabelPL.cs">
+      <DependentUpon>rptScrapLabelPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptNewPackingList.cs">
+      <DependentUpon>rptNewPackingList.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPredespacho.cs">
+      <DependentUpon>rptPredespacho.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptRawPalletLabel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptRawPalletLabel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptScrapLabel.cs">
+      <DependentUpon>rptScrapLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelSpecial2.cs">
+      <DependentUpon>rptCoilLabelSpecial2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabel.cs">
+      <DependentUpon>rptCoilLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoilLabelE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoilLabelM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelObservation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoilLabelObservation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelObservationM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoilLabelObservationM.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptCoilLabelSpecial.cs">
+      <DependentUpon>rptCoilLabelSpecial.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCuttingOrderByMainCoil.cs">
+      <DependentUpon>rptCuttingOrderByMainCoil.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCuttingOrderList.cs">
+      <DependentUpon>rptCuttingOrderList.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptCuttingOrdersPL.cs">
+      <DependentUpon>rptCuttingOrdersPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptCuttingOrders.cs">
+      <DependentUpon>rptCuttingOrders.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptFormulationReport.cs">
+      <DependentUpon>rptFormulationReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMainCoilOutline.cs">
+      <DependentUpon>rptMainCoilOutline.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Pilar\rptMainCoilQualityPL.cs">
+      <DependentUpon>rptMainCoilQualityPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMainCoilQuality.cs">
+      <DependentUpon>rptMainCoilQuality.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMainCoilSimpleLabel.cs">
+      <DependentUpon>rptMainCoilSimpleLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMainCoilStock.cs">
+      <DependentUpon>rptMainCoilStock.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptOppCoilLabel.cs">
+      <DependentUpon>rptOppCoilLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPackingList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPackingList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptPackingListReport.cs">
+      <DependentUpon>rptPackingListReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelSpecial3.cs">
+      <DependentUpon>rptPalletLabelSpecial3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelSpecial.cs">
+      <DependentUpon>rptPalletLabelSpecial.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelObs.cs">
+      <DependentUpon>rptPalletLabelObs.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelSpecialCustomer.cs">
+      <DependentUpon>rptPalletLabelSpecialCustomer.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletMillListByDate.cs">
+      <DependentUpon>rptPalletMillListByDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletPreShippingPL.cs">
+      <DependentUpon>rptPalletPreShippingPL.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletPreShipping.cs">
+      <DependentUpon>rptPalletPreShipping.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptRawMaterial.cs">
+      <DependentUpon>rptRawMaterial.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptMaquileLabel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMaquileLabel.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMetalizedCoil.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedCoil.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMetalizedCoilLow.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedCoilLow.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMetalizedDeadTimeShort.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedDeadTimeShort.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMetalizedPressionDeadTime.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedPressionDeadTime.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMetalizedProduction.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMetalizedProduction.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMillPallet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptMillPallet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\rptMixedPalletLabel.cs">
+      <DependentUpon>rptMixedPalletLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelSpecial2.cs">
+      <DependentUpon>rptPalletLabelSpecial2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabelTest.cs">
+      <DependentUpon>rptPalletLabelTest.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptOppPalletLabel.cs">
+      <DependentUpon>rptOppPalletLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptIncompletePalletLabel.cs">
+      <DependentUpon>rptIncompletePalletLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletLabel.cs">
+      <DependentUpon>rptPalletLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptPalletMovementByDate.cs">
+      <DependentUpon>rptPalletMovementByDate.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptRecordProductionDMT.cs">
+      <DependentUpon>rptRecordProductionDMT.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptRecordProductionMW.cs">
+      <DependentUpon>rptRecordProductionMW.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptUnifiedPackingListReport.cs">
+      <DependentUpon>rptUnifiedPackingListReport.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Romaneo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Romaneo.Designer.cs">
+      <DependentUpon>Romaneo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rptCoilLabelObservationM.cs">
+      <DependentUpon>rptCoilLabelObservationM.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="rptPalletListByDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptPalletListByDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmABMSupplier.resx">
+      <DependentUpon>frmABMSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewPalletType.resx">
+      <DependentUpon>frmAddNewPalletType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddRawMaterialSelector.resx">
+      <DependentUpon>frmAddRawMaterialSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAltaSupplier.resx">
+      <DependentUpon>frmAltaSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBackLoad.resx">
+      <DependentUpon>frmBackLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChangeMetalLotNumber.resx">
+      <DependentUpon>frmChangeMetalLotNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilCellarMovementsA.resx">
+      <DependentUpon>frmCoilCellarMovementsA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilCellarMovements.resx">
+      <DependentUpon>frmCoilCellarMovements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilCellarReturnsD.resx">
+      <DependentUpon>frmCoilCellarReturnsD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilCellarReturnsReport.resx">
+      <DependentUpon>frmCoilCellarReturnsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilDetail.resx">
+      <DependentUpon>frmCoilDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilEditor.resx">
+      <DependentUpon>frmCoilEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilHistory.resx">
+      <DependentUpon>frmCoilHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilRegistration.resx">
+      <DependentUpon>frmCoilRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilsInProcess.resx">
+      <DependentUpon>frmCoilsInProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilsWhitoutPallets.resx">
+      <DependentUpon>frmCoilsWhitoutPallets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilToInProcessCoilCellar.resx">
+      <DependentUpon>frmCoilToInProcessCoilCellar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilToMetallizedRack.resx">
+      <DependentUpon>frmCoilToMetallizedRack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilTraceability.resx">
+      <DependentUpon>frmCoilTraceability.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerForm.resx">
+      <DependentUpon>frmCustomerForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomerList.resx">
+      <DependentUpon>frmCustomerList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomizedMessageBox.resx">
+      <DependentUpon>frmCustomizedMessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCutterSelector.resx">
+      <DependentUpon>frmCutterSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrder.resx">
+      <DependentUpon>frmCuttingOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderDetail.resx">
+      <DependentUpon>frmCuttingOrderDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderList.resx">
+      <DependentUpon>frmCuttingOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderListReport.resx">
+      <DependentUpon>frmCuttingOrderListReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderMultiple.resx">
+      <DependentUpon>frmCuttingOrderMultiple.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderMultipleCast.resx">
+      <DependentUpon>frmCuttingOrderMultipleCast.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderNotes.resx">
+      <DependentUpon>frmCuttingOrderNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderNotification.resx">
+      <DependentUpon>frmCuttingOrderNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderPalletType.resx">
+      <DependentUpon>frmCuttingOrderPalletType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderReportView.resx">
+      <DependentUpon>frmCuttingOrderReportView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrdersReport.resx">
+      <DependentUpon>frmCuttingOrdersReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingTrazability.resx">
+      <DependentUpon>frmCuttingTrazability.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompleteCoilInventory.resx">
+      <DependentUpon>frmCompleteCoilInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepotHistoryReport.resx">
+      <DependentUpon>frmDepotHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepotPalletHistory.resx">
+      <DependentUpon>frmDepotPalletHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportacionPeru.resx">
+      <DependentUpon>frmImportacionPeru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportReport.resx">
+      <DependentUpon>frmImportReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewMetalCoil.resx">
+      <DependentUpon>frmNewMetalCoil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewMetallizedCoils.resx">
+      <DependentUpon>frmNewMetallizedCoils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPallet.resx">
+      <DependentUpon>frmNewPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPalletMovement.resx">
+      <DependentUpon>frmNewPalletMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPreShippingList.resx">
+      <DependentUpon>frmNewPreShippingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPreshippingReport.resx">
+      <DependentUpon>frmNewPreshippingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewShippings.resx">
+      <DependentUpon>frmNewShippings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperativeConditionMetalizedReport.resx">
+      <DependentUpon>frmOperativeConditionMetalizedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOperativeConditionsMetalized.resx">
+      <DependentUpon>frmOperativeConditionsMetalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPaletized.resx">
+      <DependentUpon>frmPaletized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCompletePalletInventory.resx">
+      <DependentUpon>frmCompletePalletInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletCellarReturn.resx">
+      <DependentUpon>frmPalletCellarReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletForDispatch.resx">
+      <DependentUpon>frmPalletForDispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletMovement.resx">
+      <DependentUpon>frmPalletMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletQuery.resx">
+      <DependentUpon>frmPalletQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPCPTProductionControl.resx">
+      <DependentUpon>frmPCPTProductionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPCPTProductionControlMP.resx">
+      <DependentUpon>frmPCPTProductionControlMP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPDSelect.resx">
+      <DependentUpon>frmPDSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionControl.resx">
+      <DependentUpon>frmProductionControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionControlPerDate.resx">
+      <DependentUpon>frmProductionControlPerDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionControlPerTurn.resx">
+      <DependentUpon>frmProductionControlPerTurn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRackHistory.resx">
+      <DependentUpon>frmRackHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletMovementReport.resx">
+      <DependentUpon>frmPalletMovementReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawDepotHistory.resx">
+      <DependentUpon>frmRawDepotHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialDepositState.resx">
+      <DependentUpon>frmRawMaterialDepositState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialDispatch.resx">
+      <DependentUpon>frmRawMaterialDispatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialDispatchReport.resx">
+      <DependentUpon>frmRawMaterialDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialEntryReport.resx">
+      <DependentUpon>frmRawMaterialEntryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialInputManualCopy.resx">
+      <DependentUpon>frmRawMaterialInputManualCopy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialInputManual.resx">
+      <DependentUpon>frmRawMaterialInputManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialPalletSon.resx">
+      <DependentUpon>frmRawMaterialPalletSon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialRePrintLabel.resx">
+      <DependentUpon>frmRawMaterialRePrintLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialStockByDate.resx">
+      <DependentUpon>frmRawMaterialStockByDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialSwapReport.resx">
+      <DependentUpon>frmRawMaterialSwapReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelabelFilmEquivalences.resx">
+      <DependentUpon>frmRelabelFilmEquivalences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRelabelToStock.resx">
+      <DependentUpon>frmRelabelToStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReprocessCoilReport.resx">
+      <DependentUpon>frmReprocessCoilReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReviveOrKillCoil.resx">
+      <DependentUpon>frmReviveOrKillCoil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapIntercellarMovement.resx">
+      <DependentUpon>frmScrapIntercellarMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapPalletSwapReport.resx">
+      <DependentUpon>frmScrapPalletSwapReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecundaryRackHistory.resx">
+      <DependentUpon>frmSecundaryRackHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShippingReport.resx">
+      <DependentUpon>frmShippingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShippingReportByCoil.resx">
+      <DependentUpon>frmShippingReportByCoil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwapPalletPositionCamp.resx">
+      <DependentUpon>frmSwapPalletPositionCamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwapRawPallet.resx">
+      <DependentUpon>frmSwapRawPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwapReport.resx">
+      <DependentUpon>frmSwapReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExtrusionReport.resx">
+      <DependentUpon>frmExtrusionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingReport.resx">
+      <DependentUpon>frmCuttingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeadTime.resx">
+      <DependentUpon>frmDeadTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeadTimeGroup.resx">
+      <DependentUpon>frmDeadTimeGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDeadTimeMill.resx">
+      <DependentUpon>frmDeadTimeMill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDecreaseSelector.resx">
+      <DependentUpon>frmDecreaseSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepotIn.resx">
+      <DependentUpon>frmDepotIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepotOut.resx">
+      <DependentUpon>frmDepotOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDepotState.resx">
+      <DependentUpon>frmDepotState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEfficiencyPerCuttingNumberAndPosition.resx">
+      <DependentUpon>frmEfficiencyPerCuttingNumberAndPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExecuteChangeSalesOrder.resx">
+      <DependentUpon>frmExecuteChangeSalesOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormulationReport.resx">
+      <DependentUpon>frmFormulationReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormulationsBoppForm.resx">
+      <DependentUpon>frmFormulationsBoppForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormulationsCastForm.resx">
+      <DependentUpon>frmFormulationsCastForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportRawMaterial.resx">
+      <DependentUpon>frmImportRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmImportRawMaterialGranel.resx">
+      <DependentUpon>frmImportRawMaterialGranel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInProcessCoils.resx">
+      <DependentUpon>frmInProcessCoils.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInterCellarMovement.resx">
+      <DependentUpon>frmInterCellarMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInternationalSalesOrderDetail.resx">
+      <DependentUpon>frmInternationalSalesOrderDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInternationalSalesOrderForm.resx">
+      <DependentUpon>frmInternationalSalesOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInternationalSalesOrderList.resx">
+      <DependentUpon>frmInternationalSalesOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoil.resx">
+      <DependentUpon>frmMainCoil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilMetalized.resx">
+      <DependentUpon>frmMainCoilMetalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilMetalList.resx">
+      <DependentUpon>frmMainCoilMetalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilMetalStock.resx">
+      <DependentUpon>frmMainCoilMetalStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilOutline.resx">
+      <DependentUpon>frmMainCoilOutline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilQualityReport.resx">
+      <DependentUpon>frmMainCoilQualityReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilRegister.resx">
+      <DependentUpon>frmMainCoilRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilStock.resx">
+      <DependentUpon>frmMainCoilStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilStockReport.resx">
+      <DependentUpon>frmMainCoilStockReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilWegith.resx">
+      <DependentUpon>frmMainCoilWegith.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManagerList.resx">
+      <DependentUpon>frmManagerList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetalizedOrderDetail.resx">
+      <DependentUpon>frmMetalizedOrderDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetalizedPressionDeadTimeReport.resx">
+      <DependentUpon>frmMetalizedPressionDeadTimeReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetalizedProdutionReport.resx">
+      <DependentUpon>frmMetalizedProdutionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetalizedWegithRegistration.resx">
+      <DependentUpon>frmMetalizedWegithRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetalizeOrderList.resx">
+      <DependentUpon>frmMetalizeOrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetallizedOrderReaload.resx">
+      <DependentUpon>frmMetallizedOrderReaload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMetallizedReport.resx">
+      <DependentUpon>frmMetallizedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillList.resx">
+      <DependentUpon>frmMillList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillMaterialSend.resx">
+      <DependentUpon>frmMillMaterialSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillOrder.resx">
+      <DependentUpon>frmMillOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillPalletReport.resx">
+      <DependentUpon>frmMillPalletReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillProduction.resx">
+      <DependentUpon>frmMillProduction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMillProductionReport.resx">
+      <DependentUpon>frmMillProductionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovementReportbyDate.resx">
+      <DependentUpon>frmMovementReportbyDate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMovementReportbyDateView.resx">
+      <DependentUpon>frmMovementReportbyDateView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNationalPalletShipping.resx">
+      <DependentUpon>frmNationalPalletShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCoil.resx">
+      <DependentUpon>frmNewCoil.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewCoilRegistration.resx">
+      <DependentUpon>frmNewCoilRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewMainCoilRegister.resx">
+      <DependentUpon>frmNewMainCoilRegister.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPalletRegistration.resx">
+      <DependentUpon>frmNewPalletRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackingList.resx">
+      <DependentUpon>frmPackingList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackingListReportPL.resx">
+      <DependentUpon>frmPackingListReportPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletDetail.resx">
+      <DependentUpon>frmPalletDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletDetailTraceability.resx">
+      <DependentUpon>frmPalletDetailTraceability.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletList.resx">
+      <DependentUpon>frmPalletList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletListPreShipping.resx">
+      <DependentUpon>frmPalletListPreShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletListReportView.resx">
+      <DependentUpon>frmPalletListReportView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletPreShipping.resx">
+      <DependentUpon>frmPalletPreShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletPreShippingDetail.resx">
+      <DependentUpon>frmPalletPreShippingDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackingListReport.resx">
+      <DependentUpon>frmPackingListReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletPreShippingReport.resx">
+      <DependentUpon>frmPalletPreShippingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletPreShippingReportPL.resx">
+      <DependentUpon>frmPalletPreShippingReportPL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPLChile.resx">
+      <DependentUpon>frmPLChile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPosition.resx">
+      <DependentUpon>frmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionOrderClose.resx">
+      <DependentUpon>frmProductionOrderClose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductionOrderDetails.resx">
+      <DependentUpon>frmProductionOrderDetails.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductList.resx">
+      <DependentUpon>frmProductList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductListShort.resx">
+      <DependentUpon>frmProductListShort.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProductsForm.resx">
+      <DependentUpon>frmProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProviderForm.resx">
+      <DependentUpon>frmProviderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProviderList.resx">
+      <DependentUpon>frmProviderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurchaseOrder.resx">
+      <DependentUpon>frmPurchaseOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterial.resx">
+      <DependentUpon>frmRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialConsumptionByExtruder.resx">
+      <DependentUpon>frmRawMaterialConsumptionByExtruder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialEdit.resx">
+      <DependentUpon>frmRawMaterialEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialMovementsReport.resx">
+      <DependentUpon>frmRawMaterialMovementsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialSelector.resx">
+      <DependentUpon>frmRawMaterialSelector.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordProductionMwView.resx">
+      <DependentUpon>frmRecordProductionMwView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecordProductionReportView.resx">
+      <DependentUpon>frmRecordProductionReportView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegisterCoilPalletsImported.resx">
+      <DependentUpon>frmRegisterCoilPalletsImported.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRewindCoil.resx">
+      <DependentUpon>frmRewindCoil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRewinedReport.resx">
+      <DependentUpon>frmRewinedReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesOrderDetail.resx">
+      <DependentUpon>frmSalesOrderDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesOrderForm.resx">
+      <DependentUpon>frmSalesOrderForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesOrderList.resx">
+      <DependentUpon>frmSalesOrderList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSalesOrderListForPackingList.resx">
+      <DependentUpon>frmSalesOrderListForPackingList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapExtrusionReport.resx">
+      <DependentUpon>frmScrapExtrusionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapMainCoilSend.resx">
+      <DependentUpon>frmScrapMainCoilSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapMovementsReport.resx">
+      <DependentUpon>frmScrapMovementsReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapNotifications.resx">
+      <DependentUpon>frmScrapNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapPalletReport.resx">
+      <DependentUpon>frmScrapPalletReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScrapPalletStockReport.resx">
+      <DependentUpon>frmScrapPalletStockReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwapPallet.resx">
+      <DependentUpon>frmSwapPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSwapScrapPallet.resx">
+      <DependentUpon>frmSwapScrapPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecundaryCuttingOrder.resx">
+      <DependentUpon>frmSecundaryCuttingOrder.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecundaryCuttingOrderMultiple.resx">
+      <DependentUpon>frmSecundaryCuttingOrderMultiple.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShippingManager.resx">
+      <DependentUpon>frmShippingManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleStockPalletsRegistration.resx">
+      <DependentUpon>frmSingleStockPalletsRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCoilCellarMovementsBCK.resx">
+      <DependentUpon>frmCoilCellarMovementsBCK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockPalletsRegistration.resx">
+      <DependentUpon>frmStockPalletsRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletRegistration.resx">
+      <DependentUpon>frmPalletRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddNewStockPallet.resx">
+      <DependentUpon>frmAddNewStockPallet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderSummary.resx">
+      <DependentUpon>frmCuttingOrderSummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDatabaseConfig.resx">
+      <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletsRegistration.resx">
+      <DependentUpon>frmPalletsRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmValidatePackingList.resx">
+      <DependentUpon>frmValidatePackingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Helper\frmTempLogin.resx">
+      <DependentUpon>frmTempLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputRawMaterial.resx">
+      <DependentUpon>frmInputRawMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="PruebaFechas.resx">
+      <DependentUpon>PruebaFechas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PruebaMail.resx">
+      <DependentUpon>PruebaMail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCodigosBodegas.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCodigosBodegas.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCuttingOrderSummaryD.resx">
+      <DependentUpon>frmCuttingOrderSummaryD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletRegistrationD.resx">
+      <DependentUpon>frmPalletRegistrationD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPalletsRegistrationD.resx">
+      <DependentUpon>frmPalletsRegistrationD.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCoilLabelPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCoilLabelEPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelEPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCoilLabelObservationPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelObservationPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptMetalizedCoilPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedCoilPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptPackingListPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPackingListPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptPalletLabelPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptPalletLabelSpecialPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelSpecialPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptPalletPreShippingPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletPreShippingPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptRawPalletLabelPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRawPalletLabelPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptScrapLabelPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptScrapLabelPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptNewPackingList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNewPackingList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPredespacho.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPredespacho.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptRawPalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRawPalletLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptScrapLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptScrapLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelSpecial2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelSpecial2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelE.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelObservation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelObservation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelObservationM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelObservationM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCoilLabelSpecial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelSpecial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCuttingOrderByMainCoil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuttingOrderByMainCoil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCuttingOrderList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuttingOrderList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptCuttingOrdersPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuttingOrdersPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptCuttingOrders.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCuttingOrders.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptFormulationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptFormulationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMainCoilOutline.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilOutline.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Pilar\rptMainCoilQualityPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQualityPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMainCoilQuality.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilQuality.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMainCoilSimpleLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilSimpleLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMainCoilStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptOppCoilLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOppCoilLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPackingList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPackingList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPackingListReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPackingListReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelSpecial3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelSpecial3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelSpecial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelSpecial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelObs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelObs.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelSpecialCustomer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelSpecialCustomer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletMillListByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletMillListByDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletPreShippingPL.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletPreShippingPL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletPreShipping.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletPreShipping.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptRawMaterial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRawMaterial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMaquileLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMaquileLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMetalizedCoil.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedCoil.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMetalizedCoilLow.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedCoilLow.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMetalizedDeadTimeShort.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedDeadTimeShort.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMetalizedPressionDeadTime.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedPressionDeadTime.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMetalizedProduction.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMetalizedProduction.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMillPallet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMillPallet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptMixedPalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMixedPalletLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelSpecial2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelSpecial2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabelTest.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabelTest.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptOppPalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptOppPalletLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptIncompletePalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptIncompletePalletLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptPalletMovementByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletMovementByDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptRecordProductionDMT.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecordProductionDMT.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptRecordProductionMW.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptRecordProductionMW.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptUnifiedPackingListReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptUnifiedPackingListReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Romaneo.resx">
+      <DependentUpon>Romaneo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptCoilLabelObservationM.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoilLabelObservationM.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptPalletListByDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptPalletListByDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="BPS.Lite_1_TemporaryKey.pfx" />
+    <None Include="BPS.Lite_TemporaryKey.pfx" />
+    <None Include="InventarioPallets.xsc">
+      <DependentUpon>InventarioPallets.xsd</DependentUpon>
+    </None>
+    <None Include="InventarioPallets.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InventarioPallets.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InventarioPallets.xss">
+      <DependentUpon>InventarioPallets.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="engine.xml" />
+    <Content Include="Factory-Yellow.ico" />
+    <Content Include="Resources\accept.png" />
+    <Content Include="Resources\action delete sharp thin.png" />
+    <Content Include="Resources\Add.png" />
+    <Content Include="Resources\add1.png" />
+    <Content Include="Resources\add32x32.png" />
+    <Content Include="Resources\add_coil.png" />
+    <Content Include="Resources\add_coil24.png" />
+    <Content Include="Resources\add_thermo.png" />
+    <None Include="Resources\adt.png" />
+    <Content Include="Resources\aero-blue-abstract-wallpaper.jpg" />
+    <Content Include="Resources\applications.png" />
+    <Content Include="Resources\application_go.png" />
+    <Content Include="Resources\arrow-circle-double.png" />
+    <Content Include="Resources\arrow-curve.png" />
+    <Content Include="Resources\arrow-incoming.png" />
+    <Content Include="Resources\arrow-outgoing.png" />
+    <None Include="Resources\arrow_down.png" />
+    <Content Include="Resources\arrow_left.png" />
+    <Content Include="Resources\arrow_left_red.png" />
+    <Content Include="Resources\arrow_refresh.png" />
+    <Content Include="Resources\arrow_refresh1.png" />
+    <Content Include="Resources\arrow_right.png" />
+    <Content Include="Resources\arrow_right_gray.png" />
+    <Content Include="Resources\arrow_right_orange.png" />
+    <None Include="Resources\arrow_up.png" />
+    <Content Include="Resources\back.jpg" />
+    <None Include="Resources\back.png" />
+    <Content Include="Resources\balance.png" />
+    <Content Include="Resources\blog.png" />
+    <None Include="Resources\BLURAY.png" />
+    <Content Include="Resources\boppex.png" />
+    <Content Include="Resources\box.png" />
+    <Content Include="Resources\box1.png" />
+    <Content Include="Resources\bricks.png" />
+    <None Include="Resources\bullet_green.png" />
+    <None Include="Resources\Bullet_red.bmp" />
+    <None Include="Resources\bullet_orange.png" />
+    <None Include="Resources\bullet_red.png" />
+    <Content Include="Resources\calendar.png" />
+    <Content Include="Resources\calendar_2.png" />
+    <Content Include="Resources\cancel.png" />
+    <Content Include="Resources\cancel1.png" />
+    <Content Include="Resources\cart.png" />
+    <Content Include="Resources\cart_add.png" />
+    <Content Include="Resources\chart_line.png" />
+    <Content Include="Resources\check.png" />
+    <Content Include="Resources\clear.png" />
+    <Content Include="Resources\clipboard_text.png" />
+    <Content Include="Resources\Close32x32.png" />
+    <Content Include="Resources\coilCut.png" />
+    <Content Include="Resources\coilMill.bmp" />
+    <Content Include="Resources\coilMill.png" />
+    <Content Include="Resources\coils.png" />
+    <Content Include="Resources\coils1.png" />
+    <Content Include="Resources\coilSecundaryCut.png" />
+    <None Include="Resources\control_stop.png" />
+    <None Include="Resources\control_pause.png" />
+    <None Include="Resources\control_play.png" />
+    <Content Include="Resources\cross.png" />
+    <Content Include="Resources\cut.png" />
+    <Content Include="Resources\database_add.png" />
+    <Content Include="Resources\database_table.png" />
+    <Content Include="Resources\delete_32.png" />
+    <Content Include="Resources\delivery.png" />
+    <None Include="Resources\delivery1.png" />
+    <None Include="Resources\delivery2.png" />
+    <None Include="Resources\delivery3.png" />
+    <Content Include="Resources\disk.png" />
+    <Content Include="Resources\document_edit.png" />
+    <Content Include="Resources\doc_closed.png" />
+    <Content Include="Resources\doc_excel_table.png" />
+    <Content Include="Resources\door_in.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\errorpng.png" />
+    <Content Include="Resources\eye.png" />
+    <None Include="Resources\folder.png" />
+    <Content Include="Resources\funnel.png" />
+    <Content Include="Resources\funnel_clear.png" />
+    <Content Include="Resources\gear_16.png" />
+    <Content Include="Resources\gear_32.png" />
+    <Content Include="Resources\hammer_screwdriver.png" />
+    <Content Include="Resources\heigth.png" />
+    <Content Include="Resources\info_16.png" />
+    <Content Include="Resources\key.png" />
+    <Content Include="Resources\layout_content.png" />
+    <Content Include="Resources\length.png" />
+    <Content Include="Resources\lightning.png" />
+    <None Include="Resources\loading6.gif" />
+    <Content Include="Resources\lock.png" />
+    <Content Include="Resources\lock1.png" />
+    <Content Include="Resources\locktoclose.png" />
+    <Content Include="Resources\lock_open.png" />
+    <Content Include="Resources\login.png" />
+    <None Include="Resources\login2.png" />
+    <None Include="Resources\login3.png" />
+    <Content Include="Resources\magnifier.png" />
+    <Content Include="Resources\mainCoil.png" />
+    <Content Include="Resources\mainCoil1.png" />
+    <Content Include="Resources\MDatabase.png" />
+    <Content Include="Resources\MDeadTime.png" />
+    <Content Include="Resources\metallized.png" />
+    <Content Include="Resources\metallized2.png" />
+    <Content Include="Resources\Mill.png" />
+    <Content Include="Resources\MKatch.png" />
+    <Content Include="Resources\MPause.png" />
+    <Content Include="Resources\MPauseI.png" />
+    <Content Include="Resources\MPauseII.png" />
+    <Content Include="Resources\MPlay.png" />
+    <Content Include="Resources\MStop.png" />
+    <Content Include="Resources\MWeigth.png" />
+    <Content Include="Resources\obenmas_back.jpg" />
+    <None Include="Resources\obenMas_v2.png" />
+    <None Include="Resources\obenMas_v3.1.png" />
+    <None Include="Resources\obenMas_v3.2.jpg" />
+    <Content Include="Resources\observationCoils.png" />
+    <Content Include="Resources\ok32x32.png" />
+    <Content Include="Resources\page.png" />
+    <Content Include="Resources\page_coils.png" />
+    <None Include="Resources\page_lightning.png" />
+    <Content Include="Resources\page_out.png" />
+    <Content Include="Resources\page_white_database.png" />
+    <Content Include="Resources\page_white_gear.png" />
+    <Content Include="Resources\page_white_get.png" />
+    <Content Include="Resources\page_white_put.png" />
+    <Content Include="Resources\pallet 24.png" />
+    <Content Include="Resources\pallet.png" />
+    <Content Include="Resources\paste.png" />
+    <Content Include="Resources\Pause Hot.png" />
+    <Content Include="Resources\pause sharp.png" />
+    <Content Include="Resources\pause_24x24.png" />
+    <Content Include="Resources\pencil.png" />
+    <Content Include="Resources\pencil_32.png" />
+    <Content Include="Resources\Play Hot.png" />
+    <Content Include="Resources\play sharp.png" />
+    <Content Include="Resources\printer.png" />
+    <Content Include="Resources\quality.png" />
+    <None Include="Resources\Raw.png" />
+    <None Include="Resources\Raw1.png" />
+    <None Include="Resources\RawOut.png" />
+    <None Include="Resources\RawOut2.png" />
+    <Content Include="Resources\report.png" />
+    <Content Include="Resources\reportOff.png" />
+    <Content Include="Resources\reprocess.png" />
+    <Content Include="Resources\reprocess2.png" />
+    <None Include="Resources\ret_1.png" />
+    <None Include="Resources\Return.bmp" />
+    <Content Include="Resources\rewind.png" />
+    <None Include="Resources\ruby_delete.png" />
+    <Content Include="Resources\saldos.png" />
+    <Content Include="Resources\save_32_blue.png" />
+    <Content Include="Resources\script.png" />
+    <None Include="Resources\send.png" />
+    <Content Include="Resources\server.png" />
+    <None Include="Resources\sqlserver.png" />
+    <Content Include="Resources\shape_square.png" />
+    <Content Include="Resources\shape_square_error.png" />
+    <Content Include="Resources\shape_square_go.png" />
+    <Content Include="Resources\stopplay sharp.png" />
+    <Content Include="Resources\stop_16.png" />
+    <Content Include="Resources\storage2.png" />
+    <Content Include="Resources\sum.png" />
+    <Content Include="Resources\table.png" />
+    <None Include="Resources\textNo.png" />
+    <None Include="Resources\textOK.png" />
+    <None Include="Resources\text.png" />
+    <Content Include="Resources\thermoformed.png" />
+    <Content Include="Resources\tick_32.png" />
+    <None Include="Resources\tick_48.png" />
+    <None Include="Resources\Up.png" />
+    <Content Include="Resources\user_business.png" />
+    <Content Include="Resources\width.png" />
+    <Content Include="Resources\wooden-box.png" />
+    <Content Include="Resources\world.png" />
+    <Content Include="Resources\zone-label.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="config.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Design">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Web">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="engine.xml">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Factory-Yellow.ico">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="FlashControlV71">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="MySql.Data">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="ShockwaveFlashObjects">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="stdole">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BPS.Reporting\BPS.Reporting.csproj">
+      <Project>{092FF3D6-8792-4047-8665-BDAA01ADC1DC}</Project>
+      <Name>BPS.Reporting</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BPS.Bussiness\BPS.Business.csproj">
+      <Project>{327BEEB2-FFAB-4E05-BA38-2EBC4E11A1D3}</Project>
+      <Name>BPS.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
