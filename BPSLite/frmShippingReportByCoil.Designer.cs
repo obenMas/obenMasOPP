@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShippingReportByCoil));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.dgvShippingReport = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -40,11 +41,11 @@
             this.cmbPlants = new System.Windows.Forms.ComboBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.dgvShippingReport = new System.Windows.Forms.DataGridView();
             this.clmCoil = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOrigen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,9 +55,9 @@
             this.clmYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).BeginInit();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox7
@@ -67,6 +68,31 @@
             this.groupBox7.Size = new System.Drawing.Size(912, 417);
             this.groupBox7.TabIndex = 5;
             this.groupBox7.TabStop = false;
+            // 
+            // dgvShippingReport
+            // 
+            this.dgvShippingReport.AllowUserToAddRows = false;
+            this.dgvShippingReport.AllowUserToDeleteRows = false;
+            this.dgvShippingReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvShippingReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmCoil,
+            this.clmCliente,
+            this.clmPedido,
+            this.clmProduct,
+            this.clmOrigen,
+            this.clmPeso,
+            this.clmDate,
+            this.clmPlant,
+            this.clmRemito,
+            this.clmDay,
+            this.clmMonth,
+            this.clmYear,
+            this.clmHour});
+            this.dgvShippingReport.Location = new System.Drawing.Point(3, 16);
+            this.dgvShippingReport.Name = "dgvShippingReport";
+            this.dgvShippingReport.ReadOnly = true;
+            this.dgvShippingReport.Size = new System.Drawing.Size(903, 395);
+            this.dgvShippingReport.TabIndex = 0;
             // 
             // groupBox6
             // 
@@ -170,30 +196,6 @@
             this.btnGenerateReport.UseVisualStyleBackColor = true;
             this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
-            // dgvShippingReport
-            // 
-            this.dgvShippingReport.AllowUserToAddRows = false;
-            this.dgvShippingReport.AllowUserToDeleteRows = false;
-            this.dgvShippingReport.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvShippingReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmCoil,
-            this.clmCliente,
-            this.clmPedido,
-            this.clmProduct,
-            this.clmPeso,
-            this.clmDate,
-            this.clmPlant,
-            this.clmRemito,
-            this.clmDay,
-            this.clmMonth,
-            this.clmYear,
-            this.clmHour});
-            this.dgvShippingReport.Location = new System.Drawing.Point(3, 16);
-            this.dgvShippingReport.Name = "dgvShippingReport";
-            this.dgvShippingReport.ReadOnly = true;
-            this.dgvShippingReport.Size = new System.Drawing.Size(903, 395);
-            this.dgvShippingReport.TabIndex = 0;
-            // 
             // clmCoil
             // 
             this.clmCoil.HeaderText = "Bobina";
@@ -217,6 +219,12 @@
             this.clmProduct.HeaderText = "Producto";
             this.clmProduct.Name = "clmProduct";
             this.clmProduct.ReadOnly = true;
+            // 
+            // clmOrigen
+            // 
+            this.clmOrigen.HeaderText = "Origen";
+            this.clmOrigen.Name = "clmOrigen";
+            this.clmOrigen.ReadOnly = true;
             // 
             // clmPeso
             // 
@@ -281,9 +289,9 @@
             this.Name = "frmShippingReportByCoil";
             this.Text = "Reporte de Despachos";
             this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -306,6 +314,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOrigen;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;

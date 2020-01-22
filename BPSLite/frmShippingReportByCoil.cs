@@ -156,6 +156,7 @@ namespace BPS.Lite
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmPeso.Index].Value = DS.Tables[0].Rows[i]["peso"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmRemito.Index].Value = DS.Tables[0].Rows[i]["Remito"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmProduct.Index].Value = DS.Tables[0].Rows[i]["producto"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmOrigen.Index].Value = DS.Tables[0].Rows[i]["Origen"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmPedido.Index].Value = DS.Tables[0].Rows[i]["pedido"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmPlant.Index].Value = DS.Tables[0].Rows[i]["planta"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmHour.Index].Value = DS.Tables[0].Rows[i]["Hora"].ToString();
