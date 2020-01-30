@@ -166,14 +166,12 @@ namespace BPS
                         dgvSalesOrderControl.Rows[fila].Cells[clmDayIng.Index].Value = DS.Tables[0].Rows[i]["dayFechaIngreso"];
                         dgvSalesOrderControl.Rows[fila].Cells[clmMonthIng.Index].Value = DS.Tables[0].Rows[i]["monthFechaIngreso"];
                         dgvSalesOrderControl.Rows[fila].Cells[clmYearIng.Index].Value = DS.Tables[0].Rows[i]["yearFechaIngreso"];
-                        dgvSalesOrderControl.Rows[fila].Cells[clmHourIng.Index].Value = DS.Tables[0].Rows[i]["HoraIngreso"];
                         // Aca termina
                         dgvSalesOrderControl.Rows[fila].Cells["clmCompromiseDate"].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaEntrega2"]).ToString("dd/MM/yyyy");
                         // Agregado para el cambio de Fecha, por la movida de que excel nos lo da vuelta (GOD BLESS MICROSOFT ¬¬) ENTREGA
                         dgvSalesOrderControl.Rows[fila].Cells[clmDayEnt.Index].Value = DS.Tables[0].Rows[i]["dayFechaEntrega"];
                         dgvSalesOrderControl.Rows[fila].Cells[clmMonthEnt.Index].Value = DS.Tables[0].Rows[i]["monthFechaEntrega"];
                         dgvSalesOrderControl.Rows[fila].Cells[clmYearEnt.Index].Value = DS.Tables[0].Rows[i]["yearFechaEntrega"];
-                        dgvSalesOrderControl.Rows[fila].Cells[clmHourEnt.Index].Value = DS.Tables[0].Rows[i]["HoraEntrega"];
                         // Aca termina
                         
                         if (Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaComprometida"]).ToString("dd/MM/yyyy") != "01/01/1900")
@@ -183,7 +181,6 @@ namespace BPS
                             dgvSalesOrderControl.Rows[fila].Cells[clmDayComp.Index].Value = DS.Tables[0].Rows[i]["dayFechaComprometida"];
                             dgvSalesOrderControl.Rows[fila].Cells[clmMonthComp.Index].Value = DS.Tables[0].Rows[i]["monthFechaComprometida"];
                             dgvSalesOrderControl.Rows[fila].Cells[clmYearComp.Index].Value = DS.Tables[0].Rows[i]["yearFechaComprometida"];
-                            dgvSalesOrderControl.Rows[fila].Cells[clmHourComp.Index].Value = DS.Tables[0].Rows[i]["HoraComprometida"];
                             // Aca termina.
                         }
 
@@ -893,21 +890,18 @@ namespace BPS
             dgvSalesOrderControl.Columns["clmDayIng"].Visible = true;
             dgvSalesOrderControl.Columns["clmMonthIng"].Visible = true;
             dgvSalesOrderControl.Columns["clmYearIng"].Visible = true;
-            dgvSalesOrderControl.Columns["clmHourIng"].Visible = true;
             dgvSalesOrderControl.Columns["clmCreatedDate"].Visible = false;
 
             // Entrega
             dgvSalesOrderControl.Columns["clmDayEnt"].Visible = true;
             dgvSalesOrderControl.Columns["clmMonthEnt"].Visible = true;
             dgvSalesOrderControl.Columns["clmYearEnt"].Visible = true;
-            dgvSalesOrderControl.Columns["clmHourEnt"].Visible = true;
             dgvSalesOrderControl.Columns["clmCompromiseDate"].Visible = false;
 
             // Comprometida
             dgvSalesOrderControl.Columns["clmDayComp"].Visible = true;
             dgvSalesOrderControl.Columns["clmMonthComp"].Visible = true;
             dgvSalesOrderControl.Columns["clmYearComp"].Visible = true;
-            dgvSalesOrderControl.Columns["clmHourComp"].Visible = true;
             dgvSalesOrderControl.Columns["clmCompDate"].Visible = false;
 
             // Otif
@@ -986,20 +980,17 @@ namespace BPS
             dgvSalesOrderControl.Columns["clmDayIng"].Visible = false;
             dgvSalesOrderControl.Columns["clmMonthIng"].Visible = false;
             dgvSalesOrderControl.Columns["clmYearIng"].Visible = false;
-            dgvSalesOrderControl.Columns["clmHourIng"].Visible = false;
             dgvSalesOrderControl.Columns["clmCreatedDate"].Visible = true;
             // Entrega
             dgvSalesOrderControl.Columns["clmDayEnt"].Visible = false;
             dgvSalesOrderControl.Columns["clmMonthEnt"].Visible = false;
             dgvSalesOrderControl.Columns["clmYearEnt"].Visible = false;
-            dgvSalesOrderControl.Columns["clmHourEnt"].Visible = false;
             dgvSalesOrderControl.Columns["clmCompromiseDate"].Visible = true;
 
             // Comprometida
             dgvSalesOrderControl.Columns["clmDayComp"].Visible = false;
             dgvSalesOrderControl.Columns["clmMonthComp"].Visible = false;
             dgvSalesOrderControl.Columns["clmYearComp"].Visible = false;
-            dgvSalesOrderControl.Columns["clmHourComp"].Visible = false;
             dgvSalesOrderControl.Columns["clmCompDate"].Visible = true;
 
             // Otif
@@ -1267,25 +1258,42 @@ namespace BPS
 
             if (e.ColumnIndex == clmCompDate.Index)
             {
-                
-                    
-                DateTimeConverter date = new DateTimeConverter();
                 clsSalesOrderDetail obj = new clsSalesOrderDetail(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value));
 
                 if (dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value != null)
                 {
                     try
                     {
-                        
-                        obj.updateCompromisedDate(Convert.ToDateTime(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value));
-
-                        for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                        if(clsGlobal.LoggedUser.fkRole==9 || clsGlobal.LoggedUser.fkRole == 1)
                         {
-                            if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                            obj.updateCompromisedDate(Convert.ToDateTime(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value));
+                            bool change = false;
+                            if (obj.deliveryDate < obj.compromisedDate)
                             {
-                                DS.Tables[0].Rows[i]["FechaComprometida"] = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value.ToString(); 
+                                obj.updateOTIFDate(obj.compromisedDate);
+                                dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value;
+                                change = true;
+                            }
+
+
+                            for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                            {
+                                if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                                {
+                                    DS.Tables[0].Rows[i]["FechaComprometida"] = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value.ToString();
+                                    if (change)
+                                    {
+                                        DS.Tables[0].Rows[i]["FechaOtif"] = dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value.ToString();
+                                    }
+
+                                }
                             }
                         }
+                        else
+                        {
+                            MessageBox.Show("No tiene permisos para modificar este valor", "Modificación no permitida", MessageBoxButtons.OK);
+                        }
+                        
                     }
                     catch(FormatException ex)
                     {

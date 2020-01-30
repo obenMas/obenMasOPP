@@ -36,12 +36,7 @@
             this.btnExport = new System.Windows.Forms.Button();
             this.clmOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustommer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDateIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDayIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMonthIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmYearIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOCCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDiameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,11 +48,23 @@
             this.clmProgramationPending = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCuttingPending = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDeliveryPending = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateIn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDayIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMonthIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmYearIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDeliveredDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDayEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMonthEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYearEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDatePlanning = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDatePlanningDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDatePlanningMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDatePlanningYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateDelivery = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateDeliveryDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateDeliveryMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDateDeliveryYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmObservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBLDetail)).BeginInit();
             this.grbBLDetail.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -71,12 +78,7 @@
             this.dgvBLDetail.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmOrder,
             this.clmCustommer,
-            this.clmPlant,
-            this.clmDateIn,
-            this.clmDayIng,
-            this.clmMonthIng,
-            this.clmYearIng,
-            this.clmHourIng,
+            this.clmOCCliente,
             this.clmFilm,
             this.clmWidth,
             this.clmDiameter,
@@ -88,11 +90,23 @@
             this.clmProgramationPending,
             this.clmCuttingPending,
             this.clmDeliveryPending,
+            this.clmDateIn,
+            this.clmDayIng,
+            this.clmMonthIng,
+            this.clmYearIng,
             this.clmDeliveredDate,
             this.clmDayEnt,
             this.clmMonthEnt,
             this.clmYearEnt,
-            this.clmHourEnt});
+            this.clmDatePlanning,
+            this.clmDatePlanningDay,
+            this.clmDatePlanningMonth,
+            this.clmDatePlanningYear,
+            this.clmDateDelivery,
+            this.clmDateDeliveryDay,
+            this.clmDateDeliveryMonth,
+            this.clmDateDeliveryYear,
+            this.clmObservacion});
             this.dgvBLDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBLDetail.Location = new System.Drawing.Point(3, 16);
             this.dgvBLDetail.Name = "dgvBLDetail";
@@ -147,41 +161,10 @@
             this.clmCustommer.Name = "clmCustommer";
             this.clmCustommer.Width = 190;
             // 
-            // clmPlant
+            // clmOCCliente
             // 
-            this.clmPlant.HeaderText = "Planta";
-            this.clmPlant.Name = "clmPlant";
-            this.clmPlant.Width = 70;
-            // 
-            // clmDateIn
-            // 
-            this.clmDateIn.HeaderText = "Fecha Ingreso";
-            this.clmDateIn.Name = "clmDateIn";
-            this.clmDateIn.Width = 80;
-            // 
-            // clmDayIng
-            // 
-            this.clmDayIng.HeaderText = "Dia Ingreso";
-            this.clmDayIng.Name = "clmDayIng";
-            this.clmDayIng.Visible = false;
-            // 
-            // clmMonthIng
-            // 
-            this.clmMonthIng.HeaderText = "Mes Ingreso";
-            this.clmMonthIng.Name = "clmMonthIng";
-            this.clmMonthIng.Visible = false;
-            // 
-            // clmYearIng
-            // 
-            this.clmYearIng.HeaderText = "Año Ingreso";
-            this.clmYearIng.Name = "clmYearIng";
-            this.clmYearIng.Visible = false;
-            // 
-            // clmHourIng
-            // 
-            this.clmHourIng.HeaderText = "Hora Ingreso";
-            this.clmHourIng.Name = "clmHourIng";
-            this.clmHourIng.Visible = false;
+            this.clmOCCliente.HeaderText = "OC Cliente";
+            this.clmOCCliente.Name = "clmOCCliente";
             // 
             // clmFilm
             // 
@@ -249,35 +232,104 @@
             this.clmDeliveryPending.Name = "clmDeliveryPending";
             this.clmDeliveryPending.Width = 80;
             // 
+            // clmDateIn
+            // 
+            this.clmDateIn.HeaderText = "Fecha Ingreso";
+            this.clmDateIn.Name = "clmDateIn";
+            this.clmDateIn.Width = 80;
+            // 
+            // clmDayIng
+            // 
+            this.clmDayIng.HeaderText = "Dia Ingreso";
+            this.clmDayIng.Name = "clmDayIng";
+            this.clmDayIng.Visible = false;
+            // 
+            // clmMonthIng
+            // 
+            this.clmMonthIng.HeaderText = "Mes Ingreso";
+            this.clmMonthIng.Name = "clmMonthIng";
+            this.clmMonthIng.Visible = false;
+            // 
+            // clmYearIng
+            // 
+            this.clmYearIng.HeaderText = "Año Ingreso";
+            this.clmYearIng.Name = "clmYearIng";
+            this.clmYearIng.Visible = false;
+            // 
             // clmDeliveredDate
             // 
-            this.clmDeliveredDate.HeaderText = "Fecha Entrega";
+            this.clmDeliveredDate.HeaderText = "Fecha Solicitada";
             this.clmDeliveredDate.Name = "clmDeliveredDate";
             this.clmDeliveredDate.Width = 70;
             // 
             // clmDayEnt
             // 
-            this.clmDayEnt.HeaderText = "Dia Entrega";
+            this.clmDayEnt.HeaderText = "Dia Solicitada";
             this.clmDayEnt.Name = "clmDayEnt";
             this.clmDayEnt.Visible = false;
             // 
             // clmMonthEnt
             // 
-            this.clmMonthEnt.HeaderText = "Mes Entrega";
+            this.clmMonthEnt.HeaderText = "Mes Solicitada";
             this.clmMonthEnt.Name = "clmMonthEnt";
             this.clmMonthEnt.Visible = false;
             // 
             // clmYearEnt
             // 
-            this.clmYearEnt.HeaderText = "Año Entrega";
+            this.clmYearEnt.HeaderText = "Año Solicitada";
             this.clmYearEnt.Name = "clmYearEnt";
             this.clmYearEnt.Visible = false;
             // 
-            // clmHourEnt
+            // clmDatePlanning
             // 
-            this.clmHourEnt.HeaderText = "Hora Entrega";
-            this.clmHourEnt.Name = "clmHourEnt";
-            this.clmHourEnt.Visible = false;
+            this.clmDatePlanning.HeaderText = "Fecha Planning";
+            this.clmDatePlanning.Name = "clmDatePlanning";
+            // 
+            // clmDatePlanningDay
+            // 
+            this.clmDatePlanningDay.HeaderText = "Día Planning";
+            this.clmDatePlanningDay.Name = "clmDatePlanningDay";
+            this.clmDatePlanningDay.Visible = false;
+            // 
+            // clmDatePlanningMonth
+            // 
+            this.clmDatePlanningMonth.HeaderText = "Mes Planning";
+            this.clmDatePlanningMonth.Name = "clmDatePlanningMonth";
+            this.clmDatePlanningMonth.Visible = false;
+            // 
+            // clmDatePlanningYear
+            // 
+            this.clmDatePlanningYear.HeaderText = "Año Planning";
+            this.clmDatePlanningYear.Name = "clmDatePlanningYear";
+            this.clmDatePlanningYear.Visible = false;
+            // 
+            // clmDateDelivery
+            // 
+            this.clmDateDelivery.HeaderText = "Fecha Entrega";
+            this.clmDateDelivery.Name = "clmDateDelivery";
+            // 
+            // clmDateDeliveryDay
+            // 
+            this.clmDateDeliveryDay.HeaderText = "Dia Entrega";
+            this.clmDateDeliveryDay.Name = "clmDateDeliveryDay";
+            this.clmDateDeliveryDay.Visible = false;
+            // 
+            // clmDateDeliveryMonth
+            // 
+            this.clmDateDeliveryMonth.HeaderText = "Mes Entrega";
+            this.clmDateDeliveryMonth.Name = "clmDateDeliveryMonth";
+            this.clmDateDeliveryMonth.Visible = false;
+            // 
+            // clmDateDeliveryYear
+            // 
+            this.clmDateDeliveryYear.HeaderText = "Año Entrega";
+            this.clmDateDeliveryYear.Name = "clmDateDeliveryYear";
+            this.clmDateDeliveryYear.Visible = false;
+            // 
+            // clmObservacion
+            // 
+            this.clmObservacion.HeaderText = "Observaciones";
+            this.clmObservacion.Name = "clmObservacion";
             // 
             // frmBLDetail
             // 
@@ -306,12 +358,7 @@
         private System.Windows.Forms.Button btnExport;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCustommer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateIn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOCCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFilm;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmWidth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDiameter;
@@ -323,10 +370,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmProgramationPending;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCuttingPending;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDeliveryPending;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateIn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearIng;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDeliveredDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDayEnt;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthEnt;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYearEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourEnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDatePlanning;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDatePlanningDay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDatePlanningMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDatePlanningYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDelivery;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDeliveryDay;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDeliveryMonth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDeliveryYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmObservacion;
     }
 }

@@ -38,13 +38,12 @@ namespace BPS
                 dgvBLDetail.Rows.Add();
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmOrder.Index].Value = Convert.ToInt32(DS.Tables[0].Rows[i]["Pedido"]);
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmCustommer.Index].Value = DS.Tables[0].Rows[i]["Cliente"].ToString();
-                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmPlant.Index].Value = DS.Tables[0].Rows[i]["Planta"].ToString();
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmOCCliente.Index].Value = DS.Tables[0].Rows[i]["OCCliente"].ToString();
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateIn.Index].Value = DS.Tables[0].Rows[i]["FechaIngreso"];
                 // Fecha de Entrega agregadas.
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDayIng.Index].Value = DS.Tables[0].Rows[i]["dayFechaIngreso"];
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmMonthIng.Index].Value = DS.Tables[0].Rows[i]["monthFechaIngreso"];
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmYearIng.Index].Value = DS.Tables[0].Rows[i]["yearFechaIngreso"];
-                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmHourIng.Index].Value = DS.Tables[0].Rows[i]["HoraIngreso"];
                 // Termina Aca
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmFilm.Index].Value = DS.Tables[0].Rows[i]["Pelicula"].ToString();
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmWidth.Index].Value = Convert.ToInt32(DS.Tables[0].Rows[i]["Ancho"]);
@@ -62,8 +61,20 @@ namespace BPS
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDayEnt.Index].Value = DS.Tables[0].Rows[i]["dayFechaEntrega"];
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmMonthEnt.Index].Value = DS.Tables[0].Rows[i]["monthFechaEntrega"];
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmYearEnt.Index].Value = DS.Tables[0].Rows[i]["yearFechaEntrega"];
-                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmHourEnt.Index].Value = DS.Tables[0].Rows[i]["HoraEntrega"];
                 //Termina a aca
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDatePlanning.Index].Value = DS.Tables[0].Rows[i]["FechaPlanning"];
+                // Fechas de Entrega agregadas.
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDatePlanningDay.Index].Value = DS.Tables[0].Rows[i]["dayFechaPlanning"];
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDatePlanningMonth.Index].Value = DS.Tables[0].Rows[i]["monthFechaPlanning"];
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDatePlanningYear.Index].Value = DS.Tables[0].Rows[i]["yearFechaPlanning"];
+                //Termina a aca
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateDelivery.Index].Value = DS.Tables[0].Rows[i]["FechaOTIF"];
+                // Fechas de Entrega agregadas.
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateDeliveryDay.Index].Value = DS.Tables[0].Rows[i]["dayFechaOTIF"];
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateDeliveryMonth.Index].Value = DS.Tables[0].Rows[i]["monthFechaOTIF"];
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateDeliveryYear.Index].Value = DS.Tables[0].Rows[i]["yearFechaOTIF"];
+                //Termina a aca
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmObservacion.Index].Value = DS.Tables[0].Rows[i]["Observaciones"];
             }
         }
 
@@ -78,14 +89,22 @@ namespace BPS
             dgvBLDetail.Columns["clmDayIng"].Visible = true;
             dgvBLDetail.Columns["clmMonthIng"].Visible = true;
             dgvBLDetail.Columns["clmYearIng"].Visible = true;
-            dgvBLDetail.Columns["clmHourIng"].Visible = true;
             dgvBLDetail.Columns["clmDateIn"].Visible = false;
 
             dgvBLDetail.Columns["clmDayEnt"].Visible = true;
             dgvBLDetail.Columns["clmMonthEnt"].Visible = true;
             dgvBLDetail.Columns["clmYearEnt"].Visible = true;
-            dgvBLDetail.Columns["clmHourEnt"].Visible = true;
             dgvBLDetail.Columns["clmDeliveredDate"].Visible = false;
+
+            dgvBLDetail.Columns["clmDatePlanningDay"].Visible = true;
+            dgvBLDetail.Columns["clmDatePlanningMonth"].Visible = true;
+            dgvBLDetail.Columns["clmDatePlanningYear"].Visible = true;
+            dgvBLDetail.Columns["clmDatePlanning"].Visible = false;
+
+            dgvBLDetail.Columns["clmDateDeliveryDay"].Visible = true;
+            dgvBLDetail.Columns["clmDateDeliveryMonth"].Visible = true;
+            dgvBLDetail.Columns["clmDateDeliveryYear"].Visible = true;
+            dgvBLDetail.Columns["clmDateDelivery"].Visible = false;
 
             dgvBLDetail.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
 
@@ -139,14 +158,22 @@ namespace BPS
             dgvBLDetail.Columns["clmDayIng"].Visible = false;
             dgvBLDetail.Columns["clmMonthIng"].Visible = false;
             dgvBLDetail.Columns["clmYearIng"].Visible = false;
-            dgvBLDetail.Columns["clmHourIng"].Visible = false;
             dgvBLDetail.Columns["clmDateIn"].Visible = true;
 
             dgvBLDetail.Columns["clmDayEnt"].Visible = false;
             dgvBLDetail.Columns["clmMonthEnt"].Visible = false;
             dgvBLDetail.Columns["clmYearEnt"].Visible = false;
-            dgvBLDetail.Columns["clmHourEnt"].Visible = false;
             dgvBLDetail.Columns["clmDeliveredDate"].Visible = true;
+
+            dgvBLDetail.Columns["clmDatePlanningDay"].Visible = false;
+            dgvBLDetail.Columns["clmDatePlanningMonth"].Visible = false;
+            dgvBLDetail.Columns["clmDatePlanningYear"].Visible = false;
+            dgvBLDetail.Columns["clmDatePlanning"].Visible = true;
+
+            dgvBLDetail.Columns["clmDateDeliveryDay"].Visible = false;
+            dgvBLDetail.Columns["clmDateDeliveryMonth"].Visible = false;
+            dgvBLDetail.Columns["clmDateDeliveryYear"].Visible = false;
+            dgvBLDetail.Columns["clmDateDelivery"].Visible = true;
 
         }
 

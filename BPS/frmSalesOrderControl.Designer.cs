@@ -93,19 +93,19 @@
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvSalesOrderControl = new System.Windows.Forms.DataGridView();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chkSelectAllSalesOrderControl = new System.Windows.Forms.CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnCancelSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnCloseSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnDepositListSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnTDCSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnPriceSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnStatusSalesOrderControl = new System.Windows.Forms.Button();
+            this.btnNewOrderSalesOrderControl = new System.Windows.Forms.Button();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmExecutive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDayIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMonthIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmYearIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCompromiseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDayEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMonthEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmYearEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPurchaseOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -127,12 +127,18 @@
             this.clmCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmObservations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDayIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMonthIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmYearIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCompromiseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDayEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMonthEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmYearEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCompDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDayComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMonthComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYearComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourComp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaOtif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDayOtif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMonthOtif = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -142,16 +148,7 @@
             this.clmMonthComplecion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYearComplecion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estaCompleto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.chkSelectAllSalesOrderControl = new System.Windows.Forms.CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.btnCancelSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnCloseSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnDepositListSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnTDCSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnPriceSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnStatusSalesOrderControl = new System.Windows.Forms.Button();
-            this.btnNewOrderSalesOrderControl = new System.Windows.Forms.Button();
+            this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gpbFastValuesSalesOrderControl.SuspendLayout();
             this.gpbFiltersSalesOrderControl.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -512,16 +509,6 @@
             this.clmCodsec,
             this.clmExecutive,
             this.clmOrder,
-            this.clmPlant,
-            this.clmDayIng,
-            this.clmMonthIng,
-            this.clmYearIng,
-            this.clmHourIng,
-            this.clmCompromiseDate,
-            this.clmDayEnt,
-            this.clmMonthEnt,
-            this.clmYearEnt,
-            this.clmHourEnt,
             this.clmCustomer,
             this.clmPurchaseOrder,
             this.clmFilm,
@@ -543,12 +530,18 @@
             this.clmCheck,
             this.clmObservations,
             this.clmStatus,
+            this.clmCreatedDate,
+            this.clmDayIng,
+            this.clmMonthIng,
+            this.clmYearIng,
+            this.clmCompromiseDate,
+            this.clmDayEnt,
+            this.clmMonthEnt,
+            this.clmYearEnt,
             this.clmCompDate,
             this.clmDayComp,
             this.clmMonthComp,
             this.clmYearComp,
-            this.clmHourComp,
-            this.clmCreatedDate,
             this.fechaOtif,
             this.clmDayOtif,
             this.clmMonthOtif,
@@ -557,7 +550,8 @@
             this.clmDayComplecion,
             this.clmMonthComplecion,
             this.clmYearComplecion,
-            this.estaCompleto});
+            this.estaCompleto,
+            this.clmPlant});
             dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -584,351 +578,6 @@
             this.dgvSalesOrderControl.TabIndex = 0;
             this.dgvSalesOrderControl.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalesOrderControl_CellDoubleClick);
             this.dgvSalesOrderControl.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalesOrderControl_CellEndEdit);
-            // 
-            // clmCodsec
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmCodsec.DefaultCellStyle = dataGridViewCellStyle3;
-            this.clmCodsec.HeaderText = "Pedido";
-            this.clmCodsec.Name = "clmCodsec";
-            this.clmCodsec.Width = 53;
-            // 
-            // clmExecutive
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmExecutive.DefaultCellStyle = dataGridViewCellStyle4;
-            this.clmExecutive.HeaderText = "Ejecutiva";
-            this.clmExecutive.Name = "clmExecutive";
-            this.clmExecutive.Visible = false;
-            this.clmExecutive.Width = 5;
-            // 
-            // clmOrder
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmOrder.DefaultCellStyle = dataGridViewCellStyle5;
-            this.clmOrder.HeaderText = "Pedido";
-            this.clmOrder.Name = "clmOrder";
-            this.clmOrder.Visible = false;
-            this.clmOrder.Width = 50;
-            // 
-            // clmPlant
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPlant.DefaultCellStyle = dataGridViewCellStyle6;
-            this.clmPlant.HeaderText = "Planta";
-            this.clmPlant.Name = "clmPlant";
-            this.clmPlant.Width = 50;
-            // 
-            // clmDayIng
-            // 
-            this.clmDayIng.HeaderText = "Dia Ingreso";
-            this.clmDayIng.Name = "clmDayIng";
-            this.clmDayIng.Visible = false;
-            // 
-            // clmMonthIng
-            // 
-            this.clmMonthIng.HeaderText = "Mes Ingreso";
-            this.clmMonthIng.Name = "clmMonthIng";
-            this.clmMonthIng.Visible = false;
-            // 
-            // clmYearIng
-            // 
-            this.clmYearIng.HeaderText = "Año Ingreso";
-            this.clmYearIng.Name = "clmYearIng";
-            this.clmYearIng.Visible = false;
-            // 
-            // clmHourIng
-            // 
-            this.clmHourIng.HeaderText = "Hora Ingreso";
-            this.clmHourIng.Name = "clmHourIng";
-            this.clmHourIng.Visible = false;
-            // 
-            // clmCompromiseDate
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmCompromiseDate.DefaultCellStyle = dataGridViewCellStyle7;
-            this.clmCompromiseDate.HeaderText = "Fecha de Entrega";
-            this.clmCompromiseDate.Name = "clmCompromiseDate";
-            this.clmCompromiseDate.Width = 70;
-            // 
-            // clmDayEnt
-            // 
-            this.clmDayEnt.HeaderText = "Dia Entrega";
-            this.clmDayEnt.Name = "clmDayEnt";
-            this.clmDayEnt.Visible = false;
-            // 
-            // clmMonthEnt
-            // 
-            this.clmMonthEnt.HeaderText = "Mes Entrega";
-            this.clmMonthEnt.Name = "clmMonthEnt";
-            this.clmMonthEnt.Visible = false;
-            // 
-            // clmYearEnt
-            // 
-            this.clmYearEnt.HeaderText = "Año Entrega";
-            this.clmYearEnt.Name = "clmYearEnt";
-            this.clmYearEnt.Visible = false;
-            // 
-            // clmHourEnt
-            // 
-            this.clmHourEnt.HeaderText = "Hora Entrega";
-            this.clmHourEnt.Name = "clmHourEnt";
-            this.clmHourEnt.Visible = false;
-            // 
-            // clmCustomer
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmCustomer.DefaultCellStyle = dataGridViewCellStyle8;
-            this.clmCustomer.HeaderText = "Cliente";
-            this.clmCustomer.Name = "clmCustomer";
-            this.clmCustomer.Width = 110;
-            // 
-            // clmPurchaseOrder
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPurchaseOrder.DefaultCellStyle = dataGridViewCellStyle9;
-            this.clmPurchaseOrder.HeaderText = "OC Cliente";
-            this.clmPurchaseOrder.Name = "clmPurchaseOrder";
-            this.clmPurchaseOrder.Width = 70;
-            // 
-            // clmFilm
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmFilm.DefaultCellStyle = dataGridViewCellStyle10;
-            this.clmFilm.HeaderText = "Pel.";
-            this.clmFilm.Name = "clmFilm";
-            this.clmFilm.Width = 60;
-            // 
-            // clmWidth
-            // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmWidth.DefaultCellStyle = dataGridViewCellStyle11;
-            this.clmWidth.HeaderText = "Ancho";
-            this.clmWidth.Name = "clmWidth";
-            this.clmWidth.Width = 47;
-            // 
-            // clmDiameter
-            // 
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmDiameter.DefaultCellStyle = dataGridViewCellStyle12;
-            this.clmDiameter.HeaderText = "Diam.";
-            this.clmDiameter.Name = "clmDiameter";
-            this.clmDiameter.Width = 40;
-            // 
-            // clmCore
-            // 
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmCore.DefaultCellStyle = dataGridViewCellStyle13;
-            this.clmCore.HeaderText = "Core";
-            this.clmCore.Name = "clmCore";
-            this.clmCore.Width = 40;
-            // 
-            // clmQuantity
-            // 
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmQuantity.DefaultCellStyle = dataGridViewCellStyle14;
-            this.clmQuantity.HeaderText = "Solicit. [Kg]";
-            this.clmQuantity.Name = "clmQuantity";
-            this.clmQuantity.Width = 50;
-            // 
-            // clmProgrammedQuantity
-            // 
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmProgrammedQuantity.DefaultCellStyle = dataGridViewCellStyle15;
-            this.clmProgrammedQuantity.HeaderText = "Cantidad Programada [Kg]";
-            this.clmProgrammedQuantity.Name = "clmProgrammedQuantity";
-            this.clmProgrammedQuantity.Width = 70;
-            // 
-            // clmUnpaletisedQuantity
-            // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmUnpaletisedQuantity.DefaultCellStyle = dataGridViewCellStyle16;
-            this.clmUnpaletisedQuantity.HeaderText = "Sin Paletizar [Kg]";
-            this.clmUnpaletisedQuantity.Name = "clmUnpaletisedQuantity";
-            this.clmUnpaletisedQuantity.Visible = false;
-            this.clmUnpaletisedQuantity.Width = 70;
-            // 
-            // clmPalletisedQuantityUnavialable
-            // 
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPalletisedQuantityUnavialable.DefaultCellStyle = dataGridViewCellStyle17;
-            this.clmPalletisedQuantityUnavialable.HeaderText = "Paletizado no Disponible [Kg]";
-            this.clmPalletisedQuantityUnavialable.Name = "clmPalletisedQuantityUnavialable";
-            this.clmPalletisedQuantityUnavialable.Width = 70;
-            // 
-            // clmPalletisedQuantityAvialable
-            // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPalletisedQuantityAvialable.DefaultCellStyle = dataGridViewCellStyle18;
-            this.clmPalletisedQuantityAvialable.HeaderText = "Paletizado Disponible [Kg]";
-            this.clmPalletisedQuantityAvialable.Name = "clmPalletisedQuantityAvialable";
-            this.clmPalletisedQuantityAvialable.Width = 70;
-            // 
-            // predespachado
-            // 
-            this.predespachado.HeaderText = "Cantidad Predespachada [Kg]";
-            this.predespachado.Name = "predespachado";
-            this.predespachado.Width = 70;
-            // 
-            // clmDeliveredQuantity
-            // 
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmDeliveredQuantity.DefaultCellStyle = dataGridViewCellStyle19;
-            this.clmDeliveredQuantity.HeaderText = "Entregado [Kg]";
-            this.clmDeliveredQuantity.Name = "clmDeliveredQuantity";
-            this.clmDeliveredQuantity.Width = 70;
-            // 
-            // clmPendingDeliveredQuantity
-            // 
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPendingDeliveredQuantity.DefaultCellStyle = dataGridViewCellStyle20;
-            this.clmPendingDeliveredQuantity.HeaderText = "Pend.Ent. [Kg]";
-            this.clmPendingDeliveredQuantity.Name = "clmPendingDeliveredQuantity";
-            this.clmPendingDeliveredQuantity.Width = 70;
-            // 
-            // clmPrice
-            // 
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPrice.DefaultCellStyle = dataGridViewCellStyle21;
-            this.clmPrice.HeaderText = "Precio [USD]";
-            this.clmPrice.Name = "clmPrice";
-            this.clmPrice.Width = 50;
-            // 
-            // clmTdC
-            // 
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmTdC.DefaultCellStyle = dataGridViewCellStyle22;
-            this.clmTdC.HeaderText = "TdC";
-            this.clmTdC.Name = "clmTdC";
-            this.clmTdC.Width = 40;
-            // 
-            // clmPendingMoney
-            // 
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPendingMoney.DefaultCellStyle = dataGridViewCellStyle23;
-            this.clmPendingMoney.HeaderText = "Pendiente [$]";
-            this.clmPendingMoney.Name = "clmPendingMoney";
-            this.clmPendingMoney.Width = 70;
-            // 
-            // clmPendingMoneyUSD
-            // 
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmPendingMoneyUSD.DefaultCellStyle = dataGridViewCellStyle24;
-            this.clmPendingMoneyUSD.HeaderText = "Pendiente [USD]";
-            this.clmPendingMoneyUSD.Name = "clmPendingMoneyUSD";
-            this.clmPendingMoneyUSD.Visible = false;
-            // 
-            // clmCheck
-            // 
-            this.clmCheck.HeaderText = "";
-            this.clmCheck.Name = "clmCheck";
-            this.clmCheck.Width = 35;
-            // 
-            // clmObservations
-            // 
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmObservations.DefaultCellStyle = dataGridViewCellStyle25;
-            this.clmObservations.HeaderText = "Observaciones";
-            this.clmObservations.Name = "clmObservations";
-            this.clmObservations.Width = 110;
-            // 
-            // clmStatus
-            // 
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmStatus.DefaultCellStyle = dataGridViewCellStyle26;
-            this.clmStatus.HeaderText = "Estado";
-            this.clmStatus.Name = "clmStatus";
-            this.clmStatus.Width = 60;
-            // 
-            // clmCompDate
-            // 
-            this.clmCompDate.HeaderText = "Fecha comprometida";
-            this.clmCompDate.Name = "clmCompDate";
-            this.clmCompDate.Width = 70;
-            // 
-            // clmDayComp
-            // 
-            this.clmDayComp.HeaderText = "Dia Comprometido";
-            this.clmDayComp.Name = "clmDayComp";
-            this.clmDayComp.Visible = false;
-            // 
-            // clmMonthComp
-            // 
-            this.clmMonthComp.HeaderText = "Mes Comprometido";
-            this.clmMonthComp.Name = "clmMonthComp";
-            this.clmMonthComp.Visible = false;
-            // 
-            // clmYearComp
-            // 
-            this.clmYearComp.HeaderText = "Año Comprometido";
-            this.clmYearComp.Name = "clmYearComp";
-            this.clmYearComp.Visible = false;
-            // 
-            // clmHourComp
-            // 
-            this.clmHourComp.HeaderText = "Hora Comprometida";
-            this.clmHourComp.Name = "clmHourComp";
-            this.clmHourComp.Visible = false;
-            // 
-            // clmCreatedDate
-            // 
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clmCreatedDate.DefaultCellStyle = dataGridViewCellStyle27;
-            this.clmCreatedDate.HeaderText = "Fecha de Ingreso";
-            this.clmCreatedDate.Name = "clmCreatedDate";
-            this.clmCreatedDate.Width = 80;
-            // 
-            // fechaOtif
-            // 
-            this.fechaOtif.HeaderText = "Fecha OTIF";
-            this.fechaOtif.Name = "fechaOtif";
-            // 
-            // clmDayOtif
-            // 
-            this.clmDayOtif.HeaderText = "Día Otif";
-            this.clmDayOtif.Name = "clmDayOtif";
-            this.clmDayOtif.Visible = false;
-            // 
-            // clmMonthOtif
-            // 
-            this.clmMonthOtif.HeaderText = "Mes Otif";
-            this.clmMonthOtif.Name = "clmMonthOtif";
-            this.clmMonthOtif.Visible = false;
-            // 
-            // clmYearOtif
-            // 
-            this.clmYearOtif.HeaderText = "Año Otif";
-            this.clmYearOtif.Name = "clmYearOtif";
-            this.clmYearOtif.Visible = false;
-            // 
-            // fechaComplecion
-            // 
-            this.fechaComplecion.HeaderText = "Fecha Compleción";
-            this.fechaComplecion.Name = "fechaComplecion";
-            // 
-            // clmDayComplecion
-            // 
-            this.clmDayComplecion.HeaderText = "Dia Compleción";
-            this.clmDayComplecion.Name = "clmDayComplecion";
-            this.clmDayComplecion.Visible = false;
-            // 
-            // clmMonthComplecion
-            // 
-            this.clmMonthComplecion.HeaderText = "Mes Compleción";
-            this.clmMonthComplecion.Name = "clmMonthComplecion";
-            this.clmMonthComplecion.Visible = false;
-            // 
-            // clmYearComplecion
-            // 
-            this.clmYearComplecion.HeaderText = "Año Compleción";
-            this.clmYearComplecion.Name = "clmYearComplecion";
-            this.clmYearComplecion.Visible = false;
-            // 
-            // estaCompleto
-            // 
-            this.estaCompleto.HeaderText = "";
-            this.estaCompleto.Name = "estaCompleto";
-            this.estaCompleto.Visible = false;
             // 
             // groupBox4
             // 
@@ -1036,6 +685,333 @@
             this.btnNewOrderSalesOrderControl.UseVisualStyleBackColor = true;
             this.btnNewOrderSalesOrderControl.Click += new System.EventHandler(this.btnNewOrderSalesOrderControl_Click);
             // 
+            // clmCodsec
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmCodsec.DefaultCellStyle = dataGridViewCellStyle3;
+            this.clmCodsec.HeaderText = "Pedido";
+            this.clmCodsec.Name = "clmCodsec";
+            this.clmCodsec.Width = 53;
+            // 
+            // clmExecutive
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmExecutive.DefaultCellStyle = dataGridViewCellStyle4;
+            this.clmExecutive.HeaderText = "Ejecutiva";
+            this.clmExecutive.Name = "clmExecutive";
+            this.clmExecutive.Visible = false;
+            this.clmExecutive.Width = 5;
+            // 
+            // clmOrder
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmOrder.DefaultCellStyle = dataGridViewCellStyle5;
+            this.clmOrder.HeaderText = "Pedido";
+            this.clmOrder.Name = "clmOrder";
+            this.clmOrder.Visible = false;
+            this.clmOrder.Width = 50;
+            // 
+            // clmCustomer
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmCustomer.DefaultCellStyle = dataGridViewCellStyle6;
+            this.clmCustomer.HeaderText = "Cliente";
+            this.clmCustomer.Name = "clmCustomer";
+            this.clmCustomer.Width = 110;
+            // 
+            // clmPurchaseOrder
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPurchaseOrder.DefaultCellStyle = dataGridViewCellStyle7;
+            this.clmPurchaseOrder.HeaderText = "OC Cliente";
+            this.clmPurchaseOrder.Name = "clmPurchaseOrder";
+            this.clmPurchaseOrder.Width = 70;
+            // 
+            // clmFilm
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmFilm.DefaultCellStyle = dataGridViewCellStyle8;
+            this.clmFilm.HeaderText = "Pel.";
+            this.clmFilm.Name = "clmFilm";
+            this.clmFilm.Width = 60;
+            // 
+            // clmWidth
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmWidth.DefaultCellStyle = dataGridViewCellStyle9;
+            this.clmWidth.HeaderText = "Ancho";
+            this.clmWidth.Name = "clmWidth";
+            this.clmWidth.Width = 47;
+            // 
+            // clmDiameter
+            // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmDiameter.DefaultCellStyle = dataGridViewCellStyle10;
+            this.clmDiameter.HeaderText = "Diam.";
+            this.clmDiameter.Name = "clmDiameter";
+            this.clmDiameter.Width = 40;
+            // 
+            // clmCore
+            // 
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmCore.DefaultCellStyle = dataGridViewCellStyle11;
+            this.clmCore.HeaderText = "Core";
+            this.clmCore.Name = "clmCore";
+            this.clmCore.Width = 40;
+            // 
+            // clmQuantity
+            // 
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmQuantity.DefaultCellStyle = dataGridViewCellStyle12;
+            this.clmQuantity.HeaderText = "Cant. Solicitada [Kg]";
+            this.clmQuantity.Name = "clmQuantity";
+            this.clmQuantity.Width = 50;
+            // 
+            // clmProgrammedQuantity
+            // 
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmProgrammedQuantity.DefaultCellStyle = dataGridViewCellStyle13;
+            this.clmProgrammedQuantity.HeaderText = "Cant. Programada [Kg]";
+            this.clmProgrammedQuantity.Name = "clmProgrammedQuantity";
+            this.clmProgrammedQuantity.Width = 70;
+            // 
+            // clmUnpaletisedQuantity
+            // 
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmUnpaletisedQuantity.DefaultCellStyle = dataGridViewCellStyle14;
+            this.clmUnpaletisedQuantity.HeaderText = "Cant. Sin Paletizar [Kg]";
+            this.clmUnpaletisedQuantity.Name = "clmUnpaletisedQuantity";
+            this.clmUnpaletisedQuantity.Width = 70;
+            // 
+            // clmPalletisedQuantityUnavialable
+            // 
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPalletisedQuantityUnavialable.DefaultCellStyle = dataGridViewCellStyle15;
+            this.clmPalletisedQuantityUnavialable.HeaderText = "Cant. en Paletizado no Disponible [Kg]";
+            this.clmPalletisedQuantityUnavialable.Name = "clmPalletisedQuantityUnavialable";
+            this.clmPalletisedQuantityUnavialable.Width = 70;
+            // 
+            // clmPalletisedQuantityAvialable
+            // 
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPalletisedQuantityAvialable.DefaultCellStyle = dataGridViewCellStyle16;
+            this.clmPalletisedQuantityAvialable.HeaderText = "Cant. en Paletizado Disponible [Kg]";
+            this.clmPalletisedQuantityAvialable.Name = "clmPalletisedQuantityAvialable";
+            this.clmPalletisedQuantityAvialable.Width = 70;
+            // 
+            // predespachado
+            // 
+            this.predespachado.HeaderText = "Cant. Predespachada [Kg]";
+            this.predespachado.Name = "predespachado";
+            this.predespachado.Width = 70;
+            // 
+            // clmDeliveredQuantity
+            // 
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmDeliveredQuantity.DefaultCellStyle = dataGridViewCellStyle17;
+            this.clmDeliveredQuantity.HeaderText = "Cant. Entregada [Kg]";
+            this.clmDeliveredQuantity.Name = "clmDeliveredQuantity";
+            this.clmDeliveredQuantity.Width = 70;
+            // 
+            // clmPendingDeliveredQuantity
+            // 
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPendingDeliveredQuantity.DefaultCellStyle = dataGridViewCellStyle18;
+            this.clmPendingDeliveredQuantity.HeaderText = "Cant. Pend.Ent. [Kg]";
+            this.clmPendingDeliveredQuantity.Name = "clmPendingDeliveredQuantity";
+            this.clmPendingDeliveredQuantity.Width = 70;
+            // 
+            // clmPrice
+            // 
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPrice.DefaultCellStyle = dataGridViewCellStyle19;
+            this.clmPrice.HeaderText = "Precio [USD]";
+            this.clmPrice.Name = "clmPrice";
+            this.clmPrice.Width = 50;
+            // 
+            // clmTdC
+            // 
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmTdC.DefaultCellStyle = dataGridViewCellStyle20;
+            this.clmTdC.HeaderText = "TdC";
+            this.clmTdC.Name = "clmTdC";
+            this.clmTdC.Width = 40;
+            // 
+            // clmPendingMoney
+            // 
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPendingMoney.DefaultCellStyle = dataGridViewCellStyle21;
+            this.clmPendingMoney.HeaderText = "Pendiente [$]";
+            this.clmPendingMoney.Name = "clmPendingMoney";
+            this.clmPendingMoney.Width = 70;
+            // 
+            // clmPendingMoneyUSD
+            // 
+            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPendingMoneyUSD.DefaultCellStyle = dataGridViewCellStyle22;
+            this.clmPendingMoneyUSD.HeaderText = "Pendiente [USD]";
+            this.clmPendingMoneyUSD.Name = "clmPendingMoneyUSD";
+            this.clmPendingMoneyUSD.Visible = false;
+            // 
+            // clmCheck
+            // 
+            this.clmCheck.HeaderText = "";
+            this.clmCheck.Name = "clmCheck";
+            this.clmCheck.Width = 35;
+            // 
+            // clmObservations
+            // 
+            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmObservations.DefaultCellStyle = dataGridViewCellStyle23;
+            this.clmObservations.HeaderText = "Observaciones";
+            this.clmObservations.Name = "clmObservations";
+            this.clmObservations.Width = 110;
+            // 
+            // clmStatus
+            // 
+            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmStatus.DefaultCellStyle = dataGridViewCellStyle24;
+            this.clmStatus.HeaderText = "Estado";
+            this.clmStatus.Name = "clmStatus";
+            this.clmStatus.Width = 60;
+            // 
+            // clmCreatedDate
+            // 
+            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmCreatedDate.DefaultCellStyle = dataGridViewCellStyle25;
+            this.clmCreatedDate.HeaderText = "Fecha Ingreso";
+            this.clmCreatedDate.Name = "clmCreatedDate";
+            this.clmCreatedDate.Width = 80;
+            // 
+            // clmDayIng
+            // 
+            this.clmDayIng.HeaderText = "Fecha Ingreso Día";
+            this.clmDayIng.Name = "clmDayIng";
+            this.clmDayIng.Visible = false;
+            // 
+            // clmMonthIng
+            // 
+            this.clmMonthIng.HeaderText = "Fecha Ingreso Mes";
+            this.clmMonthIng.Name = "clmMonthIng";
+            this.clmMonthIng.Visible = false;
+            // 
+            // clmYearIng
+            // 
+            this.clmYearIng.HeaderText = "Fecha Ingreso Año";
+            this.clmYearIng.Name = "clmYearIng";
+            this.clmYearIng.Visible = false;
+            // 
+            // clmCompromiseDate
+            // 
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmCompromiseDate.DefaultCellStyle = dataGridViewCellStyle26;
+            this.clmCompromiseDate.HeaderText = "Fecha Solicitada";
+            this.clmCompromiseDate.Name = "clmCompromiseDate";
+            this.clmCompromiseDate.Width = 70;
+            // 
+            // clmDayEnt
+            // 
+            this.clmDayEnt.HeaderText = "Fecha Solicitada día";
+            this.clmDayEnt.Name = "clmDayEnt";
+            this.clmDayEnt.Visible = false;
+            // 
+            // clmMonthEnt
+            // 
+            this.clmMonthEnt.HeaderText = "Fecha Solicitada Mes";
+            this.clmMonthEnt.Name = "clmMonthEnt";
+            this.clmMonthEnt.Visible = false;
+            // 
+            // clmYearEnt
+            // 
+            this.clmYearEnt.HeaderText = "Fecha Solicitada Año";
+            this.clmYearEnt.Name = "clmYearEnt";
+            this.clmYearEnt.Visible = false;
+            // 
+            // clmCompDate
+            // 
+            this.clmCompDate.HeaderText = "Fecha Planning";
+            this.clmCompDate.Name = "clmCompDate";
+            this.clmCompDate.Width = 70;
+            // 
+            // clmDayComp
+            // 
+            this.clmDayComp.HeaderText = "Fecha planning Día";
+            this.clmDayComp.Name = "clmDayComp";
+            this.clmDayComp.Visible = false;
+            // 
+            // clmMonthComp
+            // 
+            this.clmMonthComp.HeaderText = "Fecha Planning Mes";
+            this.clmMonthComp.Name = "clmMonthComp";
+            this.clmMonthComp.Visible = false;
+            // 
+            // clmYearComp
+            // 
+            this.clmYearComp.HeaderText = "Fecha Planning Año";
+            this.clmYearComp.Name = "clmYearComp";
+            this.clmYearComp.Visible = false;
+            // 
+            // fechaOtif
+            // 
+            this.fechaOtif.HeaderText = "Fecha Entrega";
+            this.fechaOtif.Name = "fechaOtif";
+            // 
+            // clmDayOtif
+            // 
+            this.clmDayOtif.HeaderText = "Fecha Entrega Día";
+            this.clmDayOtif.Name = "clmDayOtif";
+            this.clmDayOtif.Visible = false;
+            // 
+            // clmMonthOtif
+            // 
+            this.clmMonthOtif.HeaderText = "Fecha Entrega Mes";
+            this.clmMonthOtif.Name = "clmMonthOtif";
+            this.clmMonthOtif.Visible = false;
+            // 
+            // clmYearOtif
+            // 
+            this.clmYearOtif.HeaderText = "Fecha Entrega Año";
+            this.clmYearOtif.Name = "clmYearOtif";
+            this.clmYearOtif.Visible = false;
+            // 
+            // fechaComplecion
+            // 
+            this.fechaComplecion.HeaderText = "Fecha InFull";
+            this.fechaComplecion.Name = "fechaComplecion";
+            // 
+            // clmDayComplecion
+            // 
+            this.clmDayComplecion.HeaderText = "Fecha InFull Día";
+            this.clmDayComplecion.Name = "clmDayComplecion";
+            this.clmDayComplecion.Visible = false;
+            // 
+            // clmMonthComplecion
+            // 
+            this.clmMonthComplecion.HeaderText = "Fecha inFull Mes";
+            this.clmMonthComplecion.Name = "clmMonthComplecion";
+            this.clmMonthComplecion.Visible = false;
+            // 
+            // clmYearComplecion
+            // 
+            this.clmYearComplecion.HeaderText = "Fecha InFull Año";
+            this.clmYearComplecion.Name = "clmYearComplecion";
+            this.clmYearComplecion.Visible = false;
+            // 
+            // estaCompleto
+            // 
+            this.estaCompleto.HeaderText = "";
+            this.estaCompleto.Name = "estaCompleto";
+            this.estaCompleto.Visible = false;
+            // 
+            // clmPlant
+            // 
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clmPlant.DefaultCellStyle = dataGridViewCellStyle27;
+            this.clmPlant.HeaderText = "Planta";
+            this.clmPlant.Name = "clmPlant";
+            this.clmPlant.Visible = false;
+            this.clmPlant.Width = 50;
+            // 
             // frmSalesOrderControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1110,16 +1086,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmExecutive;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmOrder;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCompromiseDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourEnt;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPurchaseOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFilm;
@@ -1141,12 +1107,18 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmCheck;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmObservations;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatedDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCompromiseDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayEnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthEnt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearEnt;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCompDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDayComp;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthComp;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYearComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourComp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaOtif;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDayOtif;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthOtif;
@@ -1156,5 +1128,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthComplecion;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYearComplecion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estaCompleto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
     }
 }

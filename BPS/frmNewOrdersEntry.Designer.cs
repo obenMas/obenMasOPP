@@ -41,6 +41,8 @@
             this.dtpDeliveryDate = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dtpOtif = new System.Windows.Forms.DateTimePicker();
+            this.label15 = new System.Windows.Forms.Label();
             this.txtNotes = new System.Windows.Forms.TextBox();
             this.btnAddDuplicate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -78,8 +80,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.btnNew = new System.Windows.Forms.Button();
-            this.dtpOtif = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -105,23 +105,23 @@
             // 
             // txtOC
             // 
-            this.txtOC.Location = new System.Drawing.Point(277, 23);
+            this.txtOC.Location = new System.Drawing.Point(349, 24);
             this.txtOC.Name = "txtOC";
-            this.txtOC.Size = new System.Drawing.Size(100, 20);
+            this.txtOC.Size = new System.Drawing.Size(169, 20);
             this.txtOC.TabIndex = 3;
             // 
             // cmbCustommers
             // 
             this.cmbCustommers.FormattingEnabled = true;
-            this.cmbCustommers.Location = new System.Drawing.Point(654, 23);
+            this.cmbCustommers.Location = new System.Drawing.Point(833, 22);
             this.cmbCustommers.Name = "cmbCustommers";
-            this.cmbCustommers.Size = new System.Drawing.Size(291, 21);
+            this.cmbCustommers.Size = new System.Drawing.Size(298, 21);
             this.cmbCustommers.TabIndex = 9;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(611, 26);
+            this.label5.Location = new System.Drawing.Point(785, 27);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 8;
@@ -130,16 +130,16 @@
             // cmbExecutives
             // 
             this.cmbExecutives.FormattingEnabled = true;
-            this.cmbExecutives.Location = new System.Drawing.Point(471, 22);
+            this.cmbExecutives.Location = new System.Drawing.Point(620, 24);
             this.cmbExecutives.Name = "cmbExecutives";
-            this.cmbExecutives.Size = new System.Drawing.Size(121, 21);
+            this.cmbExecutives.Size = new System.Drawing.Size(117, 21);
             this.cmbExecutives.TabIndex = 7;
             this.cmbExecutives.SelectedIndexChanged += new System.EventHandler(this.cmbExecutives_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(411, 27);
+            this.label4.Location = new System.Drawing.Point(560, 27);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(54, 13);
             this.label4.TabIndex = 6;
@@ -148,7 +148,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(178, 27);
+            this.label2.Location = new System.Drawing.Point(239, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 2;
@@ -156,10 +156,11 @@
             // 
             // dtpDate
             // 
+            this.dtpDate.Enabled = false;
             this.dtpDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDate.Location = new System.Drawing.Point(69, 23);
+            this.dtpDate.Location = new System.Drawing.Point(116, 23);
             this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(103, 20);
+            this.dtpDate.Size = new System.Drawing.Size(91, 20);
             this.dtpDate.TabIndex = 1;
             // 
             // label1
@@ -167,14 +168,14 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Fecha:";
+            this.label1.Text = "Fecha Ingreso:";
             // 
             // dtpDeliveryDate
             // 
             this.dtpDeliveryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDeliveryDate.Location = new System.Drawing.Point(661, 62);
+            this.dtpDeliveryDate.Location = new System.Drawing.Point(655, 65);
             this.dtpDeliveryDate.Name = "dtpDeliveryDate";
             this.dtpDeliveryDate.Size = new System.Drawing.Size(103, 20);
             this.dtpDeliveryDate.TabIndex = 5;
@@ -183,11 +184,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(560, 65);
+            this.label3.Location = new System.Drawing.Point(560, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 13);
+            this.label3.Size = new System.Drawing.Size(89, 13);
             this.label3.TabIndex = 4;
-            this.label3.Text = "Fecha de Entrega:";
+            this.label3.Text = "Fecha Solicitada:";
             // 
             // groupBox2
             // 
@@ -216,16 +217,36 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Ingreso";
             // 
+            // dtpOtif
+            // 
+            this.dtpOtif.Enabled = false;
+            this.dtpOtif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpOtif.Location = new System.Drawing.Point(876, 64);
+            this.dtpOtif.Name = "dtpOtif";
+            this.dtpOtif.Size = new System.Drawing.Size(103, 20);
+            this.dtpOtif.TabIndex = 15;
+            this.dtpOtif.Visible = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(803, 68);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Fecha OTIF:";
+            this.label15.Visible = false;
+            // 
             // txtNotes
             // 
-            this.txtNotes.Location = new System.Drawing.Point(110, 61);
+            this.txtNotes.Location = new System.Drawing.Point(116, 65);
             this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(408, 20);
+            this.txtNotes.Size = new System.Drawing.Size(402, 20);
             this.txtNotes.TabIndex = 12;
             // 
             // btnAddDuplicate
             // 
-            this.btnAddDuplicate.Location = new System.Drawing.Point(1035, 58);
+            this.btnAddDuplicate.Location = new System.Drawing.Point(1016, 64);
             this.btnAddDuplicate.Name = "btnAddDuplicate";
             this.btnAddDuplicate.Size = new System.Drawing.Size(115, 23);
             this.btnAddDuplicate.TabIndex = 13;
@@ -235,7 +256,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(1035, 21);
+            this.btnAdd.Location = new System.Drawing.Point(1016, 24);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(115, 23);
             this.btnAdd.TabIndex = 13;
@@ -254,7 +275,7 @@
             // 
             // txtTDC
             // 
-            this.txtTDC.Location = new System.Drawing.Point(931, 19);
+            this.txtTDC.Location = new System.Drawing.Point(931, 24);
             this.txtTDC.Name = "txtTDC";
             this.txtTDC.Size = new System.Drawing.Size(48, 20);
             this.txtTDC.TabIndex = 10;
@@ -270,7 +291,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.Location = new System.Drawing.Point(750, 19);
+            this.txtPrice.Location = new System.Drawing.Point(773, 24);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(77, 20);
             this.txtPrice.TabIndex = 8;
@@ -278,7 +299,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(708, 26);
+            this.label9.Location = new System.Drawing.Point(731, 26);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(40, 13);
             this.label9.TabIndex = 7;
@@ -286,9 +307,9 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(597, 20);
+            this.txtQuantity.Location = new System.Drawing.Point(598, 24);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(67, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(93, 20);
             this.txtQuantity.TabIndex = 6;
             // 
             // label8
@@ -303,7 +324,7 @@
             // txtProductDescription
             // 
             this.txtProductDescription.Enabled = false;
-            this.txtProductDescription.Location = new System.Drawing.Point(311, 20);
+            this.txtProductDescription.Location = new System.Drawing.Point(311, 24);
             this.txtProductDescription.Name = "txtProductDescription";
             this.txtProductDescription.Size = new System.Drawing.Size(207, 20);
             this.txtProductDescription.TabIndex = 4;
@@ -328,9 +349,9 @@
             // 
             // txtProductCode
             // 
-            this.txtProductCode.Location = new System.Drawing.Point(107, 20);
+            this.txtProductCode.Location = new System.Drawing.Point(116, 24);
             this.txtProductCode.Name = "txtProductCode";
-            this.txtProductCode.Size = new System.Drawing.Size(100, 20);
+            this.txtProductCode.Size = new System.Drawing.Size(91, 20);
             this.txtProductCode.TabIndex = 2;
             this.txtProductCode.Leave += new System.EventHandler(this.txtProductCode_Leave);
             // 
@@ -481,7 +502,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(862, 450);
+            this.textBox8.Location = new System.Drawing.Point(862, 454);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(115, 20);
             this.textBox8.TabIndex = 6;
@@ -497,7 +518,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(1049, 450);
+            this.textBox9.Location = new System.Drawing.Point(1047, 454);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(115, 20);
             this.textBox9.TabIndex = 8;
@@ -513,7 +534,7 @@
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(677, 451);
+            this.textBox10.Location = new System.Drawing.Point(677, 454);
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(115, 20);
             this.textBox10.TabIndex = 4;
@@ -528,28 +549,10 @@
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
-            // dtpOtif
-            // 
-            this.dtpOtif.Enabled = false;
-            this.dtpOtif.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpOtif.Location = new System.Drawing.Point(876, 62);
-            this.dtpOtif.Name = "dtpOtif";
-            this.dtpOtif.Size = new System.Drawing.Size(103, 20);
-            this.dtpOtif.TabIndex = 15;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(803, 65);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Fecha OTIF:";
-            // 
             // frmNewOrdersEntry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(1174, 485);
             this.Controls.Add(this.btnNew);
             this.Controls.Add(this.textBox10);

@@ -246,7 +246,7 @@ namespace BPS
                 so.modifiedBy = clsGlobal.LoggedUser.codsec;
                 so.modifiedDate = DateTime.Now;
                 so.compromisedate = dtpDeliveryDate.Value;
-                so.fkPlant = 0;
+                so.fkPlant = 4; //Por defecto planta pilar 30-01-2020 NZ
                 so.purchaseOrder = txtOC.Text;
                 if (!so.save())
                 {
@@ -266,6 +266,7 @@ namespace BPS
             sod.price = Math.Round(Convert.ToDouble(txtPrice.Text), 2);
             sod.exchangerate = Math.Round(Convert.ToDouble(txtTDC.Text), 2);
             sod.notes = txtNotes.Text;
+            sod.fkPlant = 4; //Por defecto planta pilar 30-01-2020 NZ
             sod.deliveryDate = dtpDeliveryDate.Value;
             sod.otifDate = dtpOtif.Value;
             if (!sod.save())

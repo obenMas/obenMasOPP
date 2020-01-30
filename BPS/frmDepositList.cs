@@ -77,7 +77,7 @@ namespace BPS
                 dgvDepositList.Rows[fila].Cells[clmCodsec.Index].Value = palletList[i].codsec;
                 dgvDepositList.Rows[fila].Cells[clmOrder.Index].Value = sodlistC[i];
                 dgvDepositList.Rows[fila].Cells[clmPurchaseOrder.Index].Value = POList[i];
-                dgvDepositList.Rows[fila].Cells[clmPrice.Index].Value = priceList[i] * exchangeList[i];
+                dgvDepositList.Rows[fila].Cells[clmPrice.Index].Value = priceList[i];
                 dgvDepositList.Rows[fila].Cells[clmPlant.Index].Value = new clsPlant(new clsCoilCellar(palletList[i].fkPalletCoilcellar).fkPlant).name;
                 dgvDepositList.Rows[fila].Cells[clmCode.Index].Value = palletList[i].code;
                 dgvDepositList.Rows[fila].Cells[clmFilm.Index].Value = palletList[i].product.boppCode + palletList[i].product.castCode + palletList[i].product.coatingCode;

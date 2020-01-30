@@ -235,7 +235,7 @@ namespace BPS.Bussiness
 
                 if (this.codsec == 0)
                 {
-                    queryString += "INSERT INTO  bps_com_salesorderdetail (sod_fkSalesOrder, sod_fkProduct, sod_fkStatus, sod_quantity, sod_stock,sod_price, sod_closingDate, sod_closingBy, sod_coilsToCut, sod_palletnumber, sod_exchangerate, sod_fkPlant, sod_notes, sod_deliveryDate, sod_compromisedDate, sod_otifDate, sod_completionDate, sod_wasCompleted) ";
+                    queryString += "INSERT INTO  bps_com_salesorderdetail (sod_fkSalesOrder, sod_fkProduct, sod_fkStatus, sod_quantity, sod_stock,sod_price, sod_closingDate, sod_closingBy, sod_coilsToCut, sod_palletnumber, sod_exchangerate, sod_fkPlant, sod_notes, sod_deliveryDate, sod_otifDate, sod_wasCompleted) ";
                     queryString += " VALUES (";
                     queryString += this.fkSalesOrder.ToString() + ",";
                     queryString += this.fkProduct.ToString() + ",";
@@ -251,9 +251,9 @@ namespace BPS.Bussiness
                     queryString += "" + this.fkPlant.ToString() +", " ;
                     queryString += "'" + this.notes.ToString() + "',";
                     queryString += "'" + this.deliveryDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
-                    queryString += "'" + this.compromisedDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
+                    //queryString += "'" + this.compromisedDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
                     queryString += "'" + this.otifDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
-                    queryString += "'" + this.completionDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
+                    //queryString += "'" + this.completionDate.ToString("dd/MM/yyyy HH:mm:ss") + "',";
                     if(this.wasCompleted)
                     {
                         queryString += "1" + ");";
@@ -340,7 +340,30 @@ namespace BPS.Bussiness
 
                 queryString += "UPDATE bps_com_salesorderdetail";
                 queryString += " SET ";
-                queryString += " sod_compromisedDate = '" + this.compromisedDate.ToString("dd/MM/yyyy HH:mm:ss") + "'";
+                queryString += " sod_compromisedDate = '" + this.compromisedDate.ToString("dd/MM/yyyy") + "'";
+                queryString += " WHERE sod_codsec = " + this.codsec.ToString();
+
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsSalesOrderDetail.update");
+                return false;
+            }
+        }
+
+        public bool updateOTIFDate(DateTime date)
+        {
+            this.otifDate = date;
+            try
+            {
+                string queryString = "";
+
+
+                queryString += "UPDATE bps_com_salesorderdetail";
+                queryString += " SET ";
+                queryString += " sod_otifDate = '" + this.otifDate.ToString("dd/MM/yyyy") + "'";
                 queryString += " WHERE sod_codsec = " + this.codsec.ToString();
 
 

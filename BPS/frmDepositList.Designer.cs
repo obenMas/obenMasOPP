@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDepositList));
             this.tbcDepositList = new System.Windows.Forms.TabControl();
             this.tbcCampana = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.btnExport = new System.Windows.Forms.Button();
             this.txtTotalNetWeight = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.clmLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.tbcDepositList.SuspendLayout();
             this.tbcCampana.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -92,6 +92,24 @@
             this.tbcCampana.TabIndex = 0;
             this.tbcCampana.Text = "Pallets";
             this.tbcCampana.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(78, 460);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(144, 15);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "= Pallet Pre-Despachado";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Green;
+            this.panel1.Location = new System.Drawing.Point(47, 456);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(25, 23);
+            this.panel1.TabIndex = 15;
             // 
             // btnExport
             // 
@@ -209,7 +227,7 @@
             // 
             // clmPrice
             // 
-            this.clmPrice.HeaderText = "Precio AR$";
+            this.clmPrice.HeaderText = "Precio USD";
             this.clmPrice.Name = "clmPrice";
             this.clmPrice.Width = 80;
             // 
@@ -297,24 +315,6 @@
             this.clmCheck.Name = "clmCheck";
             this.clmCheck.Width = 60;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Green;
-            this.panel1.Location = new System.Drawing.Point(47, 456);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(25, 23);
-            this.panel1.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(78, 460);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 15);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "= Pallet Pre-Despachado";
-            // 
             // frmDepositList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,6 +345,8 @@
         private System.Windows.Forms.Button btnPreshipping;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDepositList;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPurchaseOrder;
@@ -363,8 +365,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmCheck;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel1;
-
     }
 }
