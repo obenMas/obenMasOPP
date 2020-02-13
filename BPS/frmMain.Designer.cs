@@ -450,6 +450,7 @@ namespace BPS
             this.metalizadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rebobinadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listaDeEmpaqueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nuevoPedidoExpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.detallePlanificaciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sttsFooter = new System.Windows.Forms.StatusStrip();
             this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
@@ -457,7 +458,8 @@ namespace BPS
             this.tsslUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.nuevoPedidoExpoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDespachosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteOTIFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.sttsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -1156,14 +1158,14 @@ namespace BPS
             this.tsmExtrusionOrderNewBopp});
             this.tsmExtrusionOrderNew.Image = global::BPS.Properties.Resources.play_sharp;
             this.tsmExtrusionOrderNew.Name = "tsmExtrusionOrderNew";
-            this.tsmExtrusionOrderNew.Size = new System.Drawing.Size(242, 22);
+            this.tsmExtrusionOrderNew.Size = new System.Drawing.Size(243, 22);
             this.tsmExtrusionOrderNew.Text = "Ejecución de orden de extrusión";
             // 
             // tsmExtrusionOrderNewBopp
             // 
             this.tsmExtrusionOrderNewBopp.Image = global::BPS.Properties.Resources.page_white_gear;
             this.tsmExtrusionOrderNewBopp.Name = "tsmExtrusionOrderNewBopp";
-            this.tsmExtrusionOrderNewBopp.Size = new System.Drawing.Size(216, 22);
+            this.tsmExtrusionOrderNewBopp.Size = new System.Drawing.Size(217, 22);
             this.tsmExtrusionOrderNewBopp.Text = "Ordenes de extrusión Bopp";
             this.tsmExtrusionOrderNewBopp.Click += new System.EventHandler(this.ordenesDeExtrusiónBoppToolStripMenuItem_Click);
             // 
@@ -1171,7 +1173,7 @@ namespace BPS
             // 
             this.tsmExtrusionOrderList.Image = global::BPS.Properties.Resources.script;
             this.tsmExtrusionOrderList.Name = "tsmExtrusionOrderList";
-            this.tsmExtrusionOrderList.Size = new System.Drawing.Size(242, 22);
+            this.tsmExtrusionOrderList.Size = new System.Drawing.Size(243, 22);
             this.tsmExtrusionOrderList.Text = "Listado";
             // 
             // toolStripSeparator3
@@ -1364,38 +1366,38 @@ namespace BPS
             // 
             this.tsmProductionReports.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmProductionReports.Name = "tsmProductionReports";
-            this.tsmProductionReports.Size = new System.Drawing.Size(341, 22);
+            this.tsmProductionReports.Size = new System.Drawing.Size(342, 22);
             this.tsmProductionReports.Text = "Producción";
             // 
             // tsmSeparatorProductionReports
             // 
             this.tsmSeparatorProductionReports.Name = "tsmSeparatorProductionReports";
-            this.tsmSeparatorProductionReports.Size = new System.Drawing.Size(338, 6);
+            this.tsmSeparatorProductionReports.Size = new System.Drawing.Size(339, 6);
             // 
             // tsmDecreaseReports
             // 
             this.tsmDecreaseReports.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmDecreaseReports.Name = "tsmDecreaseReports";
-            this.tsmDecreaseReports.Size = new System.Drawing.Size(341, 22);
+            this.tsmDecreaseReports.Size = new System.Drawing.Size(342, 22);
             this.tsmDecreaseReports.Text = "Desperdicios";
             // 
             // tsmDeadTimeReports
             // 
             this.tsmDeadTimeReports.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmDeadTimeReports.Name = "tsmDeadTimeReports";
-            this.tsmDeadTimeReports.Size = new System.Drawing.Size(341, 22);
+            this.tsmDeadTimeReports.Size = new System.Drawing.Size(342, 22);
             this.tsmDeadTimeReports.Text = "Tiempos Muertos";
             // 
             // tsmSeparatorDeadTimeReports
             // 
             this.tsmSeparatorDeadTimeReports.Name = "tsmSeparatorDeadTimeReports";
-            this.tsmSeparatorDeadTimeReports.Size = new System.Drawing.Size(338, 6);
+            this.tsmSeparatorDeadTimeReports.Size = new System.Drawing.Size(339, 6);
             // 
             // tsmProductionReportByOrder
             // 
             this.tsmProductionReportByOrder.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmProductionReportByOrder.Name = "tsmProductionReportByOrder";
-            this.tsmProductionReportByOrder.Size = new System.Drawing.Size(341, 22);
+            this.tsmProductionReportByOrder.Size = new System.Drawing.Size(342, 22);
             this.tsmProductionReportByOrder.Text = "Corrida Total por Lote";
             this.tsmProductionReportByOrder.Click += new System.EventHandler(this.tsmProductionReportByOrder_Click);
             // 
@@ -1403,20 +1405,20 @@ namespace BPS
             // 
             this.tsmProductionReportByOrderComsuption.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmProductionReportByOrderComsuption.Name = "tsmProductionReportByOrderComsuption";
-            this.tsmProductionReportByOrderComsuption.Size = new System.Drawing.Size(341, 22);
+            this.tsmProductionReportByOrderComsuption.Size = new System.Drawing.Size(342, 22);
             this.tsmProductionReportByOrderComsuption.Text = "Consumo de materia prima por orden de extrusión";
             this.tsmProductionReportByOrderComsuption.Click += new System.EventHandler(this.consumoDeMateriaPrimaPorOrdenDeExtrusiónToolStripMenuItem_Click);
             // 
             // tsmSeparatorProductionReportByOrderComsuption
             // 
             this.tsmSeparatorProductionReportByOrderComsuption.Name = "tsmSeparatorProductionReportByOrderComsuption";
-            this.tsmSeparatorProductionReportByOrderComsuption.Size = new System.Drawing.Size(338, 6);
+            this.tsmSeparatorProductionReportByOrderComsuption.Size = new System.Drawing.Size(339, 6);
             // 
             // tsmDate
             // 
             this.tsmDate.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmDate.Name = "tsmDate";
-            this.tsmDate.Size = new System.Drawing.Size(341, 22);
+            this.tsmDate.Size = new System.Drawing.Size(342, 22);
             this.tsmDate.Text = "Rollos madre por rango de fecha";
             this.tsmDate.Click += new System.EventHandler(this.rollosMadrePorRangoDeFechaToolStripMenuItem_Click);
             // 
@@ -2061,21 +2063,21 @@ namespace BPS
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(206, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(205, 22);
             this.toolStripMenuItem2.Text = "Depósito Aymas";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click_2);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(206, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(205, 22);
             this.toolStripMenuItem3.Text = "Remitos Presea";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.toolStripMenuItem3_Click_2);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(206, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(205, 22);
             this.toolStripMenuItem4.Text = "Ordenes de Venta Aymas";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.toolStripMenuItem4_Click_2);
             // 
@@ -2627,7 +2629,7 @@ namespace BPS
             this.reportesToolStripMenuItem1,
             this.objetivoDeOrdenesDeCompraToolStripMenuItem});
             this.tsmSales.Name = "tsmSales";
-            this.tsmSales.Size = new System.Drawing.Size(54, 22);
+            this.tsmSales.Size = new System.Drawing.Size(53, 22);
             this.tsmSales.Text = "Ventas";
             // 
             // tsmNationalSales
@@ -2744,7 +2746,7 @@ namespace BPS
             this.tsmReportNationalStock});
             this.tsmReportNationalSales.Image = global::BPS.Properties.Resources.blog;
             this.tsmReportNationalSales.Name = "tsmReportNationalSales";
-            this.tsmReportNationalSales.Size = new System.Drawing.Size(192, 22);
+            this.tsmReportNationalSales.Size = new System.Drawing.Size(191, 22);
             this.tsmReportNationalSales.Text = "Ventas Nacionales";
             // 
             // tsmReportNationalDinamic
@@ -2795,7 +2797,7 @@ namespace BPS
             // tsmSeparatorReportNationalSales
             // 
             this.tsmSeparatorReportNationalSales.Name = "tsmSeparatorReportNationalSales";
-            this.tsmSeparatorReportNationalSales.Size = new System.Drawing.Size(189, 6);
+            this.tsmSeparatorReportNationalSales.Size = new System.Drawing.Size(188, 6);
             // 
             // tsmReportInternationalSales
             // 
@@ -2809,14 +2811,14 @@ namespace BPS
             this.tsmShippingInternational});
             this.tsmReportInternationalSales.Image = global::BPS.Properties.Resources.world;
             this.tsmReportInternationalSales.Name = "tsmReportInternationalSales";
-            this.tsmReportInternationalSales.Size = new System.Drawing.Size(192, 22);
+            this.tsmReportInternationalSales.Size = new System.Drawing.Size(191, 22);
             this.tsmReportInternationalSales.Text = "Ventas Internacionales";
             // 
             // tsmReportInternationalSalesDinamic
             // 
             this.tsmReportInternationalSalesDinamic.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesDinamic.Name = "tsmReportInternationalSalesDinamic";
-            this.tsmReportInternationalSalesDinamic.Size = new System.Drawing.Size(182, 22);
+            this.tsmReportInternationalSalesDinamic.Size = new System.Drawing.Size(181, 22);
             this.tsmReportInternationalSalesDinamic.Text = "Pedidos Dinámicos";
             this.tsmReportInternationalSalesDinamic.Click += new System.EventHandler(this.filtrosToolStripMenuItem1_Click);
             // 
@@ -2824,14 +2826,14 @@ namespace BPS
             // 
             this.tsmReportInternationalSalesGeneral.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesGeneral.Name = "tsmReportInternationalSalesGeneral";
-            this.tsmReportInternationalSalesGeneral.Size = new System.Drawing.Size(182, 22);
+            this.tsmReportInternationalSalesGeneral.Size = new System.Drawing.Size(181, 22);
             this.tsmReportInternationalSalesGeneral.Text = "Pedidos General";
             this.tsmReportInternationalSalesGeneral.Click += new System.EventHandler(this.generalToolStripMenuItem1_Click);
             // 
             // tsmSeparatorReportInternationalSalesGeneral
             // 
             this.tsmSeparatorReportInternationalSalesGeneral.Name = "tsmSeparatorReportInternationalSalesGeneral";
-            this.tsmSeparatorReportInternationalSalesGeneral.Size = new System.Drawing.Size(179, 6);
+            this.tsmSeparatorReportInternationalSalesGeneral.Size = new System.Drawing.Size(178, 6);
             // 
             // tsmReportInternationalSalesProyection
             // 
@@ -2841,14 +2843,14 @@ namespace BPS
             this.tsmReportInternationalSalesProyectionPerKilos});
             this.tsmReportInternationalSalesProyection.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesProyection.Name = "tsmReportInternationalSalesProyection";
-            this.tsmReportInternationalSalesProyection.Size = new System.Drawing.Size(182, 22);
+            this.tsmReportInternationalSalesProyection.Size = new System.Drawing.Size(181, 22);
             this.tsmReportInternationalSalesProyection.Text = "Proyecciones Ventas";
             // 
             // tsmReportInternationalSalesProyectionPerMonth
             // 
             this.tsmReportInternationalSalesProyectionPerMonth.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesProyectionPerMonth.Name = "tsmReportInternationalSalesProyectionPerMonth";
-            this.tsmReportInternationalSalesProyectionPerMonth.Size = new System.Drawing.Size(163, 22);
+            this.tsmReportInternationalSalesProyectionPerMonth.Size = new System.Drawing.Size(164, 22);
             this.tsmReportInternationalSalesProyectionPerMonth.Text = "Película x Mes";
             this.tsmReportInternationalSalesProyectionPerMonth.Click += new System.EventHandler(this.peliculaXMesToolStripMenuItem_Click);
             // 
@@ -2856,7 +2858,7 @@ namespace BPS
             // 
             this.tsmReportInternationalSalesProyectionPerCustomer.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesProyectionPerCustomer.Name = "tsmReportInternationalSalesProyectionPerCustomer";
-            this.tsmReportInternationalSalesProyectionPerCustomer.Size = new System.Drawing.Size(163, 22);
+            this.tsmReportInternationalSalesProyectionPerCustomer.Size = new System.Drawing.Size(164, 22);
             this.tsmReportInternationalSalesProyectionPerCustomer.Text = "Película x Cliente";
             this.tsmReportInternationalSalesProyectionPerCustomer.Click += new System.EventHandler(this.películaXClienteToolStripMenuItem_Click);
             // 
@@ -2864,20 +2866,20 @@ namespace BPS
             // 
             this.tsmReportInternationalSalesProyectionPerKilos.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesProyectionPerKilos.Name = "tsmReportInternationalSalesProyectionPerKilos";
-            this.tsmReportInternationalSalesProyectionPerKilos.Size = new System.Drawing.Size(163, 22);
+            this.tsmReportInternationalSalesProyectionPerKilos.Size = new System.Drawing.Size(164, 22);
             this.tsmReportInternationalSalesProyectionPerKilos.Text = "País x Kilos";
             this.tsmReportInternationalSalesProyectionPerKilos.Click += new System.EventHandler(this.paísXKilosToolStripMenuItem_Click);
             // 
             // tsmSeparatorReportInternationalSalesProyection
             // 
             this.tsmSeparatorReportInternationalSalesProyection.Name = "tsmSeparatorReportInternationalSalesProyection";
-            this.tsmSeparatorReportInternationalSalesProyection.Size = new System.Drawing.Size(179, 6);
+            this.tsmSeparatorReportInternationalSalesProyection.Size = new System.Drawing.Size(178, 6);
             // 
             // tsmReportInternationalSalesMaterial
             // 
             this.tsmReportInternationalSalesMaterial.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmReportInternationalSalesMaterial.Name = "tsmReportInternationalSalesMaterial";
-            this.tsmReportInternationalSalesMaterial.Size = new System.Drawing.Size(182, 22);
+            this.tsmReportInternationalSalesMaterial.Size = new System.Drawing.Size(181, 22);
             this.tsmReportInternationalSalesMaterial.Text = "Materiales x Cliente";
             this.tsmReportInternationalSalesMaterial.Click += new System.EventHandler(this.materialesXClienteToolStripMenuItem_Click);
             // 
@@ -2885,20 +2887,20 @@ namespace BPS
             // 
             this.tsmShippingInternational.Image = global::BPS.Properties.Resources.reportOff;
             this.tsmShippingInternational.Name = "tsmShippingInternational";
-            this.tsmShippingInternational.Size = new System.Drawing.Size(182, 22);
+            this.tsmShippingInternational.Size = new System.Drawing.Size(181, 22);
             this.tsmShippingInternational.Text = "Pedidos Anuales";
             this.tsmShippingInternational.Click += new System.EventHandler(this.tsmShippingInternational_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(189, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(188, 6);
             // 
             // materialClienteToolStripMenuItem
             // 
             this.materialClienteToolStripMenuItem.Image = global::BPS.Properties.Resources.bookmark_document;
             this.materialClienteToolStripMenuItem.Name = "materialClienteToolStripMenuItem";
-            this.materialClienteToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.materialClienteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.materialClienteToolStripMenuItem.Text = "Material Cliente";
             this.materialClienteToolStripMenuItem.Click += new System.EventHandler(this.materialClienteToolStripMenuItem_Click);
             // 
@@ -3022,21 +3024,21 @@ namespace BPS
             // actualizarDepositoToolStripMenuItem
             // 
             this.actualizarDepositoToolStripMenuItem.Name = "actualizarDepositoToolStripMenuItem";
-            this.actualizarDepositoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.actualizarDepositoToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.actualizarDepositoToolStripMenuItem.Text = "Depósito Aymas";
             this.actualizarDepositoToolStripMenuItem.Click += new System.EventHandler(this.actualizarDepositoToolStripMenuItem_Click);
             // 
             // remitosPreseaToolStripMenuItem
             // 
             this.remitosPreseaToolStripMenuItem.Name = "remitosPreseaToolStripMenuItem";
-            this.remitosPreseaToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.remitosPreseaToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.remitosPreseaToolStripMenuItem.Text = "Remitos Presea";
             this.remitosPreseaToolStripMenuItem.Click += new System.EventHandler(this.remitosPreseaToolStripMenuItem_Click);
             // 
             // ordenesDeVentaAymasToolStripMenuItem
             // 
             this.ordenesDeVentaAymasToolStripMenuItem.Name = "ordenesDeVentaAymasToolStripMenuItem";
-            this.ordenesDeVentaAymasToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.ordenesDeVentaAymasToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.ordenesDeVentaAymasToolStripMenuItem.Text = "Ordenes de Venta Aymas";
             this.ordenesDeVentaAymasToolStripMenuItem.Click += new System.EventHandler(this.ordenesDeVentaAymasToolStripMenuItem_Click);
             // 
@@ -3044,7 +3046,7 @@ namespace BPS
             // 
             this.predespachosToolStripMenuItem.Image = global::BPS.Properties.Resources.box1;
             this.predespachosToolStripMenuItem.Name = "predespachosToolStripMenuItem";
-            this.predespachosToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
+            this.predespachosToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.predespachosToolStripMenuItem.Text = "Pre-Despachos";
             this.predespachosToolStripMenuItem.Click += new System.EventHandler(this.predespachosToolStripMenuItem_Click);
             // 
@@ -3056,7 +3058,9 @@ namespace BPS
             this.detalleDeBLToolStripMenuItem,
             this.despachosProgramadosToolStripMenuItem,
             this.despachosAcumuladosToolStripMenuItem,
-            this.reasignacionesToolStripMenuItem2});
+            this.reasignacionesToolStripMenuItem2,
+            this.reporteDespachosToolStripMenuItem,
+            this.reporteOTIFToolStripMenuItem});
             this.reportesToolStripMenuItem1.Name = "reportesToolStripMenuItem1";
             this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(274, 22);
             this.reportesToolStripMenuItem1.Text = "Reportes";
@@ -3279,7 +3283,7 @@ namespace BPS
             // 
             this.tsmObenMasSiigoM.Image = global::BPS.Properties.Resources.iconExportTo;
             this.tsmObenMasSiigoM.Name = "tsmObenMasSiigoM";
-            this.tsmObenMasSiigoM.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoM.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoM.Text = "Exportación de movimientos a SIIGO";
             this.tsmObenMasSiigoM.Click += new System.EventHandler(this.exportaciónDeMovimientosASIIGOToolStripMenuItem1_Click);
             // 
@@ -3287,20 +3291,20 @@ namespace BPS
             // 
             this.tsmObenMasSiigoD.Image = global::BPS.Properties.Resources.iconExportTo;
             this.tsmObenMasSiigoD.Name = "tsmObenMasSiigoD";
-            this.tsmObenMasSiigoD.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoD.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoD.Text = "Exportación de despachos a SIIGO";
             this.tsmObenMasSiigoD.Click += new System.EventHandler(this.exportaciónDeDespachosASIIGOToolStripMenuItem_Click);
             // 
             // tsmSeparatorObenMasSiigoD
             // 
             this.tsmSeparatorObenMasSiigoD.Name = "tsmSeparatorObenMasSiigoD";
-            this.tsmSeparatorObenMasSiigoD.Size = new System.Drawing.Size(263, 6);
+            this.tsmSeparatorObenMasSiigoD.Size = new System.Drawing.Size(264, 6);
             // 
             // tsmObenMasSiigoDev
             // 
             this.tsmObenMasSiigoDev.Image = global::BPS.Properties.Resources.iconExportTo;
             this.tsmObenMasSiigoDev.Name = "tsmObenMasSiigoDev";
-            this.tsmObenMasSiigoDev.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoDev.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoDev.Text = "Exportación de devoluciones a SIIGO";
             this.tsmObenMasSiigoDev.Click += new System.EventHandler(this.esportaciónDeDevolucionesASIIGOToolStripMenuItem_Click);
             // 
@@ -3308,33 +3312,33 @@ namespace BPS
             // 
             this.tsmObenMasSiigoMaq.Image = global::BPS.Properties.Resources.iconExportTo;
             this.tsmObenMasSiigoMaq.Name = "tsmObenMasSiigoMaq";
-            this.tsmObenMasSiigoMaq.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoMaq.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoMaq.Text = "Exportación de maquilas a SIIGO";
             this.tsmObenMasSiigoMaq.Click += new System.EventHandler(this.exportaciónDeMaquilasASIIGOToolStripMenuItem_Click);
             // 
             // tsmSeparatorObenMasSiigoMaq
             // 
             this.tsmSeparatorObenMasSiigoMaq.Name = "tsmSeparatorObenMasSiigoMaq";
-            this.tsmSeparatorObenMasSiigoMaq.Size = new System.Drawing.Size(263, 6);
+            this.tsmSeparatorObenMasSiigoMaq.Size = new System.Drawing.Size(264, 6);
             // 
             // tsmObenMasSiigoReProcess
             // 
             this.tsmObenMasSiigoReProcess.Image = global::BPS.Properties.Resources.iconExportTo;
             this.tsmObenMasSiigoReProcess.Name = "tsmObenMasSiigoReProcess";
-            this.tsmObenMasSiigoReProcess.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoReProcess.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoReProcess.Text = "Expotación de re-proceso SIIGO";
             this.tsmObenMasSiigoReProcess.Click += new System.EventHandler(this.expotaciónDeReprocesoSIIGOToolStripMenuItem_Click);
             // 
             // tsmSeparatorObenMasSiigoReProcess
             // 
             this.tsmSeparatorObenMasSiigoReProcess.Name = "tsmSeparatorObenMasSiigoReProcess";
-            this.tsmSeparatorObenMasSiigoReProcess.Size = new System.Drawing.Size(263, 6);
+            this.tsmSeparatorObenMasSiigoReProcess.Size = new System.Drawing.Size(264, 6);
             // 
             // exportaciónDeMateriaPrimaSIIGOToolStripMenuItem
             // 
             this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Image = global::BPS.Properties.Resources.iconExportTo;
             this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Name = "exportaciónDeMateriaPrimaSIIGOToolStripMenuItem";
-            this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Text = "Exportación de MP SIIGO";
             this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem.Click += new System.EventHandler(this.exportaciónDeMateriaPrimaSIIGOToolStripMenuItem_Click);
             // 
@@ -3342,20 +3346,20 @@ namespace BPS
             // 
             this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Image = global::BPS.Properties.Resources.iconExportTo;
             this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Name = "exportaciónDeDespachosMateriaPrimaToolStripMenuItem";
-            this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Size = new System.Drawing.Size(266, 22);
+            this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
             this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Text = "Exportación de despachos MP SIIGO";
             this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem.Click += new System.EventHandler(this.exportaciónDeDespachosMateriaPrimaToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(263, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(264, 6);
             // 
             // tsmObenMasSiigoAct
             // 
             this.tsmObenMasSiigoAct.Image = global::BPS.Properties.Resources.arrow_switch;
             this.tsmObenMasSiigoAct.Name = "tsmObenMasSiigoAct";
-            this.tsmObenMasSiigoAct.Size = new System.Drawing.Size(266, 22);
+            this.tsmObenMasSiigoAct.Size = new System.Drawing.Size(267, 22);
             this.tsmObenMasSiigoAct.Text = "Actualización Siigo";
             this.tsmObenMasSiigoAct.Click += new System.EventHandler(this.actualizaciónSiigoToolStripMenuItem_Click);
             // 
@@ -3860,14 +3864,14 @@ namespace BPS
             // 
             this.tsmManagementOrder.Image = global::BPS.Properties.Resources.script;
             this.tsmManagementOrder.Name = "tsmManagementOrder";
-            this.tsmManagementOrder.Size = new System.Drawing.Size(270, 22);
+            this.tsmManagementOrder.Size = new System.Drawing.Size(269, 22);
             this.tsmManagementOrder.Text = "Listado de Ordenes de Produccion";
             // 
             // tsmManagementReports
             // 
             this.tsmManagementReports.Image = global::BPS.Properties.Resources.report;
             this.tsmManagementReports.Name = "tsmManagementReports";
-            this.tsmManagementReports.Size = new System.Drawing.Size(270, 22);
+            this.tsmManagementReports.Size = new System.Drawing.Size(269, 22);
             this.tsmManagementReports.Text = "Reporte Tiempos Muertos Mensuales";
             // 
             // tsmManagerFull
@@ -3936,6 +3940,13 @@ namespace BPS
             this.listaDeEmpaqueToolStripMenuItem.Text = "Lista de empaque para OBENMAS";
             this.listaDeEmpaqueToolStripMenuItem.Click += new System.EventHandler(this.listaDeEmpaqueToolStripMenuItem_Click);
             // 
+            // nuevoPedidoExpoToolStripMenuItem
+            // 
+            this.nuevoPedidoExpoToolStripMenuItem.Name = "nuevoPedidoExpoToolStripMenuItem";
+            this.nuevoPedidoExpoToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
+            this.nuevoPedidoExpoToolStripMenuItem.Text = "Nuevo pedido Expo";
+            this.nuevoPedidoExpoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoExpoToolStripMenuItem_Click);
+            // 
             // detallePlanificaciónToolStripMenuItem
             // 
             this.detallePlanificaciónToolStripMenuItem.Name = "detallePlanificaciónToolStripMenuItem";
@@ -3979,7 +3990,7 @@ namespace BPS
             // tsslVersionLabel
             // 
             this.tsslVersionLabel.Name = "tsslVersionLabel";
-            this.tsslVersionLabel.Size = new System.Drawing.Size(49, 17);
+            this.tsslVersionLabel.Size = new System.Drawing.Size(48, 17);
             this.tsslVersionLabel.Text = "Versión:";
             // 
             // tsslVersion
@@ -3987,12 +3998,19 @@ namespace BPS
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(0, 17);
             // 
-            // nuevoPedidoExpoToolStripMenuItem
+            // reporteDespachosToolStripMenuItem
             // 
-            this.nuevoPedidoExpoToolStripMenuItem.Name = "nuevoPedidoExpoToolStripMenuItem";
-            this.nuevoPedidoExpoToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
-            this.nuevoPedidoExpoToolStripMenuItem.Text = "Nuevo pedido Expo";
-            this.nuevoPedidoExpoToolStripMenuItem.Click += new System.EventHandler(this.nuevoPedidoExpoToolStripMenuItem_Click);
+            this.reporteDespachosToolStripMenuItem.Name = "reporteDespachosToolStripMenuItem";
+            this.reporteDespachosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.reporteDespachosToolStripMenuItem.Text = "Reporte despachos";
+            this.reporteDespachosToolStripMenuItem.Click += new System.EventHandler(this.reporteDespachosToolStripMenuItem_Click);
+            // 
+            // reporteOTIFToolStripMenuItem
+            // 
+            this.reporteOTIFToolStripMenuItem.Name = "reporteOTIFToolStripMenuItem";
+            this.reporteOTIFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.reporteOTIFToolStripMenuItem.Text = "Reporte OTIF";
+            this.reporteOTIFToolStripMenuItem.Click += new System.EventHandler(this.reporteOTIFToolStripMenuItem_Click_1);
             // 
             // frmMain
             // 
@@ -4454,6 +4472,8 @@ namespace BPS
         private System.Windows.Forms.ToolStripMenuItem pruebaListaOrdenDeCorteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listaDeEmpaqueToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem nuevoPedidoExpoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteDespachosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reporteOTIFToolStripMenuItem;
     }
 }
 

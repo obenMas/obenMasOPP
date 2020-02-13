@@ -44,7 +44,7 @@
     <PublisherName>Oben Holding Group</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>12</ApplicationRevision>
+    <ApplicationRevision>13</ApplicationRevision>
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -651,6 +651,18 @@
     </Compile>
     <Compile Include="frmRawMaterialDepositState.Designer.cs">
       <DependentUpon>frmRawMaterialDepositState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatchReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialDispatchReport.Designer.cs">
+      <DependentUpon>frmRawMaterialDispatchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRawMaterialEntryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRawMaterialEntryReport.Designer.cs">
+      <DependentUpon>frmRawMaterialEntryReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRawMaterialMovementsReport.cs">
       <SubType>Form</SubType>
@@ -3884,6 +3896,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRawMaterialDepositState.resx">
       <DependentUpon>frmRawMaterialDepositState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialDispatchReport.resx">
+      <DependentUpon>frmRawMaterialDispatchReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRawMaterialEntryReport.resx">
+      <DependentUpon>frmRawMaterialEntryReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRawMaterialMovementsReport.resx">
       <DependentUpon>frmRawMaterialMovementsReport.cs</DependentUpon>

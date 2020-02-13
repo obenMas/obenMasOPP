@@ -40,9 +40,11 @@ namespace BPS.Lite
         double DepDespachos = 0;
         double DepImportaciones = 0;
         double DepPrimera = 0;
+        double DepPrimeraImp = 0;
         double DepProceso = 0;
         double DepOP1 = 0;
         double DepPrimeraFinal = 0;
+        double DepPrimeraFinalImp = 0;
         double DepProcesoFinal = 0;
         double DepOP1Final = 0;
         double RackPStock = 0;
@@ -63,8 +65,9 @@ namespace BPS.Lite
         double Silo4Final = 0;
         double StockMPFinal = 0;
         double Molino = 0;
-        double SwapPlus = 0;
-        double SwapMinus = 0;
+        double MermaMolino = 0;
+        //double SwapPlus = 0;
+        //double SwapMinus = 0;
         public frmProductionControlPerDate()
         {
             InitializeComponent();
@@ -329,7 +332,7 @@ namespace BPS.Lite
                     DepImportaciones += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"].ToString());
                 }
             }
-            texto = "CALL spSwapReportByDate '" + dtpDesde.Value.ToString("dd/MM/yyyy") + "', '" + dtpHasta.Value.ToString("dd/MM/yyyy") + "',0,0";
+            /*texto = "CALL spSwapReportByDate '" + dtpDesde.Value.ToString("dd/MM/yyyy") + "', '" + dtpHasta.Value.ToString("dd/MM/yyyy") + "',0,0";
             DS = clsConnection.getDataSetResult(texto);
             SwapPlus = 0;
             SwapMinus = 0;
@@ -344,7 +347,7 @@ namespace BPS.Lite
                 }
             }
             SwapPlus = SwapPlus / 1000;
-            SwapMinus = SwapMinus / 1000;
+            SwapMinus = SwapMinus / 1000;*/
             DepImportaciones = DepImportaciones / 1000;
             DepDevoluciones = DepDevoluciones / 1000;
             DepDespachos = DepDespachos / 1000;
@@ -374,7 +377,9 @@ namespace BPS.Lite
             RackSBases = 0;
             RackSMetal = 0;
             if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
-            {
+            if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
+            if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
+                    {
                 for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                 {
                     string codigo = DS.Tables[0].Rows[i]["Pelicula"].ToString();
@@ -404,14 +409,24 @@ namespace BPS.Lite
             texto = "CALL spDepotCoilHistory(" + dtpDesde.Value.Date.Day + "," + dtpDesde.Value.Date.Month + "," + dtpDesde.Value.Date.Year + ",0)";
             DS = clsConnection.getDataSetResult(texto);
             DepPrimera = 0;
+            DepPrimeraImp = 0;
             DepProceso = 0;
             DepOP1 = 0;
             if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
             {
                 for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                 {
-                    if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Primera")
-                        DepPrimera += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                    if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Primera" && DS.Tables[0].Rows[i]["Bodega"].ToString() == "Producto Terminado Pilar")
+                    {
+                        if (DS.Tables[0].Rows[i]["Tipo"].ToString() == "LOCAL")
+                        {
+                            DepPrimera += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                        }
+                        else
+                        {
+                            DepPrimeraImp += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                        }
+                    }
                     else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Observación")
                         DepProceso += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                     else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Segunda")
@@ -422,14 +437,24 @@ namespace BPS.Lite
             texto = "CALL spDepotCoilHistory(" + dtpHasta.Value.Date.Day + "," + dtpHasta.Value.Date.Month + "," + dtpHasta.Value.Date.Year + ",0)";
             DS = clsConnection.getDataSetResult(texto);
             DepPrimeraFinal = 0;
+            DepPrimeraFinalImp = 0;
             DepProcesoFinal = 0;
             DepOP1Final = 0;
             if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
             {
                 for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                 {
-                    if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Primera")
-                        DepPrimeraFinal += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                    if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Primera" && DS.Tables[0].Rows[i]["Bodega"].ToString() == "Producto Terminado Pilar")
+                    {
+                        if (DS.Tables[0].Rows[i]["Tipo"].ToString() == "LOCAL")
+                        {
+                            DepPrimeraFinal += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                        }
+                        else
+                        {
+                            DepPrimeraFinalImp += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
+                        }
+                    }                        
                     else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Observación")
                         DepProcesoFinal += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                     else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Segunda")
@@ -442,12 +467,14 @@ namespace BPS.Lite
             RackSBases = RackSBases / 1000;
             RackSMetal = RackSMetal / 1000;
             DepPrimera = DepPrimera / 1000;
+            DepPrimeraImp = DepPrimeraImp / 1000;
             DepProceso = DepProceso / 1000;
             DepOP1 = DepOP1 / 1000;
             RackPStockFinal = RackPStockFinal / 1000;
             RackSBasesFinal = RackSBasesFinal / 1000;
             RackSMetalFinal = RackSMetalFinal / 1000;
             DepPrimeraFinal = DepPrimeraFinal / 1000;
+            DepPrimeraFinalImp = DepPrimeraFinalImp / 1000;
             DepProcesoFinal = DepProcesoFinal / 1000;
             DepOP1Final = DepOP1Final / 1000;
         }
@@ -525,6 +552,15 @@ namespace BPS.Lite
                 }
             }
             Molino = Molino / 1000;
+
+            texto = "SELECT SUM(bps_prod_millproduction.mp_scrapWeigth) bps_prod_millproduction FROM bps_prod_millproduction WHERE bps_prod_millproduction.mp_date BETWEEN'" + dtpDesde.Value.ToString("dd/MM/yyyy") + "' AND '" + dtpHasta.Value.ToString("dd/MM/yyyy") + "'";
+            DS = clsConnection.getDataSetResult(texto);
+            Molino = 0;
+            if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
+            {
+                MermaMolino += Convert.ToDouble(DS.Tables[0].Rows[0][0].ToString());
+            }
+            MermaMolino = MermaMolino / 1000;
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)
@@ -542,6 +578,7 @@ namespace BPS.Lite
                 getMill();
                 //Metalizadora
                 txtMetalizadoMetalizadora.Text = metalized.ToString("0");
+                txtMermaMetalizadora.Text = MetMerma.ToString("0");
                 //Metalizadora
                 //Cortadora primaria
                 txtPrimera.Text = CPprimera.ToString("0");
@@ -579,15 +616,17 @@ namespace BPS.Lite
                 txtRecupExtrusora.Text = ExtrusoraRecupPorcentaje.ToString("0.0 %");
                 //Extrusora
                 //Deposito PT, PP y OP1
-                txtSwapPlus.Text = SwapPlus.ToString("0");
-                txtSwapMinus.Text = SwapMinus.ToString("0");
+                //txtSwapPlus.Text = SwapPlus.ToString("0");
+                //txtSwapMinus.Text = SwapMinus.ToString("0");
                 txtDespachosDeposito.Text = DepDespachos.ToString("0");
                 txtDevolucionesDeposito.Text = DepDevoluciones.ToString("0");
                 txtImportacionesDeposito.Text = DepImportaciones.ToString("0");
                 txtPrimeraDeposito.Text = DepPrimera.ToString("0");
+                txtDepositoImpInicial.Text = DepPrimeraImp.ToString("0");
                 txtProductoEnProcesoDeposito.Text = DepProceso.ToString("0");
                 txtOP1Deposito.Text = DepOP1.ToString("0");
                 txtPrimeraDepositoFinal.Text = DepPrimeraFinal.ToString("0");
+                txtDepositoImpFinal.Text = DepPrimeraFinalImp.ToString("0");
                 txtProductoEnProcesoDepositoFinal.Text = DepProcesoFinal.ToString("0");
                 txtOP1DepositoFinal.Text = DepOP1Final.ToString("0");
                 //Deposito PT, PP y OP1
@@ -613,6 +652,7 @@ namespace BPS.Lite
                 //DepositoMP
                 //Molino
                 txtStockMolino.Text = Molino.ToString("0");
+                txtMermaMolino.Text = MermaMolino.ToString("0");
                 //Molino
                 getParameter();
                 ajustarExtrusion();
@@ -993,5 +1033,16 @@ namespace BPS.Lite
             
         }
 
+        private void txtDepositoImpInicial_DoubleClick(object sender, EventArgs e)
+        {
+            frmPCPTProductionControl form = new frmPCPTProductionControl(dtpDesde.Value.Date, dtpHasta.Value.Date, "DepPrimeraImp");
+            form.Show();
+        }
+
+        private void txtDepositoImpFinal_DoubleClick(object sender, EventArgs e)
+        {
+            frmPCPTProductionControl form = new frmPCPTProductionControl(dtpDesde.Value.Date, dtpHasta.Value.Date, "PrimeraDepositoFinalImp");
+            form.Show();
+        }
     }
 }

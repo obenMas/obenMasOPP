@@ -3462,6 +3462,21 @@ namespace BPS.Lite
                 SCRAP.DropDownItems.Add(estadodedepositoscrap);
                 #endregion
 
+                #region Supervision
+
+                ToolStripMenuItem supervision = new ToolStripMenuItem();
+                supervision.Text = "Reportes";
+                supervision.Image = Properties.Resources.eye;
+                mnu.Items.Add(supervision);
+
+                ToolStripMenuItem prodcont = new ToolStripMenuItem();
+                prodcont.Text = "Control de resultados entre fechas";
+                prodcont.Click += new EventHandler(prodcontToolStripMenuItem_Click);
+                prodcont.Image = Properties.Resources.coils;
+                supervision.DropDownItems.Add(prodcont);
+
+                #endregion
+
             }
             else if (clsGlobal.LoggedUser.RoleName == "Compras")
             {

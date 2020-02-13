@@ -42,16 +42,23 @@
             this.dateTPFromCutting = new System.Windows.Forms.DateTimePicker();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEjecutiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmAncho = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCantidadFabricada = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCantidadDespachada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDiameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCantSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCantFab = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCantDesp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaCreacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmFechaOTIF = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCompDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFechaSolicitada = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPlanningDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmInFullDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaDespacho = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTIFReport)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -79,16 +86,23 @@
             this.dgvOTIFReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodsec,
             this.clmSoD,
+            this.clmEjecutiva,
             this.clmPlanta,
             this.clmCliente,
+            this.clmOC,
             this.clmPelicula,
             this.clmAncho,
-            this.clmCantidad,
-            this.clmCantidadFabricada,
-            this.clmCantidadDespachada,
+            this.clmDiameter,
+            this.clmCore,
+            this.clmPrice,
+            this.clmCantSol,
+            this.clmCantFab,
+            this.clmCantDesp,
             this.clmFechaCreacion,
-            this.clmFechaOTIF,
-            this.clmCompDate,
+            this.clmFechaSolicitada,
+            this.clmPlanningDate,
+            this.clmFechaEntrega,
+            this.clmInFullDate,
             this.clmFechaDespacho});
             this.dgvOTIFReport.Location = new System.Drawing.Point(12, 80);
             this.dgvOTIFReport.Name = "dgvOTIFReport";
@@ -189,13 +203,21 @@
             this.clmSoD.HeaderText = "Pedido";
             this.clmSoD.Name = "clmSoD";
             this.clmSoD.ReadOnly = true;
-            this.clmSoD.Width = 65;
+            this.clmSoD.Width = 55;
+            // 
+            // clmEjecutiva
+            // 
+            this.clmEjecutiva.HeaderText = "Ejecutiva";
+            this.clmEjecutiva.Name = "clmEjecutiva";
+            this.clmEjecutiva.ReadOnly = true;
+            this.clmEjecutiva.Width = 60;
             // 
             // clmPlanta
             // 
             this.clmPlanta.HeaderText = "Planta";
             this.clmPlanta.Name = "clmPlanta";
             this.clmPlanta.ReadOnly = true;
+            this.clmPlanta.Visible = false;
             this.clmPlanta.Width = 65;
             // 
             // clmCliente
@@ -203,63 +225,111 @@
             this.clmCliente.HeaderText = "Cliente";
             this.clmCliente.Name = "clmCliente";
             this.clmCliente.ReadOnly = true;
-            this.clmCliente.Width = 150;
+            // 
+            // clmOC
+            // 
+            this.clmOC.HeaderText = "OC";
+            this.clmOC.Name = "clmOC";
+            this.clmOC.ReadOnly = true;
+            this.clmOC.Width = 40;
             // 
             // clmPelicula
             // 
             this.clmPelicula.HeaderText = "Pelicula";
             this.clmPelicula.Name = "clmPelicula";
             this.clmPelicula.ReadOnly = true;
-            this.clmPelicula.Width = 70;
+            this.clmPelicula.Width = 65;
             // 
             // clmAncho
             // 
             this.clmAncho.HeaderText = "Ancho";
             this.clmAncho.Name = "clmAncho";
             this.clmAncho.ReadOnly = true;
-            this.clmAncho.Width = 65;
+            this.clmAncho.Width = 40;
             // 
-            // clmCantidad
+            // clmDiameter
             // 
-            this.clmCantidad.HeaderText = "Cantidad Solicitada";
-            this.clmCantidad.Name = "clmCantidad";
-            this.clmCantidad.ReadOnly = true;
+            this.clmDiameter.HeaderText = "Diametro";
+            this.clmDiameter.Name = "clmDiameter";
+            this.clmDiameter.ReadOnly = true;
+            this.clmDiameter.Width = 50;
             // 
-            // clmCantidadFabricada
+            // clmCore
             // 
-            this.clmCantidadFabricada.HeaderText = "Cantidad Fabricada";
-            this.clmCantidadFabricada.Name = "clmCantidadFabricada";
-            this.clmCantidadFabricada.ReadOnly = true;
+            this.clmCore.HeaderText = "Core";
+            this.clmCore.Name = "clmCore";
+            this.clmCore.ReadOnly = true;
+            this.clmCore.Width = 40;
             // 
-            // clmCantidadDespachada
+            // clmPrice
             // 
-            this.clmCantidadDespachada.HeaderText = "Cantidad Despachada";
-            this.clmCantidadDespachada.Name = "clmCantidadDespachada";
-            this.clmCantidadDespachada.ReadOnly = true;
+            this.clmPrice.HeaderText = "Precio";
+            this.clmPrice.Name = "clmPrice";
+            this.clmPrice.ReadOnly = true;
+            this.clmPrice.Width = 40;
+            // 
+            // clmCantSol
+            // 
+            this.clmCantSol.HeaderText = "Cantidad Solicitada";
+            this.clmCantSol.Name = "clmCantSol";
+            this.clmCantSol.ReadOnly = true;
+            this.clmCantSol.Width = 70;
+            // 
+            // clmCantFab
+            // 
+            this.clmCantFab.HeaderText = "Cantidad Fabricada";
+            this.clmCantFab.Name = "clmCantFab";
+            this.clmCantFab.ReadOnly = true;
+            this.clmCantFab.Width = 70;
+            // 
+            // clmCantDesp
+            // 
+            this.clmCantDesp.HeaderText = "Cantidad Despachada";
+            this.clmCantDesp.Name = "clmCantDesp";
+            this.clmCantDesp.ReadOnly = true;
+            this.clmCantDesp.Width = 70;
             // 
             // clmFechaCreacion
             // 
             this.clmFechaCreacion.HeaderText = "Fecha de Creacion";
             this.clmFechaCreacion.Name = "clmFechaCreacion";
             this.clmFechaCreacion.ReadOnly = true;
+            this.clmFechaCreacion.Width = 70;
             // 
-            // clmFechaOTIF
+            // clmFechaSolicitada
             // 
-            this.clmFechaOTIF.HeaderText = "Fecha Requerida";
-            this.clmFechaOTIF.Name = "clmFechaOTIF";
-            this.clmFechaOTIF.ReadOnly = true;
+            this.clmFechaSolicitada.HeaderText = "Fecha Solicitada";
+            this.clmFechaSolicitada.Name = "clmFechaSolicitada";
+            this.clmFechaSolicitada.ReadOnly = true;
+            this.clmFechaSolicitada.Width = 70;
             // 
-            // clmCompDate
+            // clmPlanningDate
             // 
-            this.clmCompDate.HeaderText = "Fecha Fabricación";
-            this.clmCompDate.Name = "clmCompDate";
-            this.clmCompDate.ReadOnly = true;
+            this.clmPlanningDate.HeaderText = "Fecha Planning";
+            this.clmPlanningDate.Name = "clmPlanningDate";
+            this.clmPlanningDate.ReadOnly = true;
+            this.clmPlanningDate.Width = 70;
+            // 
+            // clmFechaEntrega
+            // 
+            this.clmFechaEntrega.HeaderText = "Fecha Entrega";
+            this.clmFechaEntrega.Name = "clmFechaEntrega";
+            this.clmFechaEntrega.ReadOnly = true;
+            this.clmFechaEntrega.Width = 70;
+            // 
+            // clmInFullDate
+            // 
+            this.clmInFullDate.HeaderText = "Fecha InFull";
+            this.clmInFullDate.Name = "clmInFullDate";
+            this.clmInFullDate.ReadOnly = true;
+            this.clmInFullDate.Width = 70;
             // 
             // clmFechaDespacho
             // 
             this.clmFechaDespacho.HeaderText = "Fecha Despacho";
             this.clmFechaDespacho.Name = "clmFechaDespacho";
             this.clmFechaDespacho.ReadOnly = true;
+            this.clmFechaDespacho.Width = 70;
             // 
             // frmOTIFReport
             // 
@@ -301,16 +371,23 @@
         private System.Windows.Forms.DateTimePicker dateTPFromCutting;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSoD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEjecutiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlanta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCliente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOC;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPelicula;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmAncho;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidadFabricada;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidadDespachada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiameter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantSol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantFab;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantDesp;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaCreacion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaOTIF;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCompDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaSolicitada;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPlanningDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaEntrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmInFullDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaDespacho;
     }
 }

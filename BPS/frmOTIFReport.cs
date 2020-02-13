@@ -32,19 +32,29 @@ namespace BPS
                 {
                     dgvOTIFReport.Rows.Add();
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmSoD.Index].Value = DS.Tables[0].Rows[i]["SoD"];
-                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantidad.Index].Value = DS.Tables[0].Rows[i]["cantidad"];
-                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantidadFabricada.Index].Value = DS.Tables[0].Rows[i]["cantidadFabricada"];
-                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantidadDespachada.Index].Value = DS.Tables[0].Rows[i]["cantidadDespachada"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmEjecutiva.Index].Value = DS.Tables[0].Rows[i]["ejecutiva"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCliente.Index].Value = DS.Tables[0].Rows[i]["Cliente"];
-                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaCreacion.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaCreacion"]).ToShortDateString();
-                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaOTIF.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["OTIFDate"]).ToShortDateString();
-                    //dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantidadDespachada.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaDespacho"]).ToShortDateString();
-                    if (Convert.ToBoolean(DS.Tables[0].Rows[i]["estacompleto"]))
-                    {
-                        dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCompDate.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaComp"]).ToShortDateString();
-                    }
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmOC.Index].Value = DS.Tables[0].Rows[i]["OC"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["pelicula"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmAncho.Index].Value = DS.Tables[0].Rows[i]["Ancho"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmDiameter.Index].Value = DS.Tables[0].Rows[i]["Diametro"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCore.Index].Value = DS.Tables[0].Rows[i]["Core"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmPrice.Index].Value = Math.Round(Convert.ToDouble(DS.Tables[0].Rows[i]["Precio"]),2);
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantSol.Index].Value = Math.Round(Convert.ToDouble(DS.Tables[0].Rows[i]["CantidadSolicitada"]), 2);
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantFab.Index].Value = Math.Round(Convert.ToDouble(DS.Tables[0].Rows[i]["cantidadFabricada"]), 2);
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCantDesp.Index].Value = Math.Round(Convert.ToDouble(DS.Tables[0].Rows[i]["cantidadDespachada"]), 2);                    
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaCreacion.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaCreacion"]).ToShortDateString();
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaSolicitada.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaSolicitada"]).ToShortDateString();
+                    if(Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaPlanning"]).ToString("dd/MM/yyyy") != "01/01/1900")
+                    {
+                        dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmPlanningDate.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaPlanning"]).ToShortDateString();
+                    }
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaEntrega.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaEntrega"]).ToShortDateString();
+                    if (Convert.ToBoolean(DS.Tables[0].Rows[i]["estacompleto"]))
+                    {
+                        dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmInFullDate.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaInFull"]).ToShortDateString();
+                    }
+                    //dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaDespacho.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaDespacho"]).ToShortDateString();
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmPlanta.Index].Value = DS.Tables[0].Rows[i]["Planta"];
                 }
             }

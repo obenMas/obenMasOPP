@@ -945,9 +945,9 @@ namespace BPS.Lite
                 horario = desde.ToShortTimeString();
                 horario2 = hasta.ToShortTimeString();
                 if (hora == 19)
-                    DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "19)");
+                    DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "19,0)");
                 else if (hora == 7)
-                    DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "7)");
+                    DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "7,0)");
 
                 if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
                 {
@@ -973,7 +973,33 @@ namespace BPS.Lite
                 dgvControl.Columns[clmSubtotal.Index].Visible = true;
                 dgvControl.Columns[clmDeposito.Index].Visible = true;
                 DataSet DS = new DataSet();
-                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + desde.Day.ToString() + "," + desde.Month.ToString() + "," + desde.Year.ToString() + "," + "0)");
+                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + desde.Day.ToString() + "," + desde.Month.ToString() + "," + desde.Year.ToString() + "," + "0,0)");
+
+                if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
+                {
+                    for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                    {
+                        if ((Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000) != 0.00)
+                        {
+                            dgvControl.Rows.Add();
+                            int fila = dgvControl.Rows.Count - 1;
+                            dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["Pelicula"];
+                            dgvControl.Rows[fila].Cells[clmDeposito.Index].Value = DS.Tables[0].Rows[i]["Deposito"];
+                            dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000).ToString("0.00");
+                        }
+                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000;
+                    }
+                }
+                txtTotal.Text = total.ToString("0.00");
+            }
+            if (id == "DepPrimeraImp")
+            {
+                this.Text = "Detalle de Deposito Primera";
+                dgvControl.Columns[clmPelicula.Index].Visible = true;
+                dgvControl.Columns[clmSubtotal.Index].Visible = true;
+                dgvControl.Columns[clmDeposito.Index].Visible = true;
+                DataSet DS = new DataSet();
+                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + desde.Day.ToString() + "," + desde.Month.ToString() + "," + desde.Year.ToString() + "," + "0,1)");
 
                 if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
                 {
@@ -999,7 +1025,33 @@ namespace BPS.Lite
                 dgvControl.Columns[clmSubtotal.Index].Visible = true;
                 dgvControl.Columns[clmDeposito.Index].Visible = true;
                 DataSet DS = new DataSet();
-                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "0)");
+                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "0,0)");
+
+                if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
+                {
+                    for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                    {
+                        if ((Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000) != 0.00)
+                        {
+                            dgvControl.Rows.Add();
+                            int fila = dgvControl.Rows.Count - 1;
+                            dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["Pelicula"];
+                            dgvControl.Rows[fila].Cells[clmDeposito.Index].Value = DS.Tables[0].Rows[i]["Deposito"];
+                            dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000).ToString("0.00");
+                        }
+                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000;
+                    }
+                }
+                txtTotal.Text = total.ToString("0.00");
+            }
+            if (id == "PrimeraDepositoFinalImp")
+            {
+                this.Text = "Detalle de Deposito Primera";
+                dgvControl.Columns[clmPelicula.Index].Visible = true;
+                dgvControl.Columns[clmSubtotal.Index].Visible = true;
+                dgvControl.Columns[clmDeposito.Index].Visible = true;
+                DataSet DS = new DataSet();
+                DS = clsConnection.getDataSetResult("CALL spDepotCoilHistoryPrimaryTotal(" + hasta.Day.ToString() + "," + hasta.Month.ToString() + "," + hasta.Year.ToString() + "," + "0,1)");
 
                 if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
                 {

@@ -1240,6 +1240,40 @@ namespace BPS
                 historialBobinas.Click += new EventHandler(historialDeDepositoDeBobinasToolStripMenuItem_Click);
                 INVENTARIOS.DropDownItems.Add(historialBobinas);
 
+                ToolStripMenuItem MATERIAPRIMA = new ToolStripMenuItem();
+                MATERIAPRIMA.Text = "Materia Prima";
+                INVENTARIOS.DropDownItems.Add(MATERIAPRIMA);
+
+                ToolStripMenuItem estadodedepositomatprima = new ToolStripMenuItem();
+                estadodedepositomatprima.Text = "Inventario de MP";
+                estadodedepositomatprima.Image = Properties.Resources.box1;
+                estadodedepositomatprima.Click += new EventHandler(estadoDeDepositoMP_Click);
+                MATERIAPRIMA.DropDownItems.Add(estadodedepositomatprima);
+
+                ToolStripMenuItem historialMateriaPrima = new ToolStripMenuItem();
+                historialMateriaPrima.Text = "Historial de deposito de materia prima";
+                historialMateriaPrima.Image = Properties.Resources.calendar;
+                historialMateriaPrima.Click += new EventHandler(rawdepothistory_Click);
+                MATERIAPRIMA.DropDownItems.Add(historialMateriaPrima);
+
+                ToolStripMenuItem reportIngresoMP = new ToolStripMenuItem();
+                reportIngresoMP.Text = "Reporte de Ingreso de MP";
+                reportIngresoMP.Image = Properties.Resources.report;
+                reportIngresoMP.Click += new EventHandler(reportIngresoMP_Click);
+                MATERIAPRIMA.DropDownItems.Add(reportIngresoMP);
+
+                ToolStripMenuItem reportemovimientosmatprima = new ToolStripMenuItem();
+                reportemovimientosmatprima.Text = "Reporte de Movimientos de MP";
+                reportemovimientosmatprima.Image = Properties.Resources.report;
+                reportemovimientosmatprima.Click += new EventHandler(reportemovimientosmatprima_Click);
+                MATERIAPRIMA.DropDownItems.Add(reportemovimientosmatprima);
+
+                ToolStripMenuItem despachoReport = new ToolStripMenuItem();
+                despachoReport.Text = "Reporte de Despachos de Materias Primas";
+                despachoReport.Image = Properties.Resources.report;
+                despachoReport.Click += new EventHandler(despachoReport_Click);
+                MATERIAPRIMA.DropDownItems.Add(despachoReport);
+
                 //REPORTES
                 ToolStripMenuItem REPORTES = new ToolStripMenuItem();
                 REPORTES.Text = "Reportes";
@@ -4171,6 +4205,14 @@ namespace BPS
             winMetallizedOrder.Show();
         }
 
+        private void rawdepothistory_Click(object sender, EventArgs e)
+        {
+            frmRawDepotHistory form = new frmRawDepotHistory();
+            form.StartPosition = FormStartPosition.Manual;
+            form.MdiParent = this;
+            form.Show();
+        }
+
         private void toolStripMenuItem3_Click_1(object sender, EventArgs e)
         {
             frmMetallizedOrderList winMetallizedOrderList = new frmMetallizedOrderList();
@@ -4195,6 +4237,23 @@ namespace BPS
             winMetallizedOrderList.Show();
         }
 
+        private void reportemovimientosmatprima_Click(object sender, EventArgs e)
+        {
+            frmRawMaterialMovementsReport generateNewReport = new frmRawMaterialMovementsReport();
+            generateNewReport.MdiParent = this;
+            generateNewReport.StartPosition = FormStartPosition.CenterScreen;
+            generateNewReport.MaximizeBox = false;
+            generateNewReport.Show();
+        }
+
+        private void reportIngresoMP_Click(object sender, EventArgs e)
+        {
+            frmRawMaterialEntryReport generateNewReport = new frmRawMaterialEntryReport();
+            generateNewReport.MdiParent = this;
+            generateNewReport.StartPosition = FormStartPosition.CenterScreen;
+            generateNewReport.MaximizeBox = false;
+            generateNewReport.Show();
+        }
         private void reportePresionesTMToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMetalizedPressionDeadTimeReport winMetallizedOrderList = new frmMetalizedPressionDeadTimeReport();
@@ -4217,6 +4276,15 @@ namespace BPS
             winReturn.StartPosition = FormStartPosition.CenterScreen;
             winReturn.MdiParent = this;
             winReturn.Show();
+        }
+
+        private void despachoReport_Click(object sender, EventArgs e)
+        {
+            frmRawMaterialDispatchReport generateNewReport = new frmRawMaterialDispatchReport();
+            generateNewReport.MdiParent = this;
+            generateNewReport.StartPosition = FormStartPosition.CenterScreen;
+            generateNewReport.MaximizeBox = false;
+            generateNewReport.Show();
         }
 
         private void maquilasToolStripMenuItem3_Click(object sender, EventArgs e)
@@ -5714,6 +5782,20 @@ namespace BPS
             form.Show();
         }
 
+        private void reporteDespachosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShippingReport reporteDespachos = new frmShippingReport();
+            reporteDespachos.MdiParent = this;
+            reporteDespachos.StartPosition = FormStartPosition.Manual;
+            reporteDespachos.Show();
+        }
 
+        private void reporteOTIFToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmOTIFReport reporteDespachos = new frmOTIFReport();
+            reporteDespachos.MdiParent = this;
+            reporteDespachos.StartPosition = FormStartPosition.Manual;
+            reporteDespachos.Show();
+        }
     }
 }
