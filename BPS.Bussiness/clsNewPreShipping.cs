@@ -16,6 +16,7 @@ namespace BPS.Bussiness
         private int npship_fkStatus;
         private DateTime npship_createdDate;
         private string npship_Rnumber;
+        private bool npship_wasAproved;
 
         public int codsec { get { return npship_codsec; } set { npship_codsec = value; } }
 
@@ -32,7 +33,9 @@ namespace BPS.Bussiness
         public DateTime createdDate { get { return npship_createdDate; } set { npship_createdDate = value; } }
         
         public string Rnumber { get { return npship_Rnumber; } set { npship_Rnumber = value; } }
-        
+
+        public bool wasAproved { get { return npship_wasAproved; } set { npship_wasAproved = value; } }
+
         //Constructor
         public clsNewPreShipping()
         {
@@ -44,6 +47,7 @@ namespace BPS.Bussiness
             fkStatus = 3067;
             createdDate = DateTime.Now;
             Rnumber = "0";
+            wasAproved = false;
         }
 
         public clsNewPreShipping(string numb)
@@ -70,6 +74,7 @@ namespace BPS.Bussiness
                 this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["npship_fkStatus"]);
                 this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_createdDate"]);
                 this.Rnumber = DS.Tables[0].Rows[0]["npship_Rnumber"].ToString();
+                this.wasAproved = Convert.ToBoolean(DS.Tables[0].Rows[0]["npship_wasAproved"]);
             }
         }
 
@@ -87,6 +92,7 @@ namespace BPS.Bussiness
                 this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["npship_fkStatus"]);
                 this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_createdDate"]);
                 this.Rnumber = DS.Tables[0].Rows[0]["npship_Rnumber"].ToString();
+                this.wasAproved = Convert.ToBoolean(DS.Tables[0].Rows[0]["npship_wasAproved"]);
             }
         }
 
@@ -214,6 +220,36 @@ namespace BPS.Bussiness
             {
                 return false;
             }
+        }
+
+        public bool setAsAproved()
+        {
+            string queryString = "";
+
+            queryString += "UPDATE bps_prod_newPreShipping";
+            queryString += " SET ";
+            queryString += "npship_wasAproved = 1 ";
+            queryString += " WHERE npship_codsec = " + this.codsec.ToString();
+
+            if (clsConnection.executeQuery(queryString))
+                return true;
+            else
+                return false;
+        }
+
+        public bool setAsNotAproved()
+        {
+            string queryString = "";
+
+            queryString += "UPDATE bps_prod_newPreShipping";
+            queryString += " SET ";
+            queryString += "npship_wasAproved = 0 ";
+            queryString += " WHERE npship_codsec = " + this.codsec.ToString();
+
+            if (clsConnection.executeQuery(queryString))
+                return true;
+            else
+                return false;
         }
 
         public bool setRnumber(string rn)

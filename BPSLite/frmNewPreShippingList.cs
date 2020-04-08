@@ -32,6 +32,15 @@ namespace BPS.Lite
         {
             InitializeComponent();
             txtObj.Text = "100";
+            if(clsGlobal.LoggedUser.fkRole==2036)
+            {
+                dgv.Columns[clmAproved.Index].ReadOnly = false;
+                dgv.Columns[clmValor.Index].Visible = true;
+            }
+            if (clsGlobal.LoggedUser.fkRole == 2032)
+            {
+                dgv.Columns[remito.Index].ReadOnly = false;
+            }
             llenarDgv();
         }
 
@@ -120,6 +129,11 @@ namespace BPS.Lite
                         dgv.Rows[dgv.Rows.Count - 1].Cells[planta.Index].Value = DS.Tables[0].Rows[i]["plant"];
                         dgv.Rows[dgv.Rows.Count - 1].Cells[unidades.Index].Value = DS.Tables[0].Rows[i]["units"];
                         dgv.Rows[dgv.Rows.Count - 1].Cells[remito.Index].Value = DS.Tables[0].Rows[i]["Rnumber"];
+                        dgv.Rows[dgv.Rows.Count - 1].Cells[clmAproved.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["aproved"]);
+                        if(Convert.ToBoolean(DS.Tables[0].Rows[i]["aproved"]))
+                        {
+                            dgv.Rows[dgv.Rows.Count - 1].DefaultCellStyle.BackColor = Color.Green;
+                        }
                         if (Convert.ToDouble(DS.Tables[0].Rows[i]["weight"]) < 1000)
                         {
                             dgv.Rows[dgv.Rows.Count - 1].Cells[kilos.Index].Value = Convert.ToDouble(DS.Tables[0].Rows[i]["weight"]).ToString("0.00");
@@ -127,6 +141,14 @@ namespace BPS.Lite
                         else
                         {
                             dgv.Rows[dgv.Rows.Count - 1].Cells[kilos.Index].Value = Convert.ToDouble(DS.Tables[0].Rows[i]["weight"]).ToString("0,000.00");
+                        }
+                        if (Convert.ToDouble(DS.Tables[0].Rows[i]["value"]) < 1000)
+                        {
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[clmValor.Index].Value = Convert.ToDouble(DS.Tables[0].Rows[i]["value"]).ToString("0.00");
+                        }
+                        else
+                        {
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[clmValor.Index].Value = Convert.ToDouble(DS.Tables[0].Rows[i]["value"]).ToString("0,000.00");
                         }
                         dgv.Rows[dgv.Rows.Count - 1].Cells[estado.Index].Value = DS.Tables[0].Rows[i]["status"];
                         if (DS.Tables[0].Rows[i]["status"].ToString() == "Programado")
@@ -449,6 +471,38 @@ namespace BPS.Lite
                         }
                     }
                     llenarDgv();
+                }
+            }
+
+            if (e.ColumnIndex == clmAproved.Index)
+            {
+                if (e.RowIndex != -1)
+                {
+                    if (Convert.ToBoolean(dgv.Rows[e.RowIndex].Cells[clmAproved.Index].Value))
+                    {
+                        clsNewPreShipping nps = new clsNewPreShipping(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[codsec.Index].Value));
+                        if (!nps.setAsAproved())
+                        {
+                            MessageBox.Show("Ocurrió un error y no se pudo grabar la modificación. Consulte con el administrador del sistema.", "Listado de pre-despachos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                        }
+                    }
+                    else
+                    {
+                        clsNewPreShipping nps = new clsNewPreShipping(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[codsec.Index].Value));
+                        if (!nps.setAsNotAproved())
+                        {
+                            MessageBox.Show("Ocurrió un error y no se pudo grabar la modificación. Consulte con el administrador del sistema.", "Listado de pre-despachos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        else
+                        {
+                            dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+                        }
+                    }
+                    //llenarDgv();
                 }
             }
         }

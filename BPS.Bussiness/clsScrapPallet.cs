@@ -54,6 +54,10 @@ namespace BPS.Bussiness
             {
                 Scrap = new clsScrap(this.fkScrap);
                 Machine = new clsMachine(this.fkMachine, "Cutter");
+                if(Machine.codsec==0)
+                {
+                    Machine = new clsMachine(this.fkMachine, "Metallizer");
+                }
             }
         }
 
@@ -66,6 +70,10 @@ namespace BPS.Bussiness
             {
                 Scrap = new clsScrap(this.fkScrap);
                 Machine = new clsMachine(this.fkMachine, "Cutter");
+                if (Machine.codsec == 0)
+                {
+                    Machine = new clsMachine(this.fkMachine, "Metallizer");
+                }
             }
         }
 

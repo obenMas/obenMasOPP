@@ -44,7 +44,7 @@
     <PublisherName>Oben Holding Group</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>13</ApplicationRevision>
+    <ApplicationRevision>18</ApplicationRevision>
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -423,6 +423,12 @@
     </Compile>
     <Compile Include="frmMassBalance.Designer.cs">
       <DependentUpon>frmMassBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMaterialStatusReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMaterialStatusReport.Designer.cs">
+      <DependentUpon>frmMaterialStatusReport.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMBProductionDetail.cs">
       <SubType>Form</SubType>
@@ -3782,6 +3788,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMassBalance.resx">
       <DependentUpon>frmMassBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMaterialStatusReport.resx">
+      <DependentUpon>frmMaterialStatusReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMBProductionDetail.resx">
       <DependentUpon>frmMBProductionDetail.cs</DependentUpon>

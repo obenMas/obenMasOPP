@@ -38,8 +38,8 @@
             this.txtHasta = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.clmExtrusora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,11 +52,13 @@
             this.clmMaterial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmScrap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSubtotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCalif = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvControl)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +78,9 @@
             this.clmTipoMaterial,
             this.clmMaterial,
             this.clmScrap,
-            this.clmSubtotal});
+            this.clmSubtotal,
+            this.clmTipo,
+            this.clmCalif});
             this.dgvControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvControl.Location = new System.Drawing.Point(3, 16);
             this.dgvControl.Name = "dgvControl";
@@ -176,6 +180,16 @@
             this.groupBox2.TabIndex = 11;
             this.groupBox2.TabStop = false;
             // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.dgvControl);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 110);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(696, 359);
+            this.groupBox3.TabIndex = 11;
+            this.groupBox3.TabStop = false;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtTotal);
@@ -186,16 +200,6 @@
             this.groupBox4.Size = new System.Drawing.Size(702, 46);
             this.groupBox4.TabIndex = 12;
             this.groupBox4.TabStop = false;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.dgvControl);
-            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox3.Location = new System.Drawing.Point(3, 110);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(696, 359);
-            this.groupBox3.TabIndex = 11;
-            this.groupBox3.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -283,6 +287,20 @@
             this.clmSubtotal.Name = "clmSubtotal";
             this.clmSubtotal.ReadOnly = true;
             // 
+            // clmTipo
+            // 
+            this.clmTipo.HeaderText = "Tipo de corte";
+            this.clmTipo.Name = "clmTipo";
+            this.clmTipo.ReadOnly = true;
+            this.clmTipo.Visible = false;
+            // 
+            // clmCalif
+            // 
+            this.clmCalif.HeaderText = "Calificación";
+            this.clmCalif.Name = "clmCalif";
+            this.clmCalif.ReadOnly = true;
+            this.clmCalif.Visible = false;
+            // 
             // frmPCPTProductionControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,9 +314,9 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -330,5 +348,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmScrap;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSubtotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTipo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCalif;
     }
 }

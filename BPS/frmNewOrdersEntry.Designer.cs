@@ -230,11 +230,11 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(803, 68);
+            this.label15.Location = new System.Drawing.Point(796, 68);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(67, 13);
+            this.label15.Size = new System.Drawing.Size(80, 13);
             this.label15.TabIndex = 14;
-            this.label15.Text = "Fecha OTIF:";
+            this.label15.Text = "Fecha Entrega:";
             this.label15.Visible = false;
             // 
             // txtNotes

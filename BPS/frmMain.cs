@@ -415,6 +415,23 @@ namespace BPS
                 ListaFormu.Image = Properties.Resources.page;
                 ListaFormu.Click += new EventHandler(listadoToolStripMenuItem17_Click);
                 Formu.DropDownItems.Add(ListaFormu);
+
+                ToolStripMenuItem res = new ToolStripMenuItem();
+                res.Text = "Control de resultados";
+                res.Image = Properties.Resources.document_edit;
+                mnuMain.Items.Add(res);
+
+                ToolStripMenuItem respt = new ToolStripMenuItem();
+                respt.Text = "Resultados por turno";
+                respt.Image = Properties.Resources.page_white_gear;
+                respt.Click += new EventHandler(pruebaControlDeProdPorTurnoToolStripMenuItem_Click);
+                res.DropDownItems.Add(respt);
+
+                ToolStripMenuItem resef = new ToolStripMenuItem();
+                resef.Text = "Resultados entre fechas";
+                resef.Image = Properties.Resources.page_white_gear;
+                resef.Click += new EventHandler(pruebaControlDeProdPorFechasToolStripMenuItem_Click);
+                res.DropDownItems.Add(resef);
             }
             #endregion
             #region operadores/ supervisores extrusion campana

@@ -42,6 +42,7 @@
             this.dateTPFromCutting = new System.Windows.Forms.DateTimePicker();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEjecutiva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPlanta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,6 +87,7 @@
             this.dgvOTIFReport.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodsec,
             this.clmSoD,
+            this.clmEstado,
             this.clmEjecutiva,
             this.clmPlanta,
             this.clmCliente,
@@ -107,7 +109,7 @@
             this.dgvOTIFReport.Location = new System.Drawing.Point(12, 80);
             this.dgvOTIFReport.Name = "dgvOTIFReport";
             this.dgvOTIFReport.ReadOnly = true;
-            this.dgvOTIFReport.Size = new System.Drawing.Size(1179, 405);
+            this.dgvOTIFReport.Size = new System.Drawing.Size(1255, 405);
             this.dgvOTIFReport.TabIndex = 20;
             // 
             // groupBox3
@@ -204,6 +206,13 @@
             this.clmSoD.Name = "clmSoD";
             this.clmSoD.ReadOnly = true;
             this.clmSoD.Width = 55;
+            // 
+            // clmEstado
+            // 
+            this.clmEstado.HeaderText = "Estado";
+            this.clmEstado.Name = "clmEstado";
+            this.clmEstado.ReadOnly = true;
+            this.clmEstado.Width = 70;
             // 
             // clmEjecutiva
             // 
@@ -334,7 +343,7 @@
             // frmOTIFReport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1202, 489);
+            this.ClientSize = new System.Drawing.Size(1279, 489);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dgvOTIFReport);
             this.Controls.Add(this.groupBox3);
@@ -371,6 +380,7 @@
         private System.Windows.Forms.DateTimePicker dateTPFromCutting;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSoD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEstado;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEjecutiva;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlanta;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCliente;

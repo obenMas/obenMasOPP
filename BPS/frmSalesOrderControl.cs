@@ -558,7 +558,8 @@ namespace BPS
             {
                 string name = cmbCustomerSalesOrderControl.SelectedItem.ToString();
 
-                frmMaterialStatus winSystemConfig = new frmMaterialStatus(name);
+                //frmMaterialStatus winSystemConfig = new frmMaterialStatus(name);
+                frmMaterialStatusReport winSystemConfig = new frmMaterialStatusReport(name);
                 winSystemConfig.StartPosition = FormStartPosition.Manual;
                 winSystemConfig.Show();
             }
@@ -1274,7 +1275,12 @@ namespace BPS
                                 dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value;
                                 change = true;
                             }
-
+                            else
+                            {
+                                obj.updateOTIFDate(obj.deliveryDate);
+                                dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompromiseDate.Index].Value;
+                                change = true;
+                            }
 
                             for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                             {

@@ -32,6 +32,7 @@ namespace BPS
                 {
                     dgvOTIFReport.Rows.Add();
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmSoD.Index].Value = DS.Tables[0].Rows[i]["SoD"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmEstado.Index].Value = DS.Tables[0].Rows[i]["estado"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmEjecutiva.Index].Value = DS.Tables[0].Rows[i]["ejecutiva"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmCliente.Index].Value = DS.Tables[0].Rows[i]["Cliente"];
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmOC.Index].Value = DS.Tables[0].Rows[i]["OC"];

@@ -154,25 +154,28 @@ namespace BPS.Bussiness
 
             DSUser = clsConnection.getDataSetResult("SELECT * FROM vwrolebyuser where usr_codsec = " + codsec.ToString());
 
-
-            this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_codsec"]);
-            this.fkInning = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_fkInning"]);
-            this.InningName = DS.Tables[0].Rows[0]["usr_InningName"].ToString();
-            this.fkRole = Convert.ToInt32(DSUser.Tables[0].Rows[0]["usr_fkRole"]);
-            this.RoleName = DSUser.Tables[0].Rows[0]["usr_RoleName"].ToString();
-            this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_fkStatus"]);
-            this.StatusName = DS.Tables[0].Rows[0]["usr_StatusName"].ToString();
-            this.firstName = DS.Tables[0].Rows[0]["usr_firstName"].ToString();
-            this.lastName = DS.Tables[0].Rows[0]["usr_lastName"].ToString();
-            this.userName = DS.Tables[0].Rows[0]["usr_userName"].ToString();
-            this.password = DS.Tables[0].Rows[0]["usr_password"].ToString();
-            this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["usr_createdDate"]);
-            this.modifiedDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["usr_modifiedDate"]);
-            this.createdBy = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_createdBy"]);
-            this.creatorUser = DS.Tables[0].Rows[0]["usr_creatorUser"].ToString();
-            this.modificatorUser = DS.Tables[0].Rows[0]["usr_modificatorUser"].ToString();
-            this.modifiedBy = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_modifiedBy"]);
-            this.mail = DS.Tables[0].Rows[0]["usr_mail"].ToString();
+            if(DS.Tables.Count>0 && DS.Tables[0].Rows.Count>0)
+            {
+                this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_codsec"]);
+                this.fkInning = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_fkInning"]);
+                this.InningName = DS.Tables[0].Rows[0]["usr_InningName"].ToString();
+                this.fkRole = Convert.ToInt32(DSUser.Tables[0].Rows[0]["usr_fkRole"]);
+                this.RoleName = DSUser.Tables[0].Rows[0]["usr_RoleName"].ToString();
+                this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_fkStatus"]);
+                this.StatusName = DS.Tables[0].Rows[0]["usr_StatusName"].ToString();
+                this.firstName = DS.Tables[0].Rows[0]["usr_firstName"].ToString();
+                this.lastName = DS.Tables[0].Rows[0]["usr_lastName"].ToString();
+                this.userName = DS.Tables[0].Rows[0]["usr_userName"].ToString();
+                this.password = DS.Tables[0].Rows[0]["usr_password"].ToString();
+                this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["usr_createdDate"]);
+                this.modifiedDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["usr_modifiedDate"]);
+                this.createdBy = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_createdBy"]);
+                this.creatorUser = DS.Tables[0].Rows[0]["usr_creatorUser"].ToString();
+                this.modificatorUser = DS.Tables[0].Rows[0]["usr_modificatorUser"].ToString();
+                this.modifiedBy = Convert.ToInt32(DS.Tables[0].Rows[0]["usr_modifiedBy"]);
+                this.mail = DS.Tables[0].Rows[0]["usr_mail"].ToString();
+            }
+            
         }
         public int getLastSavedCodsec()
         {

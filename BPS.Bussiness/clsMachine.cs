@@ -131,13 +131,17 @@ namespace BPS.Bussiness
 
                     DS = clsConnection.getDataSetResult("SELECT * FROM vwmachinecutter where mch_codsec =  " + codsec.ToString());
 
-                    this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_codsec"]);
-                    this.fkCutter = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkCutter"]);
-                    this.Cutter = new clsCutter(Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkCutter"]));
-                    this.fkSector = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkSector"]);
-                    this.SectorName = DS.Tables[0].Rows[0]["mch_SectorName"].ToString();
-                    this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkStatus"]);
-                    this.StatusName = DS.Tables[0].Rows[0]["mch_StatusName"].ToString();
+                    if(DS.Tables.Count>0 && DS.Tables[0].Rows.Count>0)
+                    {
+                        this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_codsec"]);
+                        this.fkCutter = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkCutter"]);
+                        this.Cutter = new clsCutter(Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkCutter"]));
+                        this.fkSector = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkSector"]);
+                        this.SectorName = DS.Tables[0].Rows[0]["mch_SectorName"].ToString();
+                        this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkStatus"]);
+                        this.StatusName = DS.Tables[0].Rows[0]["mch_StatusName"].ToString();
+
+                    }
 
                     break;
 
@@ -148,7 +152,7 @@ namespace BPS.Bussiness
 
                     this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_codsec"]);
                     this.fkMetallizer = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkMetallizer"]);
-                    this.Metallizer = new clsMetallizer(Convert.ToInt32(DS.Tables[0].Rows[0]["mch_Metallizer"]));
+                    this.Metallizer = new clsMetallizer(Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkMetallizer"]));
                     this.fkSector = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkSector"]);
                     this.SectorName = DS.Tables[0].Rows[0]["mch_SectorName"].ToString();
                     this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["mch_fkStatus"]);

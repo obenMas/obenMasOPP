@@ -553,7 +553,7 @@ namespace BPS.Lite
             }
             Molino = Molino / 1000;
 
-            texto = "SELECT SUM(bps_prod_millproduction.mp_scrapWeigth) bps_prod_millproduction FROM bps_prod_millproduction WHERE bps_prod_millproduction.mp_date BETWEEN'" + dtpDesde.Value.ToString("dd/MM/yyyy") + "' AND '" + dtpHasta.Value.ToString("dd/MM/yyyy") + "'";
+            texto = "SELECT COALESCE(SUM(bps_prod_millproduction.mp_scrapWeigth),0) FROM bps_prod_millproduction WHERE bps_prod_millproduction.mp_date BETWEEN'" + dtpDesde.Value.ToString("dd/MM/yyyy") + "' AND '" + dtpHasta.Value.ToString("dd/MM/yyyy") + "'";
             DS = clsConnection.getDataSetResult(texto);
             Molino = 0;
             if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)

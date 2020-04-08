@@ -3329,6 +3329,12 @@ namespace BPS.Lite
                 PRODUCTOTERMINADO.Text = "Productos";
                 mnu.Items.Add(PRODUCTOTERMINADO);
 
+                ToolStripMenuItem predespachos2 = new ToolStripMenuItem();
+                predespachos2.Text = "Pre-Despachos";
+                predespachos2.Image = Properties.Resources.clipboard_text;
+                predespachos2.Click += new EventHandler(btnPreShipping2_Click);
+                PRODUCTOTERMINADO.DropDownItems.Add(predespachos2);
+
                 ToolStripMenuItem estadodedeposito = new ToolStripMenuItem();
                 estadodedeposito.Text = "Inventario Completo de Pallets";
                 estadodedeposito.Image = Properties.Resources.box1;

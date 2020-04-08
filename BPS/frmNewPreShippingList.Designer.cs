@@ -31,21 +31,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewPreShippingList));
             this.dgv = new System.Windows.Forms.DataGridView();
-            this.codsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.cmbFiltroCreacion = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -66,6 +52,21 @@
             this.cmbFiltroUsuario = new System.Windows.Forms.ComboBox();
             this.cmbFiltroCliente = new System.Windows.Forms.ComboBox();
             this.cmbFiltroNumero = new System.Windows.Forms.ComboBox();
+            this.codsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clmAproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -91,12 +92,14 @@
             this.usuario,
             this.unidades,
             this.kilos,
+            this.clmValor,
             this.planta,
             this.estado,
             this.programado,
             this.remito,
             this.preparar,
-            this.listaemp});
+            this.listaemp,
+            this.clmAproved});
             this.dgv.Location = new System.Drawing.Point(12, 81);
             this.dgv.Name = "dgv";
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -109,101 +112,10 @@
             this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv.Size = new System.Drawing.Size(1056, 416);
+            this.dgv.Size = new System.Drawing.Size(1113, 416);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
-            // 
-            // codsec
-            // 
-            this.codsec.HeaderText = "codsec";
-            this.codsec.Name = "codsec";
-            this.codsec.ReadOnly = true;
-            this.codsec.Visible = false;
-            // 
-            // creado
-            // 
-            this.creado.HeaderText = "Fecha creación";
-            this.creado.Name = "creado";
-            this.creado.ReadOnly = true;
-            this.creado.Width = 80;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 80;
-            // 
-            // cliente
-            // 
-            this.cliente.HeaderText = "Cliente";
-            this.cliente.Name = "cliente";
-            this.cliente.ReadOnly = true;
-            this.cliente.Width = 200;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Width = 80;
-            // 
-            // unidades
-            // 
-            this.unidades.HeaderText = "Cantidad [Un]";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            this.unidades.Width = 70;
-            // 
-            // kilos
-            // 
-            this.kilos.HeaderText = "Cantidad [Kg]";
-            this.kilos.Name = "kilos";
-            this.kilos.ReadOnly = true;
-            this.kilos.Width = 70;
-            // 
-            // planta
-            // 
-            this.planta.HeaderText = "Planta";
-            this.planta.Name = "planta";
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // programado
-            // 
-            this.programado.HeaderText = "Fecha despacho";
-            this.programado.Name = "programado";
-            this.programado.ReadOnly = true;
-            this.programado.Width = 80;
-            // 
-            // remito
-            // 
-            this.remito.HeaderText = "Remito";
-            this.remito.Name = "remito";
-            this.remito.Width = 70;
-            // 
-            // preparar
-            // 
-            this.preparar.HeaderText = "";
-            this.preparar.Image = global::BPS.Properties.Resources.printer;
-            this.preparar.Name = "preparar";
-            this.preparar.ReadOnly = true;
-            this.preparar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.preparar.ToolTipText = "Imprimir pre-despacho";
-            this.preparar.Width = 30;
-            // 
-            // listaemp
-            // 
-            this.listaemp.HeaderText = "";
-            this.listaemp.Image = global::BPS.Properties.Resources.clipboard_text;
-            this.listaemp.Name = "listaemp";
-            this.listaemp.ToolTipText = "Imprimir lista de empaque";
-            this.listaemp.Width = 30;
             // 
             // dataGridViewImageColumn1
             // 
@@ -243,7 +155,7 @@
             this.groupBox1.Controls.Add(this.cmbFiltroCreacion);
             this.groupBox1.Location = new System.Drawing.Point(12, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1056, 71);
+            this.groupBox1.Size = new System.Drawing.Size(1113, 71);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por:";
@@ -407,15 +319,123 @@
             this.cmbFiltroNumero.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroNumero_SelectedIndexChanged);
             this.cmbFiltroNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbFiltroNumero_KeyDown);
             // 
+            // codsec
+            // 
+            this.codsec.HeaderText = "codsec";
+            this.codsec.Name = "codsec";
+            this.codsec.ReadOnly = true;
+            this.codsec.Visible = false;
+            // 
+            // creado
+            // 
+            this.creado.HeaderText = "Fecha creación";
+            this.creado.Name = "creado";
+            this.creado.ReadOnly = true;
+            this.creado.Width = 80;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 80;
+            // 
+            // cliente
+            // 
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
+            this.cliente.Width = 200;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Width = 80;
+            // 
+            // unidades
+            // 
+            this.unidades.HeaderText = "Cantidad [Un]";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            this.unidades.Width = 70;
+            // 
+            // kilos
+            // 
+            this.kilos.HeaderText = "Cantidad [Kg]";
+            this.kilos.Name = "kilos";
+            this.kilos.ReadOnly = true;
+            this.kilos.Width = 70;
+            // 
+            // clmValor
+            // 
+            this.clmValor.HeaderText = "Valor Total [USD]";
+            this.clmValor.Name = "clmValor";
+            this.clmValor.ReadOnly = true;
+            this.clmValor.Visible = false;
+            // 
+            // planta
+            // 
+            this.planta.HeaderText = "Planta";
+            this.planta.Name = "planta";
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // programado
+            // 
+            this.programado.HeaderText = "Fecha despacho";
+            this.programado.Name = "programado";
+            this.programado.ReadOnly = true;
+            this.programado.Width = 80;
+            // 
+            // remito
+            // 
+            this.remito.HeaderText = "Remito";
+            this.remito.Name = "remito";
+            this.remito.ReadOnly = true;
+            this.remito.Width = 70;
+            // 
+            // preparar
+            // 
+            this.preparar.HeaderText = "";
+            this.preparar.Image = global::BPS.Properties.Resources.printer;
+            this.preparar.Name = "preparar";
+            this.preparar.ReadOnly = true;
+            this.preparar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.preparar.ToolTipText = "Imprimir pre-despacho";
+            this.preparar.Width = 30;
+            // 
+            // listaemp
+            // 
+            this.listaemp.HeaderText = "";
+            this.listaemp.Image = global::BPS.Properties.Resources.clipboard_text;
+            this.listaemp.Name = "listaemp";
+            this.listaemp.ToolTipText = "Imprimir lista de empaque";
+            this.listaemp.Width = 30;
+            // 
+            // clmAproved
+            // 
+            this.clmAproved.HeaderText = "Aprobado";
+            this.clmAproved.Name = "clmAproved";
+            this.clmAproved.ReadOnly = true;
+            this.clmAproved.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmAproved.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmAproved.Width = 60;
+            // 
             // frmNewPreShippingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 509);
+            this.ClientSize = new System.Drawing.Size(1134, 509);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNewPreShippingList";
+            this.ShowIcon = false;
             this.Text = "Listado de pre-despachos";
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -445,6 +465,8 @@
         private System.Windows.Forms.ComboBox cmbFiltroUsuario;
         private System.Windows.Forms.ComboBox cmbFiltroCliente;
         private System.Windows.Forms.ComboBox cmbFiltroNumero;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbFiltroPlanta;
         private System.Windows.Forms.DataGridViewTextBoxColumn codsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn creado;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
@@ -452,13 +474,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn kilos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn planta;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn programado;
         private System.Windows.Forms.DataGridViewTextBoxColumn remito;
         private System.Windows.Forms.DataGridViewImageColumn preparar;
         private System.Windows.Forms.DataGridViewImageColumn listaemp;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbFiltroPlanta;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmAproved;
     }
 }

@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.cmbFiltroCreacion = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cmbFiltroPlanta = new System.Windows.Forms.ComboBox();
             this.txtTot = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtObj = new System.Windows.Forms.TextBox();
@@ -57,14 +59,14 @@
             this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
             this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cmbFiltroPlanta = new System.Windows.Forms.ComboBox();
+            this.clmAproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -73,14 +75,14 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codsec,
@@ -90,25 +92,27 @@
             this.usuario,
             this.unidades,
             this.kilos,
+            this.clmValor,
             this.planta,
             this.estado,
             this.programado,
             this.remito,
             this.preparar,
-            this.listaemp});
+            this.listaemp,
+            this.clmAproved});
             this.dgv.Location = new System.Drawing.Point(12, 81);
             this.dgv.Name = "dgv";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle9;
-            this.dgv.Size = new System.Drawing.Size(1056, 416);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv.Size = new System.Drawing.Size(1113, 416);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
@@ -151,10 +155,29 @@
             this.groupBox1.Controls.Add(this.cmbFiltroCreacion);
             this.groupBox1.Location = new System.Drawing.Point(12, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1056, 71);
+            this.groupBox1.Size = new System.Drawing.Size(1113, 71);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(547, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(37, 13);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Planta";
+            // 
+            // cmbFiltroPlanta
+            // 
+            this.cmbFiltroPlanta.FormattingEnabled = true;
+            this.cmbFiltroPlanta.Location = new System.Drawing.Point(550, 36);
+            this.cmbFiltroPlanta.Name = "cmbFiltroPlanta";
+            this.cmbFiltroPlanta.Size = new System.Drawing.Size(129, 21);
+            this.cmbFiltroPlanta.TabIndex = 17;
+            this.cmbFiltroPlanta.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroPlanta_SelectedIndexChanged);
+            this.cmbFiltroPlanta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbFiltroPlanta_KeyDown);
             // 
             // txtTot
             // 
@@ -345,6 +368,13 @@
             this.kilos.ReadOnly = true;
             this.kilos.Width = 70;
             // 
+            // clmValor
+            // 
+            this.clmValor.HeaderText = "Valor Total [USD]";
+            this.clmValor.Name = "clmValor";
+            this.clmValor.ReadOnly = true;
+            this.clmValor.Visible = false;
+            // 
             // planta
             // 
             this.planta.HeaderText = "Planta";
@@ -367,6 +397,7 @@
             // 
             this.remito.HeaderText = "Remito";
             this.remito.Name = "remito";
+            this.remito.ReadOnly = true;
             this.remito.Width = 70;
             // 
             // preparar
@@ -387,30 +418,20 @@
             this.listaemp.ToolTipText = "Imprimir lista de empaque";
             this.listaemp.Width = 30;
             // 
-            // label9
+            // clmAproved
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(547, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(37, 13);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Planta";
-            // 
-            // cmbFiltroPlanta
-            // 
-            this.cmbFiltroPlanta.FormattingEnabled = true;
-            this.cmbFiltroPlanta.Location = new System.Drawing.Point(550, 36);
-            this.cmbFiltroPlanta.Name = "cmbFiltroPlanta";
-            this.cmbFiltroPlanta.Size = new System.Drawing.Size(129, 21);
-            this.cmbFiltroPlanta.TabIndex = 17;
-            this.cmbFiltroPlanta.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroPlanta_SelectedIndexChanged);
-            this.cmbFiltroPlanta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbFiltroPlanta_KeyDown);
+            this.clmAproved.HeaderText = "Aprobado";
+            this.clmAproved.Name = "clmAproved";
+            this.clmAproved.ReadOnly = true;
+            this.clmAproved.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmAproved.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmAproved.Width = 60;
             // 
             // frmNewPreShippingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1080, 509);
+            this.ClientSize = new System.Drawing.Size(1134, 509);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
             this.Name = "frmNewPreShippingList";
@@ -444,6 +465,8 @@
         private System.Windows.Forms.ComboBox cmbFiltroUsuario;
         private System.Windows.Forms.ComboBox cmbFiltroCliente;
         private System.Windows.Forms.ComboBox cmbFiltroNumero;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ComboBox cmbFiltroPlanta;
         private System.Windows.Forms.DataGridViewTextBoxColumn codsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn creado;
         private System.Windows.Forms.DataGridViewTextBoxColumn numero;
@@ -451,13 +474,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn unidades;
         private System.Windows.Forms.DataGridViewTextBoxColumn kilos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmValor;
         private System.Windows.Forms.DataGridViewTextBoxColumn planta;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn programado;
         private System.Windows.Forms.DataGridViewTextBoxColumn remito;
         private System.Windows.Forms.DataGridViewImageColumn preparar;
         private System.Windows.Forms.DataGridViewImageColumn listaemp;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cmbFiltroPlanta;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmAproved;
     }
 }
