@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInputRawMaterial));
             this.dgvEntradaMaterPrima = new System.Windows.Forms.DataGridView();
+            this.btnImportar = new System.Windows.Forms.Button();
             this.clmCodAlfa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPartida = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -37,9 +38,9 @@
             this.clmEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmNombreEmpresa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRecption = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPallets = new System.Windows.Forms.DataGridViewButtonColumn();
             this.clmGranel = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.btnImportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEntradaMaterPrima)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,14 +57,25 @@
             this.clmEmpresa,
             this.clmNombreEmpresa,
             this.clmFecha,
+            this.clmRecption,
             this.clmPallets,
             this.clmGranel});
             this.dgvEntradaMaterPrima.Location = new System.Drawing.Point(7, 54);
             this.dgvEntradaMaterPrima.Name = "dgvEntradaMaterPrima";
             this.dgvEntradaMaterPrima.ReadOnly = true;
-            this.dgvEntradaMaterPrima.Size = new System.Drawing.Size(873, 262);
+            this.dgvEntradaMaterPrima.Size = new System.Drawing.Size(1063, 262);
             this.dgvEntradaMaterPrima.TabIndex = 0;
             this.dgvEntradaMaterPrima.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEntradaMaterPrima_CellContentClick);
+            // 
+            // btnImportar
+            // 
+            this.btnImportar.Location = new System.Drawing.Point(955, 12);
+            this.btnImportar.Name = "btnImportar";
+            this.btnImportar.Size = new System.Drawing.Size(115, 36);
+            this.btnImportar.TabIndex = 1;
+            this.btnImportar.Text = "Importar";
+            this.btnImportar.UseVisualStyleBackColor = true;
+            this.btnImportar.Click += new System.EventHandler(this.Importar_Click);
             // 
             // clmCodAlfa
             // 
@@ -115,6 +127,13 @@
             this.clmFecha.Name = "clmFecha";
             this.clmFecha.ReadOnly = true;
             // 
+            // clmRecption
+            // 
+            this.clmRecption.DataPropertyName = "NNUMERO";
+            this.clmRecption.HeaderText = "Recepción";
+            this.clmRecption.Name = "clmRecption";
+            this.clmRecption.ReadOnly = true;
+            // 
             // clmPallets
             // 
             this.clmPallets.HeaderText = "";
@@ -131,23 +150,14 @@
             this.clmGranel.ReadOnly = true;
             this.clmGranel.Text = "Granel";
             this.clmGranel.UseColumnTextForButtonValue = true;
+            this.clmGranel.Visible = false;
             this.clmGranel.Width = 80;
-            // 
-            // btnImportar
-            // 
-            this.btnImportar.Location = new System.Drawing.Point(765, 12);
-            this.btnImportar.Name = "btnImportar";
-            this.btnImportar.Size = new System.Drawing.Size(115, 36);
-            this.btnImportar.TabIndex = 1;
-            this.btnImportar.Text = "Importar";
-            this.btnImportar.UseVisualStyleBackColor = true;
-            this.btnImportar.Click += new System.EventHandler(this.Importar_Click);
             // 
             // frmInputRawMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(891, 356);
+            this.ClientSize = new System.Drawing.Size(1080, 356);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.dgvEntradaMaterPrima);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -169,6 +179,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmNombreEmpresa;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmRecption;
         private System.Windows.Forms.DataGridViewButtonColumn clmPallets;
         private System.Windows.Forms.DataGridViewButtonColumn clmGranel;
     }

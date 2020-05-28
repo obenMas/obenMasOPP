@@ -1321,6 +1321,71 @@ namespace BPS
                     
                 }
             }
+
+            if (e.ColumnIndex == clmCompromiseDate.Index)
+            {
+                clsSalesOrderDetail obj = new clsSalesOrderDetail(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value));
+
+                if (dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompromiseDate.Index].Value != null)
+                {
+                    try
+                    {
+                        if (clsGlobal.LoggedUser.fkRole == 2 || clsGlobal.LoggedUser.fkRole == 1)
+                        {
+                            obj.updateDeliveryDate(Convert.ToDateTime(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompromiseDate.Index].Value));
+                            bool change = false;
+                            if (obj.deliveryDate < obj.compromisedDate)
+                            {
+                                obj.updateOTIFDate(obj.compromisedDate);
+                                dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompDate.Index].Value;
+                                change = true;
+                            }
+                            else
+                            {
+                                obj.updateOTIFDate(obj.deliveryDate);
+                                dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompromiseDate.Index].Value;
+                                change = true;
+                            }
+
+                            for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                            {
+                                if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                                {
+                                    DS.Tables[0].Rows[i]["FechaEntrega"] = dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCompromiseDate.Index].Value.ToString();
+                                    if (change)
+                                    {
+                                        DS.Tables[0].Rows[i]["FechaOtif"] = dgvSalesOrderControl.Rows[e.RowIndex].Cells[fechaOtif.Index].Value.ToString();
+                                    }
+
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("No tiene permisos para modificar este valor", "Modificación no permitida", MessageBoxButtons.OK);
+                        }
+
+                    }
+                    catch (FormatException ex)
+                    {
+                        clsLog.addLog(ex, 1, "salesordercontrol.edit");
+                        MessageBox.Show("El valor ingresado no puede ser reconocido como una fecha", "Fecha no reconocida", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    obj.updateCompromisedDate(new DateTime(1900, 01, 01));
+                    for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                    {
+                        if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                        {
+                            DS.Tables[0].Rows[i]["FechaComprometida"] = string.Empty;
+                        }
+
+                    }
+
+                }
+            }
         }
 
         private void cmbObs_SelectedIndexChanged(object sender, EventArgs e)

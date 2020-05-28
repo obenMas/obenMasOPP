@@ -349,6 +349,8 @@ namespace BPS
             this.despachosProgramadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.despachosAcumuladosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reasignacionesToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDespachosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteOTIFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.objetivoDeOrdenesDeCompraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmRequests = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmUser = new System.Windows.Forms.ToolStripMenuItem();
@@ -458,8 +460,7 @@ namespace BPS
             this.tsslUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.reporteDespachosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteOTIFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaPlanExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.sttsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -834,7 +835,8 @@ namespace BPS
             this.pruebaFormulacionesToolStripMenuItem,
             this.pruebaListadoFormulacionesToolStripMenuItem,
             this.pruebaOrdenesDeExtrusionToolStripMenuItem,
-            this.pruebaListaOrdenDeCorteToolStripMenuItem});
+            this.pruebaListaOrdenDeCorteToolStripMenuItem,
+            this.pruebaPlanExtrusionToolStripMenuItem});
             this.tsmProduction.Name = "tsmProduction";
             this.tsmProduction.Size = new System.Drawing.Size(80, 22);
             this.tsmProduction.Text = "Producción";
@@ -3107,6 +3109,20 @@ namespace BPS
             this.reasignacionesToolStripMenuItem2.Text = "Reasignaciones";
             this.reasignacionesToolStripMenuItem2.Click += new System.EventHandler(this.reasignacionesToolStripMenuItem2_Click);
             // 
+            // reporteDespachosToolStripMenuItem
+            // 
+            this.reporteDespachosToolStripMenuItem.Name = "reporteDespachosToolStripMenuItem";
+            this.reporteDespachosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.reporteDespachosToolStripMenuItem.Text = "Reporte despachos";
+            this.reporteDespachosToolStripMenuItem.Click += new System.EventHandler(this.reporteDespachosToolStripMenuItem_Click);
+            // 
+            // reporteOTIFToolStripMenuItem
+            // 
+            this.reporteOTIFToolStripMenuItem.Name = "reporteOTIFToolStripMenuItem";
+            this.reporteOTIFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.reporteOTIFToolStripMenuItem.Text = "Reporte OTIF";
+            this.reporteOTIFToolStripMenuItem.Click += new System.EventHandler(this.reporteOTIFToolStripMenuItem_Click_1);
+            // 
             // objetivoDeOrdenesDeCompraToolStripMenuItem
             // 
             this.objetivoDeOrdenesDeCompraToolStripMenuItem.Name = "objetivoDeOrdenesDeCompraToolStripMenuItem";
@@ -3998,19 +4014,12 @@ namespace BPS
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(0, 17);
             // 
-            // reporteDespachosToolStripMenuItem
+            // pruebaPlanExtrusionToolStripMenuItem
             // 
-            this.reporteDespachosToolStripMenuItem.Name = "reporteDespachosToolStripMenuItem";
-            this.reporteDespachosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.reporteDespachosToolStripMenuItem.Text = "Reporte despachos";
-            this.reporteDespachosToolStripMenuItem.Click += new System.EventHandler(this.reporteDespachosToolStripMenuItem_Click);
-            // 
-            // reporteOTIFToolStripMenuItem
-            // 
-            this.reporteOTIFToolStripMenuItem.Name = "reporteOTIFToolStripMenuItem";
-            this.reporteOTIFToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.reporteOTIFToolStripMenuItem.Text = "Reporte OTIF";
-            this.reporteOTIFToolStripMenuItem.Click += new System.EventHandler(this.reporteOTIFToolStripMenuItem_Click_1);
+            this.pruebaPlanExtrusionToolStripMenuItem.Name = "pruebaPlanExtrusionToolStripMenuItem";
+            this.pruebaPlanExtrusionToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.pruebaPlanExtrusionToolStripMenuItem.Text = "Prueba plan extrusion";
+            this.pruebaPlanExtrusionToolStripMenuItem.Click += new System.EventHandler(this.pruebaPlanExtrusionToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -4474,6 +4483,7 @@ namespace BPS
         private System.Windows.Forms.ToolStripMenuItem nuevoPedidoExpoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteDespachosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteOTIFToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruebaPlanExtrusionToolStripMenuItem;
     }
 }
 

@@ -29,6 +29,19 @@
         private void InitializeComponent()
         {
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtListo = new System.Windows.Forms.TextBox();
+            this.btnIngresar = new System.Windows.Forms.Button();
+            this.btnObtenerPL = new System.Windows.Forms.Button();
+            this.btnVerificar = new System.Windows.Forms.Button();
+            this.txtKilos = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtBobinas = new System.Windows.Forms.TextBox();
+            this.txtPallets = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.PedidoN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Posicion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Pallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,19 +63,6 @@
             this.PesoBrutoPalletLB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codOben = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.done = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtListo = new System.Windows.Forms.TextBox();
-            this.btnIngresar = new System.Windows.Forms.Button();
-            this.btnObtenerPL = new System.Windows.Forms.Button();
-            this.btnVerificar = new System.Windows.Forms.Button();
-            this.txtKilos = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtBobinas = new System.Windows.Forms.TextBox();
-            this.txtPallets = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -99,159 +99,6 @@
             this.dgv.ReadOnly = true;
             this.dgv.Size = new System.Drawing.Size(1228, 557);
             this.dgv.TabIndex = 0;
-            // 
-            // PedidoN
-            // 
-            this.PedidoN.HeaderText = "Pedido N°";
-            this.PedidoN.Name = "PedidoN";
-            this.PedidoN.ReadOnly = true;
-            this.PedidoN.Visible = false;
-            this.PedidoN.Width = 80;
-            // 
-            // Posicion
-            // 
-            this.Posicion.HeaderText = "Posición";
-            this.Posicion.Name = "Posicion";
-            this.Posicion.ReadOnly = true;
-            this.Posicion.Visible = false;
-            this.Posicion.Width = 60;
-            // 
-            // Pallet
-            // 
-            this.Pallet.HeaderText = "Pallet";
-            this.Pallet.Name = "Pallet";
-            this.Pallet.ReadOnly = true;
-            this.Pallet.Width = 80;
-            // 
-            // Bobina
-            // 
-            this.Bobina.HeaderText = "Bobina";
-            this.Bobina.Name = "Bobina";
-            this.Bobina.ReadOnly = true;
-            this.Bobina.Width = 60;
-            // 
-            // PesoNetoBobina
-            // 
-            this.PesoNetoBobina.HeaderText = "Peso Neto Bobina";
-            this.PesoNetoBobina.Name = "PesoNetoBobina";
-            this.PesoNetoBobina.ReadOnly = true;
-            this.PesoNetoBobina.Width = 60;
-            // 
-            // Unidad
-            // 
-            this.Unidad.HeaderText = "Unidad";
-            this.Unidad.Name = "Unidad";
-            this.Unidad.ReadOnly = true;
-            this.Unidad.Width = 60;
-            // 
-            // Diametro
-            // 
-            this.Diametro.HeaderText = "Diametro";
-            this.Diametro.Name = "Diametro";
-            this.Diametro.ReadOnly = true;
-            this.Diametro.Width = 60;
-            // 
-            // DiametroE
-            // 
-            this.DiametroE.HeaderText = "Diametro Externo";
-            this.DiametroE.Name = "DiametroE";
-            this.DiametroE.ReadOnly = true;
-            this.DiametroE.Width = 60;
-            // 
-            // Grosor
-            // 
-            this.Grosor.HeaderText = "Grosor";
-            this.Grosor.Name = "Grosor";
-            this.Grosor.ReadOnly = true;
-            this.Grosor.Visible = false;
-            this.Grosor.Width = 60;
-            // 
-            // Ancho
-            // 
-            this.Ancho.HeaderText = "Ancho";
-            this.Ancho.Name = "Ancho";
-            this.Ancho.ReadOnly = true;
-            this.Ancho.Width = 60;
-            // 
-            // Largo
-            // 
-            this.Largo.HeaderText = "Largo";
-            this.Largo.Name = "Largo";
-            this.Largo.ReadOnly = true;
-            this.Largo.Width = 60;
-            // 
-            // Material
-            // 
-            this.Material.HeaderText = "Material";
-            this.Material.Name = "Material";
-            this.Material.ReadOnly = true;
-            this.Material.Width = 80;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Entrega
-            // 
-            this.Entrega.HeaderText = "Entrega";
-            this.Entrega.Name = "Entrega";
-            this.Entrega.ReadOnly = true;
-            this.Entrega.Width = 80;
-            // 
-            // PesoNetoBobinaLB
-            // 
-            this.PesoNetoBobinaLB.HeaderText = "Peso Neto Bobina LB";
-            this.PesoNetoBobinaLB.Name = "PesoNetoBobinaLB";
-            this.PesoNetoBobinaLB.ReadOnly = true;
-            this.PesoNetoBobinaLB.Visible = false;
-            this.PesoNetoBobinaLB.Width = 60;
-            // 
-            // PesoPalletNeto
-            // 
-            this.PesoPalletNeto.HeaderText = "Peso Pallet Neto";
-            this.PesoPalletNeto.Name = "PesoPalletNeto";
-            this.PesoPalletNeto.ReadOnly = true;
-            this.PesoPalletNeto.Width = 60;
-            // 
-            // PesoPalletBruto
-            // 
-            this.PesoPalletBruto.HeaderText = "Peso Pallet Bruto";
-            this.PesoPalletBruto.Name = "PesoPalletBruto";
-            this.PesoPalletBruto.ReadOnly = true;
-            this.PesoPalletBruto.Width = 60;
-            // 
-            // PesoPalletNetoLB
-            // 
-            this.PesoPalletNetoLB.HeaderText = "Peso Pallet Neto LB";
-            this.PesoPalletNetoLB.Name = "PesoPalletNetoLB";
-            this.PesoPalletNetoLB.ReadOnly = true;
-            this.PesoPalletNetoLB.Visible = false;
-            this.PesoPalletNetoLB.Width = 60;
-            // 
-            // PesoBrutoPalletLB
-            // 
-            this.PesoBrutoPalletLB.HeaderText = "Peso Pallet Bruto LB";
-            this.PesoBrutoPalletLB.Name = "PesoBrutoPalletLB";
-            this.PesoBrutoPalletLB.ReadOnly = true;
-            this.PesoBrutoPalletLB.Visible = false;
-            this.PesoBrutoPalletLB.Width = 60;
-            // 
-            // codOben
-            // 
-            this.codOben.HeaderText = "Código Oben";
-            this.codOben.Name = "codOben";
-            this.codOben.ReadOnly = true;
-            this.codOben.Width = 120;
-            // 
-            // done
-            // 
-            this.done.HeaderText = "Listo para ingresar";
-            this.done.Name = "done";
-            this.done.ReadOnly = true;
-            this.done.Visible = false;
-            this.done.Width = 60;
             // 
             // label1
             // 
@@ -386,6 +233,160 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
+            // PedidoN
+            // 
+            this.PedidoN.HeaderText = "Pedido N°";
+            this.PedidoN.Name = "PedidoN";
+            this.PedidoN.ReadOnly = true;
+            this.PedidoN.Visible = false;
+            this.PedidoN.Width = 80;
+            // 
+            // Posicion
+            // 
+            this.Posicion.HeaderText = "Posición";
+            this.Posicion.Name = "Posicion";
+            this.Posicion.ReadOnly = true;
+            this.Posicion.Visible = false;
+            this.Posicion.Width = 60;
+            // 
+            // Pallet
+            // 
+            this.Pallet.HeaderText = "Pallet";
+            this.Pallet.Name = "Pallet";
+            this.Pallet.ReadOnly = true;
+            this.Pallet.Width = 80;
+            // 
+            // Bobina
+            // 
+            this.Bobina.HeaderText = "Bobina";
+            this.Bobina.Name = "Bobina";
+            this.Bobina.ReadOnly = true;
+            this.Bobina.Width = 60;
+            // 
+            // PesoNetoBobina
+            // 
+            this.PesoNetoBobina.HeaderText = "Peso Neto Bobina";
+            this.PesoNetoBobina.Name = "PesoNetoBobina";
+            this.PesoNetoBobina.ReadOnly = true;
+            this.PesoNetoBobina.Width = 60;
+            // 
+            // Unidad
+            // 
+            this.Unidad.HeaderText = "Unidad";
+            this.Unidad.Name = "Unidad";
+            this.Unidad.ReadOnly = true;
+            this.Unidad.Visible = false;
+            this.Unidad.Width = 60;
+            // 
+            // Diametro
+            // 
+            this.Diametro.HeaderText = "Diametro";
+            this.Diametro.Name = "Diametro";
+            this.Diametro.ReadOnly = true;
+            this.Diametro.Width = 60;
+            // 
+            // DiametroE
+            // 
+            this.DiametroE.HeaderText = "Diametro Externo";
+            this.DiametroE.Name = "DiametroE";
+            this.DiametroE.ReadOnly = true;
+            this.DiametroE.Width = 60;
+            // 
+            // Grosor
+            // 
+            this.Grosor.HeaderText = "Grosor";
+            this.Grosor.Name = "Grosor";
+            this.Grosor.ReadOnly = true;
+            this.Grosor.Visible = false;
+            this.Grosor.Width = 60;
+            // 
+            // Ancho
+            // 
+            this.Ancho.HeaderText = "Ancho";
+            this.Ancho.Name = "Ancho";
+            this.Ancho.ReadOnly = true;
+            this.Ancho.Width = 60;
+            // 
+            // Largo
+            // 
+            this.Largo.HeaderText = "Largo";
+            this.Largo.Name = "Largo";
+            this.Largo.ReadOnly = true;
+            this.Largo.Width = 60;
+            // 
+            // Material
+            // 
+            this.Material.HeaderText = "Material";
+            this.Material.Name = "Material";
+            this.Material.ReadOnly = true;
+            this.Material.Width = 80;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Entrega
+            // 
+            this.Entrega.HeaderText = "Entrega";
+            this.Entrega.Name = "Entrega";
+            this.Entrega.ReadOnly = true;
+            this.Entrega.Width = 80;
+            // 
+            // PesoNetoBobinaLB
+            // 
+            this.PesoNetoBobinaLB.HeaderText = "Peso Neto Bobina LB";
+            this.PesoNetoBobinaLB.Name = "PesoNetoBobinaLB";
+            this.PesoNetoBobinaLB.ReadOnly = true;
+            this.PesoNetoBobinaLB.Visible = false;
+            this.PesoNetoBobinaLB.Width = 60;
+            // 
+            // PesoPalletNeto
+            // 
+            this.PesoPalletNeto.HeaderText = "Peso Pallet Neto";
+            this.PesoPalletNeto.Name = "PesoPalletNeto";
+            this.PesoPalletNeto.ReadOnly = true;
+            this.PesoPalletNeto.Width = 60;
+            // 
+            // PesoPalletBruto
+            // 
+            this.PesoPalletBruto.HeaderText = "Peso Pallet Bruto";
+            this.PesoPalletBruto.Name = "PesoPalletBruto";
+            this.PesoPalletBruto.ReadOnly = true;
+            this.PesoPalletBruto.Width = 60;
+            // 
+            // PesoPalletNetoLB
+            // 
+            this.PesoPalletNetoLB.HeaderText = "Peso Pallet Neto LB";
+            this.PesoPalletNetoLB.Name = "PesoPalletNetoLB";
+            this.PesoPalletNetoLB.ReadOnly = true;
+            this.PesoPalletNetoLB.Visible = false;
+            this.PesoPalletNetoLB.Width = 60;
+            // 
+            // PesoBrutoPalletLB
+            // 
+            this.PesoBrutoPalletLB.HeaderText = "Peso Pallet Bruto LB";
+            this.PesoBrutoPalletLB.Name = "PesoBrutoPalletLB";
+            this.PesoBrutoPalletLB.ReadOnly = true;
+            this.PesoBrutoPalletLB.Visible = false;
+            this.PesoBrutoPalletLB.Width = 60;
+            // 
+            // codOben
+            // 
+            this.codOben.HeaderText = "Código Oben";
+            this.codOben.Name = "codOben";
+            this.codOben.ReadOnly = true;
+            this.codOben.Width = 120;
+            // 
+            // done
+            // 
+            this.done.HeaderText = "Listo para ingresar";
+            this.done.Name = "done";
+            this.done.ReadOnly = true;
+            this.done.Visible = false;
+            this.done.Width = 60;
+            // 
             // frmPLChile
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -411,6 +412,14 @@
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnObtenerPL;
         private System.Windows.Forms.Button btnVerificar;
+        private System.Windows.Forms.TextBox txtKilos;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtBobinas;
+        private System.Windows.Forms.TextBox txtPallets;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn PedidoN;
         private System.Windows.Forms.DataGridViewTextBoxColumn Posicion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Pallet;
@@ -432,13 +441,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn PesoBrutoPalletLB;
         private System.Windows.Forms.DataGridViewTextBoxColumn codOben;
         private System.Windows.Forms.DataGridViewTextBoxColumn done;
-        private System.Windows.Forms.TextBox txtKilos;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtBobinas;
-        private System.Windows.Forms.TextBox txtPallets;
-        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

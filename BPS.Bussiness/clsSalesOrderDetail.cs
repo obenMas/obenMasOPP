@@ -353,6 +353,29 @@ namespace BPS.Bussiness
             }
         }
 
+        public bool updateDeliveryDate(DateTime date)
+        {
+            this.deliveryDate = date;
+            try
+            {
+                string queryString = "";
+
+
+                queryString += "UPDATE bps_com_salesorderdetail";
+                queryString += " SET ";
+                queryString += " sod_deliveryDate = '" + this.deliveryDate.ToString("dd/MM/yyyy") + "'";
+                queryString += " WHERE sod_codsec = " + this.codsec.ToString();
+
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsSalesOrderDetail.update");
+                return false;
+            }
+        }
+
         public bool updateOTIFDate(DateTime date)
         {
             this.otifDate = date;

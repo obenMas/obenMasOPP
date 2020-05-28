@@ -2975,6 +2975,40 @@ namespace BPS.Bussiness
             }
         }
 
+        public static void setCoilAsPreShipped(List<int> lstCoil)
+        {
+            for (int i = 0; i < lstCoil.Count; i++)
+            {
+                string queryString = "";
+
+                queryString += "UPDATE bps_prod_coil ";
+                queryString += " SET ";
+                queryString += "coil_fkStatus = 3072, ";
+                queryString += "coil_modifiedDate = '" + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "',";
+                queryString += "coil_modifiedBy = " + clsGlobal.LoggedUser.codsec + " ";
+                queryString += " WHERE coil_codsec = " + lstCoil[i].ToString() + ";";
+
+                clsConnection.executeQuery(queryString);
+            }
+        }
+
+        public static void cancelPreShipping(List<int> lstCoil)
+        {
+            for (int i = 0; i < lstCoil.Count; i++)
+            {
+                string queryString = "";
+
+                queryString += "UPDATE bps_prod_coil ";
+                queryString += " SET ";
+                queryString += "coil_fkStatus = 33, ";
+                queryString += "coil_modifiedDate = '" + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "',";
+                queryString += "coil_modifiedBy = " + clsGlobal.LoggedUser.codsec + " ";
+                queryString += " WHERE coil_codsec = " + lstCoil[i].ToString() + ";";
+
+                clsConnection.executeQuery(queryString);
+            }
+        }
+
         public static void cancelPreShipping(int coilCodsec)
         {
             clsCoil objCoil = new clsCoil(coilCodsec);

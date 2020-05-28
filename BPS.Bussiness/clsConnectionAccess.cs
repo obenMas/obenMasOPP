@@ -72,7 +72,7 @@ namespace BPS.Bussiness
         {
             clsConnectionAccess myCon = new clsConnectionAccess();
 
-            OleDbDataAdapter dbDA = myCon.executeQuery("SELECT * FROM PLCHILE");
+            OleDbDataAdapter dbDA = myCon.executeQuery("SELECT * FROM PLCHILEPREPARADO");
 
             DataTable table = new DataTable();
             dbDA.Fill(table);

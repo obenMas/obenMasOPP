@@ -48,6 +48,7 @@
             this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFilmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDiameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCore = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -187,6 +188,7 @@
             this.clmPlant,
             this.clmCode,
             this.clmFilm,
+            this.clmFilmCodsec,
             this.clmWidth,
             this.clmDiameter,
             this.clmCore,
@@ -247,6 +249,12 @@
             this.clmFilm.HeaderText = "Película";
             this.clmFilm.Name = "clmFilm";
             this.clmFilm.Width = 70;
+            // 
+            // clmFilmCodsec
+            // 
+            this.clmFilmCodsec.HeaderText = "";
+            this.clmFilmCodsec.Name = "clmFilmCodsec";
+            this.clmFilmCodsec.Visible = false;
             // 
             // clmWidth
             // 
@@ -354,6 +362,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFilm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFilmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmWidth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDiameter;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCore;

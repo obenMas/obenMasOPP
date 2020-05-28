@@ -4355,7 +4355,8 @@
             "3C",
             "1D",
             "2D",
-            "3D"});
+            "3D",
+            "PNC"});
             this.clmQualityRanking.Name = "clmQualityRanking";
             this.clmQualityRanking.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmQualityRanking.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;

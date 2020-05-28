@@ -165,7 +165,8 @@ namespace BPS.Bussiness
             queryString += "UPDATE bps_prod_newPreShipping";
             queryString += " SET ";
             queryString += "npship_fkStatus = 3067, ";
-            queryString += "npship_shippingDate = '" + this.createdDate.ToString("dd/MM/yyyy") + "'";
+            queryString += "npship_shippingDate = '" + this.createdDate.ToString("dd/MM/yyyy") + "', ";
+            queryString += "npship_wasAproved = 0";
             queryString += " WHERE npship_codsec = " + this.codsec.ToString();
 
             if (clsConnection.executeQuery(queryString))
@@ -289,6 +290,14 @@ namespace BPS.Bussiness
             }
 
             return list;
+        }
+
+        public DataSet getDSDetail()
+        {
+            DataSet DS = new DataSet();
+            DS = clsConnection.getDataSetResult("spGetNewPreShippingDetail " + this.codsec);
+
+            return DS;
         }
 
         public DataSet getDetailDS()

@@ -73,6 +73,7 @@
     <Compile Include="clsCastCoil.cs" />
     <Compile Include="clsCellar.cs" />
     <Compile Include="clsCellarByExtruder.cs" />
+    <Compile Include="clsCellarStocks.cs" />
     <Compile Include="clsCertificate.cs" />
     <Compile Include="clsChangeSalesOrder.cs" />
     <Compile Include="clsChangeSalesOrderDetail.cs" />
@@ -198,6 +199,9 @@
     <Compile Include="clsMill.cs" />
     <Compile Include="clsMillPallet.cs" />
     <Compile Include="clsMillProduction.cs" />
+    <Compile Include="clsNewExtrusionOrder.cs" />
+    <Compile Include="clsNewExtrusionPlan.cs" />
+    <Compile Include="clsNewExtrusionPlanDetail.cs" />
     <Compile Include="clsNewFormulation.cs" />
     <Compile Include="clsNewFormulationDetail.cs" />
     <Compile Include="clsNewPreShipping.cs" />
@@ -340,6 +344,7 @@
     <Compile Include="clsThermoformer.cs" />
     <Compile Include="clsThermoforming.cs" />
     <Compile Include="clsThickness.cs" />
+    <Compile Include="clsTransactions.cs" />
     <Compile Include="clsTransfer.cs" />
     <Compile Include="clsTransport.cs" />
     <Compile Include="clsTransportBySalesOrder.cs" />

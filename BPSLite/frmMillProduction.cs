@@ -57,7 +57,14 @@ namespace BPS.Lite
 
             contextbox = cmbTipo.Text;
             pletra = contextbox.Substring(0, 1);
-            tletra = contextbox.Substring(22,2);
+            if(contextbox.Length>25)
+            {
+                tletra = contextbox.Substring(22, 2);
+            }
+            else
+            {
+                tletra = contextbox.Substring(18, 2);
+            }
 
             if (contextbox.Length > 33)
             {
@@ -137,7 +144,7 @@ namespace BPS.Lite
                         
                         clsScrapMovements movimiento = new clsScrapMovements();
                         clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
-                        int codsecPalletRaw = rawPallet.getCodsecByCode(txtCodigo.Text);
+                        int codsecPalletRaw = clsRawMaterialPallet.getCodsecByCode(txtCodigo.Text);
                         clsPrintLabels.printRawLabelPL(codsecPalletRaw);
 
                         // Lo cambie de lugar por que me estaba instanciando con el fk de tipo de scrap del pallet
@@ -206,7 +213,7 @@ namespace BPS.Lite
                        
                         clsScrapMovements movimiento = new clsScrapMovements();
                         clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
-                        int codsecPalletRaw = rawPallet.getCodsecByCode(txtCodigo.Text);
+                        int codsecPalletRaw = clsRawMaterialPallet.getCodsecByCode(txtCodigo.Text);
                         clsPrintLabels.printRawLabel(codsecPalletRaw);
 
                         // Lo cambie de lugar por que me estaba instanciando con el fk de tipo de scrap del pallet

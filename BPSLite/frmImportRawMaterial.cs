@@ -13,8 +13,9 @@ namespace BPS.Lite
     public partial class frmImportRawMaterial : Form
     {
         List<clsCoilCellar> bodegas = new List<clsCoilCellar>();
+        string referencia;
 
-        public frmImportRawMaterial(string Codigo, string Cantidad, string partida, string proveedor, string nombreEmp)
+        public frmImportRawMaterial(string Codigo, string Cantidad, string partida, string proveedor, string nombreEmp, string refe)
         {
             InitializeComponent();
             txtCodigo.Text = Codigo;
@@ -27,8 +28,11 @@ namespace BPS.Lite
 
             for (int i = 0; i < bodegas.Count; i++)
             {
+                if(bodegas[i].isReception==1)
                 cmbBodegas.Items.Add(bodegas[i]);
             }
+
+            referencia = refe;
         }
 
         #region Importar Todas las materias primas
@@ -64,7 +68,7 @@ namespace BPS.Lite
                         dgvImportRawMat.Rows[dgvImportRawMat.Rows.Count - 1].Cells[clmBodega.Index].Value = cmbBodegas.Text;
                         dgvImportRawMat.Rows[dgvImportRawMat.Rows.Count - 1].Cells[clmProveedor.Index].Value = txtProveedor.Text;
                         dgvImportRawMat.Rows[dgvImportRawMat.Rows.Count - 1].Cells[clmPartidas.Index].Value = txtPartidas.Text;
-                        dgvImportRawMat.Rows[dgvImportRawMat.Rows.Count - 1].Cells[clmCodigoPallet.Index].Value = DateTime.Now.ToString("yy") + clsGlobal.ToHexadecimal(Convert.ToInt32(DateTime.Now.ToString("MM"))) + DateTime.Now.ToString("dd") + planta.abr + "MP" + clsGlobal.FillWithZeros(((new clsSequential().rawPallet).ToString()), 5);
+                        dgvImportRawMat.Rows[dgvImportRawMat.Rows.Count - 1].Cells[clmCodigoPallet.Index].Value = DateTime.Now.ToString("yy") + clsGlobal.ToHexadecimal(Convert.ToInt32(DateTime.Now.ToString("MM"))) + DateTime.Now.ToString("dd") + "R" + DateTime.Now.ToString("hh") + DateTime.Now.ToString("mm") + DateTime.Now.ToString("ss") + clsGlobal.FillWithZeros(i.ToString(),2);
 
                     }
 
@@ -101,18 +105,21 @@ namespace BPS.Lite
             clsCoilCellar bodegas = new clsCoilCellar();
             bool psave = false;
             bool psavePallet = false;
-                
+
+            bodegas = clsCoilCellar.getCellarByName(Convert.ToString(dgvImportRawMat.Rows[0].Cells[clmBodega.Index].Value));
+            rawMaterialcodsec = clsRawMaterial.getCodsecByCode(Convert.ToString(dgvImportRawMat.Rows[0].Cells[clmCodigo.Index].Value));
+
             for (int i = 0; i < dgvImportRawMat.Rows.Count; i++)
             {
                 clsRawMaterialPallet palletMateriaprima = new clsRawMaterialPallet();
                 clsRawMaterialMovements movimientosRaw = new clsRawMaterialMovements();
-                bodegas = clsCoilCellar.getCellarByName(Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmBodega.Index].Value));
+                
                 clsRawPalletByCoilCellar bodegaDestino = new clsRawPalletByCoilCellar();
 
                 //Instancio cada pallet.
 
                 palletMateriaprima.code = Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmCodigoPallet.Index].Value);
-                rawMaterialcodsec = clsRawMaterial.getCodsecByCode(Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmCodigo.Index].Value));
+                
                 palletMateriaprima.fkRaw = rawMaterialcodsec;
                 palletMateriaprima.netweigth = Convert.ToDouble(dgvImportRawMat.Rows[i].Cells[clmCantidad.Index].Value);
                 palletMateriaprima.lote = Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmLote.Index].Value);
@@ -126,12 +133,12 @@ namespace BPS.Lite
                 // Aca se genera el movimiento del ingreso de pallet.
                 psavePallet = palletMateriaprima.save();
 
-                clsRawMaterialPallet palletRawMaterial = new clsRawMaterialPallet(Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmCodigoPallet.Index].Value));
+                //clsRawMaterialPallet palletRawMaterial = new clsRawMaterialPallet(Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmCodigoPallet.Index].Value));
                 movimientosRaw.fkRaw = rawMaterialcodsec;
-                movimientosRaw.type = "Ingreso de Materias Primas";
-                movimientosRaw.netWeigth = palletRawMaterial.netweigth;
+                movimientosRaw.type = "Ingreso de Materias Primas por interfaz Presea";
+                movimientosRaw.netWeigth = Convert.ToDouble(dgvImportRawMat.Rows[i].Cells[clmCantidad.Index].Value);
                 movimientosRaw.lote = Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmLote.Index].Value);
-                movimientosRaw.fkRawPallet = palletRawMaterial.codsec;
+                movimientosRaw.fkRawPallet = clsRawMaterialPallet.getCodsecByCode(Convert.ToString(dgvImportRawMat.Rows[i].Cells[clmCodigoPallet.Index].Value));
                 movimientosRaw.fkOrigCellar = bodegas.codsec;
                 movimientosRaw.estrusionLote = "";
                 movimientosRaw.fkDestCellar = bodegas.codsec;
@@ -143,19 +150,22 @@ namespace BPS.Lite
                 // Genero el destino del pallet
 
                 bodegaDestino.fkCoilCellar = bodegas.codsec;
-                bodegaDestino.fkRawPallet = palletRawMaterial.codsec;
+                bodegaDestino.fkRawPallet = movimientosRaw.fkRawPallet;
 
                 bodegaDestino.save();
+
+                // transaccion
+                clsTransactions.addPreseaReception(Convert.ToString(dgvImportRawMat.Rows[0].Cells[clmCodigo.Index].Value), palletMateriaprima.code, palletMateriaprima.lote, bodegas.codsec, palletMateriaprima.netweigth,referencia);
 
                 if ((psave == true) && psavePallet == true)
                 {
                     if (clsGlobal.LoggedUser.fkRole == 2029 || clsGlobal.LoggedUser.fkRole == 2030 || clsGlobal.LoggedUser.fkRole == 2032)
                     {
-                        clsPrintLabels.printRawLabelPL(palletRawMaterial.codsec);
+                        clsPrintLabels.printRawLabelPL(movimientosRaw.fkRawPallet);
                     }
                     else
                     {
-                        clsPrintLabels.printRawLabel(palletRawMaterial.codsec);
+                        clsPrintLabels.printRawLabel(movimientosRaw.fkRawPallet);
                     }
                 }
 

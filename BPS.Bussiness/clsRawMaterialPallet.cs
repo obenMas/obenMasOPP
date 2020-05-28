@@ -161,7 +161,7 @@ namespace BPS.Bussiness
             return List;
         }
 
-        public int getCodsecByCode(string code)
+        public static int getCodsecByCode(string code)
         {
             try
             {

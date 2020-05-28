@@ -51,8 +51,9 @@ namespace BPS.Lite
                     string partida = Convert.ToString(dgvEntradaMaterPrima.Rows[dgvEntradaMaterPrima.CurrentRow.Index].Cells[2].Value);
                     string proveedor = Convert.ToString(dgvEntradaMaterPrima.Rows[dgvEntradaMaterPrima.CurrentRow.Index].Cells[3].Value);
                     string nombreEmpresa = Convert.ToString(dgvEntradaMaterPrima.Rows[dgvEntradaMaterPrima.CurrentRow.Index].Cells[5].Value);
+                    string refe = Convert.ToString(dgvEntradaMaterPrima.Rows[dgvEntradaMaterPrima.CurrentRow.Index].Cells[7].Value);
 
-                    frmImportRawMaterial importRaw = new frmImportRawMaterial(codigo, cantidad, partida, proveedor, nombreEmpresa);
+                    frmImportRawMaterial importRaw = new frmImportRawMaterial(codigo, cantidad, partida, proveedor, nombreEmpresa,refe);
                     importRaw.Show();
                 }
                 else

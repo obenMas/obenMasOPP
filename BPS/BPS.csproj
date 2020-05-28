@@ -44,7 +44,7 @@
     <PublisherName>Oben Holding Group</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>18</ApplicationRevision>
+    <ApplicationRevision>23</ApplicationRevision>
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -406,6 +406,12 @@
     <Compile Include="frmListaEmpaque.Designer.cs">
       <DependentUpon>frmListaEmpaque.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMainCoilLabelView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMainCoilLabelView.Designer.cs">
+      <DependentUpon>frmMainCoilLabelView.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMainCoilMetalStock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -447,6 +453,24 @@
     </Compile>
     <Compile Include="frmNewExtrusionOrder.Designer.cs">
       <DependentUpon>frmNewExtrusionOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewExtrusionOrderCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewExtrusionOrderCreator.Designer.cs">
+      <DependentUpon>frmNewExtrusionOrderCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlan.Designer.cs">
+      <DependentUpon>frmNewExtrusionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlanCreation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlanCreation.Designer.cs">
+      <DependentUpon>frmNewExtrusionPlanCreation.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewFormulationList.cs">
       <SubType>Form</SubType>
@@ -1346,6 +1370,18 @@
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\Extruder\rptMainCoilLabel.cs">
+      <DependentUpon>rptMainCoilLabel.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Reports\rptNewMainCoilLabel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptNewMainCoilLabel.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\rptRequeriments.cs">
       <DependentUpon>rptRequeriments.rpt</DependentUpon>
@@ -3780,6 +3816,9 @@
     <EmbeddedResource Include="frmListaEmpaque.resx">
       <DependentUpon>frmListaEmpaque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMainCoilLabelView.resx">
+      <DependentUpon>frmMainCoilLabelView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMainCoilMetalStock.resx">
       <DependentUpon>frmMainCoilMetalStock.cs</DependentUpon>
     </EmbeddedResource>
@@ -3800,6 +3839,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewExtrusionOrder.resx">
       <DependentUpon>frmNewExtrusionOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewExtrusionOrderCreator.resx">
+      <DependentUpon>frmNewExtrusionOrderCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewExtrusionPlan.resx">
+      <DependentUpon>frmNewExtrusionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewExtrusionPlanCreation.resx">
+      <DependentUpon>frmNewExtrusionPlanCreation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewFormulationList.resx">
       <DependentUpon>frmNewFormulationList.cs</DependentUpon>
@@ -4255,6 +4303,14 @@
     <EmbeddedResource Include="Reports\Control\rptMainCoilQuality_PL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptMainCoilQuality_PL.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Extruder\rptMainCoilLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptMainCoilLabel.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\rptNewMainCoilLabel.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptNewMainCoilLabel.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\rptRequeriments.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -6280,7 +6336,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ReportsSales\National\" />
-    <Folder Include="Reports\Extruder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BPS.Bussiness\BPS.Business.csproj">

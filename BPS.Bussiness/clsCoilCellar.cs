@@ -23,6 +23,8 @@ namespace BPS.Bussiness
         private int cclr_isScrapCellar;
         private int cclr_isRawCellar;
         private int cclr_isSiloCellar;
+        private bool cclr_byLot;
+        private int cclr_isReception;
 
         //properties
         public int codsec { get { return cclr_codsec; } set { cclr_codsec = value; } }
@@ -53,6 +55,10 @@ namespace BPS.Bussiness
 
         public int isSiloCellar { get { return cclr_isSiloCellar; } set { cclr_isSiloCellar = value; } }
 
+        public bool byLot { get { return cclr_byLot; } set { cclr_byLot = value; } }
+
+        public int isReception { get { return cclr_isReception; } set { cclr_isReception = value; } }
+
         //Constructor
         public clsCoilCellar()
         {
@@ -67,6 +73,11 @@ namespace BPS.Bussiness
             isDropCellar = false;
             isSecundaryCutCellar = false;
             fkPlant = 0;
+            isScrapCellar = 0;
+            isRawCellar = 0;
+            isSiloCellar = 0;
+            byLot = false;
+            isReception = 0;
         }
         public clsCoilCellar(int coilCellarCodsec)
         {
@@ -101,6 +112,8 @@ namespace BPS.Bussiness
                 this.isScrapCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isScrapCellar"]);
                 this.isRawCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isRawCellar"]);
                 this.isSiloCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isSiloCellar"]);
+                this.byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_byLot"], DS.Tables[0].Rows[0]["cclr_byLot"].GetType().FullName);
+                this.isReception = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isReception"]);
             }
         }
 
@@ -126,6 +139,8 @@ namespace BPS.Bussiness
                 this.isScrapCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isScrapCellar"]);
                 this.isRawCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isRawCellar"]);
                 this.isSiloCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isSiloCellar"]);
+                this.byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_byLot"], DS.Tables[0].Rows[0]["cclr_byLot"].GetType().FullName);
+                this.isReception = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isReception"]);
             }
 
         }
@@ -154,7 +169,8 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
                     //lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
-                    
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -185,7 +201,8 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
                     //lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
-
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -213,7 +230,8 @@ namespace BPS.Bussiness
                 objCoilCellar.isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isDropCellar"], DS.Tables[0].Rows[0]["cclr_isDropCellar"].GetType().FullName);
                 objCoilCellar.isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
                 objCoilCellar.fkPlant = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_fkPlant"]);
-
+                objCoilCellar.byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_byLot"], DS.Tables[0].Rows[0]["cclr_byLot"].GetType().FullName);
+                objCoilCellar.isReception = Convert.ToInt32(DS.Tables[0].Rows[0]["cclr_isReception"]);
             }
 
             return objCoilCellar;
@@ -240,9 +258,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
-               
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -273,6 +292,8 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
                     lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -301,8 +322,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -330,8 +353,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -359,8 +384,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -388,8 +415,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -417,8 +446,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -446,8 +477,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -475,8 +508,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -506,8 +541,10 @@ namespace BPS.Bussiness
                     lstCoilCellar[i].isMetallizedCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"], DS.Tables[0].Rows[i]["cclr_isMetallizedCellar"].GetType().FullName);
                     lstCoilCellar[i].isStockCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isStockCellar"], DS.Tables[0].Rows[i]["cclr_isStockCellar"].GetType().FullName);
                     lstCoilCellar[i].isDropCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isDropCellar"], DS.Tables[0].Rows[i]["cclr_isDropCellar"].GetType().FullName);
-                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[0]["cclr_isSecundaryCutCellar"].GetType().FullName);
+                    lstCoilCellar[i].isSecundaryCutCellar = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"], DS.Tables[0].Rows[i]["cclr_isSecundaryCutCellar"].GetType().FullName);
                     lstCoilCellar[i].fkPlant = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_fkPlant"]);
+                    lstCoilCellar[i].byLot = clsGlobal.convertToBoolean(DS.Tables[0].Rows[i]["cclr_byLot"], DS.Tables[0].Rows[i]["cclr_byLot"].GetType().FullName);
+                    lstCoilCellar[i].isReception = Convert.ToInt32(DS.Tables[0].Rows[i]["cclr_isReception"]);
                 }
             }
 
@@ -548,7 +585,7 @@ namespace BPS.Bussiness
 
             DataSet DS = new DataSet();
 
-            DS = clsConnection.getDataSetResult("SELECT * FROM bps_prod_coilcellar WHERE cclr_isRawCellar = 1");
+            DS = clsConnection.getDataSetResult("SELECT * FROM bps_prod_coilcellar WHERE cclr_isRawCellar = 1 AND cclr_isSiloCellar = 0 AND cclr_fkPlant = 4");
 
             if (DS.Tables.Count > 0)
             {

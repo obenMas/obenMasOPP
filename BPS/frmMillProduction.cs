@@ -116,8 +116,8 @@ namespace BPS
                         
                         
                         clsScrapMovements movimiento = new clsScrapMovements();
-                        clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
-                        int codsecPalletRaw = rawPallet.getCodsecByCode(txtCodigo.Text);
+                        //clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
+                        int codsecPalletRaw = clsRawMaterialPallet.getCodsecByCode(txtCodigo.Text);
                         clsPrintLabels.printRawLabelPL(codsecPalletRaw);
 
                         // Lo cambie de lugar por que me estaba instanciando con el fk de tipo de scrap del pallet
@@ -182,8 +182,8 @@ namespace BPS
                         bool prue = rawMaterialPallet.save();
                        
                         clsScrapMovements movimiento = new clsScrapMovements();
-                        clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
-                        int codsecPalletRaw = rawPallet.getCodsecByCode(txtCodigo.Text);
+                        //clsRawMaterialPallet rawPallet = new clsRawMaterialPallet();
+                        int codsecPalletRaw = clsRawMaterialPallet.getCodsecByCode(txtCodigo.Text);
                         clsPrintLabels.printRawLabel(codsecPalletRaw);
                         // Lo cambie de lugar por que me estaba instanciando con el fk de tipo de scrap del pallet
                         // Y no con el fk del pallet.

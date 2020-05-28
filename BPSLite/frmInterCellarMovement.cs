@@ -200,6 +200,14 @@ namespace BPS.Lite
                             movimientosRaw.date = DateTime.Now;
                             movimientosRaw.fkUser = clsGlobal.LoggedUser.codsec;
 
+                            clsTransactions.addIntercellarMovement(rawPallet.rawMaterial.code,rawPallet.code,rawPallet.lote, rawPalletBCC.fkCoilCellar, bodegaNueva.codsec, Convert.ToDouble(dgvSwapMP.Rows[i].Cells[clmPeso.Index].Value));
+
+                            if(bodegaNueva.byLot)
+                            {
+                                clsCellarStocks cellarstock = new clsCellarStocks(bodegaNueva.codsec, rawPallet.fkRaw, rawPallet.lote);
+                                cellarstock.alterQuantity(movimientosRaw.netWeigth);
+                            }
+
                             if (bodegaNueva.isSiloCellar == 1)
                             { //Si sale por esta rama significa que el pallet se esta mandando a un silo.
                                 clsRawMaterialBySiloCellar silo = new clsRawMaterialBySiloCellar();

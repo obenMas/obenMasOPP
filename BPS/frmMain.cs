@@ -5814,5 +5814,13 @@ namespace BPS
             reporteDespachos.StartPosition = FormStartPosition.Manual;
             reporteDespachos.Show();
         }
+
+        private void pruebaPlanExtrusionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewExtrusionPlan reporteDespachos = new frmNewExtrusionPlan(3024, "BRUCKNER");
+            reporteDespachos.MdiParent = this;
+            reporteDespachos.StartPosition = FormStartPosition.Manual;
+            reporteDespachos.Show();
+        }
     }
 }

@@ -2783,7 +2783,7 @@ namespace BPS.Bussiness
 
         #region CancelPreShipping Overloading
 
-        public static void cancelPreShipping(int objPalletCodsec)
+        /*public static void cancelPreShipping(int objPalletCodsec)
         {
             clsPallet objPallet = new clsPallet(objPalletCodsec);
             objPallet.fkCoilCellar = getContainerCellarByPallet(objPallet.codsec).codsec;
@@ -2806,7 +2806,7 @@ namespace BPS.Bussiness
                     clsCoil.cancelPreShipping(objPallet.lstCoil[i].codsec);
                 }
             }
-        }
+        }*/
 
         public static void cancelPreShipping(clsPallet objPallet)
         {
@@ -2832,13 +2832,45 @@ namespace BPS.Bussiness
                 }
             }
         }
+
+        public static void cancelPreShipping(int codPallet)
+        {
+
+            //if (objPallet.fkStatus == 3073)
+            //{
+                string queryString = "";
+
+                queryString += "UPDATE bps_prod_pallet ";
+                queryString += " SET ";
+                queryString += "plt_fkStatus = 38, ";
+                queryString += "plt_modifiedDate = '" + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "',";
+                queryString += "plt_modifiedBy = " + clsGlobal.LoggedUser.codsec + " ";
+                queryString += " WHERE plt_codsec = " + codPallet.ToString() + ";";
+
+                clsConnection.executeQuery(queryString);
+
+            DataSet Ds = clsConnection.getDataSetResult("spCoilCodsecByPallet " + codPallet);
+
+            List<int> lista = new List<int>();
+
+            if (Ds.Tables.Count > 0 && Ds.Tables[0].Rows.Count > 0)
+            {
+                for (int i = 0; i < Ds.Tables[0].Rows.Count; i++)
+                {
+                    lista.Add(Convert.ToInt32(Ds.Tables[0].Rows[i][0]));
+                }
+            }
+            clsCoil.cancelPreShipping(lista);
+
+            //}
+        }
         #endregion
 
         public static void setPalletAsPreShipped(clsPallet objPallet) // BEFORE: Antes pasaba el codsec del pallet, y lo volvia a instanciar abajo.
         {
             //clsPallet objPallet = new clsPallet(objPalletCodsec); Nose por que lo vuelve a instanciar, si se podria pasar el objeto instanciado.
             
-            objPallet.fkCoilCellar = getContainerCellarByPallet(objPallet.codsec).codsec;
+            objPallet.fkCoilCellar = objPallet.fkPalletCoilcellar;
 
             string queryString = "";
 
@@ -2856,6 +2888,34 @@ namespace BPS.Bussiness
                 //clsCoil.setCoilAsPreShipped(objPallet.lstCoil[i].codsec); BEFORE: Le pasaba el codsec de bobina y lo volvia a instanciar en la clase.
                 clsCoil.setCoilAsPreShipped(objPallet.lstCoil); // Se le pasa la lista y no se instancia cada bobina.
             //}
+        }
+
+        public static void setPalletAsPreShipped(int cod) 
+        {
+            
+            string queryString = "";
+
+            queryString += "UPDATE bps_prod_pallet ";
+            queryString += " SET ";
+            queryString += "plt_fkStatus = 3073, ";
+            queryString += "plt_modifiedDate = '" + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "',";
+            queryString += "plt_modifiedBy = " + clsGlobal.LoggedUser.codsec + " ";
+            queryString += " WHERE plt_codsec = " + cod.ToString() + ";";
+
+            clsConnection.executeQuery(queryString);
+
+            DataSet Ds = clsConnection.getDataSetResult("spCoilCodsecByPallet " + cod);
+
+            List<int> lista = new List<int>();
+
+            if (Ds.Tables.Count>0 && Ds.Tables[0].Rows.Count>0)
+            {
+                for(int i=0;i<Ds.Tables[0].Rows.Count;i++)
+                {
+                    lista.Add(Convert.ToInt32(Ds.Tables[0].Rows[i][0]));
+                }
+            }
+            clsCoil.setCoilAsPreShipped(lista);
         }
 
         public static void setPalletAsDeliveredNational(List<string> code)

@@ -224,7 +224,7 @@ namespace BPS
                 || filmname.StartsWith("PGBT")
                 || (filmname == "BL017" || filmname == "BL020" || filmname == "BL025" || filmname == "BL030" || filmname == "BL035")
                 || (filmname == "BCB020")
-                || (filmname == "BCM020" || filmname == "BCM025")
+                || (filmname == "BCM020" || filmname == "BCM025" || filmname == "BCN020" || filmname == "BCN025")
                 || filmname.StartsWith("BF")
                 || (filmname == "BMBTF017") || (filmname == "BMBTF020")) // se agrego esto, a pedido de Bruno. 
             {
@@ -1368,6 +1368,7 @@ namespace BPS
                         || (myfilmname == "BL017" || myfilmname == "BL020" || myfilmname == "BL025" || myfilmname == "BL030" || myfilmname == "BL035")
                         || (myfilmname == "BCB020")
                         || (myfilmname == "BCM020" || myfilmname == "BCM025")
+                        || (myfilmname == "BCN020" || myfilmname == "BCN025")
                         || myfilmname.StartsWith("BF")
                         || (myfilmname == "BMBTF017") || (myfilmname == "BMBTF020"))
                         {

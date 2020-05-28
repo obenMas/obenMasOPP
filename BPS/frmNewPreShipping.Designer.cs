@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNewPreShipping));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
@@ -56,28 +55,15 @@
             this.dgvAgregados = new System.Windows.Forms.DataGridView();
             this.codsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fkPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quitar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.cmbPedido = new System.Windows.Forms.ComboBox();
-            this.dgvParaAgregar = new System.Windows.Forms.DataGridView();
-            this.Agregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.codsecpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fkPalletpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Palletpa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Productopa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pesopa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pedidopa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPedido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgregados)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaAgregar)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -96,7 +82,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1088, 103);
+            this.groupBox1.Size = new System.Drawing.Size(659, 160);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pre-Despacho";
@@ -104,16 +90,16 @@
             // txtEstado
             // 
             this.txtEstado.Enabled = false;
-            this.txtEstado.Location = new System.Drawing.Point(407, 65);
+            this.txtEstado.Location = new System.Drawing.Point(69, 113);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(126, 20);
+            this.txtEstado.Size = new System.Drawing.Size(91, 20);
             this.txtEstado.TabIndex = 10;
             this.txtEstado.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(361, 68);
+            this.label5.Location = new System.Drawing.Point(23, 116);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 13);
             this.label5.TabIndex = 9;
@@ -122,11 +108,11 @@
             // chkDespacho
             // 
             this.chkDespacho.AutoSize = true;
-            this.chkDespacho.Location = new System.Drawing.Point(576, 70);
+            this.chkDespacho.Location = new System.Drawing.Point(183, 114);
             this.chkDespacho.Name = "chkDespacho";
-            this.chkDespacho.Size = new System.Drawing.Size(124, 17);
+            this.chkDespacho.Size = new System.Drawing.Size(74, 17);
             this.chkDespacho.TabIndex = 0;
-            this.chkDespacho.Text = "Programar despacho";
+            this.chkDespacho.Text = "Programar";
             this.chkDespacho.UseVisualStyleBackColor = true;
             this.chkDespacho.CheckedChanged += new System.EventHandler(this.chkDespacho_CheckedChanged);
             // 
@@ -135,7 +121,7 @@
             this.groupBox4.Controls.Add(this.btnProgramar);
             this.groupBox4.Controls.Add(this.dtpProgramado);
             this.groupBox4.Controls.Add(this.label6);
-            this.groupBox4.Location = new System.Drawing.Point(706, 51);
+            this.groupBox4.Location = new System.Drawing.Point(260, 98);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(376, 45);
             this.groupBox4.TabIndex = 8;
@@ -190,7 +176,7 @@
             // txtUser
             // 
             this.txtUser.Enabled = false;
-            this.txtUser.Location = new System.Drawing.Point(910, 25);
+            this.txtUser.Location = new System.Drawing.Point(478, 65);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(158, 20);
             this.txtUser.TabIndex = 5;
@@ -199,7 +185,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(842, 28);
+            this.label3.Location = new System.Drawing.Point(410, 68);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
             this.label3.TabIndex = 4;
@@ -210,7 +196,7 @@
             this.txtCliente.Enabled = false;
             this.txtCliente.Location = new System.Drawing.Point(260, 25);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(530, 20);
+            this.txtCliente.Size = new System.Drawing.Size(376, 20);
             this.txtCliente.TabIndex = 3;
             this.txtCliente.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -249,9 +235,9 @@
             this.groupBox2.Controls.Add(this.txtPallets);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.dgvAgregados);
-            this.groupBox2.Location = new System.Drawing.Point(12, 121);
+            this.groupBox2.Location = new System.Drawing.Point(12, 178);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(535, 414);
+            this.groupBox2.Size = new System.Drawing.Size(659, 419);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Pallets agregados";
@@ -315,15 +301,15 @@
             this.dgvAgregados.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codsec,
             this.fkPallet,
-            this.Pallet,
-            this.Producto,
-            this.Peso,
-            this.Pedido,
-            this.Quitar});
+            this.clmPallet,
+            this.clmProducto,
+            this.clmPeso,
+            this.clmPedido,
+            this.clmQuitar});
             this.dgvAgregados.Location = new System.Drawing.Point(6, 63);
             this.dgvAgregados.Name = "dgvAgregados";
             this.dgvAgregados.ReadOnly = true;
-            this.dgvAgregados.Size = new System.Drawing.Size(523, 345);
+            this.dgvAgregados.Size = new System.Drawing.Size(647, 345);
             this.dgvAgregados.TabIndex = 0;
             this.dgvAgregados.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgregados_CellClick);
             // 
@@ -341,156 +327,50 @@
             this.fkPallet.ReadOnly = true;
             this.fkPallet.Visible = false;
             // 
-            // Pallet
+            // clmPallet
             // 
-            this.Pallet.HeaderText = "Pallet";
-            this.Pallet.Name = "Pallet";
-            this.Pallet.ReadOnly = true;
-            this.Pallet.Width = 140;
+            this.clmPallet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clmPallet.HeaderText = "Pallet";
+            this.clmPallet.Name = "clmPallet";
+            this.clmPallet.ReadOnly = true;
+            this.clmPallet.Width = 58;
             // 
-            // Producto
+            // clmProducto
             // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            this.Producto.Width = 130;
+            this.clmProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clmProducto.HeaderText = "Producto";
+            this.clmProducto.Name = "clmProducto";
+            this.clmProducto.ReadOnly = true;
+            this.clmProducto.Width = 75;
             // 
-            // Peso
+            // clmPeso
             // 
-            this.Peso.HeaderText = "Peso Neto [Kg]";
-            this.Peso.Name = "Peso";
-            this.Peso.ReadOnly = true;
-            this.Peso.Width = 80;
+            this.clmPeso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clmPeso.HeaderText = "Peso Neto [Kg]";
+            this.clmPeso.Name = "clmPeso";
+            this.clmPeso.ReadOnly = true;
+            this.clmPeso.Width = 78;
             // 
-            // Pedido
+            // clmPedido
             // 
-            this.Pedido.HeaderText = "Pedido";
-            this.Pedido.Name = "Pedido";
-            this.Pedido.ReadOnly = true;
-            this.Pedido.Width = 70;
+            this.clmPedido.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.clmPedido.HeaderText = "Pedido";
+            this.clmPedido.Name = "clmPedido";
+            this.clmPedido.ReadOnly = true;
+            this.clmPedido.Width = 65;
             // 
-            // Quitar
+            // clmQuitar
             // 
-            this.Quitar.HeaderText = "";
-            this.Quitar.Image = global::BPS.Properties.Resources.arrow_right;
-            this.Quitar.Name = "Quitar";
-            this.Quitar.ReadOnly = true;
-            this.Quitar.Width = 30;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.cmbPedido);
-            this.groupBox3.Controls.Add(this.dgvParaAgregar);
-            this.groupBox3.Location = new System.Drawing.Point(565, 121);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(535, 414);
-            this.groupBox3.TabIndex = 2;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Pallets para agregar";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(20, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
-            this.label10.TabIndex = 3;
-            this.label10.Text = "Pedido:";
-            // 
-            // cmbPedido
-            // 
-            this.cmbPedido.FormattingEnabled = true;
-            this.cmbPedido.Location = new System.Drawing.Point(69, 26);
-            this.cmbPedido.Name = "cmbPedido";
-            this.cmbPedido.Size = new System.Drawing.Size(120, 21);
-            this.cmbPedido.TabIndex = 2;
-            this.cmbPedido.SelectedIndexChanged += new System.EventHandler(this.cmbPedido_SelectedIndexChanged);
-            // 
-            // dgvParaAgregar
-            // 
-            this.dgvParaAgregar.AllowUserToAddRows = false;
-            this.dgvParaAgregar.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvParaAgregar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvParaAgregar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvParaAgregar.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Agregar,
-            this.codsecpa,
-            this.fkPalletpa,
-            this.Palletpa,
-            this.Productopa,
-            this.Pesopa,
-            this.Pedidopa});
-            this.dgvParaAgregar.Location = new System.Drawing.Point(6, 63);
-            this.dgvParaAgregar.Name = "dgvParaAgregar";
-            this.dgvParaAgregar.ReadOnly = true;
-            this.dgvParaAgregar.Size = new System.Drawing.Size(523, 345);
-            this.dgvParaAgregar.TabIndex = 1;
-            this.dgvParaAgregar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvParaAgregar_CellClick);
-            // 
-            // Agregar
-            // 
-            this.Agregar.HeaderText = "";
-            this.Agregar.Image = global::BPS.Properties.Resources.arrow_left;
-            this.Agregar.Name = "Agregar";
-            this.Agregar.ReadOnly = true;
-            this.Agregar.Width = 30;
-            // 
-            // codsecpa
-            // 
-            this.codsecpa.HeaderText = "";
-            this.codsecpa.Name = "codsecpa";
-            this.codsecpa.ReadOnly = true;
-            this.codsecpa.Visible = false;
-            // 
-            // fkPalletpa
-            // 
-            this.fkPalletpa.HeaderText = "";
-            this.fkPalletpa.Name = "fkPalletpa";
-            this.fkPalletpa.ReadOnly = true;
-            this.fkPalletpa.Visible = false;
-            // 
-            // Palletpa
-            // 
-            this.Palletpa.HeaderText = "Pallet";
-            this.Palletpa.Name = "Palletpa";
-            this.Palletpa.ReadOnly = true;
-            this.Palletpa.Width = 140;
-            // 
-            // Productopa
-            // 
-            this.Productopa.HeaderText = "Producto";
-            this.Productopa.Name = "Productopa";
-            this.Productopa.ReadOnly = true;
-            this.Productopa.Width = 130;
-            // 
-            // Pesopa
-            // 
-            this.Pesopa.HeaderText = "Peso Neto [Kg]";
-            this.Pesopa.Name = "Pesopa";
-            this.Pesopa.ReadOnly = true;
-            this.Pesopa.Width = 80;
-            // 
-            // Pedidopa
-            // 
-            this.Pedidopa.HeaderText = "Pedido";
-            this.Pedidopa.Name = "Pedidopa";
-            this.Pedidopa.ReadOnly = true;
-            this.Pedidopa.Width = 70;
+            this.clmQuitar.HeaderText = "Quitar";
+            this.clmQuitar.Image = global::BPS.Properties.Resources.cross;
+            this.clmQuitar.Name = "clmQuitar";
+            this.clmQuitar.ReadOnly = true;
             // 
             // frmNewPreShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 547);
-            this.Controls.Add(this.groupBox3);
+            this.ClientSize = new System.Drawing.Size(688, 609);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -503,9 +383,6 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgregados)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvParaAgregar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -514,7 +391,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox chkDespacho;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DateTimePicker dtpCreacion;
@@ -533,25 +409,15 @@
         private System.Windows.Forms.Button btnProgramar;
         private System.Windows.Forms.TextBox txtPallets;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codsec;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fkPallet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pallet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Peso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pedido;
-        private System.Windows.Forms.DataGridViewImageColumn Quitar;
-        private System.Windows.Forms.DataGridView dgvParaAgregar;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtKilos;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cmbPedido;
-        private System.Windows.Forms.DataGridViewImageColumn Agregar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codsecpa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fkPalletpa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Palletpa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Productopa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pesopa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pedidopa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codsec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fkPallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPallet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPeso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPedido;
+        private System.Windows.Forms.DataGridViewImageColumn clmQuitar;
     }
 }

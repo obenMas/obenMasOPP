@@ -32,13 +32,13 @@ namespace BPS.Lite
                 for (int i = 0; i < table.Rows.Count; i++)
                 {
                     dgv.Rows.Add();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PedidoN.Index].Value = table.Rows[i][0].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Posicion.Index].Value = table.Rows[i][1].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Pallet.Index].Value = table.Rows[i][2].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Bobina.Index].Value = table.Rows[i][3].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoNetoBobina.Index].Value = Convert.ToDouble(table.Rows[i][4]);
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Unidad.Index].Value = table.Rows[i][5].ToString();
-                    int prue = Convert.ToInt32(table.Rows[i][6].ToString().Replace("m", "").Replace(" ", ""));
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[PedidoN.Index].Value = table.Rows[i][10].ToString();
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[Posicion.Index].Value = table.Rows[i][1].ToString();
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Pallet.Index].Value = table.Rows[i][0].ToString();
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Bobina.Index].Value = table.Rows[i][1].ToString();
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoNetoBobina.Index].Value = Convert.ToDouble(table.Rows[i][2]);
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[Unidad.Index].Value = table.Rows[i][5].ToString();
+                    int prue = Convert.ToInt32(table.Rows[i][5].ToString().Replace("m", "").Replace(" ", ""));
                     if (prue != 570 && prue != 550)
                     {
                         if (prue == 770)
@@ -51,7 +51,7 @@ namespace BPS.Lite
                         }
                     }
                     dgv.Rows[dgv.Rows.Count - 1].Cells[Diametro.Index].Value = prue;
-                    prue = Convert.ToInt32(table.Rows[i][7].ToString().Replace(" ", "").Replace("PLG", ""));
+                    prue = Convert.ToInt32(table.Rows[i][4].ToString().Replace(" ", "").Replace("PLG", ""));
                     if (prue != 6)
                     {
                         if (prue == 3)
@@ -64,68 +64,68 @@ namespace BPS.Lite
                         }
                     }
                     dgv.Rows[dgv.Rows.Count - 1].Cells[DiametroE.Index].Value = prue;
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Grosor.Index].Value = table.Rows[i][8].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Ancho.Index].Value = table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".","");
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Largo.Index].Value = table.Rows[i][10].ToString().Replace(".", "").Replace("m", "").Replace(".", "");
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Material.Index].Value = table.Rows[i][11].ToString();
-                    switch (table.Rows[i][11].ToString())
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[Grosor.Index].Value = table.Rows[i][8].ToString();
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Ancho.Index].Value = table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".","");
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Largo.Index].Value = table.Rows[i][7].ToString().Replace(".", "").Replace("m", "").Replace(".", "");
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Material.Index].Value = table.Rows[i][8].ToString();
+                    switch (table.Rows[i][8].ToString())
                     {
                         case "NH 17 TT":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NH017TTx" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NH017TTx" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "NH 20 TT":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NH020TTx" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NH020TTx" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "VC 25":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC025x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC025x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "VC 30":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC030x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC030x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "VC 35":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC035x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC035x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "VC 40":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC040x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "VC040x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "AT 15 TT":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT015TTx" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT015TTx" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "AT 15":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT015x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT015x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "AT 12":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT012x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "AT012x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "WC 20":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "WC020x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "WC020x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "WC 25":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "WC025x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "WC025x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "NL 20":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL020x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL020x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "NL 17":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL017x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "BD 17":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "BD017x" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "BD017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "SC 30 TT":
-                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC030TTx" + table.Rows[i][9].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC030TTx" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         default:
                             dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "ERROR";
                             break;
                     }
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Descripcion.Index].Value = table.Rows[i][12].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[Entrega.Index].Value = table.Rows[i][13].ToString();
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoNetoBobinaLB.Index].Value = Convert.ToDouble(table.Rows[i][4]);
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletNeto.Index].Value = Convert.ToDouble(table.Rows[i][15]);
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletBruto.Index].Value = Convert.ToDouble(table.Rows[i][16]);
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletNetoLB.Index].Value = Convert.ToDouble(table.Rows[i][17]);
-                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoBrutoPalletLB.Index].Value = Convert.ToDouble(table.Rows[i][18]);
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[Descripcion.Index].Value = table.Rows[i][12].ToString();
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[Entrega.Index].Value = table.Rows[i][10].ToString();
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[PesoNetoBobinaLB.Index].Value = Convert.ToDouble(table.Rows[i][4]);
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletNeto.Index].Value = Convert.ToDouble(table.Rows[i][11]);
+                    dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletBruto.Index].Value = Convert.ToDouble(table.Rows[i][12]);
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[PesoPalletNetoLB.Index].Value = Convert.ToDouble(table.Rows[i][17]);
+                    //dgv.Rows[dgv.Rows.Count - 1].Cells[PesoBrutoPalletLB.Index].Value = Convert.ToDouble(table.Rows[i][18]);
                     if (new clsProduct(dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value.ToString()).codsec != 0)
                     {
                         dgv.Rows[dgv.Rows.Count - 1].Cells[done.Index].Value = "Si";

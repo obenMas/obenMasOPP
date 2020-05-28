@@ -80,6 +80,7 @@ namespace BPS
                 dgvDepositList.Rows[fila].Cells[clmPrice.Index].Value = priceList[i];
                 dgvDepositList.Rows[fila].Cells[clmPlant.Index].Value = new clsPlant(new clsCoilCellar(palletList[i].fkPalletCoilcellar).fkPlant).name;
                 dgvDepositList.Rows[fila].Cells[clmCode.Index].Value = palletList[i].code;
+                dgvDepositList.Rows[fila].Cells[clmFilmCodsec.Index].Value = palletList[i].product.codsec;
                 dgvDepositList.Rows[fila].Cells[clmFilm.Index].Value = palletList[i].product.boppCode + palletList[i].product.castCode + palletList[i].product.coatingCode;
                 dgvDepositList.Rows[fila].Cells[clmWidth.Index].Value = palletList[i].product.width;
                 dgvDepositList.Rows[fila].Cells[clmDiameter.Index].Value = palletList[i].product.DiameterAbbreviation;
@@ -323,16 +324,22 @@ namespace BPS
                 pshipping.fkUser = clsGlobal.LoggedUser.codsec;
                 pshipping.save();
                 List<int> listapa = new List<int>();
+                List<int> listapro = new List<int>();
+                List<int> listaped = new List<int>();
+                List<double> listanw = new List<double>();
 
                 for (int i = 0; i < dgvDepositList.Rows.Count; i++)
                 {
                     if (Convert.ToBoolean(dgvDepositList.Rows[i].Cells[clmCheck.Index].Value))
                     {
                         listapa.Add(Convert.ToInt32(dgvDepositList.Rows[i].Cells[clmCodsec.Index].Value));
+                        listapro.Add(Convert.ToInt32(dgvDepositList.Rows[i].Cells[clmFilmCodsec.Index].Value));
+                        listanw.Add(Convert.ToDouble(dgvDepositList.Rows[i].Cells[clmNetWeight.Index].Value));
+                        listaped.Add(Convert.ToInt32(dgvDepositList.Rows[i].Cells[clmOrder.Index].Value));
                     }
                 }
 
-                frmNewPreShipping winSystemConfig = new frmNewPreShipping(pshipping.number,listapa);
+                frmNewPreShipping winSystemConfig = new frmNewPreShipping(pshipping.number,listapa,listapro,listanw, listaped);
                 winSystemConfig.StartPosition = FormStartPosition.Manual;
                 winSystemConfig.ShowDialog();
             }
