@@ -56,6 +56,57 @@
             this.cmbLot = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pnlSCTT = new System.Windows.Forms.Panel();
+            this.label217 = new System.Windows.Forms.Label();
+            this.label218 = new System.Windows.Forms.Label();
+            this.label219 = new System.Windows.Forms.Label();
+            this.label220 = new System.Windows.Forms.Label();
+            this.label221 = new System.Windows.Forms.Label();
+            this.label222 = new System.Windows.Forms.Label();
+            this.label223 = new System.Windows.Forms.Label();
+            this.label224 = new System.Windows.Forms.Label();
+            this.label225 = new System.Windows.Forms.Label();
+            this.label226 = new System.Windows.Forms.Label();
+            this.label132 = new System.Windows.Forms.Label();
+            this.textBox26 = new System.Windows.Forms.TextBox();
+            this.label133 = new System.Windows.Forms.Label();
+            this.label134 = new System.Windows.Forms.Label();
+            this.label135 = new System.Windows.Forms.Label();
+            this.textBox41 = new System.Windows.Forms.TextBox();
+            this.label136 = new System.Windows.Forms.Label();
+            this.label191 = new System.Windows.Forms.Label();
+            this.label192 = new System.Windows.Forms.Label();
+            this.textBox42 = new System.Windows.Forms.TextBox();
+            this.label193 = new System.Windows.Forms.Label();
+            this.label194 = new System.Windows.Forms.Label();
+            this.label195 = new System.Windows.Forms.Label();
+            this.label196 = new System.Windows.Forms.Label();
+            this.label197 = new System.Windows.Forms.Label();
+            this.label198 = new System.Windows.Forms.Label();
+            this.label200 = new System.Windows.Forms.Label();
+            this.textBox43 = new System.Windows.Forms.TextBox();
+            this.textBox44 = new System.Windows.Forms.TextBox();
+            this.textBox45 = new System.Windows.Forms.TextBox();
+            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.textBox47 = new System.Windows.Forms.TextBox();
+            this.textBox48 = new System.Windows.Forms.TextBox();
+            this.label201 = new System.Windows.Forms.Label();
+            this.label202 = new System.Windows.Forms.Label();
+            this.label203 = new System.Windows.Forms.Label();
+            this.label204 = new System.Windows.Forms.Label();
+            this.label205 = new System.Windows.Forms.Label();
+            this.label206 = new System.Windows.Forms.Label();
+            this.label207 = new System.Windows.Forms.Label();
+            this.label208 = new System.Windows.Forms.Label();
+            this.label209 = new System.Windows.Forms.Label();
+            this.label210 = new System.Windows.Forms.Label();
+            this.label211 = new System.Windows.Forms.Label();
+            this.label212 = new System.Windows.Forms.Label();
+            this.label213 = new System.Windows.Forms.Label();
+            this.label214 = new System.Windows.Forms.Label();
+            this.label215 = new System.Windows.Forms.Label();
+            this.label216 = new System.Windows.Forms.Label();
+            this.label199 = new System.Windows.Forms.Label();
             this.pnlMC = new System.Windows.Forms.Panel();
             this.label123 = new System.Windows.Forms.Label();
             this.label124 = new System.Windows.Forms.Label();
@@ -239,57 +290,6 @@
             this.label188 = new System.Windows.Forms.Label();
             this.label189 = new System.Windows.Forms.Label();
             this.label190 = new System.Windows.Forms.Label();
-            this.pnlSCTT = new System.Windows.Forms.Panel();
-            this.label217 = new System.Windows.Forms.Label();
-            this.label218 = new System.Windows.Forms.Label();
-            this.label219 = new System.Windows.Forms.Label();
-            this.label220 = new System.Windows.Forms.Label();
-            this.label221 = new System.Windows.Forms.Label();
-            this.label222 = new System.Windows.Forms.Label();
-            this.label223 = new System.Windows.Forms.Label();
-            this.label224 = new System.Windows.Forms.Label();
-            this.label225 = new System.Windows.Forms.Label();
-            this.label226 = new System.Windows.Forms.Label();
-            this.label132 = new System.Windows.Forms.Label();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.label133 = new System.Windows.Forms.Label();
-            this.label134 = new System.Windows.Forms.Label();
-            this.label135 = new System.Windows.Forms.Label();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.label136 = new System.Windows.Forms.Label();
-            this.label191 = new System.Windows.Forms.Label();
-            this.label192 = new System.Windows.Forms.Label();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.label193 = new System.Windows.Forms.Label();
-            this.label194 = new System.Windows.Forms.Label();
-            this.label195 = new System.Windows.Forms.Label();
-            this.label196 = new System.Windows.Forms.Label();
-            this.label197 = new System.Windows.Forms.Label();
-            this.label198 = new System.Windows.Forms.Label();
-            this.label200 = new System.Windows.Forms.Label();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.label201 = new System.Windows.Forms.Label();
-            this.label202 = new System.Windows.Forms.Label();
-            this.label203 = new System.Windows.Forms.Label();
-            this.label204 = new System.Windows.Forms.Label();
-            this.label205 = new System.Windows.Forms.Label();
-            this.label206 = new System.Windows.Forms.Label();
-            this.label207 = new System.Windows.Forms.Label();
-            this.label208 = new System.Windows.Forms.Label();
-            this.label209 = new System.Windows.Forms.Label();
-            this.label210 = new System.Windows.Forms.Label();
-            this.label211 = new System.Windows.Forms.Label();
-            this.label212 = new System.Windows.Forms.Label();
-            this.label213 = new System.Windows.Forms.Label();
-            this.label214 = new System.Windows.Forms.Label();
-            this.label215 = new System.Windows.Forms.Label();
-            this.label216 = new System.Windows.Forms.Label();
-            this.label199 = new System.Windows.Forms.Label();
             this.pnlLHTT = new System.Windows.Forms.Panel();
             this.label64 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -575,11 +575,11 @@
             this.grbpPreShipping.SuspendLayout();
             this.grpbHead.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.pnlSCTT.SuspendLayout();
             this.pnlMC.SuspendLayout();
             this.pnlMCTT.SuspendLayout();
             this.pnlSD.SuspendLayout();
             this.pnlPCX.SuspendLayout();
-            this.pnlSCTT.SuspendLayout();
             this.pnlLHTT.SuspendLayout();
             this.pnlLH.SuspendLayout();
             this.pnlTH.SuspendLayout();
@@ -711,11 +711,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(412, 117);
+            this.label5.Location = new System.Drawing.Point(355, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 15);
+            this.label5.Size = new System.Drawing.Size(115, 15);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Extrusión";
+            this.label5.Text = "Fecha de despacho";
             // 
             // lblMainCoil
             // 
@@ -861,6 +861,545 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Especificaciones de Película";
+            // 
+            // pnlSCTT
+            // 
+            this.pnlSCTT.Controls.Add(this.label217);
+            this.pnlSCTT.Controls.Add(this.label218);
+            this.pnlSCTT.Controls.Add(this.label219);
+            this.pnlSCTT.Controls.Add(this.label220);
+            this.pnlSCTT.Controls.Add(this.label221);
+            this.pnlSCTT.Controls.Add(this.label222);
+            this.pnlSCTT.Controls.Add(this.label223);
+            this.pnlSCTT.Controls.Add(this.label224);
+            this.pnlSCTT.Controls.Add(this.label225);
+            this.pnlSCTT.Controls.Add(this.label226);
+            this.pnlSCTT.Controls.Add(this.label132);
+            this.pnlSCTT.Controls.Add(this.textBox26);
+            this.pnlSCTT.Controls.Add(this.label133);
+            this.pnlSCTT.Controls.Add(this.label134);
+            this.pnlSCTT.Controls.Add(this.label135);
+            this.pnlSCTT.Controls.Add(this.textBox41);
+            this.pnlSCTT.Controls.Add(this.label136);
+            this.pnlSCTT.Controls.Add(this.label191);
+            this.pnlSCTT.Controls.Add(this.label192);
+            this.pnlSCTT.Controls.Add(this.textBox42);
+            this.pnlSCTT.Controls.Add(this.label193);
+            this.pnlSCTT.Controls.Add(this.label194);
+            this.pnlSCTT.Controls.Add(this.label195);
+            this.pnlSCTT.Controls.Add(this.label196);
+            this.pnlSCTT.Controls.Add(this.label197);
+            this.pnlSCTT.Controls.Add(this.label198);
+            this.pnlSCTT.Controls.Add(this.label200);
+            this.pnlSCTT.Controls.Add(this.textBox43);
+            this.pnlSCTT.Controls.Add(this.textBox44);
+            this.pnlSCTT.Controls.Add(this.textBox45);
+            this.pnlSCTT.Controls.Add(this.textBox46);
+            this.pnlSCTT.Controls.Add(this.textBox47);
+            this.pnlSCTT.Controls.Add(this.textBox48);
+            this.pnlSCTT.Controls.Add(this.label201);
+            this.pnlSCTT.Controls.Add(this.label202);
+            this.pnlSCTT.Controls.Add(this.label203);
+            this.pnlSCTT.Controls.Add(this.label204);
+            this.pnlSCTT.Controls.Add(this.label205);
+            this.pnlSCTT.Controls.Add(this.label206);
+            this.pnlSCTT.Controls.Add(this.label207);
+            this.pnlSCTT.Controls.Add(this.label208);
+            this.pnlSCTT.Controls.Add(this.label209);
+            this.pnlSCTT.Controls.Add(this.label210);
+            this.pnlSCTT.Controls.Add(this.label211);
+            this.pnlSCTT.Controls.Add(this.label212);
+            this.pnlSCTT.Controls.Add(this.label213);
+            this.pnlSCTT.Controls.Add(this.label214);
+            this.pnlSCTT.Controls.Add(this.label215);
+            this.pnlSCTT.Controls.Add(this.label216);
+            this.pnlSCTT.Controls.Add(this.label199);
+            this.pnlSCTT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlSCTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.pnlSCTT.Location = new System.Drawing.Point(3, 17);
+            this.pnlSCTT.Name = "pnlSCTT";
+            this.pnlSCTT.Size = new System.Drawing.Size(855, 302);
+            this.pnlSCTT.TabIndex = 90;
+            // 
+            // label217
+            // 
+            this.label217.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label217.Location = new System.Drawing.Point(276, 102);
+            this.label217.Name = "label217";
+            this.label217.Size = new System.Drawing.Size(218, 27);
+            this.label217.TabIndex = 97;
+            this.label217.Text = "ASTM D 2457";
+            this.label217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label218
+            // 
+            this.label218.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label218.Location = new System.Drawing.Point(276, 267);
+            this.label218.Name = "label218";
+            this.label218.Size = new System.Drawing.Size(218, 27);
+            this.label218.TabIndex = 96;
+            this.label218.Text = "ASTM D 1894";
+            this.label218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label219
+            // 
+            this.label219.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label219.Location = new System.Drawing.Point(276, 168);
+            this.label219.Name = "label219";
+            this.label219.Size = new System.Drawing.Size(218, 31);
+            this.label219.TabIndex = 95;
+            this.label219.Text = "ASTM D 2578";
+            this.label219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label220
+            // 
+            this.label220.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label220.Location = new System.Drawing.Point(276, 136);
+            this.label220.Name = "label220";
+            this.label220.Size = new System.Drawing.Size(218, 31);
+            this.label220.TabIndex = 94;
+            this.label220.Text = "ASTM D 2578";
+            this.label220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label221
+            // 
+            this.label221.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label221.Location = new System.Drawing.Point(276, 235);
+            this.label221.Name = "label221";
+            this.label221.Size = new System.Drawing.Size(218, 27);
+            this.label221.TabIndex = 93;
+            this.label221.Text = "ASTM D 2578 F88 (Mordazas planas 40 PSI, 0,5)";
+            this.label221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label222
+            // 
+            this.label222.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label222.Location = new System.Drawing.Point(276, 202);
+            this.label222.Name = "label222";
+            this.label222.Size = new System.Drawing.Size(218, 31);
+            this.label222.TabIndex = 92;
+            this.label222.Text = "ASTM D 2578 F88 (Mordazas planas 40 PSI, 0,5)";
+            this.label222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label223
+            // 
+            this.label223.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label223.Location = new System.Drawing.Point(276, 78);
+            this.label223.Name = "label223";
+            this.label223.Size = new System.Drawing.Size(218, 21);
+            this.label223.TabIndex = 91;
+            this.label223.Text = "ASTM D 1003";
+            this.label223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label224
+            // 
+            this.label224.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label224.Location = new System.Drawing.Point(276, 51);
+            this.label224.Name = "label224";
+            this.label224.Size = new System.Drawing.Size(218, 21);
+            this.label224.TabIndex = 90;
+            this.label224.Text = "ASTM D 4321";
+            this.label224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label225
+            // 
+            this.label225.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label225.Location = new System.Drawing.Point(276, 29);
+            this.label225.Name = "label225";
+            this.label225.Size = new System.Drawing.Size(218, 21);
+            this.label225.TabIndex = 89;
+            this.label225.Text = "ASTM D 374";
+            this.label225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label226
+            // 
+            this.label226.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label226.Location = new System.Drawing.Point(276, 5);
+            this.label226.Name = "label226";
+            this.label226.Size = new System.Drawing.Size(218, 21);
+            this.label226.TabIndex = 88;
+            this.label226.Text = "Normas ASTM";
+            this.label226.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label132
+            // 
+            this.label132.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label132.Location = new System.Drawing.Point(712, 103);
+            this.label132.Name = "label132";
+            this.label132.Size = new System.Drawing.Size(114, 27);
+            this.label132.TabIndex = 87;
+            this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox26
+            // 
+            this.textBox26.Location = new System.Drawing.Point(607, 104);
+            this.textBox26.Multiline = true;
+            this.textBox26.Name = "textBox26";
+            this.textBox26.Size = new System.Drawing.Size(101, 28);
+            this.textBox26.TabIndex = 86;
+            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label133
+            // 
+            this.label133.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label133.Location = new System.Drawing.Point(501, 103);
+            this.label133.Name = "label133";
+            this.label133.Size = new System.Drawing.Size(101, 27);
+            this.label133.TabIndex = 85;
+            this.label133.Text = "%";
+            this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label134
+            // 
+            this.label134.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label134.Location = new System.Drawing.Point(27, 102);
+            this.label134.Name = "label134";
+            this.label134.Size = new System.Drawing.Size(244, 27);
+            this.label134.TabIndex = 84;
+            this.label134.Text = "Brillo 45º (cara externa)";
+            this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label135
+            // 
+            this.label135.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label135.Location = new System.Drawing.Point(713, 267);
+            this.label135.Name = "label135";
+            this.label135.Size = new System.Drawing.Size(114, 27);
+            this.label135.TabIndex = 83;
+            this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox41
+            // 
+            this.textBox41.Location = new System.Drawing.Point(607, 269);
+            this.textBox41.Multiline = true;
+            this.textBox41.Name = "textBox41";
+            this.textBox41.Size = new System.Drawing.Size(101, 28);
+            this.textBox41.TabIndex = 82;
+            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label136
+            // 
+            this.label136.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label136.Location = new System.Drawing.Point(501, 267);
+            this.label136.Name = "label136";
+            this.label136.Size = new System.Drawing.Size(101, 27);
+            this.label136.TabIndex = 81;
+            this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label191
+            // 
+            this.label191.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label191.Location = new System.Drawing.Point(27, 267);
+            this.label191.Name = "label191";
+            this.label191.Size = new System.Drawing.Size(244, 27);
+            this.label191.TabIndex = 80;
+            this.label191.Text = "Cof. Dinámico (Cara Interna)";
+            this.label191.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label192
+            // 
+            this.label192.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label192.Location = new System.Drawing.Point(713, 168);
+            this.label192.Name = "label192";
+            this.label192.Size = new System.Drawing.Size(114, 31);
+            this.label192.TabIndex = 79;
+            this.label192.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox42
+            // 
+            this.textBox42.Location = new System.Drawing.Point(608, 171);
+            this.textBox42.Multiline = true;
+            this.textBox42.Name = "textBox42";
+            this.textBox42.Size = new System.Drawing.Size(101, 28);
+            this.textBox42.TabIndex = 78;
+            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label193
+            // 
+            this.label193.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label193.Location = new System.Drawing.Point(501, 168);
+            this.label193.Name = "label193";
+            this.label193.Size = new System.Drawing.Size(101, 31);
+            this.label193.TabIndex = 77;
+            this.label193.Text = "dinas/cm";
+            this.label193.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label194
+            // 
+            this.label194.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label194.Location = new System.Drawing.Point(27, 168);
+            this.label194.Name = "label194";
+            this.label194.Size = new System.Drawing.Size(244, 31);
+            this.label194.TabIndex = 76;
+            this.label194.Text = "Tensión Superficial (cara interna)\r\n";
+            this.label194.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label195
+            // 
+            this.label195.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label195.Location = new System.Drawing.Point(712, 136);
+            this.label195.Name = "label195";
+            this.label195.Size = new System.Drawing.Size(114, 31);
+            this.label195.TabIndex = 75;
+            this.label195.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label196
+            // 
+            this.label196.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label196.Location = new System.Drawing.Point(713, 235);
+            this.label196.Name = "label196";
+            this.label196.Size = new System.Drawing.Size(114, 27);
+            this.label196.TabIndex = 73;
+            this.label196.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label197
+            // 
+            this.label197.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label197.Location = new System.Drawing.Point(713, 202);
+            this.label197.Name = "label197";
+            this.label197.Size = new System.Drawing.Size(114, 31);
+            this.label197.TabIndex = 71;
+            this.label197.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label198
+            // 
+            this.label198.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label198.Location = new System.Drawing.Point(712, 77);
+            this.label198.Name = "label198";
+            this.label198.Size = new System.Drawing.Size(114, 21);
+            this.label198.TabIndex = 69;
+            this.label198.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label200
+            // 
+            this.label200.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label200.Location = new System.Drawing.Point(712, 29);
+            this.label200.Name = "label200";
+            this.label200.Size = new System.Drawing.Size(114, 21);
+            this.label200.TabIndex = 67;
+            this.label200.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox43
+            // 
+            this.textBox43.Location = new System.Drawing.Point(607, 237);
+            this.textBox43.Multiline = true;
+            this.textBox43.Name = "textBox43";
+            this.textBox43.Size = new System.Drawing.Size(101, 28);
+            this.textBox43.TabIndex = 51;
+            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox44
+            // 
+            this.textBox44.Location = new System.Drawing.Point(607, 204);
+            this.textBox44.Multiline = true;
+            this.textBox44.Name = "textBox44";
+            this.textBox44.Size = new System.Drawing.Size(101, 30);
+            this.textBox44.TabIndex = 50;
+            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox45
+            // 
+            this.textBox45.Location = new System.Drawing.Point(607, 138);
+            this.textBox45.Multiline = true;
+            this.textBox45.Name = "textBox45";
+            this.textBox45.Size = new System.Drawing.Size(101, 28);
+            this.textBox45.TabIndex = 48;
+            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox46
+            // 
+            this.textBox46.Location = new System.Drawing.Point(607, 78);
+            this.textBox46.Name = "textBox46";
+            this.textBox46.Size = new System.Drawing.Size(101, 20);
+            this.textBox46.TabIndex = 46;
+            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox47
+            // 
+            this.textBox47.Location = new System.Drawing.Point(607, 52);
+            this.textBox47.Name = "textBox47";
+            this.textBox47.Size = new System.Drawing.Size(101, 20);
+            this.textBox47.TabIndex = 45;
+            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox47.TextChanged += new System.EventHandler(this.textBox47_TextChanged);
+            // 
+            // textBox48
+            // 
+            this.textBox48.Location = new System.Drawing.Point(607, 29);
+            this.textBox48.Name = "textBox48";
+            this.textBox48.Size = new System.Drawing.Size(101, 20);
+            this.textBox48.TabIndex = 44;
+            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label201
+            // 
+            this.label201.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label201.Location = new System.Drawing.Point(501, 136);
+            this.label201.Name = "label201";
+            this.label201.Size = new System.Drawing.Size(101, 31);
+            this.label201.TabIndex = 26;
+            this.label201.Text = "dinas/cm";
+            this.label201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label202
+            // 
+            this.label202.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label202.Location = new System.Drawing.Point(501, 235);
+            this.label202.Name = "label202";
+            this.label202.Size = new System.Drawing.Size(101, 27);
+            this.label202.TabIndex = 24;
+            this.label202.Text = "N/25mm";
+            this.label202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label203
+            // 
+            this.label203.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label203.Location = new System.Drawing.Point(501, 202);
+            this.label203.Name = "label203";
+            this.label203.Size = new System.Drawing.Size(101, 31);
+            this.label203.TabIndex = 22;
+            this.label203.Text = "°C";
+            this.label203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label204
+            // 
+            this.label204.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label204.Location = new System.Drawing.Point(501, 78);
+            this.label204.Name = "label204";
+            this.label204.Size = new System.Drawing.Size(101, 21);
+            this.label204.TabIndex = 20;
+            this.label204.Text = "%";
+            this.label204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label205
+            // 
+            this.label205.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label205.Location = new System.Drawing.Point(501, 51);
+            this.label205.Name = "label205";
+            this.label205.Size = new System.Drawing.Size(101, 21);
+            this.label205.TabIndex = 19;
+            this.label205.Text = "g/m";
+            this.label205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label206
+            // 
+            this.label206.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label206.Location = new System.Drawing.Point(501, 29);
+            this.label206.Name = "label206";
+            this.label206.Size = new System.Drawing.Size(101, 21);
+            this.label206.TabIndex = 18;
+            this.label206.Text = "μm";
+            this.label206.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label207
+            // 
+            this.label207.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label207.Location = new System.Drawing.Point(27, 136);
+            this.label207.Name = "label207";
+            this.label207.Size = new System.Drawing.Size(244, 31);
+            this.label207.TabIndex = 17;
+            this.label207.Text = "Tensión Superficial (cara externa)\r\n";
+            this.label207.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label208
+            // 
+            this.label208.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label208.Location = new System.Drawing.Point(27, 235);
+            this.label208.Name = "label208";
+            this.label208.Size = new System.Drawing.Size(244, 27);
+            this.label208.TabIndex = 15;
+            this.label208.Text = "Fuerza de Sello (40 PSI, 0.5 a 140 C)";
+            this.label208.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label209
+            // 
+            this.label209.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label209.Location = new System.Drawing.Point(27, 202);
+            this.label209.Name = "label209";
+            this.label209.Size = new System.Drawing.Size(244, 31);
+            this.label209.TabIndex = 13;
+            this.label209.Text = "Temperatura Inicial Sello (Cara Interna)";
+            this.label209.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label210
+            // 
+            this.label210.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label210.Location = new System.Drawing.Point(27, 78);
+            this.label210.Name = "label210";
+            this.label210.Size = new System.Drawing.Size(244, 21);
+            this.label210.TabIndex = 9;
+            this.label210.Text = "Haze";
+            this.label210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label211
+            // 
+            this.label211.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label211.Location = new System.Drawing.Point(27, 51);
+            this.label211.Name = "label211";
+            this.label211.Size = new System.Drawing.Size(244, 21);
+            this.label211.TabIndex = 8;
+            this.label211.Text = "Gramaje";
+            this.label211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label212
+            // 
+            this.label212.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label212.Location = new System.Drawing.Point(27, 29);
+            this.label212.Name = "label212";
+            this.label212.Size = new System.Drawing.Size(244, 21);
+            this.label212.TabIndex = 6;
+            this.label212.Text = "Espesor\r\n";
+            this.label212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label213
+            // 
+            this.label213.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label213.Location = new System.Drawing.Point(712, 5);
+            this.label213.Name = "label213";
+            this.label213.Size = new System.Drawing.Size(114, 21);
+            this.label213.TabIndex = 5;
+            this.label213.Text = "Rango de Aceptación";
+            // 
+            // label214
+            // 
+            this.label214.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label214.Location = new System.Drawing.Point(607, 5);
+            this.label214.Name = "label214";
+            this.label214.Size = new System.Drawing.Size(101, 21);
+            this.label214.TabIndex = 4;
+            this.label214.Text = "Promedio";
+            this.label214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label215
+            // 
+            this.label215.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label215.Location = new System.Drawing.Point(501, 5);
+            this.label215.Name = "label215";
+            this.label215.Size = new System.Drawing.Size(101, 21);
+            this.label215.TabIndex = 1;
+            this.label215.Text = "Unidades";
+            this.label215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label216
+            // 
+            this.label216.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label216.Location = new System.Drawing.Point(27, 5);
+            this.label216.Name = "label216";
+            this.label216.Size = new System.Drawing.Size(244, 21);
+            this.label216.TabIndex = 0;
+            this.label216.Text = "Propiedades";
+            this.label216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label199
+            // 
+            this.label199.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label199.Location = new System.Drawing.Point(712, 51);
+            this.label199.Name = "label199";
+            this.label199.Size = new System.Drawing.Size(114, 21);
+            this.label199.TabIndex = 68;
+            this.label199.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlMC
             // 
@@ -2775,545 +3314,6 @@
             this.label190.TabIndex = 0;
             this.label190.Text = "Propiedades";
             this.label190.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pnlSCTT
-            // 
-            this.pnlSCTT.Controls.Add(this.label217);
-            this.pnlSCTT.Controls.Add(this.label218);
-            this.pnlSCTT.Controls.Add(this.label219);
-            this.pnlSCTT.Controls.Add(this.label220);
-            this.pnlSCTT.Controls.Add(this.label221);
-            this.pnlSCTT.Controls.Add(this.label222);
-            this.pnlSCTT.Controls.Add(this.label223);
-            this.pnlSCTT.Controls.Add(this.label224);
-            this.pnlSCTT.Controls.Add(this.label225);
-            this.pnlSCTT.Controls.Add(this.label226);
-            this.pnlSCTT.Controls.Add(this.label132);
-            this.pnlSCTT.Controls.Add(this.textBox26);
-            this.pnlSCTT.Controls.Add(this.label133);
-            this.pnlSCTT.Controls.Add(this.label134);
-            this.pnlSCTT.Controls.Add(this.label135);
-            this.pnlSCTT.Controls.Add(this.textBox41);
-            this.pnlSCTT.Controls.Add(this.label136);
-            this.pnlSCTT.Controls.Add(this.label191);
-            this.pnlSCTT.Controls.Add(this.label192);
-            this.pnlSCTT.Controls.Add(this.textBox42);
-            this.pnlSCTT.Controls.Add(this.label193);
-            this.pnlSCTT.Controls.Add(this.label194);
-            this.pnlSCTT.Controls.Add(this.label195);
-            this.pnlSCTT.Controls.Add(this.label196);
-            this.pnlSCTT.Controls.Add(this.label197);
-            this.pnlSCTT.Controls.Add(this.label198);
-            this.pnlSCTT.Controls.Add(this.label200);
-            this.pnlSCTT.Controls.Add(this.textBox43);
-            this.pnlSCTT.Controls.Add(this.textBox44);
-            this.pnlSCTT.Controls.Add(this.textBox45);
-            this.pnlSCTT.Controls.Add(this.textBox46);
-            this.pnlSCTT.Controls.Add(this.textBox47);
-            this.pnlSCTT.Controls.Add(this.textBox48);
-            this.pnlSCTT.Controls.Add(this.label201);
-            this.pnlSCTT.Controls.Add(this.label202);
-            this.pnlSCTT.Controls.Add(this.label203);
-            this.pnlSCTT.Controls.Add(this.label204);
-            this.pnlSCTT.Controls.Add(this.label205);
-            this.pnlSCTT.Controls.Add(this.label206);
-            this.pnlSCTT.Controls.Add(this.label207);
-            this.pnlSCTT.Controls.Add(this.label208);
-            this.pnlSCTT.Controls.Add(this.label209);
-            this.pnlSCTT.Controls.Add(this.label210);
-            this.pnlSCTT.Controls.Add(this.label211);
-            this.pnlSCTT.Controls.Add(this.label212);
-            this.pnlSCTT.Controls.Add(this.label213);
-            this.pnlSCTT.Controls.Add(this.label214);
-            this.pnlSCTT.Controls.Add(this.label215);
-            this.pnlSCTT.Controls.Add(this.label216);
-            this.pnlSCTT.Controls.Add(this.label199);
-            this.pnlSCTT.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlSCTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pnlSCTT.Location = new System.Drawing.Point(3, 17);
-            this.pnlSCTT.Name = "pnlSCTT";
-            this.pnlSCTT.Size = new System.Drawing.Size(855, 302);
-            this.pnlSCTT.TabIndex = 90;
-            // 
-            // label217
-            // 
-            this.label217.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label217.Location = new System.Drawing.Point(276, 102);
-            this.label217.Name = "label217";
-            this.label217.Size = new System.Drawing.Size(218, 27);
-            this.label217.TabIndex = 97;
-            this.label217.Text = "ASTM D 2457";
-            this.label217.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label218
-            // 
-            this.label218.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label218.Location = new System.Drawing.Point(276, 267);
-            this.label218.Name = "label218";
-            this.label218.Size = new System.Drawing.Size(218, 27);
-            this.label218.TabIndex = 96;
-            this.label218.Text = "ASTM D 1894";
-            this.label218.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label219
-            // 
-            this.label219.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label219.Location = new System.Drawing.Point(276, 168);
-            this.label219.Name = "label219";
-            this.label219.Size = new System.Drawing.Size(218, 31);
-            this.label219.TabIndex = 95;
-            this.label219.Text = "ASTM D 2578";
-            this.label219.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label220
-            // 
-            this.label220.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label220.Location = new System.Drawing.Point(276, 136);
-            this.label220.Name = "label220";
-            this.label220.Size = new System.Drawing.Size(218, 31);
-            this.label220.TabIndex = 94;
-            this.label220.Text = "ASTM D 2578";
-            this.label220.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label221
-            // 
-            this.label221.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label221.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label221.Location = new System.Drawing.Point(276, 235);
-            this.label221.Name = "label221";
-            this.label221.Size = new System.Drawing.Size(218, 27);
-            this.label221.TabIndex = 93;
-            this.label221.Text = "ASTM D 2578 F88 (Mordazas planas 40 PSI, 0,5)";
-            this.label221.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label222
-            // 
-            this.label222.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label222.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label222.Location = new System.Drawing.Point(276, 202);
-            this.label222.Name = "label222";
-            this.label222.Size = new System.Drawing.Size(218, 31);
-            this.label222.TabIndex = 92;
-            this.label222.Text = "ASTM D 2578 F88 (Mordazas planas 40 PSI, 0,5)";
-            this.label222.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label223
-            // 
-            this.label223.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label223.Location = new System.Drawing.Point(276, 78);
-            this.label223.Name = "label223";
-            this.label223.Size = new System.Drawing.Size(218, 21);
-            this.label223.TabIndex = 91;
-            this.label223.Text = "ASTM D 1003";
-            this.label223.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label224
-            // 
-            this.label224.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label224.Location = new System.Drawing.Point(276, 51);
-            this.label224.Name = "label224";
-            this.label224.Size = new System.Drawing.Size(218, 21);
-            this.label224.TabIndex = 90;
-            this.label224.Text = "ASTM D 4321";
-            this.label224.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label225
-            // 
-            this.label225.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label225.Location = new System.Drawing.Point(276, 29);
-            this.label225.Name = "label225";
-            this.label225.Size = new System.Drawing.Size(218, 21);
-            this.label225.TabIndex = 89;
-            this.label225.Text = "ASTM D 374";
-            this.label225.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label226
-            // 
-            this.label226.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label226.Location = new System.Drawing.Point(276, 5);
-            this.label226.Name = "label226";
-            this.label226.Size = new System.Drawing.Size(218, 21);
-            this.label226.TabIndex = 88;
-            this.label226.Text = "Normas ASTM";
-            this.label226.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label132
-            // 
-            this.label132.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label132.Location = new System.Drawing.Point(712, 103);
-            this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(114, 27);
-            this.label132.TabIndex = 87;
-            this.label132.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox26
-            // 
-            this.textBox26.Location = new System.Drawing.Point(607, 104);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(101, 28);
-            this.textBox26.TabIndex = 86;
-            this.textBox26.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label133
-            // 
-            this.label133.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label133.Location = new System.Drawing.Point(501, 103);
-            this.label133.Name = "label133";
-            this.label133.Size = new System.Drawing.Size(101, 27);
-            this.label133.TabIndex = 85;
-            this.label133.Text = "%";
-            this.label133.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label134
-            // 
-            this.label134.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label134.Location = new System.Drawing.Point(27, 102);
-            this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(244, 27);
-            this.label134.TabIndex = 84;
-            this.label134.Text = "Brillo 45º (cara externa)";
-            this.label134.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label135
-            // 
-            this.label135.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label135.Location = new System.Drawing.Point(713, 267);
-            this.label135.Name = "label135";
-            this.label135.Size = new System.Drawing.Size(114, 27);
-            this.label135.TabIndex = 83;
-            this.label135.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox41
-            // 
-            this.textBox41.Location = new System.Drawing.Point(607, 269);
-            this.textBox41.Multiline = true;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(101, 28);
-            this.textBox41.TabIndex = 82;
-            this.textBox41.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label136
-            // 
-            this.label136.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label136.Location = new System.Drawing.Point(501, 267);
-            this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(101, 27);
-            this.label136.TabIndex = 81;
-            this.label136.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label191
-            // 
-            this.label191.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label191.Location = new System.Drawing.Point(27, 267);
-            this.label191.Name = "label191";
-            this.label191.Size = new System.Drawing.Size(244, 27);
-            this.label191.TabIndex = 80;
-            this.label191.Text = "Cof. Dinámico (Cara Interna)";
-            this.label191.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label192
-            // 
-            this.label192.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label192.Location = new System.Drawing.Point(713, 168);
-            this.label192.Name = "label192";
-            this.label192.Size = new System.Drawing.Size(114, 31);
-            this.label192.TabIndex = 79;
-            this.label192.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox42
-            // 
-            this.textBox42.Location = new System.Drawing.Point(608, 171);
-            this.textBox42.Multiline = true;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(101, 28);
-            this.textBox42.TabIndex = 78;
-            this.textBox42.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label193
-            // 
-            this.label193.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label193.Location = new System.Drawing.Point(501, 168);
-            this.label193.Name = "label193";
-            this.label193.Size = new System.Drawing.Size(101, 31);
-            this.label193.TabIndex = 77;
-            this.label193.Text = "dinas/cm";
-            this.label193.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label194
-            // 
-            this.label194.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label194.Location = new System.Drawing.Point(27, 168);
-            this.label194.Name = "label194";
-            this.label194.Size = new System.Drawing.Size(244, 31);
-            this.label194.TabIndex = 76;
-            this.label194.Text = "Tensión Superficial (cara interna)\r\n";
-            this.label194.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label195
-            // 
-            this.label195.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label195.Location = new System.Drawing.Point(712, 136);
-            this.label195.Name = "label195";
-            this.label195.Size = new System.Drawing.Size(114, 31);
-            this.label195.TabIndex = 75;
-            this.label195.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label196
-            // 
-            this.label196.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label196.Location = new System.Drawing.Point(713, 235);
-            this.label196.Name = "label196";
-            this.label196.Size = new System.Drawing.Size(114, 27);
-            this.label196.TabIndex = 73;
-            this.label196.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label197
-            // 
-            this.label197.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label197.Location = new System.Drawing.Point(713, 202);
-            this.label197.Name = "label197";
-            this.label197.Size = new System.Drawing.Size(114, 31);
-            this.label197.TabIndex = 71;
-            this.label197.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label198
-            // 
-            this.label198.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label198.Location = new System.Drawing.Point(712, 77);
-            this.label198.Name = "label198";
-            this.label198.Size = new System.Drawing.Size(114, 21);
-            this.label198.TabIndex = 69;
-            this.label198.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label200
-            // 
-            this.label200.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label200.Location = new System.Drawing.Point(712, 29);
-            this.label200.Name = "label200";
-            this.label200.Size = new System.Drawing.Size(114, 21);
-            this.label200.TabIndex = 67;
-            this.label200.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // textBox43
-            // 
-            this.textBox43.Location = new System.Drawing.Point(607, 237);
-            this.textBox43.Multiline = true;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(101, 28);
-            this.textBox43.TabIndex = 51;
-            this.textBox43.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox44
-            // 
-            this.textBox44.Location = new System.Drawing.Point(607, 204);
-            this.textBox44.Multiline = true;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(101, 30);
-            this.textBox44.TabIndex = 50;
-            this.textBox44.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox45
-            // 
-            this.textBox45.Location = new System.Drawing.Point(607, 138);
-            this.textBox45.Multiline = true;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(101, 28);
-            this.textBox45.TabIndex = 48;
-            this.textBox45.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox46
-            // 
-            this.textBox46.Location = new System.Drawing.Point(607, 78);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(101, 20);
-            this.textBox46.TabIndex = 46;
-            this.textBox46.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // textBox47
-            // 
-            this.textBox47.Location = new System.Drawing.Point(607, 52);
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(101, 20);
-            this.textBox47.TabIndex = 45;
-            this.textBox47.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox47.TextChanged += new System.EventHandler(this.textBox47_TextChanged);
-            // 
-            // textBox48
-            // 
-            this.textBox48.Location = new System.Drawing.Point(607, 29);
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(101, 20);
-            this.textBox48.TabIndex = 44;
-            this.textBox48.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label201
-            // 
-            this.label201.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label201.Location = new System.Drawing.Point(501, 136);
-            this.label201.Name = "label201";
-            this.label201.Size = new System.Drawing.Size(101, 31);
-            this.label201.TabIndex = 26;
-            this.label201.Text = "dinas/cm";
-            this.label201.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label202
-            // 
-            this.label202.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label202.Location = new System.Drawing.Point(501, 235);
-            this.label202.Name = "label202";
-            this.label202.Size = new System.Drawing.Size(101, 27);
-            this.label202.TabIndex = 24;
-            this.label202.Text = "N/25mm";
-            this.label202.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label203
-            // 
-            this.label203.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label203.Location = new System.Drawing.Point(501, 202);
-            this.label203.Name = "label203";
-            this.label203.Size = new System.Drawing.Size(101, 31);
-            this.label203.TabIndex = 22;
-            this.label203.Text = "°C";
-            this.label203.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label204
-            // 
-            this.label204.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label204.Location = new System.Drawing.Point(501, 78);
-            this.label204.Name = "label204";
-            this.label204.Size = new System.Drawing.Size(101, 21);
-            this.label204.TabIndex = 20;
-            this.label204.Text = "%";
-            this.label204.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label205
-            // 
-            this.label205.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label205.Location = new System.Drawing.Point(501, 51);
-            this.label205.Name = "label205";
-            this.label205.Size = new System.Drawing.Size(101, 21);
-            this.label205.TabIndex = 19;
-            this.label205.Text = "g/m";
-            this.label205.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label206
-            // 
-            this.label206.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label206.Location = new System.Drawing.Point(501, 29);
-            this.label206.Name = "label206";
-            this.label206.Size = new System.Drawing.Size(101, 21);
-            this.label206.TabIndex = 18;
-            this.label206.Text = "μm";
-            this.label206.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label207
-            // 
-            this.label207.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label207.Location = new System.Drawing.Point(27, 136);
-            this.label207.Name = "label207";
-            this.label207.Size = new System.Drawing.Size(244, 31);
-            this.label207.TabIndex = 17;
-            this.label207.Text = "Tensión Superficial (cara externa)\r\n";
-            this.label207.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label208
-            // 
-            this.label208.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label208.Location = new System.Drawing.Point(27, 235);
-            this.label208.Name = "label208";
-            this.label208.Size = new System.Drawing.Size(244, 27);
-            this.label208.TabIndex = 15;
-            this.label208.Text = "Fuerza de Sello (40 PSI, 0.5 a 140 C)";
-            this.label208.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label209
-            // 
-            this.label209.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label209.Location = new System.Drawing.Point(27, 202);
-            this.label209.Name = "label209";
-            this.label209.Size = new System.Drawing.Size(244, 31);
-            this.label209.TabIndex = 13;
-            this.label209.Text = "Temperatura Inicial Sello (Cara Interna)";
-            this.label209.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label210
-            // 
-            this.label210.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label210.Location = new System.Drawing.Point(27, 78);
-            this.label210.Name = "label210";
-            this.label210.Size = new System.Drawing.Size(244, 21);
-            this.label210.TabIndex = 9;
-            this.label210.Text = "Haze";
-            this.label210.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label211
-            // 
-            this.label211.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label211.Location = new System.Drawing.Point(27, 51);
-            this.label211.Name = "label211";
-            this.label211.Size = new System.Drawing.Size(244, 21);
-            this.label211.TabIndex = 8;
-            this.label211.Text = "Gramaje";
-            this.label211.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label212
-            // 
-            this.label212.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label212.Location = new System.Drawing.Point(27, 29);
-            this.label212.Name = "label212";
-            this.label212.Size = new System.Drawing.Size(244, 21);
-            this.label212.TabIndex = 6;
-            this.label212.Text = "Espesor\r\n";
-            this.label212.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label213
-            // 
-            this.label213.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label213.Location = new System.Drawing.Point(712, 5);
-            this.label213.Name = "label213";
-            this.label213.Size = new System.Drawing.Size(114, 21);
-            this.label213.TabIndex = 5;
-            this.label213.Text = "Rango de Aceptación";
-            // 
-            // label214
-            // 
-            this.label214.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label214.Location = new System.Drawing.Point(607, 5);
-            this.label214.Name = "label214";
-            this.label214.Size = new System.Drawing.Size(101, 21);
-            this.label214.TabIndex = 4;
-            this.label214.Text = "Promedio";
-            this.label214.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label215
-            // 
-            this.label215.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label215.Location = new System.Drawing.Point(501, 5);
-            this.label215.Name = "label215";
-            this.label215.Size = new System.Drawing.Size(101, 21);
-            this.label215.TabIndex = 1;
-            this.label215.Text = "Unidades";
-            this.label215.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label216
-            // 
-            this.label216.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label216.Location = new System.Drawing.Point(27, 5);
-            this.label216.Name = "label216";
-            this.label216.Size = new System.Drawing.Size(244, 21);
-            this.label216.TabIndex = 0;
-            this.label216.Text = "Propiedades";
-            this.label216.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label199
-            // 
-            this.label199.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label199.Location = new System.Drawing.Point(712, 51);
-            this.label199.Name = "label199";
-            this.label199.Size = new System.Drawing.Size(114, 21);
-            this.label199.TabIndex = 68;
-            this.label199.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlLHTT
             // 
@@ -6267,6 +6267,8 @@
             this.grpbHead.ResumeLayout(false);
             this.grpbHead.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.pnlSCTT.ResumeLayout(false);
+            this.pnlSCTT.PerformLayout();
             this.pnlMC.ResumeLayout(false);
             this.pnlMC.PerformLayout();
             this.pnlMCTT.ResumeLayout(false);
@@ -6275,8 +6277,6 @@
             this.pnlSD.PerformLayout();
             this.pnlPCX.ResumeLayout(false);
             this.pnlPCX.PerformLayout();
-            this.pnlSCTT.ResumeLayout(false);
-            this.pnlSCTT.PerformLayout();
             this.pnlLHTT.ResumeLayout(false);
             this.pnlLHTT.PerformLayout();
             this.pnlLH.ResumeLayout(false);

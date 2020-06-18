@@ -17,6 +17,7 @@ namespace BPS
         clsCertificate ObjCertificate = new clsCertificate();
         string myfilmname = string.Empty;
         string mypanelname = string.Empty;
+        clsNewPreShipping pd = new clsNewPreShipping();
 
         private void ClearData()
         {
@@ -51,7 +52,10 @@ namespace BPS
         private void txtpreshipping_KeyDown(object sender, KeyEventArgs e)
        {
             if (e.KeyCode == Keys.Enter)
+            {
+                pd = new clsNewPreShipping(txtpreshipping.Text);
                 PopulateHeadCertificate(txtpreshipping.Text);
+            }
         }
 
         private void PopulateHeadCertificate(string preshipping)
@@ -164,7 +168,7 @@ namespace BPS
         {
             if (cmbLot.SelectedIndex > -1)
             {
-                lblExtruderDate.Text = clsCertificate.getExtruderDateByLotNumber(cmbLot.SelectedItem.ToString());
+                lblExtruderDate.Text = pd.shippingDate.ToString("dd/MM/yyyy");//clsCertificate.getExtruderDateByLotNumber(cmbLot.SelectedItem.ToString());
                 var hList = clsCertificate.getRangeOfMainCoilByLotNumber(cmbLot.SelectedItem.ToString());
                 lblFilm.Text = hList[1].ToString();
                 lblMainCoil.Text = hList[0].ToString();

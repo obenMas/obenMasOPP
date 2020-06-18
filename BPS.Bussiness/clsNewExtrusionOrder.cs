@@ -156,5 +156,60 @@ namespace BPS.Bussiness
 
             return lista;
         }
+
+        public static bool setAsProgrammed(int cod)
+        {
+            try
+            {
+                string queryString = "";
+                queryString += "UPDATE bps_new_extrusionOrder";
+                queryString += " SET ";
+                queryString += "neo_fkStatus = 3075 ";
+                queryString += " WHERE neo_codsec = " + cod.ToString() + ";";
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch(Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsNewExtrusionOrder.setAsProgrammed");
+                return false;
+            }
+        }
+
+        public static bool setAsNonProgrammed(int cod)
+        {
+            try
+            {
+                string queryString = "";
+                queryString += "UPDATE bps_new_extrusionOrder";
+                queryString += " SET ";
+                queryString += "neo_fkStatus = 3074 ";
+                queryString += " WHERE neo_codsec = " + cod.ToString() + ";";
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsNewExtrusionOrder.setAsNonProgrammed");
+                return false;
+            }
+        }
+
+        public static bool delete(int cod)
+        {
+            try
+            {
+                string queryString = "";
+                queryString += "DELETE FROM bps_new_extrusionOrder";
+                queryString += " WHERE neo_codsec = " + cod.ToString() + ";";
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsNewExtrusionOrder.delete");
+                return false;
+            }
+        }
     }
 }

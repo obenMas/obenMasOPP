@@ -29,43 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSalesOrderHistory));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.btnDeleteFilter = new System.Windows.Forms.Button();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.cmbNotes = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.cmbCore = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.cmbDiameter = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbWidth = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.cmbFilm = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.cmbCustommer = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbPlant = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.cmbExecutive = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmbOrder = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgvSalesOrderHistory = new System.Windows.Forms.DataGridView();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCompromiseDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDayEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMonthEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmYearEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmShippingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmdayShipping = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmmonthShipping = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmyearShipping = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPurchaseOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,280 +47,100 @@
             this.clmQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDeliveredQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTdC = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPendingMoney = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmObservations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmExecutive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmDayIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMonthIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmYearIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmHourIng = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.clmSolicit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPlanning = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmInFull = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmShippingDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.numWidth = new System.Windows.Forms.NumericUpDown();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.numReg = new System.Windows.Forms.NumericUpDown();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesOrderHistory)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.groupBox13.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numWidth)).BeginInit();
+            this.groupBox8.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numReg)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.txtQuantity);
-            this.groupBox1.Controls.Add(this.btnDeleteFilter);
-            this.groupBox1.Controls.Add(this.btnExport);
-            this.groupBox1.Controls.Add(this.cmbNotes);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.cmbCore);
-            this.groupBox1.Controls.Add(this.label12);
-            this.groupBox1.Controls.Add(this.cmbDiameter);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.cmbWidth);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.cmbFilm);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.cmbCustommer);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.cmbPlant);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cmbExecutive);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.cmbOrder);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(4, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1113, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Filtros";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(951, 67);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(24, 17);
-            this.label9.TabIndex = 28;
-            this.label9.Text = "0 /";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(884, 69);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 13);
-            this.label8.TabIndex = 27;
-            this.label8.Text = "Registros:";
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Location = new System.Drawing.Point(988, 66);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(56, 20);
-            this.txtQuantity.TabIndex = 26;
-            this.txtQuantity.Text = "100";
-            this.txtQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtQuantity.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtQuantity_KeyDown);
-            // 
-            // btnDeleteFilter
-            // 
-            this.btnDeleteFilter.Image = global::BPS.Properties.Resources.funnel_clear;
-            this.btnDeleteFilter.Location = new System.Drawing.Point(1064, 62);
-            this.btnDeleteFilter.Name = "btnDeleteFilter";
-            this.btnDeleteFilter.Size = new System.Drawing.Size(25, 25);
-            this.btnDeleteFilter.TabIndex = 25;
-            this.btnDeleteFilter.UseVisualStyleBackColor = true;
-            this.btnDeleteFilter.Click += new System.EventHandler(this.btnDeleteFilter_Click);
-            // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExport.Location = new System.Drawing.Point(1064, 26);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(25, 25);
-            this.btnExport.TabIndex = 24;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
-            // cmbNotes
-            // 
-            this.cmbNotes.FormattingEnabled = true;
-            this.cmbNotes.Location = new System.Drawing.Point(95, 66);
-            this.cmbNotes.Name = "cmbNotes";
-            this.cmbNotes.Size = new System.Drawing.Size(783, 21);
-            this.cmbNotes.TabIndex = 23;
-            this.cmbNotes.SelectedIndexChanged += new System.EventHandler(this.cmbNotes_SelectedIndexChanged);
-            this.cmbNotes.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbNotes_KeyDown);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(8, 69);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(81, 13);
-            this.label14.TabIndex = 22;
-            this.label14.Text = "Observaciones:";
             // 
             // cmbCore
             // 
+            this.cmbCore.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbCore.FormattingEnabled = true;
-            this.cmbCore.Location = new System.Drawing.Point(998, 29);
+            this.cmbCore.Location = new System.Drawing.Point(3, 16);
             this.cmbCore.Name = "cmbCore";
-            this.cmbCore.Size = new System.Drawing.Size(46, 21);
+            this.cmbCore.Size = new System.Drawing.Size(58, 21);
             this.cmbCore.TabIndex = 16;
-            this.cmbCore.SelectedIndexChanged += new System.EventHandler(this.cmbCore_SelectedIndexChanged);
-            this.cmbCore.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbCore_KeyDown);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(966, 32);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(32, 13);
-            this.label12.TabIndex = 15;
-            this.label12.Text = "Core:";
             // 
             // cmbDiameter
             // 
+            this.cmbDiameter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbDiameter.FormattingEnabled = true;
-            this.cmbDiameter.Location = new System.Drawing.Point(916, 29);
+            this.cmbDiameter.Location = new System.Drawing.Point(3, 16);
             this.cmbDiameter.Name = "cmbDiameter";
-            this.cmbDiameter.Size = new System.Drawing.Size(46, 21);
+            this.cmbDiameter.Size = new System.Drawing.Size(58, 21);
             this.cmbDiameter.TabIndex = 13;
-            this.cmbDiameter.SelectedIndexChanged += new System.EventHandler(this.cmbDiameter_SelectedIndexChanged);
-            this.cmbDiameter.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbDiameter_KeyDown);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(882, 32);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(34, 13);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Diam:";
-            // 
-            // cmbWidth
-            // 
-            this.cmbWidth.FormattingEnabled = true;
-            this.cmbWidth.Location = new System.Drawing.Point(829, 29);
-            this.cmbWidth.Name = "cmbWidth";
-            this.cmbWidth.Size = new System.Drawing.Size(49, 21);
-            this.cmbWidth.TabIndex = 11;
-            this.cmbWidth.SelectedIndexChanged += new System.EventHandler(this.cmbWidth_SelectedIndexChanged);
-            this.cmbWidth.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbWidth_KeyDown);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(788, 32);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Ancho:";
             // 
             // cmbFilm
             // 
+            this.cmbFilm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbFilm.FormattingEnabled = true;
-            this.cmbFilm.Location = new System.Drawing.Point(641, 28);
+            this.cmbFilm.Location = new System.Drawing.Point(3, 16);
             this.cmbFilm.Name = "cmbFilm";
-            this.cmbFilm.Size = new System.Drawing.Size(146, 21);
+            this.cmbFilm.Size = new System.Drawing.Size(88, 21);
             this.cmbFilm.TabIndex = 9;
-            this.cmbFilm.SelectedIndexChanged += new System.EventHandler(this.cmbFilm_SelectedIndexChanged);
-            this.cmbFilm.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbFilm_KeyDown);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(607, 31);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(28, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Pel.:";
             // 
             // cmbCustommer
             // 
+            this.cmbCustommer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbCustommer.FormattingEnabled = true;
-            this.cmbCustommer.Location = new System.Drawing.Point(393, 28);
+            this.cmbCustommer.Location = new System.Drawing.Point(3, 16);
             this.cmbCustommer.Name = "cmbCustommer";
-            this.cmbCustommer.Size = new System.Drawing.Size(208, 21);
+            this.cmbCustommer.Size = new System.Drawing.Size(188, 21);
             this.cmbCustommer.TabIndex = 7;
-            this.cmbCustommer.SelectedIndexChanged += new System.EventHandler(this.cmbCustommer_SelectedIndexChanged);
-            this.cmbCustommer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbCustommer_KeyDown);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(350, 31);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cliente:";
-            // 
-            // cmbPlant
-            // 
-            this.cmbPlant.FormattingEnabled = true;
-            this.cmbPlant.Location = new System.Drawing.Point(290, 28);
-            this.cmbPlant.Name = "cmbPlant";
-            this.cmbPlant.Size = new System.Drawing.Size(56, 21);
-            this.cmbPlant.TabIndex = 5;
-            this.cmbPlant.SelectedIndexChanged += new System.EventHandler(this.cmbPlant_SelectedIndexChanged);
-            this.cmbPlant.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbPlant_KeyDown);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(248, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Planta:";
             // 
             // cmbExecutive
             // 
+            this.cmbExecutive.Dock = System.Windows.Forms.DockStyle.Fill;
             this.cmbExecutive.FormattingEnabled = true;
-            this.cmbExecutive.Location = new System.Drawing.Point(67, 28);
+            this.cmbExecutive.Location = new System.Drawing.Point(3, 16);
             this.cmbExecutive.Name = "cmbExecutive";
-            this.cmbExecutive.Size = new System.Drawing.Size(74, 21);
+            this.cmbExecutive.Size = new System.Drawing.Size(88, 21);
             this.cmbExecutive.TabIndex = 3;
-            this.cmbExecutive.SelectedIndexChanged += new System.EventHandler(this.cmbExecutive_SelectedIndexChanged);
-            this.cmbExecutive.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbExecutive_KeyDown);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 31);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ejecutiva:";
-            // 
-            // cmbOrder
-            // 
-            this.cmbOrder.FormattingEnabled = true;
-            this.cmbOrder.Location = new System.Drawing.Point(189, 28);
-            this.cmbOrder.Name = "cmbOrder";
-            this.cmbOrder.Size = new System.Drawing.Size(55, 21);
-            this.cmbOrder.TabIndex = 1;
-            this.cmbOrder.SelectedIndexChanged += new System.EventHandler(this.cmbOrder_SelectedIndexChanged);
-            this.cmbOrder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbOrder_KeyDown);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(145, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pedido:";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvSalesOrderHistory);
-            this.groupBox2.Location = new System.Drawing.Point(4, 108);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox2.Location = new System.Drawing.Point(3, 78);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1113, 380);
+            this.groupBox2.Size = new System.Drawing.Size(1253, 465);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -361,15 +153,6 @@
             this.dgvSalesOrderHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.clmCodsec,
             this.clmPlant,
-            this.clmCompromiseDate,
-            this.clmDayEnt,
-            this.clmMonthEnt,
-            this.clmYearEnt,
-            this.clmHourEnt,
-            this.clmShippingDate,
-            this.clmdayShipping,
-            this.clmmonthShipping,
-            this.clmyearShipping,
             this.clmCustomer,
             this.clmPurchaseOrder,
             this.clmFilm,
@@ -379,23 +162,21 @@
             this.clmQuantity,
             this.clmDeliveredQuantity,
             this.clmPrice,
-            this.clmTdC,
-            this.clmPendingMoney,
             this.clmObservations,
             this.clmStatus,
             this.clmExecutive,
             this.clmCreatedDate,
-            this.clmDayIng,
-            this.clmMonthIng,
-            this.clmYearIng,
-            this.clmHourIng});
+            this.clmSolicit,
+            this.clmPlanning,
+            this.clmEntrega,
+            this.clmInFull,
+            this.clmShippingDate});
             this.dgvSalesOrderHistory.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSalesOrderHistory.Location = new System.Drawing.Point(3, 16);
             this.dgvSalesOrderHistory.Name = "dgvSalesOrderHistory";
             this.dgvSalesOrderHistory.ReadOnly = true;
-            this.dgvSalesOrderHistory.Size = new System.Drawing.Size(1107, 361);
+            this.dgvSalesOrderHistory.Size = new System.Drawing.Size(1247, 446);
             this.dgvSalesOrderHistory.TabIndex = 0;
-            this.dgvSalesOrderHistory.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSalesOrderHistory_CellContentDoubleClick);
             // 
             // clmCodsec
             // 
@@ -410,69 +191,6 @@
             this.clmPlant.Name = "clmPlant";
             this.clmPlant.ReadOnly = true;
             this.clmPlant.Width = 70;
-            // 
-            // clmCompromiseDate
-            // 
-            this.clmCompromiseDate.HeaderText = "Fecha de Entrega";
-            this.clmCompromiseDate.Name = "clmCompromiseDate";
-            this.clmCompromiseDate.ReadOnly = true;
-            this.clmCompromiseDate.Width = 70;
-            // 
-            // clmDayEnt
-            // 
-            this.clmDayEnt.HeaderText = "Dia de Entrega";
-            this.clmDayEnt.Name = "clmDayEnt";
-            this.clmDayEnt.ReadOnly = true;
-            this.clmDayEnt.Visible = false;
-            // 
-            // clmMonthEnt
-            // 
-            this.clmMonthEnt.HeaderText = "Mes de Entrega";
-            this.clmMonthEnt.Name = "clmMonthEnt";
-            this.clmMonthEnt.ReadOnly = true;
-            this.clmMonthEnt.Visible = false;
-            // 
-            // clmYearEnt
-            // 
-            this.clmYearEnt.HeaderText = "Año de Entrega";
-            this.clmYearEnt.Name = "clmYearEnt";
-            this.clmYearEnt.ReadOnly = true;
-            this.clmYearEnt.Visible = false;
-            // 
-            // clmHourEnt
-            // 
-            this.clmHourEnt.HeaderText = "Hora de Entrega";
-            this.clmHourEnt.Name = "clmHourEnt";
-            this.clmHourEnt.ReadOnly = true;
-            this.clmHourEnt.Visible = false;
-            // 
-            // clmShippingDate
-            // 
-            this.clmShippingDate.HeaderText = "Fecha de Despacho";
-            this.clmShippingDate.Name = "clmShippingDate";
-            this.clmShippingDate.ReadOnly = true;
-            this.clmShippingDate.Width = 120;
-            // 
-            // clmdayShipping
-            // 
-            this.clmdayShipping.HeaderText = "Dia Despacho";
-            this.clmdayShipping.Name = "clmdayShipping";
-            this.clmdayShipping.ReadOnly = true;
-            this.clmdayShipping.Visible = false;
-            // 
-            // clmmonthShipping
-            // 
-            this.clmmonthShipping.HeaderText = "Mes Despacho";
-            this.clmmonthShipping.Name = "clmmonthShipping";
-            this.clmmonthShipping.ReadOnly = true;
-            this.clmmonthShipping.Visible = false;
-            // 
-            // clmyearShipping
-            // 
-            this.clmyearShipping.HeaderText = "Año Despacho";
-            this.clmyearShipping.Name = "clmyearShipping";
-            this.clmyearShipping.ReadOnly = true;
-            this.clmyearShipping.Visible = false;
             // 
             // clmCustomer
             // 
@@ -537,19 +255,6 @@
             this.clmPrice.ReadOnly = true;
             this.clmPrice.Width = 50;
             // 
-            // clmTdC
-            // 
-            this.clmTdC.HeaderText = "TdC";
-            this.clmTdC.Name = "clmTdC";
-            this.clmTdC.ReadOnly = true;
-            this.clmTdC.Width = 40;
-            // 
-            // clmPendingMoney
-            // 
-            this.clmPendingMoney.HeaderText = "Total [$]";
-            this.clmPendingMoney.Name = "clmPendingMoney";
-            this.clmPendingMoney.ReadOnly = true;
-            // 
             // clmObservations
             // 
             this.clmObservations.HeaderText = "Observaciones";
@@ -576,93 +281,310 @@
             this.clmCreatedDate.HeaderText = "Fecha de Ingreso";
             this.clmCreatedDate.Name = "clmCreatedDate";
             this.clmCreatedDate.ReadOnly = true;
-            this.clmCreatedDate.Visible = false;
             // 
-            // clmDayIng
+            // clmSolicit
             // 
-            this.clmDayIng.HeaderText = "Dia de Ingreso";
-            this.clmDayIng.Name = "clmDayIng";
-            this.clmDayIng.ReadOnly = true;
-            this.clmDayIng.Visible = false;
+            this.clmSolicit.HeaderText = "Fecha Solicitada";
+            this.clmSolicit.Name = "clmSolicit";
+            this.clmSolicit.ReadOnly = true;
+            this.clmSolicit.Width = 70;
             // 
-            // clmMonthIng
+            // clmPlanning
             // 
-            this.clmMonthIng.HeaderText = "Mes de Ingreso";
-            this.clmMonthIng.Name = "clmMonthIng";
-            this.clmMonthIng.ReadOnly = true;
-            this.clmMonthIng.Visible = false;
+            this.clmPlanning.HeaderText = "Fecha Planning";
+            this.clmPlanning.Name = "clmPlanning";
+            this.clmPlanning.ReadOnly = true;
             // 
-            // clmYearIng
+            // clmEntrega
             // 
-            this.clmYearIng.HeaderText = "Año de Ingreso";
-            this.clmYearIng.Name = "clmYearIng";
-            this.clmYearIng.ReadOnly = true;
-            this.clmYearIng.Visible = false;
+            this.clmEntrega.HeaderText = "Fecha Entrega";
+            this.clmEntrega.Name = "clmEntrega";
+            this.clmEntrega.ReadOnly = true;
             // 
-            // clmHourIng
+            // clmInFull
             // 
-            this.clmHourIng.HeaderText = "Hora de ingreso";
-            this.clmHourIng.Name = "clmHourIng";
-            this.clmHourIng.ReadOnly = true;
-            this.clmHourIng.Visible = false;
+            this.clmInFull.HeaderText = "Fecha inFull";
+            this.clmInFull.Name = "clmInFull";
+            this.clmInFull.ReadOnly = true;
+            // 
+            // clmShippingDate
+            // 
+            this.clmShippingDate.HeaderText = "Fecha Despacho";
+            this.clmShippingDate.Name = "clmShippingDate";
+            this.clmShippingDate.ReadOnly = true;
+            this.clmShippingDate.Width = 120;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.groupBox2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.groupBox13, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 75F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1259, 546);
+            this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Controls.Add(this.tableLayoutPanel2);
+            this.groupBox13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox13.Location = new System.Drawing.Point(3, 3);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(1253, 69);
+            this.groupBox13.TabIndex = 2;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Seleccione los parametros a buscar";
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 11;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 70F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 80F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.Controls.Add(this.groupBox4, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox6, 3, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox7, 4, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox8, 5, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox9, 6, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox10, 7, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btnSearch, 8, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button2, 10, 0);
+            this.tableLayoutPanel2.Controls.Add(this.groupBox1, 2, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1247, 50);
+            this.tableLayoutPanel2.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.cmbCustommer);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Location = new System.Drawing.Point(103, 3);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(194, 44);
+            this.groupBox4.TabIndex = 1;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Cliente";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cmbExecutive);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Location = new System.Drawing.Point(3, 3);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(94, 44);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Ejecutiva";
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.cmbFilm);
+            this.groupBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox6.Location = new System.Drawing.Point(403, 3);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(94, 44);
+            this.groupBox6.TabIndex = 3;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Pelicula";
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.numWidth);
+            this.groupBox7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox7.Location = new System.Drawing.Point(503, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(74, 44);
+            this.groupBox7.TabIndex = 4;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Ancho";
+            // 
+            // numWidth
+            // 
+            this.numWidth.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numWidth.Location = new System.Drawing.Point(3, 16);
+            this.numWidth.Maximum = new decimal(new int[] {
+            3000,
+            0,
+            0,
+            0});
+            this.numWidth.Name = "numWidth";
+            this.numWidth.Size = new System.Drawing.Size(68, 20);
+            this.numWidth.TabIndex = 0;
+            this.numWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.cmbDiameter);
+            this.groupBox8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox8.Location = new System.Drawing.Point(583, 3);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(64, 44);
+            this.groupBox8.TabIndex = 5;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Diam.";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.cmbCore);
+            this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox9.Location = new System.Drawing.Point(653, 3);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(64, 44);
+            this.groupBox9.TabIndex = 6;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Core";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.numReg);
+            this.groupBox10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox10.Location = new System.Drawing.Point(723, 3);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(74, 44);
+            this.groupBox10.TabIndex = 7;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Registros";
+            // 
+            // numReg
+            // 
+            this.numReg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.numReg.Location = new System.Drawing.Point(3, 16);
+            this.numReg.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numReg.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numReg.Name = "numReg";
+            this.numReg.Size = new System.Drawing.Size(68, 20);
+            this.numReg.TabIndex = 0;
+            this.numReg.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnSearch.Location = new System.Drawing.Point(803, 3);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(94, 44);
+            this.btnSearch.TabIndex = 0;
+            this.btnSearch.Text = "Buscar";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button2.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.button2.Location = new System.Drawing.Point(1210, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(34, 44);
+            this.button2.TabIndex = 0;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.cmbStatus);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(303, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(94, 44);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Estado";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Items.AddRange(new object[] {
+            "Pendiente",
+            "Cerrada",
+            "Anulada"});
+            this.cmbStatus.Location = new System.Drawing.Point(3, 16);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(88, 21);
+            this.cmbStatus.TabIndex = 0;
             // 
             // frmSalesOrderHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1123, 500);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.ClientSize = new System.Drawing.Size(1259, 546);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmSalesOrderHistory";
             this.Text = "Historial de Pedidos";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesOrderHistory)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numWidth)).EndInit();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numReg)).EndInit();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvSalesOrderHistory;
-        private System.Windows.Forms.ComboBox cmbWidth;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbFilm;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCustommer;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cmbPlant;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbExecutive;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox cmbOrder;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbDiameter;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cmbCore;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox cmbNotes;
-        private System.Windows.Forms.Button btnExport;
-        private System.Windows.Forms.Button btnDeleteFilter;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.NumericUpDown numWidth;
+        private System.Windows.Forms.NumericUpDown numReg;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCompromiseDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourEnt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmShippingDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmdayShipping;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmmonthShipping;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmyearShipping;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPurchaseOrder;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFilm;
@@ -672,15 +594,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDeliveredQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTdC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPendingMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmObservations;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmStatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmExecutive;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatedDate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmDayIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMonthIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmYearIng;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmHourIng;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSolicit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPlanning;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEntrega;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmInFull;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmShippingDate;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }

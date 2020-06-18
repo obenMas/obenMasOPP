@@ -33,10 +33,10 @@
             this.txtObservations = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbFilm = new System.Windows.Forms.ComboBox();
-            this.btnCreate = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.numQuantity = new System.Windows.Forms.NumericUpDown();
+            this.btnCreate = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -69,7 +69,7 @@
             this.groupBox4.Location = new System.Drawing.Point(3, 63);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(301, 87);
-            this.groupBox4.TabIndex = 4;
+            this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Observaciones";
             // 
@@ -109,6 +109,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pelicula";
             // 
+            // cmbFilm
+            // 
+            this.cmbFilm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cmbFilm.FormattingEnabled = true;
+            this.cmbFilm.Location = new System.Drawing.Point(3, 16);
+            this.cmbFilm.Name = "cmbFilm";
+            this.cmbFilm.Size = new System.Drawing.Size(138, 21);
+            this.cmbFilm.TabIndex = 0;
+            this.cmbFilm.SelectedIndexChanged += new System.EventHandler(this.cmbFilm_SelectedIndexChanged);
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.numQuantity);
@@ -119,26 +129,6 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cantidad";
-            // 
-            // cmbFilm
-            // 
-            this.cmbFilm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cmbFilm.FormattingEnabled = true;
-            this.cmbFilm.Location = new System.Drawing.Point(3, 16);
-            this.cmbFilm.Name = "cmbFilm";
-            this.cmbFilm.Size = new System.Drawing.Size(138, 21);
-            this.cmbFilm.TabIndex = 0;
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnCreate.Location = new System.Drawing.Point(3, 156);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(301, 34);
-            this.btnCreate.TabIndex = 6;
-            this.btnCreate.Text = "Crear";
-            this.btnCreate.UseVisualStyleBackColor = true;
-            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // numQuantity
             // 
@@ -158,6 +148,18 @@
             this.numQuantity.Size = new System.Drawing.Size(139, 20);
             this.numQuantity.TabIndex = 0;
             this.numQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.numQuantity.Leave += new System.EventHandler(this.numQuantity_Leave);
+            // 
+            // btnCreate
+            // 
+            this.btnCreate.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnCreate.Location = new System.Drawing.Point(3, 156);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(301, 34);
+            this.btnCreate.TabIndex = 4;
+            this.btnCreate.Text = "Crear";
+            this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // frmNewExtrusionOrderCreator
             // 
@@ -170,6 +172,7 @@
             this.Name = "frmNewExtrusionOrderCreator";
             this.ShowIcon = false;
             this.Text = "Nueva orden de extrusión";
+            this.Shown += new System.EventHandler(this.frmNewExtrusionOrderCreator_Shown);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();

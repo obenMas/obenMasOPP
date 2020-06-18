@@ -288,6 +288,7 @@ namespace BPS
             this.pruebaListadoFormulacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaOrdenesDeExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaListaOrdenDeCorteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaPlanExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSales = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNationalSales = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNationalSalesNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -460,7 +461,7 @@ namespace BPS
             this.tsslUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pruebaPlanExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaHistoricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.sttsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -836,7 +837,8 @@ namespace BPS
             this.pruebaListadoFormulacionesToolStripMenuItem,
             this.pruebaOrdenesDeExtrusionToolStripMenuItem,
             this.pruebaListaOrdenDeCorteToolStripMenuItem,
-            this.pruebaPlanExtrusionToolStripMenuItem});
+            this.pruebaPlanExtrusionToolStripMenuItem,
+            this.pruebaHistoricoToolStripMenuItem});
             this.tsmProduction.Name = "tsmProduction";
             this.tsmProduction.Size = new System.Drawing.Size(80, 22);
             this.tsmProduction.Text = "Producción";
@@ -2608,6 +2610,13 @@ namespace BPS
             this.pruebaListaOrdenDeCorteToolStripMenuItem.Text = "prueba lista orden de corte";
             this.pruebaListaOrdenDeCorteToolStripMenuItem.Click += new System.EventHandler(this.pruebaListaOrdenDeCorteToolStripMenuItem_Click);
             // 
+            // pruebaPlanExtrusionToolStripMenuItem
+            // 
+            this.pruebaPlanExtrusionToolStripMenuItem.Name = "pruebaPlanExtrusionToolStripMenuItem";
+            this.pruebaPlanExtrusionToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.pruebaPlanExtrusionToolStripMenuItem.Text = "Prueba plan extrusion";
+            this.pruebaPlanExtrusionToolStripMenuItem.Click += new System.EventHandler(this.pruebaPlanExtrusionToolStripMenuItem_Click);
+            // 
             // tsmSales
             // 
             this.tsmSales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -4014,12 +4023,11 @@ namespace BPS
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(0, 17);
             // 
-            // pruebaPlanExtrusionToolStripMenuItem
+            // pruebaHistoricoToolStripMenuItem
             // 
-            this.pruebaPlanExtrusionToolStripMenuItem.Name = "pruebaPlanExtrusionToolStripMenuItem";
-            this.pruebaPlanExtrusionToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.pruebaPlanExtrusionToolStripMenuItem.Text = "Prueba plan extrusion";
-            this.pruebaPlanExtrusionToolStripMenuItem.Click += new System.EventHandler(this.pruebaPlanExtrusionToolStripMenuItem_Click);
+            this.pruebaHistoricoToolStripMenuItem.Name = "pruebaHistoricoToolStripMenuItem";
+            this.pruebaHistoricoToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.pruebaHistoricoToolStripMenuItem.Text = "Prueba historico";
             // 
             // frmMain
             // 
@@ -4484,6 +4492,7 @@ namespace BPS
         private System.Windows.Forms.ToolStripMenuItem reporteDespachosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reporteOTIFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pruebaPlanExtrusionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pruebaHistoricoToolStripMenuItem;
     }
 }
 

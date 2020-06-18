@@ -51,5 +51,23 @@ namespace BPS
                 }
             }
         }
+
+        private void cmbFilm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cmbFilm.SelectedIndex!=-1)
+            {
+                numQuantity.Focus();
+            }
+        }
+
+        private void numQuantity_Leave(object sender, EventArgs e)
+        {
+            txtObservations.Focus();
+        }
+
+        private void frmNewExtrusionOrderCreator_Shown(object sender, EventArgs e)
+        {
+            cmbFilm.Focus();
+        }
     }
 }

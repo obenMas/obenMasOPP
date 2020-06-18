@@ -32,27 +32,17 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvPlanificado = new System.Windows.Forms.DataGridView();
-            this.clmSecuencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmOrdenExtrusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTiempoMuerto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmExtruido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmTiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgvSinPlanificar = new System.Windows.Forms.DataGridView();
+            this.clmOrdenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPeliculaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCantidadSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmObservationsSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.PlanNumber = new System.Windows.Forms.Label();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
-            this.btnExcel = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmbMachine = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -77,12 +67,41 @@
             this.btnApply = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.btnEstimate = new System.Windows.Forms.Button();
+            this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmSecuencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOrdenExtrusion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmOrderStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmExtruido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTiempo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmTiempoMuerto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmInicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFin = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.txtSolicitado = new System.Windows.Forms.TextBox();
+            this.txtExtruido = new System.Windows.Forms.TextBox();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clmQuitar = new System.Windows.Forms.DataGridViewImageColumn();
             this.clmAgregar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clmOrdenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPeliculaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCantidadSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEliminarSP = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnExcel = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -108,6 +127,15 @@
             this.groupBox12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numAvailability)).BeginInit();
             this.groupBox13.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.tableLayoutPanel8.SuspendLayout();
+            this.groupBox15.SuspendLayout();
+            this.groupBox16.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.tableLayoutPanel9.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -159,13 +187,15 @@
             this.dgvPlanificado.AllowUserToDeleteRows = false;
             this.dgvPlanificado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPlanificado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmCodsec,
             this.clmSecuencia,
             this.clmOrdenExtrusion,
-            this.clmTiempoMuerto,
+            this.clmOrderStatus,
             this.clmPelicula,
             this.clmCantidad,
             this.clmExtruido,
             this.clmTiempo,
+            this.clmTiempoMuerto,
             this.clmInicio,
             this.clmFin,
             this.clmObservaciones,
@@ -176,83 +206,7 @@
             this.dgvPlanificado.ReadOnly = true;
             this.dgvPlanificado.Size = new System.Drawing.Size(844, 373);
             this.dgvPlanificado.TabIndex = 0;
-            // 
-            // clmSecuencia
-            // 
-            this.clmSecuencia.HeaderText = "N° Secuencia";
-            this.clmSecuencia.Name = "clmSecuencia";
-            this.clmSecuencia.ReadOnly = true;
-            this.clmSecuencia.Width = 65;
-            // 
-            // clmOrdenExtrusion
-            // 
-            this.clmOrdenExtrusion.HeaderText = "Orden de extrusión";
-            this.clmOrdenExtrusion.Name = "clmOrdenExtrusion";
-            this.clmOrdenExtrusion.ReadOnly = true;
-            this.clmOrdenExtrusion.Width = 60;
-            // 
-            // clmTiempoMuerto
-            // 
-            this.clmTiempoMuerto.HeaderText = "Tiempo muerto";
-            this.clmTiempoMuerto.Name = "clmTiempoMuerto";
-            this.clmTiempoMuerto.ReadOnly = true;
-            // 
-            // clmPelicula
-            // 
-            this.clmPelicula.HeaderText = "Pelicula";
-            this.clmPelicula.Name = "clmPelicula";
-            this.clmPelicula.ReadOnly = true;
-            this.clmPelicula.Width = 50;
-            // 
-            // clmCantidad
-            // 
-            this.clmCantidad.HeaderText = "Cantidad solicitada";
-            this.clmCantidad.Name = "clmCantidad";
-            this.clmCantidad.ReadOnly = true;
-            this.clmCantidad.Width = 65;
-            // 
-            // clmExtruido
-            // 
-            this.clmExtruido.HeaderText = "Cantidad extruida";
-            this.clmExtruido.Name = "clmExtruido";
-            this.clmExtruido.ReadOnly = true;
-            this.clmExtruido.Width = 65;
-            // 
-            // clmTiempo
-            // 
-            this.clmTiempo.HeaderText = "Tiempo";
-            this.clmTiempo.Name = "clmTiempo";
-            this.clmTiempo.ReadOnly = true;
-            this.clmTiempo.Width = 45;
-            // 
-            // clmInicio
-            // 
-            this.clmInicio.HeaderText = "Fecha inicio";
-            this.clmInicio.Name = "clmInicio";
-            this.clmInicio.ReadOnly = true;
-            this.clmInicio.Width = 80;
-            // 
-            // clmFin
-            // 
-            this.clmFin.HeaderText = "Fecha fin";
-            this.clmFin.Name = "clmFin";
-            this.clmFin.ReadOnly = true;
-            this.clmFin.Width = 80;
-            // 
-            // clmObservaciones
-            // 
-            this.clmObservaciones.HeaderText = "Observaciones";
-            this.clmObservaciones.Name = "clmObservaciones";
-            this.clmObservaciones.ReadOnly = true;
-            this.clmObservaciones.Width = 150;
-            // 
-            // clmQuitar
-            // 
-            this.clmQuitar.HeaderText = "";
-            this.clmQuitar.Image = global::BPS.Properties.Resources.arrow_right;
-            this.clmQuitar.Name = "clmQuitar";
-            this.clmQuitar.ReadOnly = true;
-            this.clmQuitar.Width = 30;
+            this.dgvPlanificado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPlanificado_CellClick);
             // 
             // groupBox6
             // 
@@ -274,7 +228,9 @@
             this.clmAgregar,
             this.clmOrdenSP,
             this.clmPeliculaSP,
-            this.clmCantidadSP});
+            this.clmCantidadSP,
+            this.clmObservationsSP,
+            this.clmEliminarSP});
             this.dgvSinPlanificar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSinPlanificar.Location = new System.Drawing.Point(3, 16);
             this.dgvSinPlanificar.Name = "dgvSinPlanificar";
@@ -282,6 +238,40 @@
             this.dgvSinPlanificar.Size = new System.Drawing.Size(355, 373);
             this.dgvSinPlanificar.TabIndex = 0;
             this.dgvSinPlanificar.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSinPlanificar_CellClick);
+            // 
+            // clmOrdenSP
+            // 
+            this.clmOrdenSP.HeaderText = "Orden";
+            this.clmOrdenSP.Name = "clmOrdenSP";
+            this.clmOrdenSP.ReadOnly = true;
+            this.clmOrdenSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmOrdenSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmOrdenSP.Width = 60;
+            // 
+            // clmPeliculaSP
+            // 
+            this.clmPeliculaSP.HeaderText = "Pelicula";
+            this.clmPeliculaSP.Name = "clmPeliculaSP";
+            this.clmPeliculaSP.ReadOnly = true;
+            this.clmPeliculaSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmPeliculaSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmPeliculaSP.Width = 80;
+            // 
+            // clmCantidadSP
+            // 
+            this.clmCantidadSP.HeaderText = "Cantidad";
+            this.clmCantidadSP.Name = "clmCantidadSP";
+            this.clmCantidadSP.ReadOnly = true;
+            this.clmCantidadSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmCantidadSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.clmCantidadSP.Width = 70;
+            // 
+            // clmObservationsSP
+            // 
+            this.clmObservationsSP.HeaderText = "";
+            this.clmObservationsSP.Name = "clmObservationsSP";
+            this.clmObservationsSP.ReadOnly = true;
+            this.clmObservationsSP.Visible = false;
             // 
             // groupBox5
             // 
@@ -348,28 +338,6 @@
             this.PlanNumber.Text = "100";
             this.PlanNumber.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnPrevious.Image = global::BPS.Properties.Resources.arrow_left;
-            this.btnPrevious.Location = new System.Drawing.Point(343, 3);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(24, 44);
-            this.btnPrevious.TabIndex = 3;
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
-            // 
-            // btnNext
-            // 
-            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnNext.Image = global::BPS.Properties.Resources.arrow_right;
-            this.btnNext.Location = new System.Drawing.Point(373, 3);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(24, 44);
-            this.btnNext.TabIndex = 4;
-            this.btnNext.UseVisualStyleBackColor = true;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
-            // 
             // btnNew
             // 
             this.btnNew.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -380,16 +348,6 @@
             this.btnNew.Text = "Crear nuevo";
             this.btnNew.UseVisualStyleBackColor = true;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnExcel
-            // 
-            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnExcel.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExcel.Location = new System.Drawing.Point(1190, 3);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(24, 44);
-            this.btnExcel.TabIndex = 8;
-            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -499,6 +457,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.groupBox8, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.groupBox14, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(859, 3);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
@@ -531,11 +490,13 @@
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.ColumnCount = 3;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 480F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 120F));
-            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Controls.Add(this.groupBox9, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.groupBox13, 1, 0);
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel6.Controls.Add(this.groupBox18, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.groupBox9, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.groupBox13, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -548,7 +509,7 @@
             // 
             this.groupBox9.Controls.Add(this.tableLayoutPanel7);
             this.groupBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox9.Location = new System.Drawing.Point(3, 3);
+            this.groupBox9.Location = new System.Drawing.Point(253, 3);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(474, 62);
             this.groupBox9.TabIndex = 0;
@@ -680,7 +641,7 @@
             // groupBox13
             // 
             this.groupBox13.Controls.Add(this.btnEstimate);
-            this.groupBox13.Location = new System.Drawing.Point(483, 3);
+            this.groupBox13.Location = new System.Drawing.Point(733, 3);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(114, 62);
             this.groupBox13.TabIndex = 1;
@@ -697,6 +658,249 @@
             this.btnEstimate.Text = "Estimar consumo";
             this.btnEstimate.UseVisualStyleBackColor = true;
             // 
+            // clmCodsec
+            // 
+            this.clmCodsec.HeaderText = "";
+            this.clmCodsec.Name = "clmCodsec";
+            this.clmCodsec.ReadOnly = true;
+            this.clmCodsec.Visible = false;
+            // 
+            // clmSecuencia
+            // 
+            this.clmSecuencia.HeaderText = "N° Sec.";
+            this.clmSecuencia.Name = "clmSecuencia";
+            this.clmSecuencia.ReadOnly = true;
+            this.clmSecuencia.Width = 50;
+            // 
+            // clmOrdenExtrusion
+            // 
+            this.clmOrdenExtrusion.HeaderText = "Orden extrusión";
+            this.clmOrdenExtrusion.Name = "clmOrdenExtrusion";
+            this.clmOrdenExtrusion.ReadOnly = true;
+            this.clmOrdenExtrusion.Width = 60;
+            // 
+            // clmOrderStatus
+            // 
+            this.clmOrderStatus.HeaderText = "";
+            this.clmOrderStatus.Name = "clmOrderStatus";
+            this.clmOrderStatus.ReadOnly = true;
+            this.clmOrderStatus.Visible = false;
+            // 
+            // clmPelicula
+            // 
+            this.clmPelicula.HeaderText = "Pelicula";
+            this.clmPelicula.Name = "clmPelicula";
+            this.clmPelicula.ReadOnly = true;
+            this.clmPelicula.Width = 60;
+            // 
+            // clmCantidad
+            // 
+            this.clmCantidad.HeaderText = "Cantidad solicitada";
+            this.clmCantidad.Name = "clmCantidad";
+            this.clmCantidad.ReadOnly = true;
+            this.clmCantidad.Width = 65;
+            // 
+            // clmExtruido
+            // 
+            this.clmExtruido.HeaderText = "Cantidad extruida";
+            this.clmExtruido.Name = "clmExtruido";
+            this.clmExtruido.ReadOnly = true;
+            this.clmExtruido.Width = 65;
+            // 
+            // clmTiempo
+            // 
+            this.clmTiempo.HeaderText = "Tiempo";
+            this.clmTiempo.Name = "clmTiempo";
+            this.clmTiempo.ReadOnly = true;
+            this.clmTiempo.Width = 60;
+            // 
+            // clmTiempoMuerto
+            // 
+            this.clmTiempoMuerto.HeaderText = "Tiempo muerto";
+            this.clmTiempoMuerto.Name = "clmTiempoMuerto";
+            this.clmTiempoMuerto.ReadOnly = true;
+            this.clmTiempoMuerto.Width = 60;
+            // 
+            // clmInicio
+            // 
+            this.clmInicio.HeaderText = "Fecha inicio";
+            this.clmInicio.Name = "clmInicio";
+            this.clmInicio.ReadOnly = true;
+            this.clmInicio.Width = 110;
+            // 
+            // clmFin
+            // 
+            this.clmFin.HeaderText = "Fecha fin";
+            this.clmFin.Name = "clmFin";
+            this.clmFin.ReadOnly = true;
+            this.clmFin.Width = 110;
+            // 
+            // clmObservaciones
+            // 
+            this.clmObservaciones.HeaderText = "Observaciones";
+            this.clmObservaciones.Name = "clmObservaciones";
+            this.clmObservaciones.ReadOnly = true;
+            this.clmObservaciones.Width = 140;
+            // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.tableLayoutPanel8);
+            this.groupBox14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox14.Location = new System.Drawing.Point(123, 3);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(235, 62);
+            this.groupBox14.TabIndex = 2;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Código de colores";
+            // 
+            // tableLayoutPanel8
+            // 
+            this.tableLayoutPanel8.ColumnCount = 3;
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel8.Controls.Add(this.groupBox15, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.groupBox16, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.groupBox17, 2, 0);
+            this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel8.Name = "tableLayoutPanel8";
+            this.tableLayoutPanel8.RowCount = 1;
+            this.tableLayoutPanel8.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel8.Size = new System.Drawing.Size(229, 43);
+            this.tableLayoutPanel8.TabIndex = 0;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.textBox1);
+            this.groupBox15.Location = new System.Drawing.Point(3, 3);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(70, 37);
+            this.groupBox15.TabIndex = 0;
+            this.groupBox15.TabStop = false;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.textBox2);
+            this.groupBox16.Location = new System.Drawing.Point(79, 3);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(70, 37);
+            this.groupBox16.TabIndex = 1;
+            this.groupBox16.TabStop = false;
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.textBox3);
+            this.groupBox17.Location = new System.Drawing.Point(155, 3);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(71, 37);
+            this.groupBox17.TabIndex = 2;
+            this.groupBox17.TabStop = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(64, 18);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = "Cerrada";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(3, 16);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(64, 18);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "En ejecución";
+            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(3, 16);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(65, 18);
+            this.textBox3.TabIndex = 0;
+            this.textBox3.Text = "Planif./Sin Planif.";
+            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.tableLayoutPanel9);
+            this.groupBox18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox18.Location = new System.Drawing.Point(3, 3);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(244, 62);
+            this.groupBox18.TabIndex = 1;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Totales";
+            // 
+            // tableLayoutPanel9
+            // 
+            this.tableLayoutPanel9.ColumnCount = 2;
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Controls.Add(this.groupBox20, 1, 0);
+            this.tableLayoutPanel9.Controls.Add(this.groupBox19, 0, 0);
+            this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 16);
+            this.tableLayoutPanel9.Name = "tableLayoutPanel9";
+            this.tableLayoutPanel9.RowCount = 1;
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(238, 43);
+            this.tableLayoutPanel9.TabIndex = 1;
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.txtSolicitado);
+            this.groupBox19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox19.Location = new System.Drawing.Point(3, 3);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(113, 37);
+            this.groupBox19.TabIndex = 1;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Cant. solicitada";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.txtExtruido);
+            this.groupBox20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox20.Location = new System.Drawing.Point(122, 3);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(113, 37);
+            this.groupBox20.TabIndex = 1;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Cant. extruida";
+            // 
+            // txtSolicitado
+            // 
+            this.txtSolicitado.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtSolicitado.Location = new System.Drawing.Point(3, 16);
+            this.txtSolicitado.Name = "txtSolicitado";
+            this.txtSolicitado.ReadOnly = true;
+            this.txtSolicitado.Size = new System.Drawing.Size(107, 20);
+            this.txtSolicitado.TabIndex = 1;
+            // 
+            // txtExtruido
+            // 
+            this.txtExtruido.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtExtruido.Location = new System.Drawing.Point(3, 16);
+            this.txtExtruido.Name = "txtExtruido";
+            this.txtExtruido.ReadOnly = true;
+            this.txtExtruido.Size = new System.Drawing.Size(107, 20);
+            this.txtExtruido.TabIndex = 1;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.HeaderText = "";
@@ -711,6 +915,21 @@
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 60;
             // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn3.Image = global::BPS.Properties.Resources.cross;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.Width = 60;
+            // 
+            // clmQuitar
+            // 
+            this.clmQuitar.HeaderText = "Quitar";
+            this.clmQuitar.Image = global::BPS.Properties.Resources.arrow_right;
+            this.clmQuitar.Name = "clmQuitar";
+            this.clmQuitar.ReadOnly = true;
+            this.clmQuitar.Width = 60;
+            // 
             // clmAgregar
             // 
             this.clmAgregar.HeaderText = "Agregar";
@@ -719,31 +938,45 @@
             this.clmAgregar.ReadOnly = true;
             this.clmAgregar.Width = 60;
             // 
-            // clmOrdenSP
+            // clmEliminarSP
             // 
-            this.clmOrdenSP.HeaderText = "Orden";
-            this.clmOrdenSP.Name = "clmOrdenSP";
-            this.clmOrdenSP.ReadOnly = true;
-            this.clmOrdenSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmOrdenSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.clmOrdenSP.Width = 60;
+            this.clmEliminarSP.HeaderText = "Eliminar";
+            this.clmEliminarSP.Image = global::BPS.Properties.Resources.cross;
+            this.clmEliminarSP.Name = "clmEliminarSP";
+            this.clmEliminarSP.ReadOnly = true;
+            this.clmEliminarSP.Width = 60;
             // 
-            // clmPeliculaSP
+            // btnPrevious
             // 
-            this.clmPeliculaSP.HeaderText = "Pelicula";
-            this.clmPeliculaSP.Name = "clmPeliculaSP";
-            this.clmPeliculaSP.ReadOnly = true;
-            this.clmPeliculaSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmPeliculaSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.btnPrevious.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnPrevious.Image = global::BPS.Properties.Resources.arrow_left;
+            this.btnPrevious.Location = new System.Drawing.Point(343, 3);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(24, 44);
+            this.btnPrevious.TabIndex = 3;
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
-            // clmCantidadSP
+            // btnNext
             // 
-            this.clmCantidadSP.HeaderText = "Cantidad";
-            this.clmCantidadSP.Name = "clmCantidadSP";
-            this.clmCantidadSP.ReadOnly = true;
-            this.clmCantidadSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmCantidadSP.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.clmCantidadSP.Width = 80;
+            this.btnNext.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnNext.Image = global::BPS.Properties.Resources.arrow_right;
+            this.btnNext.Location = new System.Drawing.Point(373, 3);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(24, 44);
+            this.btnNext.TabIndex = 4;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnExcel.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.btnExcel.Location = new System.Drawing.Point(1190, 3);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(24, 44);
+            this.btnExcel.TabIndex = 8;
+            this.btnExcel.UseVisualStyleBackColor = true;
             // 
             // frmNewExtrusionPlan
             // 
@@ -782,6 +1015,20 @@
             this.groupBox12.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numAvailability)).EndInit();
             this.groupBox13.ResumeLayout(false);
+            this.groupBox14.ResumeLayout(false);
+            this.tableLayoutPanel8.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox18.ResumeLayout(false);
+            this.tableLayoutPanel9.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox19.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -806,17 +1053,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmSecuencia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmOrdenExtrusion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTiempoMuerto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmPelicula;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmExtruido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmTiempo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmInicio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmFin;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmObservaciones;
-        private System.Windows.Forms.DataGridViewImageColumn clmQuitar;
         private System.Windows.Forms.GroupBox groupBox6;
         private System.Windows.Forms.DataGridView dgvSinPlanificar;
         private System.Windows.Forms.GroupBox groupBox7;
@@ -843,5 +1079,35 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmOrdenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPeliculaSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidadSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmObservationsSP;
+        private System.Windows.Forms.DataGridViewImageColumn clmEliminarSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmSecuencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOrdenExtrusion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmOrderStatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPelicula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmExtruido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTiempo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmTiempoMuerto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmInicio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFin;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmObservaciones;
+        private System.Windows.Forms.DataGridViewImageColumn clmQuitar;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel9;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.TextBox txtExtruido;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.TextBox txtSolicitado;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
     }
 }

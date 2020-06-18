@@ -26,6 +26,7 @@ namespace BPS
             InitializeComponent();
             nps = new clsNewPreShipping(numb);
             completarDatos();
+            llenarAgregados();
         }
 
         public frmNewPreShipping(string numb, List<int> listaPal, List<int> listaProd, List<double> listanw, List<int> listaped)
@@ -48,7 +49,7 @@ namespace BPS
                     detail.netWeight = listanw[i];
                     if (detail.save())
                     {
-                        clsPallet.setPalletAsPreShipped(pallet);
+                        clsPallet.setPalletAsPreShipped(listaPal[i]);
                         //llenarAgregados();
                     }
                 }
@@ -70,7 +71,7 @@ namespace BPS
                                 detail.netWeight = listanw[i];
                                 if (detail.save())
                                 {
-                                    clsPallet.setPalletAsPreShipped(pallet);
+                                    clsPallet.setPalletAsPreShipped(listaPal[i]);
                                     //llenarAgregados();
                                 }
                             }
@@ -96,7 +97,7 @@ namespace BPS
             {
                 chkDespacho.Checked = true;
             }
-            llenarAgregados();
+            //llenarAgregados();
         }
 
         private void chkDespacho_CheckedChanged(object sender, EventArgs e)
@@ -130,7 +131,7 @@ namespace BPS
             double kilos = 0;
 
             dgvAgregados.Rows.Clear();
-            if(DS.Tables.Count>0)
+            if(DS.Tables.Count>0 && DS.Tables[0].Rows.Count>0)
             {
                 for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                 {

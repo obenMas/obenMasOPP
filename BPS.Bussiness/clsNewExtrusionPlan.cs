@@ -202,5 +202,30 @@ namespace BPS.Bussiness
             this.active = true;
             return this.save();
         }
+
+        public int getNextSequential()
+        {
+            int seq = 0;
+            DataSet DS = new DataSet();
+
+            DS = clsConnection.getDataSetResult("SELECT COALESCE(MAX(bps_new_extrusionPlanDetail.nepd_sequential),0) FROM bps_new_extrusionPlanDetail where nepd_fkNewExtrusionPlan = " + this.codsec.ToString());
+
+            if(DS.Tables.Count>0 && DS.Tables[0].Rows.Count>0)
+            {
+                seq = Convert.ToInt32(DS.Tables[0].Rows[0][0]);
+            }
+
+            return seq + 1;
+
+        }
+
+        public DataSet getDSdetail()
+        {
+            DataSet DS = new DataSet();
+
+            DS = clsConnection.getDataSetResult("spGetNewExtrusionPlanDetail " + this.codsec.ToString());
+
+            return DS;
+        }
     }
 }

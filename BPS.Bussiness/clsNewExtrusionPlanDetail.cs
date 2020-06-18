@@ -12,8 +12,8 @@ namespace BPS.Bussiness
         private int nepd_fkNewExtrusionPlan;
         private int nepd_sequential;
         private int nepd_fkNewExtrusionOrder;
-        private int nepd_deadTime;
-        private int nepd_hours;
+        private double nepd_deadTime;
+        private double nepd_hours;
 
         //Properties
 
@@ -25,9 +25,9 @@ namespace BPS.Bussiness
 
         public int fkNewExtrusionOrder { get { return nepd_fkNewExtrusionOrder; } set { nepd_fkNewExtrusionOrder = value; } }
 
-        public int deadTime { get { return nepd_deadTime; } set { nepd_deadTime = value; } }
+        public double deadTime { get { return nepd_deadTime; } set { nepd_deadTime = value; } }
 
-        public int hours { get { return nepd_hours; } set { nepd_hours = value; } }
+        public double hours { get { return nepd_hours; } set { nepd_hours = value; } }
 
 
         //Constructor
@@ -61,8 +61,8 @@ namespace BPS.Bussiness
                 this.fkNewExtrusionPlan = Convert.ToInt32(DS.Tables[0].Rows[0]["nepd_fkNewExtrusionPlan"]);
                 this.sequential = Convert.ToInt32(DS.Tables[0].Rows[0]["nepd_sequential"]);
                 this.fkNewExtrusionOrder = Convert.ToInt32(DS.Tables[0].Rows[0]["nepd_fkNewExtrusionOrder"]);
-                this.deadTime = Convert.ToInt32(DS.Tables[0].Rows[0]["nepd_deadTime"]);
-                this.hours = Convert.ToInt32(DS.Tables[0].Rows[0]["nepd_hours"]);
+                this.deadTime = Convert.ToDouble(DS.Tables[0].Rows[0]["nepd_deadTime"]);
+                this.hours = Convert.ToDouble(DS.Tables[0].Rows[0]["nepd_hours"]);
             }
         }
 
@@ -95,7 +95,7 @@ namespace BPS.Bussiness
                     queryString += "nepd_fkNewExtrusionOrder = " + this.fkNewExtrusionOrder + ", ";
                     queryString += "nepd_deadTime = " + this.deadTime + ", ";
                     queryString += "nepd_hours = " + this.hours + "";
-                    queryString += " WHERE neo_codsec = " + this.codsec.ToString() + ";";
+                    queryString += " WHERE nepd_codsec = " + this.codsec.ToString() + ";";
                     clsConnection.executeQuery(queryString);
 
                 }
@@ -104,6 +104,34 @@ namespace BPS.Bussiness
             catch (Exception ex)
             {
                 clsLog.addLog(ex, 3, "clsNewExtrusionPlanDetail.save");
+                return false;
+            }
+        }
+
+        public static bool delete(int cod)
+        {
+            try
+            {
+                string queryString = "DELETE FROM bps_new_extrusionPlanDetail WHERE nepd_codsec=" + cod;
+                return (clsConnection.executeQuery(queryString));
+            }
+            catch(Exception ex) 
+            {
+                clsLog.addLog(ex, 3, "clsNewExtrusionPlanDetail.delete");
+                return false;
+            }
+        }
+
+        public static bool deletePlanDetail(int cod)
+        {
+            try
+            {
+                string queryString = "DELETE FROM bps_new_extrusionPlanDetail WHERE nepd_fkNewExtrusionPlan=" + cod;
+                return (clsConnection.executeQuery(queryString));
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsNewExtrusionPlanDetail.deletePlanDetail");
                 return false;
             }
         }

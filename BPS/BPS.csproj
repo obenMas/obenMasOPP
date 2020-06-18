@@ -44,7 +44,7 @@
     <PublisherName>Oben Holding Group</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>23</ApplicationRevision>
+    <ApplicationRevision>26</ApplicationRevision>
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -471,6 +471,12 @@
     </Compile>
     <Compile Include="frmNewExtrusionPlanCreation.Designer.cs">
       <DependentUpon>frmNewExtrusionPlanCreation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlanVisualization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewExtrusionPlanVisualization.Designer.cs">
+      <DependentUpon>frmNewExtrusionPlanVisualization.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewFormulationList.cs">
       <SubType>Form</SubType>
@@ -3848,6 +3854,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewExtrusionPlanCreation.resx">
       <DependentUpon>frmNewExtrusionPlanCreation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewExtrusionPlanVisualization.resx">
+      <DependentUpon>frmNewExtrusionPlanVisualization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewFormulationList.resx">
       <DependentUpon>frmNewFormulationList.cs</DependentUpon>
