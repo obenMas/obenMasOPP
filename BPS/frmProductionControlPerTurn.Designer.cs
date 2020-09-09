@@ -448,9 +448,9 @@
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(36, 73);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(34, 16);
+            this.label12.Size = new System.Drawing.Size(36, 16);
             this.label12.TabIndex = 2;
-            this.label12.Text = "OP1";
+            this.label12.Text = "PNC";
             // 
             // txtPrimeraDeposito
             // 
@@ -516,9 +516,9 @@
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(42, 90);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(34, 16);
+            this.label44.Size = new System.Drawing.Size(36, 16);
             this.label44.TabIndex = 29;
-            this.label44.Text = "OP1";
+            this.label44.Text = "PNC";
             // 
             // txtSecPPAtlas
             // 
@@ -629,9 +629,9 @@
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(44, 89);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(34, 16);
+            this.label36.Size = new System.Drawing.Size(36, 16);
             this.label36.TabIndex = 17;
-            this.label36.Text = "OP1";
+            this.label36.Text = "PNC";
             // 
             // txtMetPPAtlas
             // 
@@ -915,9 +915,9 @@
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(36, 75);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(34, 16);
+            this.label22.Size = new System.Drawing.Size(36, 16);
             this.label22.TabIndex = 2;
-            this.label22.Text = "OP1";
+            this.label22.Text = "PNC";
             // 
             // txtCortePrimario
             // 
@@ -1265,7 +1265,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 66);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1219, 684);
+            this.groupBox2.Size = new System.Drawing.Size(1219, 683);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
@@ -1286,9 +1286,9 @@
             this.label30.ForeColor = System.Drawing.Color.White;
             this.label30.Location = new System.Drawing.Point(14, 5);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(168, 16);
+            this.label30.Size = new System.Drawing.Size(170, 16);
             this.label30.TabIndex = 0;
-            this.label30.Text = "Deposito PT, PP y OP1";
+            this.label30.Text = "Deposito PT, PP y PNC";
             // 
             // panel36
             // 
@@ -1362,9 +1362,9 @@
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(46, 97);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(34, 16);
+            this.label37.Size = new System.Drawing.Size(36, 16);
             this.label37.TabIndex = 23;
-            this.label37.Text = "OP1";
+            this.label37.Text = "PNC";
             // 
             // txtSecPPTitan
             // 
@@ -1724,7 +1724,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1219, 750);
+            this.ClientSize = new System.Drawing.Size(1219, 749);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmProductionControlPerTurn";

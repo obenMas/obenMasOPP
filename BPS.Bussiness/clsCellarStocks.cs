@@ -53,13 +53,19 @@ namespace BPS.Bussiness
 
             DS = clsConnection.getDataSetResult("SELECT * FROM bps_prod_cellarstocks where cs_fkCoilCellar = " + cellar.ToString() + " AND fkRawMaterial = " + fkraw.ToString() + " AND cs_lotNumber = '" + lot +"'");
 
-            if (DS.Tables[0].Rows.Count > 0)
+            if (DS.Tables.Count>0 && DS.Tables[0].Rows.Count > 0)
             {
                 this.codsec = Convert.ToInt32(DS.Tables[0].Rows[0]["cs_codsec"]);
                 this.fkCoilCellar = Convert.ToInt32(DS.Tables[0].Rows[0]["cs_fkCoilCellar"]);
                 this.fkRawMaterial = Convert.ToInt32(DS.Tables[0].Rows[0]["cs_fkRawMaterial"]);
                 this.lotNumber = DS.Tables[0].Rows[0]["cs_lotNumber"].ToString();
                 this.quantity = Convert.ToDouble(DS.Tables[0].Rows[0]["cs_quantity"]);
+            }
+            else
+            {
+                this.fkCoilCellar = cellar;
+                this.fkRawMaterial = fkraw;
+                this.lotNumber = lot;
             }
         }
 

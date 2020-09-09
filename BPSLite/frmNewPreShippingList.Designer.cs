@@ -28,10 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv = new System.Windows.Forms.DataGridView();
+            this.codsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.despachado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.FechaPago = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clmAproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.cmbFiltroCreacion = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -52,21 +69,7 @@
             this.cmbFiltroUsuario = new System.Windows.Forms.ComboBox();
             this.cmbFiltroCliente = new System.Windows.Forms.ComboBox();
             this.cmbFiltroNumero = new System.Windows.Forms.ComboBox();
-            this.codsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.creado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.unidades = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.kilos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmValor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.planta = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clmAproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -75,14 +78,14 @@
             // 
             this.dgv.AllowUserToAddRows = false;
             this.dgv.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codsec,
@@ -96,26 +99,153 @@
             this.planta,
             this.estado,
             this.programado,
+            this.despachado,
+            this.FechaPago,
             this.remito,
             this.preparar,
             this.listaemp,
             this.clmAproved});
             this.dgv.Location = new System.Drawing.Point(12, 81);
             this.dgv.Name = "dgv";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv.Size = new System.Drawing.Size(1113, 416);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv.Size = new System.Drawing.Size(1122, 416);
             this.dgv.TabIndex = 0;
             this.dgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellClick);
             this.dgv.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_CellEndEdit);
+            // 
+            // codsec
+            // 
+            this.codsec.HeaderText = "codsec";
+            this.codsec.Name = "codsec";
+            this.codsec.ReadOnly = true;
+            this.codsec.Visible = false;
+            // 
+            // creado
+            // 
+            this.creado.HeaderText = "Fecha creación";
+            this.creado.Name = "creado";
+            this.creado.ReadOnly = true;
+            this.creado.Width = 80;
+            // 
+            // numero
+            // 
+            this.numero.HeaderText = "Número";
+            this.numero.Name = "numero";
+            this.numero.ReadOnly = true;
+            this.numero.Width = 80;
+            // 
+            // cliente
+            // 
+            this.cliente.HeaderText = "Cliente";
+            this.cliente.Name = "cliente";
+            this.cliente.ReadOnly = true;
+            this.cliente.Width = 160;
+            // 
+            // usuario
+            // 
+            this.usuario.HeaderText = "Usuario";
+            this.usuario.Name = "usuario";
+            this.usuario.ReadOnly = true;
+            this.usuario.Width = 80;
+            // 
+            // unidades
+            // 
+            this.unidades.HeaderText = "Cantidad [Un]";
+            this.unidades.Name = "unidades";
+            this.unidades.ReadOnly = true;
+            this.unidades.Width = 70;
+            // 
+            // kilos
+            // 
+            this.kilos.HeaderText = "Cantidad [Kg]";
+            this.kilos.Name = "kilos";
+            this.kilos.ReadOnly = true;
+            this.kilos.Width = 70;
+            // 
+            // clmValor
+            // 
+            this.clmValor.HeaderText = "Valor Total [USD]";
+            this.clmValor.Name = "clmValor";
+            this.clmValor.ReadOnly = true;
+            this.clmValor.Visible = false;
+            // 
+            // planta
+            // 
+            this.planta.HeaderText = "Planta";
+            this.planta.Name = "planta";
+            this.planta.Width = 80;
+            // 
+            // estado
+            // 
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            this.estado.Width = 80;
+            // 
+            // programado
+            // 
+            this.programado.HeaderText = "Fecha Despacho programado";
+            this.programado.Name = "programado";
+            this.programado.ReadOnly = true;
+            this.programado.Width = 80;
+            // 
+            // despachado
+            // 
+            this.despachado.HeaderText = "Fecha Despachado real";
+            this.despachado.Name = "despachado";
+            this.despachado.Width = 80;
+            // 
+            // FechaPago
+            // 
+            this.FechaPago.HeaderText = "Fecha pago";
+            this.FechaPago.Name = "FechaPago";
+            this.FechaPago.ReadOnly = true;
+            this.FechaPago.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.FechaPago.Visible = false;
+            this.FechaPago.Width = 80;
+            // 
+            // remito
+            // 
+            this.remito.HeaderText = "Remito";
+            this.remito.Name = "remito";
+            this.remito.ReadOnly = true;
+            this.remito.Width = 70;
+            // 
+            // preparar
+            // 
+            this.preparar.HeaderText = "";
+            this.preparar.Image = global::BPS.Lite.Properties.Resources.printer;
+            this.preparar.Name = "preparar";
+            this.preparar.ReadOnly = true;
+            this.preparar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.preparar.ToolTipText = "Imprimir pre-despacho";
+            this.preparar.Width = 30;
+            // 
+            // listaemp
+            // 
+            this.listaemp.HeaderText = "";
+            this.listaemp.Image = global::BPS.Lite.Properties.Resources.clipboard_text;
+            this.listaemp.Name = "listaemp";
+            this.listaemp.ToolTipText = "Imprimir lista de empaque";
+            this.listaemp.Width = 30;
+            // 
+            // clmAproved
+            // 
+            this.clmAproved.HeaderText = "Aprobado";
+            this.clmAproved.Name = "clmAproved";
+            this.clmAproved.ReadOnly = true;
+            this.clmAproved.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmAproved.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.clmAproved.Width = 60;
             // 
             // dataGridViewImageColumn1
             // 
@@ -135,6 +265,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnExport);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cmbFiltroPlanta);
             this.groupBox1.Controls.Add(this.txtTot);
@@ -155,7 +286,7 @@
             this.groupBox1.Controls.Add(this.cmbFiltroCreacion);
             this.groupBox1.Location = new System.Drawing.Point(12, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1113, 71);
+            this.groupBox1.Size = new System.Drawing.Size(1122, 71);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Filtrar por:";
@@ -319,119 +450,21 @@
             this.cmbFiltroNumero.SelectedIndexChanged += new System.EventHandler(this.cmbFiltroNumero_SelectedIndexChanged);
             this.cmbFiltroNumero.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cmbFiltroNumero_KeyDown);
             // 
-            // codsec
+            // btnExport
             // 
-            this.codsec.HeaderText = "codsec";
-            this.codsec.Name = "codsec";
-            this.codsec.ReadOnly = true;
-            this.codsec.Visible = false;
-            // 
-            // creado
-            // 
-            this.creado.HeaderText = "Fecha creación";
-            this.creado.Name = "creado";
-            this.creado.ReadOnly = true;
-            this.creado.Width = 80;
-            // 
-            // numero
-            // 
-            this.numero.HeaderText = "Número";
-            this.numero.Name = "numero";
-            this.numero.ReadOnly = true;
-            this.numero.Width = 80;
-            // 
-            // cliente
-            // 
-            this.cliente.HeaderText = "Cliente";
-            this.cliente.Name = "cliente";
-            this.cliente.ReadOnly = true;
-            this.cliente.Width = 200;
-            // 
-            // usuario
-            // 
-            this.usuario.HeaderText = "Usuario";
-            this.usuario.Name = "usuario";
-            this.usuario.ReadOnly = true;
-            this.usuario.Width = 80;
-            // 
-            // unidades
-            // 
-            this.unidades.HeaderText = "Cantidad [Un]";
-            this.unidades.Name = "unidades";
-            this.unidades.ReadOnly = true;
-            this.unidades.Width = 70;
-            // 
-            // kilos
-            // 
-            this.kilos.HeaderText = "Cantidad [Kg]";
-            this.kilos.Name = "kilos";
-            this.kilos.ReadOnly = true;
-            this.kilos.Width = 70;
-            // 
-            // clmValor
-            // 
-            this.clmValor.HeaderText = "Valor Total [USD]";
-            this.clmValor.Name = "clmValor";
-            this.clmValor.ReadOnly = true;
-            this.clmValor.Visible = false;
-            // 
-            // planta
-            // 
-            this.planta.HeaderText = "Planta";
-            this.planta.Name = "planta";
-            // 
-            // estado
-            // 
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
-            // programado
-            // 
-            this.programado.HeaderText = "Fecha despacho";
-            this.programado.Name = "programado";
-            this.programado.ReadOnly = true;
-            this.programado.Width = 80;
-            // 
-            // remito
-            // 
-            this.remito.HeaderText = "Remito";
-            this.remito.Name = "remito";
-            this.remito.ReadOnly = true;
-            this.remito.Width = 70;
-            // 
-            // preparar
-            // 
-            this.preparar.HeaderText = "";
-            this.preparar.Image = global::BPS.Lite.Properties.Resources.printer;
-            this.preparar.Name = "preparar";
-            this.preparar.ReadOnly = true;
-            this.preparar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.preparar.ToolTipText = "Imprimir pre-despacho";
-            this.preparar.Width = 30;
-            // 
-            // listaemp
-            // 
-            this.listaemp.HeaderText = "";
-            this.listaemp.Image = global::BPS.Lite.Properties.Resources.clipboard_text;
-            this.listaemp.Name = "listaemp";
-            this.listaemp.ToolTipText = "Imprimir lista de empaque";
-            this.listaemp.Width = 30;
-            // 
-            // clmAproved
-            // 
-            this.clmAproved.HeaderText = "Aprobado";
-            this.clmAproved.Name = "clmAproved";
-            this.clmAproved.ReadOnly = true;
-            this.clmAproved.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.clmAproved.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.clmAproved.Width = 60;
+            this.btnExport.Image = global::BPS.Lite.Properties.Resources.doc_excel_table;
+            this.btnExport.Location = new System.Drawing.Point(1070, 31);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(25, 25);
+            this.btnExport.TabIndex = 24;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // frmNewPreShippingList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 509);
+            this.ClientSize = new System.Drawing.Size(1146, 509);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgv);
             this.Name = "frmNewPreShippingList";
@@ -478,9 +511,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn planta;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn programado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn despachado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn FechaPago;
         private System.Windows.Forms.DataGridViewTextBoxColumn remito;
         private System.Windows.Forms.DataGridViewImageColumn preparar;
         private System.Windows.Forms.DataGridViewImageColumn listaemp;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmAproved;
+        private System.Windows.Forms.Button btnExport;
     }
 }

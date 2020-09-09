@@ -187,6 +187,8 @@
             this.cmbDensityTaper = new System.Windows.Forms.ComboBox();
             this.grpbDensityCoilShort = new System.Windows.Forms.GroupBox();
             this.dgvDensity = new System.Windows.Forms.DataGridView();
+            this.clmdensitynumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmdensitydensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbNotes = new System.Windows.Forms.GroupBox();
             this.grpbAnalist = new System.Windows.Forms.GroupBox();
             this.txtNotesAnalist = new System.Windows.Forms.TextBox();
@@ -210,8 +212,6 @@
             this.btnMainCoilSave = new System.Windows.Forms.Button();
             this.btnMainCoilCancel = new System.Windows.Forms.Button();
             this.ttpMainCoilQuality = new System.Windows.Forms.ToolTip(this.components);
-            this.clmdensitynumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmdensitydensity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tbcMainCoilInfo.SuspendLayout();
             this.tbpMainCoilInfo.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -1940,7 +1940,8 @@
             "3B",
             "1C",
             "2C",
-            "3C"});
+            "3C",
+            "PNC"});
             this.cmbDensityCalification.Location = new System.Drawing.Point(6, 53);
             this.cmbDensityCalification.Name = "cmbDensityCalification";
             this.cmbDensityCalification.Size = new System.Drawing.Size(80, 23);
@@ -1993,6 +1994,16 @@
             this.dgvDensity.TabIndex = 0;
             this.dgvDensity.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDensity_CellValidated);
             this.dgvDensity.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvDensity_RowsRemoved);
+            // 
+            // clmdensitynumber
+            // 
+            this.clmdensitynumber.HeaderText = "Número";
+            this.clmdensitynumber.Name = "clmdensitynumber";
+            // 
+            // clmdensitydensity
+            // 
+            this.clmdensitydensity.HeaderText = "Densidad(d)";
+            this.clmdensitydensity.Name = "clmdensitydensity";
             // 
             // grpbNotes
             // 
@@ -2222,16 +2233,6 @@
             this.ttpMainCoilQuality.SetToolTip(this.btnMainCoilCancel, "Cancelar Control de Calidad");
             this.btnMainCoilCancel.UseVisualStyleBackColor = true;
             this.btnMainCoilCancel.Click += new System.EventHandler(this.btnMainCoilCancel_Click);
-            // 
-            // clmdensitynumber
-            // 
-            this.clmdensitynumber.HeaderText = "Número";
-            this.clmdensitynumber.Name = "clmdensitynumber";
-            // 
-            // clmdensitydensity
-            // 
-            this.clmdensitydensity.HeaderText = "Densidad(d)";
-            this.clmdensitydensity.Name = "clmdensitydensity";
             // 
             // frmMainCoilQualityMetal
             // 

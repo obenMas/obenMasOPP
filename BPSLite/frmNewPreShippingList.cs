@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using BPS.Bussiness;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.IO;
+
 
 namespace BPS.Lite
 {
@@ -35,7 +38,9 @@ namespace BPS.Lite
             if(clsGlobal.LoggedUser.fkRole==2036)
             {
                 dgv.Columns[clmAproved.Index].ReadOnly = false;
+                dgv.Columns[FechaPago.Index].ReadOnly = false;
                 dgv.Columns[clmValor.Index].Visible = true;
+                dgv.Columns[FechaPago.Index].Visible = true;
             }
             if (clsGlobal.LoggedUser.fkRole == 2032)
             {
@@ -151,9 +156,17 @@ namespace BPS.Lite
                             dgv.Rows[dgv.Rows.Count - 1].Cells[clmValor.Index].Value = Convert.ToDouble(DS.Tables[0].Rows[i]["value"]).ToString("0,000.00");
                         }
                         dgv.Rows[dgv.Rows.Count - 1].Cells[estado.Index].Value = DS.Tables[0].Rows[i]["status"];
-                        if (DS.Tables[0].Rows[i]["status"].ToString() == "Programado")
+                        if (DS.Tables[0].Rows[i]["status"].ToString() == "Programado" || DS.Tables[0].Rows[i]["status"].ToString() == "Despachado")
                         {
                             dgv.Rows[dgv.Rows.Count - 1].Cells[programado.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["shippingDate"]).ToString("dd/MM/yyyy");
+                        }
+                        if(Convert.ToDateTime(DS.Tables[0].Rows[i]["shippedDate"]).ToString("dd/MM/yyyy")!="01/01/1900")
+                        {
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[despachado.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["shippedDate"]).ToString("dd/MM/yyyy");
+                        }
+                        if (Convert.ToDateTime(DS.Tables[0].Rows[i]["paymentDate"]).ToString("dd/MM/yyyy") != "01/01/1900")
+                        {
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[FechaPago.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["paymentDate"]).ToString("dd/MM/yyyy");
                         }
 
                         if (!filtrocreaciones.Contains(Convert.ToDateTime(DS.Tables[0].Rows[i]["createdDate"]).ToString("dd/MM/yyyy")))
@@ -505,6 +518,38 @@ namespace BPS.Lite
                     //llenarDgv();
                 }
             }
+
+            if (e.ColumnIndex == FechaPago.Index)
+            {
+                if (e.RowIndex != -1)
+                {
+                    clsNewPreShipping nps = new clsNewPreShipping(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[codsec.Index].Value));
+                    if (dgv.Rows[e.RowIndex].Cells[FechaPago.Index].Value != null)
+                    {
+                        try
+                        {
+                            if(nps.setPaymentDate(Convert.ToDateTime(dgv.Rows[e.RowIndex].Cells[FechaPago.Index].Value)))
+                            {
+                                MessageBox.Show("Cambios guardados correctamente", "Listado de pre-despachos", MessageBoxButtons.OK);
+                            }
+                            else
+                            {                                
+                                MessageBox.Show("Ocurrió un error y no se pudo grabar la modificación. Consulte con el administrador del sistema.", "Listado de pre-despachos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                        catch (FormatException ex)
+                        {
+                            clsLog.addLog(ex, 1, "paymentdate.edit");
+                            MessageBox.Show("El valor ingresado no puede ser reconocido como una fecha", "Fecha no reconocida", MessageBoxButtons.OK);
+                        }
+                    }
+                    else
+                    {
+                        nps.setPaymentDate(new DateTime(1900, 01, 01));
+                    }
+                    //llenarDgv();
+                }
+            }
         }
 
         private void cmbFiltroPlanta_SelectedIndexChanged(object sender, EventArgs e)
@@ -532,6 +577,86 @@ namespace BPS.Lite
                 plantafiltrado = string.Empty;
                 ultimocambio = string.Empty;
                 llenarDgv();
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            List<string> listaFechas = new List<string>();
+
+            string ext = string.Empty;
+
+            dgv.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Excel 97-2003 WorkBook|*.xls|Excel WorkBook|*.xlsx|All Excel Files|*.xls;*.xlsx";
+            string filename = System.IO.Path.GetFileName(sfd.FileName);
+
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                // Copy DataGridView results to clipboard
+                copyAlltoClipboard();
+
+                object misValue = System.Reflection.Missing.Value;
+                Excel.Application xlexcel = new Excel.Application();
+
+                xlexcel.DisplayAlerts = false; // Without this you will get two confirm overwrite prompts
+                Excel.Workbook xlWorkBook = xlexcel.Workbooks.Add(misValue);
+                Excel.Worksheet xlWorkSheet = (Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+
+                // Paste clipboard results to worksheet range
+                Excel.Range CR = (Excel.Range)xlWorkSheet.Cells[1, 1];
+                CR.Select();
+                xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+
+                // For some reason column A is always blank in the worksheet.
+                // Delete blank column A and select cell A1
+                Excel.Range delRng = xlWorkSheet.get_Range("A:A").Cells;
+                delRng.Delete(Type.Missing);
+                xlWorkSheet.get_Range("A1").Select();
+
+                // Save the excel file under the captured location from the SaveFileDialog
+                xlWorkBook.SaveAs(sfd.FileName, Excel.XlFileFormat.xlWorkbookDefault, misValue, misValue, misValue, misValue, Excel.XlSaveAsAccessMode.xlNoChange, misValue, misValue, misValue, misValue, misValue);
+                xlexcel.DisplayAlerts = true;
+                xlWorkBook.Close(true, misValue, misValue);
+                xlexcel.Quit();
+
+                releaseObject(xlWorkSheet);
+                releaseObject(xlWorkBook);
+                releaseObject(xlexcel);
+
+                // Clear Clipboard and DataGridView selection
+                Clipboard.Clear();
+                dgv.ClearSelection();
+
+                // Open the newly saved excel file
+                if (File.Exists(sfd.FileName))
+                    System.Diagnostics.Process.Start(sfd.FileName);
+            }
+        }
+
+        private void copyAlltoClipboard()
+        {
+            dgv.SelectAll();
+            DataObject dataObj = dgv.GetClipboardContent();
+            if (dataObj != null)
+                Clipboard.SetDataObject(dataObj);
+        }
+
+        private void releaseObject(object obj)
+        {
+            try
+            {
+                System.Runtime.InteropServices.Marshal.ReleaseComObject(obj);
+                obj = null;
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                MessageBox.Show("Exception Occurred while releasing object " + ex.ToString());
+            }
+            finally
+            {
+                GC.Collect();
             }
         }
     }

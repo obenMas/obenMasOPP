@@ -244,8 +244,7 @@ namespace BPS.Lite
                     if (!pdIncompleto)
                     {
                         MessageBox.Show("Se despacho el PD completo, correctamente.", "¡Exito!", MessageBoxButtons.OK);
-                        PD.fkStatus = 3069;
-                        PD.save();
+                        PD.setAsDispatched();
                         dgvShippings.Rows.Clear();
                     }
                     else
@@ -294,6 +293,7 @@ namespace BPS.Lite
         }
 
         #endregion
+
 
     }
 }

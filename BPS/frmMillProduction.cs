@@ -14,6 +14,7 @@ namespace BPS
     {
        
         List<clsRawMaterialFromScrap> listRawMaterial = new List<clsRawMaterialFromScrap>();
+        clsRawMaterial raw = new clsRawMaterial();
 
         public frmMillProduction()
         {
@@ -33,16 +34,17 @@ namespace BPS
 
             for (int i = 0; i < listRawMaterial.Count; i++)
             {
-               cmbTipo.Items.Add(listRawMaterial[i].rawMaterial.name);
+               cmbTipo.Items.Add(listRawMaterial[i].rawMaterial.code);
             }
         }
 
         private void cmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string pletra,tletra, contextbox;
-
-            string vta;
-            vta = "";
+            if (cmbTipo.SelectedIndex != -1)
+            {
+                raw = new clsRawMaterial(cmbTipo.Items[cmbTipo.SelectedIndex].ToString());
+                txtDesc.Text = raw.name;
+            }
 
             DateTime hoy = DateTime.Now;
             string anio = Convert.ToString(hoy.Year);
@@ -51,25 +53,13 @@ namespace BPS
             string hora = Convert.ToString(hoy.Hour);
             string minu = Convert.ToString(hoy.Minute);
             string seg = Convert.ToString(hoy.Second);
+            string mili = Convert.ToString(hoy.Millisecond);
 
             anio = anio.Substring(2, 2);
-            string fecha = anio + mes + dia + hora + minu + seg;
+            string fecha = anio + mes + dia + hora + minu + seg + mili;
 
-            contextbox = cmbTipo.Text;
-            pletra = contextbox.Substring(0, 1);
-            tletra = contextbox.Substring(22, 2);
-
-            if (contextbox.Length > 33)
-            {
-                vta = "V";
-            }
-
-            if (cmbTipo.SelectedIndex == 6)
-            {
-                tletra = "MZ";
-            }
-
-            txtCodigo.Text = pletra + tletra + vta + fecha; 
+            txtCodigo.Text = "REC" + fecha;
+            
             
         }
 
@@ -83,8 +73,8 @@ namespace BPS
 
                 // Obtengo el codsec que coincide con el fkRawMaterial por medio de el string que tiene el combo
 
-                clsRawMaterial rawMat = new clsRawMaterial();
-                int codsecRaw = rawMat.getCodsecByName(cmbTipo.SelectedItem.ToString());
+
+                int codsecRaw = raw.codsec;
 
 
                 // Obtengo el fkScrap a partir del fkRawMaterial que consegui arriba.

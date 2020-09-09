@@ -116,6 +116,11 @@ namespace BPS.Bussiness
             this.load(codsec);
         }
 
+        public clsRawMaterial(string  cod)
+        {
+            this.loadByCode(cod);
+        }
+
         //Methods
 
         public void load(int codsec)
@@ -621,7 +626,7 @@ namespace BPS.Bussiness
             return lstRawMaterial;
         }
 
-        public int getCodsecByName(string name)
+        public static int getCodsecByName(string name)
         {
             try
             {

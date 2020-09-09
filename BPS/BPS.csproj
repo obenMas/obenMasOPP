@@ -10,9 +10,8 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>BPS</RootNamespace>
     <AssemblyName>BPS</AssemblyName>
-    <ManifestCertificateThumbprint>22C378A99EEAE4B01AB5039DE2F6195CF22571B0</ManifestCertificateThumbprint>
-    <ManifestKeyFile>
-    </ManifestKeyFile>
+    <ManifestCertificateThumbprint>E51C8E15BDD68F2C2FB3C93411BC2700E4571839</ManifestCertificateThumbprint>
+    <ManifestKeyFile>BPS_TemporaryKey.pfx</ManifestKeyFile>
     <GenerateManifests>true</GenerateManifests>
     <TargetZone>LocalIntranet</TargetZone>
     <SignManifests>true</SignManifests>
@@ -102,7 +101,8 @@
     <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>BPS_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Cellar\Film\frmPalletList.cs">
@@ -5712,7 +5712,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptSalesOrderExport.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="BPS_1_TemporaryKey.pfx" />
     <None Include="BPS_TemporaryKey.pfx" />
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
