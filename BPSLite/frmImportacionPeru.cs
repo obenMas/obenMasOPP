@@ -40,7 +40,7 @@ namespace BPS.Lite
                 for(int i=0;i<table.Rows.Count;i++)
                 {
                     dgv.Rows.Add();
-                    if (table.Rows[i][0].ToString().StartsWith("SC") || table.Rows[i][0].ToString().StartsWith("CC") || table.Rows[i][0].ToString().StartsWith("CWC") || table.Rows[i][0].ToString().StartsWith("CWLH") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ML") || table.Rows[i][0].ToString().StartsWith("CHb") || table.Rows[i][0].ToString().StartsWith("EMa") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RP"))
+                    if (table.Rows[i][0].ToString().StartsWith("ENa") || table.Rows[i][0].ToString().StartsWith("SC") || table.Rows[i][0].ToString().StartsWith("CC") || table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("CWC") || table.Rows[i][0].ToString().StartsWith("CWLH") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ML") || table.Rows[i][0].ToString().StartsWith("CHb") || table.Rows[i][0].ToString().StartsWith("EMa") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RP"))
                     {
                         if (table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "760" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "750" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "755" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "665" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "670")
                         {
@@ -58,7 +58,7 @@ namespace BPS.Lite
                         {
                             stringdiam = "X6";
                         }
-                        if (table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RP") || table.Rows[i][0].ToString().StartsWith("CWLH"))
+                        if (table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RP") || table.Rows[i][0].ToString().StartsWith("CWLH"))
                         {
                             stringtratamiento = table.Rows[i][0].ToString().Substring(9,2);
                         }
@@ -75,7 +75,7 @@ namespace BPS.Lite
                             stringancho = table.Rows[i][0].ToString().Substring(11, 4);
                         }
 
-                        if (table.Rows[i][0].ToString().ToUpper().StartsWith("CHB") || table.Rows[i][0].ToString().ToUpper().StartsWith("CWC") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETO"))
+                        if (table.Rows[i][0].ToString().ToUpper().StartsWith("CHB") || table.Rows[i][0].ToString().ToUpper().StartsWith("CWC") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETO"))
                         {
                             stringancho = Convert.ToInt32(table.Rows[i][0].ToString().Substring(11,4)).ToString();
                             stringprod = table.Rows[i][0].ToString().Substring(0, 3).ToUpper() + "0" + table.Rows[i][0].ToString().Substring(7, 2) + stringtratamiento + "x" + Convert.ToInt32(stringancho).ToString() + stringdiam;

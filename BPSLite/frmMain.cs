@@ -3417,6 +3417,12 @@ namespace BPS.Lite
                 peliculaReport.Click += new EventHandler(peliculaReport_Click);
                 PRODUCTOTERMINADO.DropDownItems.Add(peliculaReport);
 
+                ToolStripMenuItem DespReport = new ToolStripMenuItem();
+                DespReport.Text = "Reporte de despachos";
+                DespReport.Image = Properties.Resources.report;
+                DespReport.Click += new EventHandler(reporteDespachosToolStripMenuItem_Click);
+                PRODUCTOTERMINADO.DropDownItems.Add(DespReport);
+
                 #endregion
 
                 #region Materia Prima
@@ -5733,6 +5739,14 @@ namespace BPS.Lite
             generateNewReport.StartPosition = FormStartPosition.CenterScreen;
             generateNewReport.MaximizeBox = false;
             generateNewReport.Show();
+        }
+
+        private void reporteDespachosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShippingReport reporteDespachos = new frmShippingReport();
+            reporteDespachos.MdiParent = this;
+            reporteDespachos.StartPosition = FormStartPosition.Manual;
+            reporteDespachos.Show();
         }
 
         private void peliculaReport_Click(object sender, EventArgs e)

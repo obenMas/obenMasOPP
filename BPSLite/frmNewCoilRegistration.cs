@@ -300,16 +300,41 @@ namespace BPS.Lite
                 {
                     if (clsGlobal.isNumeric(txtGrossWeigth.Text))
                     {
-                        if (objprod.width < 1600)
+                        if(objprod.Bopp.name=="TH022")
                         {
-                            //resto el peso del core de carton de 8mm de 3 o de 6 pulgadas
-                            netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter);
+                            if (objprod.width < 1100)
+                            {
+                                //resto el peso del core de carton de 8mm de 3 o de 6 pulgadas
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter);
+                            }
+                            else if (objprod.width < 1650)
+                            {
+                                //resta el peso del core de carton de 15mm de 6 pulgadas
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter2);
+                            }
+                            else
+                            {
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter3);
+                            }
                         }
-                        else
+                        else 
                         {
-                            //resta el peso del core de carton de 15mm de 6 pulgadas
-                            netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter2);
+                            if (objprod.width < 1600)
+                            {
+                                //resto el peso del core de carton de 8mm de 3 o de 6 pulgadas
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter);
+                            }
+                            else if (objprod.width < 1800)
+                            {
+                                //resta el peso del core de carton de 15mm de 6 pulgadas
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter2);
+                            }
+                            else
+                            {
+                                netWeigth = Convert.ToDouble(txtGrossWeigth.Text) - (objprod.width * (new clsCore(objprod.fkCore)).weigthPerMilimeter3);
+                            }
                         }
+                        
 
 
                         txtNetWeigth.Text = Convert.ToString(Math.Round(netWeigth, 1));

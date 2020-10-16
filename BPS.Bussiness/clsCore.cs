@@ -19,6 +19,7 @@ namespace BPS.Bussiness
         private int core_value;
         private double core_weigthPerMilimeter;
         private double core_weigthPerMilimeter2;
+        private double core_weigthPerMilimeter3;
 
         //Properties
 
@@ -32,6 +33,8 @@ namespace BPS.Bussiness
 
         public double weigthPerMilimeter2 { get { return core_weigthPerMilimeter2; } set { core_weigthPerMilimeter2 = value; } }
 
+        public double weigthPerMilimeter3 { get { return core_weigthPerMilimeter3; } set { core_weigthPerMilimeter3 = value; } }
+
 
         //Constructor
 
@@ -42,6 +45,7 @@ namespace BPS.Bussiness
             core_value = 0;
             core_weigthPerMilimeter = 0;
             core_weigthPerMilimeter2 = 0;
+            core_weigthPerMilimeter3 = 0;
         }
 
         public clsCore(int codsec)
@@ -64,6 +68,7 @@ namespace BPS.Bussiness
                 this.value = Convert.ToInt32(DS.Tables[0].Rows[0]["core_value"]);
                 this.weigthPerMilimeter = Convert.ToDouble(DS.Tables[0].Rows[0]["core_weigthPerMilimeter"]);
                 this.weigthPerMilimeter2 = Convert.ToDouble(DS.Tables[0].Rows[0]["core_weigthPerMilimeter2"]);
+                this.weigthPerMilimeter3 = Convert.ToDouble(DS.Tables[0].Rows[0]["core_weigthPerMilimeter3"]);
             }
         }
 
@@ -77,12 +82,13 @@ namespace BPS.Bussiness
 
                 if (this.codsec == 0)
                 {
-                    queryString += "INSERT INTO bps_prod_core (core_name, core_value,core_weigthPerMilimeter)";
+                    queryString += "INSERT INTO bps_prod_core (core_name, core_value,core_weigthPerMilimeter,core_weigthPerMilimeter2,core_weigthPerMilimeter3)";
                     queryString += " VALUES (";
                     queryString += "'" + this.name + "',";
                     queryString += this.value.ToString() + ",";
                     queryString += this.weigthPerMilimeter.ToString() + ",";
-                    queryString += this.weigthPerMilimeter2.ToString() + "";
+                    queryString += this.weigthPerMilimeter2.ToString() + ",";
+                    queryString += this.weigthPerMilimeter3.ToString() + "";
                     queryString += ");";
                     clsConnection.executeQuery(queryString);
                 }
@@ -93,7 +99,8 @@ namespace BPS.Bussiness
                     queryString += "core_name = '" + this.name + "',";
                     queryString += "core_value = " + this.value.ToString() + ",";
                     queryString += "core_weigthPerMilimeter = " + this.weigthPerMilimeter.ToString() + ",";
-                    queryString += "core_weigthPerMilimeter2 = " + this.weigthPerMilimeter2.ToString() + "";
+                    queryString += "core_weigthPerMilimeter2 = " + this.weigthPerMilimeter2.ToString() + ",";
+                    queryString += "core_weigthPerMilimeter3 = " + this.weigthPerMilimeter3.ToString() + "";
                     queryString += " WHERE core_codsec = " + this.codsec.ToString() + ";";
                     clsConnection.executeQuery(queryString);
 
@@ -126,7 +133,8 @@ namespace BPS.Bussiness
                 lstCore[i].value = Convert.ToInt32(DS.Tables[0].Rows[i]["core_value"]);
                 lstCore[i].weigthPerMilimeter = Convert.ToDouble(DS.Tables[0].Rows[i]["core_weigthPerMilimeter"]);
                 lstCore[i].weigthPerMilimeter2 = Convert.ToDouble(DS.Tables[0].Rows[i]["core_weigthPerMilimeter2"]);
-                
+                lstCore[i].weigthPerMilimeter3 = Convert.ToDouble(DS.Tables[0].Rows[i]["core_weigthPerMilimeter3"]);
+
             }
 
             return lstCore;
