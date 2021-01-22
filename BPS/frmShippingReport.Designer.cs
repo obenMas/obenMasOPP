@@ -32,18 +32,24 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgvShippingReport = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cmbPlants = new System.Windows.Forms.ComboBox();
             this.btnExport = new System.Windows.Forms.Button();
             this.btnGenerateReport = new System.Windows.Forms.Button();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
             this.clmPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustommerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFilm = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmWidth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDiameter = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCore = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.origen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmWeight = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,6 +61,7 @@
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox7
@@ -62,7 +69,7 @@
             this.groupBox7.Controls.Add(this.dgvShippingReport);
             this.groupBox7.Location = new System.Drawing.Point(5, 78);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(840, 381);
+            this.groupBox7.Size = new System.Drawing.Size(912, 417);
             this.groupBox7.TabIndex = 3;
             this.groupBox7.TabStop = false;
             // 
@@ -76,6 +83,11 @@
             this.clmCustommerName,
             this.clmSordNumber,
             this.clmProductCode,
+            this.clmFilm,
+            this.clmWidth,
+            this.clmDiameter,
+            this.clmCore,
+            this.origen,
             this.clmWeight,
             this.clmDate,
             this.clmHour,
@@ -87,24 +99,68 @@
             this.dgvShippingReport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvShippingReport.Location = new System.Drawing.Point(3, 16);
             this.dgvShippingReport.Name = "dgvShippingReport";
-            this.dgvShippingReport.Size = new System.Drawing.Size(834, 362);
+            this.dgvShippingReport.Size = new System.Drawing.Size(906, 398);
             this.dgvShippingReport.TabIndex = 0;
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.groupBox2);
             this.groupBox6.Controls.Add(this.groupBox3);
-            this.groupBox6.Controls.Add(this.groupBox4);
-            this.groupBox6.Controls.Add(this.groupBox1);
             this.groupBox6.Controls.Add(this.cmbPlants);
             this.groupBox6.Controls.Add(this.btnExport);
             this.groupBox6.Controls.Add(this.btnGenerateReport);
-            this.groupBox6.Controls.Add(this.dtpTo);
-            this.groupBox6.Controls.Add(this.dtpFrom);
             this.groupBox6.Location = new System.Drawing.Point(5, -2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(840, 80);
+            this.groupBox6.Size = new System.Drawing.Size(909, 90);
             this.groupBox6.TabIndex = 2;
             this.groupBox6.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.dtpFrom);
+            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.dtpTo);
+            this.groupBox2.Location = new System.Drawing.Point(7, 10);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(458, 74);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtrado Por Fecha";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(6, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(217, 29);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Desde:";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Location = new System.Drawing.Point(6, 49);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(217, 20);
+            this.dtpFrom.TabIndex = 2;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(238, 15);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(213, 27);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Hasta";
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Location = new System.Drawing.Point(238, 48);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(213, 20);
+            this.dtpTo.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -115,26 +171,6 @@
             this.groupBox3.TabIndex = 17;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Planta";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(277, 14);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(213, 27);
-            this.groupBox4.TabIndex = 16;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Hasta";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(16, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(217, 27);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Desde:";
             // 
             // cmbPlants
             // 
@@ -164,20 +200,6 @@
             this.btnGenerateReport.UseVisualStyleBackColor = true;
             this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
-            // dtpTo
-            // 
-            this.dtpTo.Location = new System.Drawing.Point(277, 47);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(213, 20);
-            this.dtpTo.TabIndex = 3;
-            // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Location = new System.Drawing.Point(16, 47);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(217, 20);
-            this.dtpFrom.TabIndex = 2;
-            // 
             // clmPallet
             // 
             this.clmPallet.HeaderText = "Pallet";
@@ -198,7 +220,33 @@
             // 
             this.clmProductCode.HeaderText = "Producto";
             this.clmProductCode.Name = "clmProductCode";
+            this.clmProductCode.Visible = false;
             this.clmProductCode.Width = 120;
+            // 
+            // clmFilm
+            // 
+            this.clmFilm.HeaderText = "Pelicula";
+            this.clmFilm.Name = "clmFilm";
+            // 
+            // clmWidth
+            // 
+            this.clmWidth.HeaderText = "Ancho";
+            this.clmWidth.Name = "clmWidth";
+            // 
+            // clmDiameter
+            // 
+            this.clmDiameter.HeaderText = "Diametro";
+            this.clmDiameter.Name = "clmDiameter";
+            // 
+            // clmCore
+            // 
+            this.clmCore.HeaderText = "Core";
+            this.clmCore.Name = "clmCore";
+            // 
+            // origen
+            // 
+            this.origen.HeaderText = "Origen";
+            this.origen.Name = "origen";
             // 
             // clmWeight
             // 
@@ -252,7 +300,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 464);
+            this.ClientSize = new System.Drawing.Size(919, 498);
             this.Controls.Add(this.groupBox7);
             this.Controls.Add(this.groupBox6);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -261,6 +309,7 @@
             this.groupBox7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).EndInit();
             this.groupBox6.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,10 +327,16 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPallet;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCustommerName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSordNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmProductCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmFilm;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmWidth;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiameter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCore;
+        private System.Windows.Forms.DataGridViewTextBoxColumn origen;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmWeight;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmHour;

@@ -22,8 +22,6 @@ namespace BPS
             fillPlants();
         }
 
-        #region Generar y Cargar el DGV
-
         public void getDataSet()
         {
            // string texto = "CALL spShippingByDate '" + dtpFrom.Value.ToString("dd/MM/yyyy") + "', '" + dtpTo.Value.ToString("dd/MM/yyyy") + "';";
@@ -58,6 +56,11 @@ namespace BPS
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmCustommerName.Index].Value = DS.Tables[0].Rows[i]["Cliente"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmSordNumber.Index].Value = DS.Tables[0].Rows[i]["Pedido"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmProductCode.Index].Value = DS.Tables[0].Rows[i]["Producto"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmFilm.Index].Value = DS.Tables[0].Rows[i]["Pelicula"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmWidth.Index].Value = DS.Tables[0].Rows[i]["Ancho"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmDiameter.Index].Value = DS.Tables[0].Rows[i]["Diametro"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmCore.Index].Value = DS.Tables[0].Rows[i]["Core"].ToString();
+                    dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[origen.Index].Value = DS.Tables[0].Rows[i]["Origen"].ToString();
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmWeight.Index].Value = Math.Round(Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]), 2);
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmDate.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["Fecha"]).ToString("dd/MM/yyyy");
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmHour.Index].Value = DS.Tables[0].Rows[i]["Hora"].ToString();
@@ -66,14 +69,10 @@ namespace BPS
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmDay.Index].Value = DS.Tables[0].Rows[i]["dayFecha"];
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmMonth.Index].Value = DS.Tables[0].Rows[i]["monthFecha"];
                     dgvShippingReport.Rows[dgvShippingReport.Rows.Count - 1].Cells[clmYear.Index].Value = DS.Tables[0].Rows[i]["yearFecha"];
-
                 }
             }
+            dgvShippingReport.Sort(dgvShippingReport.Columns[clmDate.Index], ListSortDirection.Descending);
         }
-
-        #endregion
-
-        #region Exportar a Excel
 
         private void copyAlltoClipboard()
         {
@@ -105,12 +104,11 @@ namespace BPS
         {
             string ext = string.Empty;
 
+            dgvShippingReport.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             dgvShippingReport.Columns["clmDay"].Visible = true;
             dgvShippingReport.Columns["clmMonth"].Visible = true;
             dgvShippingReport.Columns["clmYear"].Visible = true;
             dgvShippingReport.Columns["clmDate"].Visible = false;
-
-            dgvShippingReport.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
 
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.Filter = "Excel 97-2003 WorkBook|*.xls|Excel WorkBook|*.xlsx|All Excel Files|*.xls;*.xlsx";
@@ -166,12 +164,6 @@ namespace BPS
             dgvShippingReport.Columns["clmDate"].Visible = true;
         }
 
-
-
-
-
-        #endregion
-
         private void fillPlants()
         {
             List<clsPlant> list = clsPlant.getList();
@@ -180,11 +172,6 @@ namespace BPS
                 cmbPlants.Items.Add(list[i].name);
             }
         }
-
-
-
-
-
 
     }
 }

@@ -40,12 +40,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtDesc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,6 +98,7 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Peso Scrap";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Visible = false;
             // 
             // label5
             // 
@@ -125,6 +126,7 @@
             this.txtPesoScrap.Name = "txtPesoScrap";
             this.txtPesoScrap.Size = new System.Drawing.Size(231, 20);
             this.txtPesoScrap.TabIndex = 9;
+            this.txtPesoScrap.Visible = false;
             this.txtPesoScrap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPesoScrap_KeyPress);
             // 
             // txtPeso
@@ -151,6 +153,7 @@
             this.label4.Size = new System.Drawing.Size(20, 13);
             this.label4.TabIndex = 12;
             this.label4.Text = "Kg";
+            this.label4.Visible = false;
             // 
             // label6
             // 
@@ -175,6 +178,24 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Material";
+            // 
+            // txtDesc
+            // 
+            this.txtDesc.Enabled = false;
+            this.txtDesc.Location = new System.Drawing.Point(126, 136);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(231, 20);
+            this.txtDesc.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(38, 139);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 17);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Descripción";
             // 
             // groupBox2
             // 
@@ -222,24 +243,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(231, 21);
             this.comboBox1.TabIndex = 0;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(38, 139);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 17);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Descripción";
-            // 
-            // txtDesc
-            // 
-            this.txtDesc.Enabled = false;
-            this.txtDesc.Location = new System.Drawing.Point(126, 136);
-            this.txtDesc.Name = "txtDesc";
-            this.txtDesc.Size = new System.Drawing.Size(231, 20);
-            this.txtDesc.TabIndex = 14;
             // 
             // frmMillProduction
             // 

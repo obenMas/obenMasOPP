@@ -1513,14 +1513,14 @@ namespace BPS
         {
              if (e.RowIndex >= 0)
             {
-                if(clsGlobal.LoggedUser.userName == "narguello" || clsGlobal.LoggedUser.userName == "jotero")
-                {
+                //if(clsGlobal.LoggedUser.userName == "narguello" || clsGlobal.LoggedUser.userName == "jotero")
+                //{
                     cmbPlants.SelectedItem = "Pilar";
-                }
-                else
-                {
-                    cmbPlants.SelectedItem = "Campana";
-                }
+                //}
+                //else
+                //{
+                //    cmbPlants.SelectedItem = "Campana";
+                //}
 
 
                 objBopp.load(Convert.ToInt32(dgvBopp.Rows[e.RowIndex].Cells[clmCodsec.Index].Value));

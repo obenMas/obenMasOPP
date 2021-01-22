@@ -50,6 +50,10 @@ namespace BPS.Lite
                             diam = "";
                         }
                     }
+                    else
+                    {
+                        diam = "N";
+                    }
                     dgv.Rows[dgv.Rows.Count - 1].Cells[Diametro.Index].Value = prue;
                     prue = Convert.ToInt32(table.Rows[i][4].ToString().Replace(" ", "").Replace("PLG", ""));
                     if (prue != 6)
@@ -105,6 +109,24 @@ namespace BPS.Lite
                             break;
                         case "NL 20":
                             dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL020x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "ML 20":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "ML020x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "ML 30":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "ML030x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "SC 20":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC020x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "SC 25":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC025x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "SC 17":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
+                        case "SC 30":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC030x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
                         case "NL 17":
                             dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "NL017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;

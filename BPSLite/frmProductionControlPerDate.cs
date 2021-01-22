@@ -97,10 +97,10 @@ namespace BPS.Lite
                         if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Primera")
                             CPprimera += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
 
-                        else if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Observación")
+                        else if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Producto en proceso")
                             CPobs += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
 
-                        else if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Segunda")
+                        else if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "PNC")
                             CPOP1 += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
 
                         if (producto.Substring(producto.Length - 2, 1) == "M")
@@ -139,9 +139,9 @@ namespace BPS.Lite
                             AtlasMetal += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                             if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Primera")
                                 AtlasPrimeraMet += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Observación")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Producto en proceso")
                                 AtlasPPMet += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Segunda")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "PNC")
                                 AtlasOP1Met += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                         }
                         else if (DS.Tables[0].Rows[i]["Tipo"].ToString() == "Corte Secundario")
@@ -149,9 +149,9 @@ namespace BPS.Lite
                             AtlasSecundario += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                             if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Primera")
                                 AtlasPrimeraSec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Observación")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Producto en proceso")
                                 AtlasPPSec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Segunda")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "PNC")
                                 AtlasOP1Sec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                         }
                     }
@@ -162,9 +162,9 @@ namespace BPS.Lite
                             TitanSecundario += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                             if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Primera")
                                 TitanPrimeraSec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Observación")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Producto en proceso")
                                 TitanPPSec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
-                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "Segunda")
+                            if (DS.Tables[0].Rows[i]["Calificación"].ToString() == "PNC")
                                 TitanOP1Sec += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"].ToString());
                         }
                     }
@@ -427,9 +427,9 @@ namespace BPS.Lite
                             DepPrimeraImp += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                         }
                     }
-                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Observación")
+                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Producto en proceso")
                         DepProceso += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
-                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Segunda")
+                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "PNC")
                         DepOP1 += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                 }
             }
@@ -455,9 +455,9 @@ namespace BPS.Lite
                             DepPrimeraFinalImp += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                         }
                     }                        
-                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Observación")
+                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Producto en proceso")
                         DepProcesoFinal += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
-                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "Segunda")
+                    else if (DS.Tables[0].Rows[i]["Calidad"].ToString() == "PNC")
                         DepOP1Final += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]);
                 }
             }

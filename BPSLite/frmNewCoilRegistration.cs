@@ -439,7 +439,7 @@ namespace BPS.Lite
 
                         }
 
-                        this.Invoke((MethodInvoker)delegate { txtGrossWeigth.Text = Math.Round(Convert.ToDouble(strReceivedData.Substring(0, strReceivedData.Length - 2)), 2).ToString("N2").Trim(); });
+                        this.Invoke((MethodInvoker)delegate { txtGrossWeigth.Text = Convert.ToDouble(strReceivedData.Substring(0, strReceivedData.Length - 2)).ToString().Trim(); });
                         
                     }
                     sprtBalance.Close();
