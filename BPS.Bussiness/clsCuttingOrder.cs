@@ -1168,6 +1168,17 @@ namespace BPS.Bussiness
                     break;
             }
         }
+
+        public void changeNotes(string not)
+        {
+            if(not!=null)
+            {
+                this.notes = not;
+                this.save();
+            }
+            
+        }
+
         public static List<clsSalesOrder> getSalesOrderByCuttingOrder(int cuttingOrderCodsec)
         {
             clsCuttingOrder objCuttingOrder = new clsCuttingOrder(cuttingOrderCodsec);

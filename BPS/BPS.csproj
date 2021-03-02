@@ -43,7 +43,7 @@
     <PublisherName>Oben Holding Group</PublisherName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>install.htm</WebPage>
-    <ApplicationRevision>28</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>2.1.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -231,6 +231,12 @@
     </Compile>
     <Compile Include="frmBackLoadReload.Designer.cs">
       <DependentUpon>frmBackLoadReload.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBLDetailOrigin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBLDetailOrigin.Designer.cs">
+      <DependentUpon>frmBLDetailOrigin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmBLDetail.cs">
       <SubType>Form</SubType>
@@ -3733,6 +3739,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmBackLoadReload.resx">
       <DependentUpon>frmBackLoadReload.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBLDetailOrigin.resx">
+      <DependentUpon>frmBLDetailOrigin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmBLDetail.resx">
       <DependentUpon>frmBLDetail.cs</DependentUpon>

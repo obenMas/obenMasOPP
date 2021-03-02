@@ -37,8 +37,8 @@ namespace BPS.Lite
                     {
                         if (rawPallet.fkStatus == 38)
                         {
-                            if (rawPallet.fkRaw == 256 || rawPallet.fkRaw == 255 || rawPallet.fkRaw == 276 || rawPallet.fkRaw == 277 || rawPallet.fkRaw == 278 || rawPallet.fkRaw == 279 || rawPallet.fkRaw == 292 || rawPallet.fkRaw == 293 || rawPallet.fkRaw == 294 || rawPallet.fkRaw == 295 || rawPallet.fkRaw == 303 || rawPallet.fkRaw == 332 || rawPallet.fkRaw == 333 || rawPallet.fkRaw == 282 || rawPallet.fkRaw == 302 || rawPallet.fkRaw == 332 || rawPallet.fkRaw == 336)
-                            {
+                            //if (rawPallet.fkRaw == 256 || rawPallet.fkRaw == 255 || rawPallet.fkRaw == 276 || rawPallet.fkRaw == 277 || rawPallet.fkRaw == 278 || rawPallet.fkRaw == 279 || rawPallet.fkRaw == 292 || rawPallet.fkRaw == 293 || rawPallet.fkRaw == 294 || rawPallet.fkRaw == 295 || rawPallet.fkRaw == 303 || rawPallet.fkRaw == 332 || rawPallet.fkRaw == 333 || rawPallet.fkRaw == 282 || rawPallet.fkRaw == 302 || rawPallet.fkRaw == 332 || rawPallet.fkRaw == 336)
+                            //{
                                 if (dgvDispatchRawMat.Rows.Count > 0)
                                 {
                                     foreach (DataGridViewRow row in dgvDispatchRawMat.Rows)
@@ -76,11 +76,11 @@ namespace BPS.Lite
 
                                     txtCodigo.ResetText();
                                 }
-                            }
-                            else
-                            {
-                                MessageBox.Show("El material que intenta cargar no es para la venta, caso contrario por favor contacte con el administrador del sistema", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            }
+                            //}
+                            //else
+                            //{
+                            //    MessageBox.Show("El material que intenta cargar no es para la venta, caso contrario por favor contacte con el administrador del sistema", "¡Advertencia!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //}
                         }
                         else
                         {

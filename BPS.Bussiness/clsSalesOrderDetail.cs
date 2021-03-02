@@ -48,6 +48,7 @@ namespace BPS.Bussiness
         private DateTime sod_otifDate;
         private DateTime sod_completionDate;
         private bool sod_wasCompleted;
+        private bool sod_isResale;
 
         //Properties
 
@@ -115,6 +116,8 @@ namespace BPS.Bussiness
 
         public bool wasCompleted { get { return sod_wasCompleted; } set { sod_wasCompleted = value; } }
 
+        public bool isResale { get { return sod_isResale; } set { sod_isResale = value; } }
+
         //Constructor
 
         public clsSalesOrderDetail()
@@ -151,6 +154,7 @@ namespace BPS.Bussiness
             sod_otifDate = DateTime.Now;
             sod_completionDate = DateTime.Now;
             sod_wasCompleted = false;
+            sod_isResale = false;
         }
 
         public clsSalesOrderDetail(int codsec)
@@ -190,6 +194,7 @@ namespace BPS.Bussiness
                 this.otifDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["sod_otifDate"]);
                 this.completionDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["sod_completionDate"]);
                 this.wasCompleted = Convert.ToBoolean(DS.Tables[0].Rows[0]["sod_wasCompleted"]);
+                this.isResale = Convert.ToBoolean(DS.Tables[0].Rows[0]["sod_isResale"]);
             }
 
         }
@@ -222,6 +227,7 @@ namespace BPS.Bussiness
                 objSalesOrderDetail.otifDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["sod_otifDate"]);
                 objSalesOrderDetail.completionDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["sod_completionDate"]);
                 objSalesOrderDetail.wasCompleted = Convert.ToBoolean(DS.Tables[0].Rows[0]["sod_wasCompleted"]);
+                objSalesOrderDetail.isResale = Convert.ToBoolean(DS.Tables[0].Rows[0]["sod_isResale"]);
             }
 
             return objSalesOrderDetail;
@@ -422,6 +428,33 @@ namespace BPS.Bussiness
             }
         }
 
+        public bool setAsResale(bool resale)
+        {
+            try
+            {
+                string queryString = "";
+                queryString += "UPDATE bps_com_salesorderdetail";
+                queryString += " SET ";
+                if (resale)
+                {                    
+                    queryString += " sod_isResale = 1";                    
+                }
+                else
+                {
+                    queryString += " sod_isResale = 0";
+                }
+                queryString += " WHERE sod_codsec = " + this.codsec.ToString();
+
+
+                return clsConnection.executeQuery(queryString);
+            }
+            catch (Exception ex)
+            {
+                clsLog.addLog(ex, 3, "clsSalesOrderDetail.update");
+                return false;
+            }
+        }
+
         public bool updateExchangerate(double exchangerate)
         {
             this.exchangerate = exchangerate;
@@ -479,6 +512,7 @@ namespace BPS.Bussiness
                 lstOrderDetail[i].otifDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_otifDate"]);
                 lstOrderDetail[i].completionDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_completionDate"]);
                 lstOrderDetail[i].wasCompleted = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_wasCompleted"]);
+                lstOrderDetail[i].isResale = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_isResale"]);
             }
             return lstOrderDetail;
         }
@@ -545,6 +579,7 @@ namespace BPS.Bussiness
                 lstOrderDetail[i].otifDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_otifDate"]);
                 lstOrderDetail[i].completionDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_completionDate"]);
                 lstOrderDetail[i].wasCompleted = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_wasCompleted"]);
+                lstOrderDetail[i].isResale = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_isResale"]);
             }
             return lstOrderDetail;
         }
@@ -580,6 +615,7 @@ namespace BPS.Bussiness
                 lstOrderDetail[i].otifDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_otifDate"]);
                 lstOrderDetail[i].completionDate = Convert.ToDateTime(DS.Tables[0].Rows[i]["sod_completionDate"]);
                 lstOrderDetail[i].wasCompleted = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_wasCompleted"]);
+                lstOrderDetail[i].isResale = Convert.ToBoolean(DS.Tables[0].Rows[i]["sod_isResale"]);
             }
             return lstOrderDetail;
         }

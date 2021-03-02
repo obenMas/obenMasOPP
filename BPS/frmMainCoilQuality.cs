@@ -684,6 +684,7 @@ namespace BPS
                     dgvGramaje.Rows[i].Cells[clmGramajeMainCoilCode.Index].Value = lstMainCoil[i].code;
                     dgvGramaje.Rows[i].Cells[clmGramajeGramaje.Index].Value = Math.Round(lstMainCoil[i].gramaje, 2).ToString();
                     dgvGramaje.Rows[i].Cells[clmGramajeWeight.Index].Value = Math.Round(lstMainCoil[i].netWeigth, 2).ToString();
+                    dgvGramaje.Rows[i].Cells[clmCalculateWeight.Index].Value = lstMainCoil[i].calculateWeight.ToString();
 
                     dgvRating.Rows.Add();
                     dgvRating.Rows[i].Cells[clmQualityMainCoilCodsec.Index].Value = lstMainCoil[i].codsec;

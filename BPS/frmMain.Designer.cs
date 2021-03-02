@@ -289,6 +289,7 @@ namespace BPS
             this.pruebaOrdenesDeExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaListaOrdenDeCorteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaPlanExtrusionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaHistoricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmSales = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNationalSales = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmNationalSalesNew = new System.Windows.Forms.ToolStripMenuItem();
@@ -461,7 +462,7 @@ namespace BPS
             this.tsslUserName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pruebaHistoricoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.detalleDeBLConOrigenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.sttsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -2617,6 +2618,12 @@ namespace BPS
             this.pruebaPlanExtrusionToolStripMenuItem.Text = "Prueba plan extrusion";
             this.pruebaPlanExtrusionToolStripMenuItem.Click += new System.EventHandler(this.pruebaPlanExtrusionToolStripMenuItem_Click);
             // 
+            // pruebaHistoricoToolStripMenuItem
+            // 
+            this.pruebaHistoricoToolStripMenuItem.Name = "pruebaHistoricoToolStripMenuItem";
+            this.pruebaHistoricoToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
+            this.pruebaHistoricoToolStripMenuItem.Text = "Prueba historico";
+            // 
             // tsmSales
             // 
             this.tsmSales.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -3071,7 +3078,8 @@ namespace BPS
             this.despachosAcumuladosToolStripMenuItem,
             this.reasignacionesToolStripMenuItem2,
             this.reporteDespachosToolStripMenuItem,
-            this.reporteOTIFToolStripMenuItem});
+            this.reporteOTIFToolStripMenuItem,
+            this.detalleDeBLConOrigenToolStripMenuItem});
             this.reportesToolStripMenuItem1.Name = "reportesToolStripMenuItem1";
             this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(274, 22);
             this.reportesToolStripMenuItem1.Text = "Reportes";
@@ -3214,7 +3222,7 @@ namespace BPS
             // 
             this.tsmPalletStock.Image = global::BPS.Properties.Resources.bookmark_book_open;
             this.tsmPalletStock.Name = "tsmPalletStock";
-            this.tsmPalletStock.Size = new System.Drawing.Size(156, 22);
+            this.tsmPalletStock.Size = new System.Drawing.Size(180, 22);
             this.tsmPalletStock.Text = "Stock de pallets";
             this.tsmPalletStock.Click += new System.EventHandler(this.stockDePalletsToolStripMenuItem_Click_1);
             // 
@@ -3222,7 +3230,7 @@ namespace BPS
             // 
             this.tsmDevolStock.Image = global::BPS.Properties.Resources.arrow_incoming;
             this.tsmDevolStock.Name = "tsmDevolStock";
-            this.tsmDevolStock.Size = new System.Drawing.Size(156, 22);
+            this.tsmDevolStock.Size = new System.Drawing.Size(180, 22);
             this.tsmDevolStock.Text = "Devoluciones";
             this.tsmDevolStock.Click += new System.EventHandler(this.devolucionesToolStripMenuItem2_Click);
             // 
@@ -3230,7 +3238,7 @@ namespace BPS
             // 
             this.tsmMaquileStock.Image = global::BPS.Properties.Resources.arrow_redo;
             this.tsmMaquileStock.Name = "tsmMaquileStock";
-            this.tsmMaquileStock.Size = new System.Drawing.Size(156, 22);
+            this.tsmMaquileStock.Size = new System.Drawing.Size(180, 22);
             this.tsmMaquileStock.Text = "Maquilas";
             this.tsmMaquileStock.Click += new System.EventHandler(this.maquilasToolStripMenuItem1_Click);
             // 
@@ -4023,11 +4031,12 @@ namespace BPS
             this.tsslVersion.Name = "tsslVersion";
             this.tsslVersion.Size = new System.Drawing.Size(0, 17);
             // 
-            // pruebaHistoricoToolStripMenuItem
+            // detalleDeBLConOrigenToolStripMenuItem
             // 
-            this.pruebaHistoricoToolStripMenuItem.Name = "pruebaHistoricoToolStripMenuItem";
-            this.pruebaHistoricoToolStripMenuItem.Size = new System.Drawing.Size(228, 22);
-            this.pruebaHistoricoToolStripMenuItem.Text = "Prueba historico";
+            this.detalleDeBLConOrigenToolStripMenuItem.Name = "detalleDeBLConOrigenToolStripMenuItem";
+            this.detalleDeBLConOrigenToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.detalleDeBLConOrigenToolStripMenuItem.Text = "Detalle de BL con origen";
+            this.detalleDeBLConOrigenToolStripMenuItem.Click += new System.EventHandler(this.detalleDeBLConOrigenToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -4493,6 +4502,7 @@ namespace BPS
         private System.Windows.Forms.ToolStripMenuItem reporteOTIFToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pruebaPlanExtrusionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pruebaHistoricoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem detalleDeBLConOrigenToolStripMenuItem;
     }
 }
 

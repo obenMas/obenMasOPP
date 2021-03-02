@@ -1101,6 +1101,11 @@ namespace BPS
                 nuevaocs.Click += new EventHandler(toolStripMenuItem4_Click);
                 CORTE.DropDownItems.Add(nuevaocs);
 
+                ToolStripMenuItem listaocs = new ToolStripMenuItem();
+                listaocs.Text = "Modificación de ordenes de corte";
+                listaocs.Click += new EventHandler(pruebaListaOrdenDeCorteToolStripMenuItem_Click);
+                CORTE.DropDownItems.Add(listaocs);
+
                 ToolStripMenuItem planc = new ToolStripMenuItem();
                 planc.Text = "Plan de corte";
                 planc.Image = Properties.Resources.calendar_2;
@@ -1356,6 +1361,24 @@ namespace BPS
                 PLReport.Image = Properties.Resources.report;
                 PLReport.Click += new EventHandler(listaDeEmpaqueToolStripMenuItem_Click);
                 REPORTES.DropDownItems.Add(PLReport);
+
+                ToolStripMenuItem PalletReport = new ToolStripMenuItem();
+                PalletReport.Text = "Reporte de pallets entre fechas";
+                PalletReport.Image = Properties.Resources.report;
+                PalletReport.Click += new EventHandler(ingresoDeEmpaqueToolStripMenuItem_Click);
+                REPORTES.DropDownItems.Add(PalletReport);
+
+                //PRUEBAS
+                ToolStripMenuItem PRUEBAS = new ToolStripMenuItem();
+                PRUEBAS.Text = "Pruebas/trabajos inconclusos";
+                PRUEBAS.Image = Properties.Resources.report;
+                op.DropDownItems.Add(PRUEBAS);
+
+                ToolStripMenuItem massBalance = new ToolStripMenuItem();
+                massBalance.Text = "Balance de masas";
+                massBalance.Image = Properties.Resources.report;
+                massBalance.Click += new EventHandler(balanceDeMasasToolStripMenuItem_Click);
+                PRUEBAS.DropDownItems.Add(massBalance);
 
                 //VENTAS
                 ToolStripMenuItem VTAS = new ToolStripMenuItem();
@@ -5818,6 +5841,14 @@ namespace BPS
         private void pruebaPlanExtrusionToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmNewExtrusionPlan reporteDespachos = new frmNewExtrusionPlan(3024, "BRUCKNER");
+            reporteDespachos.MdiParent = this;
+            reporteDespachos.StartPosition = FormStartPosition.Manual;
+            reporteDespachos.Show();
+        }
+
+        private void detalleDeBLConOrigenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBLDetailOrigin reporteDespachos = new frmBLDetailOrigin();
             reporteDespachos.MdiParent = this;
             reporteDespachos.StartPosition = FormStartPosition.Manual;
             reporteDespachos.Show();

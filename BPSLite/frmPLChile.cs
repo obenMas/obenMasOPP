@@ -246,6 +246,7 @@ namespace BPS.Lite
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].lotNumber = dgv.Rows[i].Cells[Entrega.Index].Value.ToString();
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].mainCoilCode = dgv.Rows[i].Cells[Entrega.Index].Value.ToString();
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].extrusionDate = DateTime.Now;
+                        lstPallet[lstPallet.Count - 1].lstCoil[lstPos].procedence = 251;
                     }
 
                 }

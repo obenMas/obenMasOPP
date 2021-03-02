@@ -149,6 +149,7 @@
             this.clmYearComplecion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estaCompleto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmIsResale = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gpbFastValuesSalesOrderControl.SuspendLayout();
             this.gpbFiltersSalesOrderControl.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -551,7 +552,8 @@
             this.clmMonthComplecion,
             this.clmYearComplecion,
             this.estaCompleto,
-            this.clmPlant});
+            this.clmPlant,
+            this.clmIsResale});
             dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1012,6 +1014,13 @@
             this.clmPlant.Visible = false;
             this.clmPlant.Width = 50;
             // 
+            // clmIsResale
+            // 
+            this.clmIsResale.HeaderText = "Reventa";
+            this.clmIsResale.Name = "clmIsResale";
+            this.clmIsResale.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmIsResale.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // frmSalesOrderControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1129,5 +1138,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYearComplecion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn estaCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmIsResale;
     }
 }

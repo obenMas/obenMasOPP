@@ -41,7 +41,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbPlant = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
             this.Pallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.clmMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExport = new System.Windows.Forms.Button();
             this.groupBoxFrom.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -184,16 +184,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(928, 405);
             this.dataGridView1.TabIndex = 11;
             // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExport.Location = new System.Drawing.Point(756, 51);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(25, 25);
-            this.btnExport.TabIndex = 12;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
-            // 
             // Pallet
             // 
             this.Pallet.HeaderText = "Pallet";
@@ -273,6 +263,16 @@
             this.clmHour.ReadOnly = true;
             this.clmHour.Visible = false;
             // 
+            // btnExport
+            // 
+            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.btnExport.Location = new System.Drawing.Point(756, 51);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(25, 25);
+            this.btnExport.TabIndex = 12;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmPalletReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -289,7 +289,7 @@
             this.Controls.Add(this.groupBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPalletReport";
-            this.Text = "Reporte de Extrusión";
+            this.Text = "Reporte de pallets entre fechas";
             this.groupBoxFrom.ResumeLayout(false);
             this.groupBoxFrom.PerformLayout();
             this.groupBox2.ResumeLayout(false);

@@ -886,8 +886,8 @@ namespace BPS
             this.cmbInProcessDestination.FormattingEnabled = true;
             this.cmbInProcessDestination.Items.AddRange(new object[] {
             "Primera",
-            "En Proceso",
-            "Segunda"});
+            "Producto en proceso",
+            "PNC"});
             this.cmbInProcessDestination.Location = new System.Drawing.Point(85, 25);
             this.cmbInProcessDestination.Name = "cmbInProcessDestination";
             this.cmbInProcessDestination.Size = new System.Drawing.Size(153, 23);

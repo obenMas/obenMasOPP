@@ -334,14 +334,7 @@ namespace BPS
                     {
                             if (clsCoil.ChangeQuality(objCoil.codsec, cmbInProcessDestination.SelectedItem.ToString()))
                             {
-                                if (cmbInProcessDestination.SelectedItem.ToString()!="En Proceso")
-                                {
-                                    objCoil.fkCuttingQuality = clsCuttingQuality.getQualityByName(cmbInProcessDestination.SelectedItem.ToString()).codsec;
-                                }
-                                else
-                                {
-                                    objCoil.fkCuttingQuality = clsCuttingQuality.getQualityByName("Observación").codsec;
-                                }
+                                objCoil.fkCuttingQuality = clsCuttingQuality.getQualityByName(cmbInProcessDestination.SelectedItem.ToString()).codsec;
                                 
                                 MessageBox.Show("Se guardaron los datos correctamente.", "Bobinas en proceso", MessageBoxButtons.OK);
                             }

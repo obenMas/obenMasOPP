@@ -208,7 +208,8 @@ namespace BPS
                             }
                         }
 
-
+                        dgvSalesOrderControl.Rows[fila].Cells[clmIsResale.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["esReventa"]);
+                        
                         dgvSalesOrderControl.Rows[fila].Cells["clmCustomer"].Value = DS.Tables[0].Rows[i]["Cliente"].ToString();
                         dgvSalesOrderControl.Rows[fila].Cells["clmPurchaseOrder"].Value = DS.Tables[0].Rows[i]["OCCliente"].ToString();
                         dgvSalesOrderControl.Rows[fila].Cells["clmFilm"].Value = DS.Tables[0].Rows[i]["Pelicula"].ToString();
@@ -1175,6 +1176,21 @@ namespace BPS
 
         private void dgvSalesOrderControl_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
+            if(e.ColumnIndex==clmIsResale.Index)
+            {
+                clsSalesOrderDetail obj = new clsSalesOrderDetail(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value));
+
+                obj.setAsResale(Convert.ToBoolean(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmIsResale.Index].Value));
+                
+                for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                {
+                    if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                    {
+                        DS.Tables[0].Rows[i]["esReventa"] = Convert.ToBoolean(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmIsResale.Index].Value);                        
+                    }
+                }
+            }
+
             if(e.ColumnIndex== clmPurchaseOrder.Index)
             {
                 clsSalesOrder obj = new clsSalesOrder(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmOrder.Index].Value));

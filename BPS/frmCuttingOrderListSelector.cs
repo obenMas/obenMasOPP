@@ -201,7 +201,7 @@ namespace BPS
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (txtEstado.Text != "Cerrada")
+            if (txtEstado.Text != "Cerrada" && txtEstado.Text != "Ejecutandose")
             {
                 if (MessageBox.Show("¿Esta seguro que desea eliminar la orden?", "Lista de ordenes de corte", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
@@ -217,6 +217,17 @@ namespace BPS
             }
             else
                 MessageBox.Show("No puede eliminar una orden cerrada", "Lista de ordenes de corte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+
+        private void txtNotas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter)
+            {
+                clsCuttingOrder co = new clsCuttingOrder(Convert.ToInt32(txtNum.Text));
+                co.changeNotes(txtNotas.Text);
+            }
+            
         }
     }
 }
