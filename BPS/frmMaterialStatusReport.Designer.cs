@@ -58,6 +58,7 @@
             this.clmFechaSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaEnt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmObservaciones = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -125,6 +126,7 @@
             this.tableLayoutPanel3.ColumnCount = 1;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Controls.Add(this.button1, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.button2, 0, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(1206, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -357,6 +359,16 @@
             this.clmObservaciones.Name = "clmObservaciones";
             this.clmObservaciones.ReadOnly = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(3, 31);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(28, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Ex";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmMaterialStatusReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -408,5 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaSol;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaEnt;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmObservaciones;
+        private System.Windows.Forms.Button button2;
     }
 }

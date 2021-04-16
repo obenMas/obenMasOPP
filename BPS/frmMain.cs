@@ -2269,7 +2269,7 @@ namespace BPS
 
                 //mnuMain.Visible = false;
             }
-            if (clsGlobal.LoggedUser.fkRole == 2)
+            if (clsGlobal.LoggedUser.fkRole == 2 || clsGlobal.LoggedUser.fkRole==2040)
                 tsmBackload.Visible = false;
                 
         }
@@ -5853,5 +5853,6 @@ namespace BPS
             reporteDespachos.StartPosition = FormStartPosition.Manual;
             reporteDespachos.Show();
         }
+
     }
 }

@@ -110,6 +110,8 @@
             this.historialCompletoDeBobinasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.historialCompletoDePalletsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialRackPrimarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialRackSecundarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosTSMLog = new System.Windows.Forms.ToolStripMenuItem();
             this.sttsFooter = new System.Windows.Forms.StatusStrip();
             this.tsslDatabase = new System.Windows.Forms.ToolStripStatusLabel();
@@ -118,8 +120,6 @@
             this.tsslVersionLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.enviarBobinaAProductoEnProcesoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialRackPrimarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.historialRackSecundarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnu.SuspendLayout();
             this.sttsFooter.SuspendLayout();
             this.SuspendLayout();
@@ -721,7 +721,7 @@
             // 
             this.bindingToolStripMenuItem.Name = "bindingToolStripMenuItem";
             this.bindingToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
-            this.bindingToolStripMenuItem.Text = "binding";
+            this.bindingToolStripMenuItem.Text = "impo colombia";
             this.bindingToolStripMenuItem.Click += new System.EventHandler(this.bindingToolStripMenuItem_Click);
             // 
             // impoPeruToolStripMenuItem
@@ -780,6 +780,20 @@
             this.toolStripMenuItem2.Text = "Historial completo de deposito de materia prima";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
+            // historialRackPrimarioToolStripMenuItem
+            // 
+            this.historialRackPrimarioToolStripMenuItem.Name = "historialRackPrimarioToolStripMenuItem";
+            this.historialRackPrimarioToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
+            this.historialRackPrimarioToolStripMenuItem.Text = "Historial rack primario";
+            this.historialRackPrimarioToolStripMenuItem.Click += new System.EventHandler(this.historialRackPrimarioToolStripMenuItem_Click);
+            // 
+            // historialRackSecundarioToolStripMenuItem
+            // 
+            this.historialRackSecundarioToolStripMenuItem.Name = "historialRackSecundarioToolStripMenuItem";
+            this.historialRackSecundarioToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
+            this.historialRackSecundarioToolStripMenuItem.Text = "Historial rack secundario";
+            this.historialRackSecundarioToolStripMenuItem.Click += new System.EventHandler(this.historialRackSecundarioToolStripMenuItem_Click);
+            // 
             // movimientosTSMLog
             // 
             this.movimientosTSMLog.Name = "movimientosTSMLog";
@@ -822,7 +836,7 @@
             // tsslVersionLabel
             // 
             this.tsslVersionLabel.Name = "tsslVersionLabel";
-            this.tsslVersionLabel.Size = new System.Drawing.Size(52, 17);
+            this.tsslVersionLabel.Size = new System.Drawing.Size(51, 17);
             this.tsslVersionLabel.Text = "Versión :";
             // 
             // tsslVersion
@@ -834,20 +848,6 @@
             // 
             this.enviarBobinaAProductoEnProcesoToolStripMenuItem.Name = "enviarBobinaAProductoEnProcesoToolStripMenuItem";
             this.enviarBobinaAProductoEnProcesoToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
-            // 
-            // historialRackPrimarioToolStripMenuItem
-            // 
-            this.historialRackPrimarioToolStripMenuItem.Name = "historialRackPrimarioToolStripMenuItem";
-            this.historialRackPrimarioToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
-            this.historialRackPrimarioToolStripMenuItem.Text = "Historial rack primario";
-            this.historialRackPrimarioToolStripMenuItem.Click += new System.EventHandler(this.historialRackPrimarioToolStripMenuItem_Click);
-            // 
-            // historialRackSecundarioToolStripMenuItem
-            // 
-            this.historialRackSecundarioToolStripMenuItem.Name = "historialRackSecundarioToolStripMenuItem";
-            this.historialRackSecundarioToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
-            this.historialRackSecundarioToolStripMenuItem.Text = "Historial rack secundario";
-            this.historialRackSecundarioToolStripMenuItem.Click += new System.EventHandler(this.historialRackSecundarioToolStripMenuItem_Click);
             // 
             // frmMain
             // 

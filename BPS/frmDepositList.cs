@@ -364,148 +364,153 @@ namespace BPS
 
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clsExports.createExcelWhitCheck(dgvDepositList);
+        }
+
         //PILAR
 
-       /* public void populateDataGridPL()
-        {
-            for (int i = 0; i < palletListPL.Count; i++)
-            {
-                dgvDepositListPL.Rows.Add();
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCodsec.Index].Value = palletListPL[i].codsec;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmOrder.Index].Value = sodlistPL[i];
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPurchaseOrder.Index].Value = POListPL[i];
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPrice.Index].Value = priceListPL[i] * exchangeListPL[i];
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPlant.Index].Value = "Pilar";
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCode.Index].Value = palletListPL[i].palletCode;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmFilm.Index].Value = palletListPL[i].film;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmWidth.Index].Value = palletListPL[i].width;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmDiameter.Index].Value = palletListPL[i].diameter;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCore.Index].Value = palletListPL[i].core;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2);
-                if (Convert.ToDouble(dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value) > 999.99)
-                {
-                    dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2).ToString("0,000.00");
-                }
-                else
-                {
-                    dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2).ToString("00.00");
-                }
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCustomer.Index].Value = custommerListPL[i];
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmSaleOrder.Index].Value = sodlistPL[i];
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmOrigin.Index].Value = palletListPL[i].procedence;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmLocation.Index].Value = palletListPL[i].state;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmDate.Index].Value = palletListPL[i].date.ToShortDateString();
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCheck.Index].Value = true;
-                dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmQualification.Index].Value = palletListPL[i].quality;
-            }
-            txtTotalNetWeightPL.Text = CalculateTotalNetWeightPL().ToString();
-        }
+        /* public void populateDataGridPL()
+         {
+             for (int i = 0; i < palletListPL.Count; i++)
+             {
+                 dgvDepositListPL.Rows.Add();
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCodsec.Index].Value = palletListPL[i].codsec;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmOrder.Index].Value = sodlistPL[i];
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPurchaseOrder.Index].Value = POListPL[i];
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPrice.Index].Value = priceListPL[i] * exchangeListPL[i];
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmPlant.Index].Value = "Pilar";
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCode.Index].Value = palletListPL[i].palletCode;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmFilm.Index].Value = palletListPL[i].film;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmWidth.Index].Value = palletListPL[i].width;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmDiameter.Index].Value = palletListPL[i].diameter;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCore.Index].Value = palletListPL[i].core;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2);
+                 if (Convert.ToDouble(dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value) > 999.99)
+                 {
+                     dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2).ToString("0,000.00");
+                 }
+                 else
+                 {
+                     dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmNetWeight.Index].Value = Math.Round(palletListPL[i].weigth, 2).ToString("00.00");
+                 }
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCustomer.Index].Value = custommerListPL[i];
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmSaleOrder.Index].Value = sodlistPL[i];
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmOrigin.Index].Value = palletListPL[i].procedence;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmLocation.Index].Value = palletListPL[i].state;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmDate.Index].Value = palletListPL[i].date.ToShortDateString();
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmCheck.Index].Value = true;
+                 dgvDepositListPL.Rows[dgvDepositListPL.Rows.Count - 1].Cells[clmQualification.Index].Value = palletListPL[i].quality;
+             }
+             txtTotalNetWeightPL.Text = CalculateTotalNetWeightPL().ToString();
+         }
 
-        public double CalculateTotalNetWeightPL()
-        {
-            double totalNetWeight = 0;
-            for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
-            {
-                if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
-                {
-                    totalNetWeight += Math.Round(Convert.ToDouble(dgvDepositListPL.Rows[i].Cells[clmNetWeight.Index].Value), 2);
-                }
-            }
-            return totalNetWeight;
-        }
+         public double CalculateTotalNetWeightPL()
+         {
+             double totalNetWeight = 0;
+             for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
+             {
+                 if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
+                 {
+                     totalNetWeight += Math.Round(Convert.ToDouble(dgvDepositListPL.Rows[i].Cells[clmNetWeight.Index].Value), 2);
+                 }
+             }
+             return totalNetWeight;
+         }
 
-        private void btnExportPL_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
-                Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
-                Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
-                app.Visible = true;
-                worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets.get_Item(1);
-                worksheet.Name = "Listado de Depósito Pilar";
+         private void btnExportPL_Click_1(object sender, EventArgs e)
+         {
+             try
+             {
+                 Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+                 Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+                 Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+                 app.Visible = true;
+                 worksheet = (Microsoft.Office.Interop.Excel.Worksheet)workbook.Worksheets.get_Item(1);
+                 worksheet.Name = "Listado de Depósito Pilar";
 
-                for (int i = 2; i < dgvDepositListPL.Columns.Count + 1; i++)
-                    worksheet.Cells[1, i - 1] = dgvDepositListPL.Columns[i - 1].HeaderText;
+                 for (int i = 2; i < dgvDepositListPL.Columns.Count + 1; i++)
+                     worksheet.Cells[1, i - 1] = dgvDepositListPL.Columns[i - 1].HeaderText;
 
-                for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
-                {
-                    if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
-                    {
-                        for (int j = 1; j < dgvDepositListPL.Columns.Count - 1; j++)
-                        {
-                            if (dgvDepositListPL.Rows[i].Cells[j].Value != null)
-                                worksheet.Cells[i + 2, j] = dgvDepositListPL.Rows[i].Cells[j].Value.ToString();
-                        }
-                    }
-                }
-                MessageBox.Show("Exportación Generada correctamente", "Listado de Depósito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Listado de Depósito", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+                 for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
+                 {
+                     if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
+                     {
+                         for (int j = 1; j < dgvDepositListPL.Columns.Count - 1; j++)
+                         {
+                             if (dgvDepositListPL.Rows[i].Cells[j].Value != null)
+                                 worksheet.Cells[i + 2, j] = dgvDepositListPL.Rows[i].Cells[j].Value.ToString();
+                         }
+                     }
+                 }
+                 MessageBox.Show("Exportación Generada correctamente", "Listado de Depósito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show(ex.Message, "Listado de Depósito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+             }
+         }
 
-        private void dgvDepositListPL_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == clmCheck.Index)
-            {
-                double total = CalculateTotalNetWeightPL();
-                if (total > 999.99)
-                {
-                    txtTotalNetWeightPL.Text = total.ToString("0,000.00");
-                }
-                else
-                {
-                    txtTotalNetWeightPL.Text = total.ToString("00.00");
-                }
-            }
-        }
-        
-        private void dgvDepositListPL_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == clmCheck.Index)
-            {
-                txtTotalNetWeightPL.Focus();
-            }
-        }
+         private void dgvDepositListPL_CellValueChanged_1(object sender, DataGridViewCellEventArgs e)
+         {
+             if (e.ColumnIndex == clmCheck.Index)
+             {
+                 double total = CalculateTotalNetWeightPL();
+                 if (total > 999.99)
+                 {
+                     txtTotalNetWeightPL.Text = total.ToString("0,000.00");
+                 }
+                 else
+                 {
+                     txtTotalNetWeightPL.Text = total.ToString("00.00");
+                 }
+             }
+         }
 
-        private void chkSelectAllPL_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (chkSelectAllPL.Checked)
-            {
-                for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
-                {
-                    dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value = true;
-                }
-            }
-            else
-            {
-                for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
-                {
-                    dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value = false;
-                }
-            }
-        }
-        
-        private void btnPreshippingPL_Click_1(object sender, EventArgs e)
-        {
-            clsAymasDepot objpallet = new clsAymasDepot();
-            List<clsAymasDepot> objPltList = new List<clsAymasDepot>();
+         private void dgvDepositListPL_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+         {
+             if (e.ColumnIndex == clmCheck.Index)
+             {
+                 txtTotalNetWeightPL.Focus();
+             }
+         }
 
-            for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
-            {
-                if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
-                {
-                    objpallet = clsAymasDepot.getDetailByCode(dgvDepositListPL.Rows[i].Cells[clmCode.Index].Value.ToString());
-                    objPltList.Add(objpallet);
-                }
-            }
-            frmPalletPreShippingPL winSystemConfig = new frmPalletPreShippingPL(objPltList);
-            winSystemConfig.StartPosition = FormStartPosition.Manual;
-            winSystemConfig.Show();
-        }*/
+         private void chkSelectAllPL_CheckedChanged_1(object sender, EventArgs e)
+         {
+             if (chkSelectAllPL.Checked)
+             {
+                 for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
+                 {
+                     dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value = true;
+                 }
+             }
+             else
+             {
+                 for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
+                 {
+                     dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value = false;
+                 }
+             }
+         }
+
+         private void btnPreshippingPL_Click_1(object sender, EventArgs e)
+         {
+             clsAymasDepot objpallet = new clsAymasDepot();
+             List<clsAymasDepot> objPltList = new List<clsAymasDepot>();
+
+             for (int i = 0; i < dgvDepositListPL.Rows.Count; i++)
+             {
+                 if (Convert.ToBoolean(dgvDepositListPL.Rows[i].Cells[clmCheck.Index].Value))
+                 {
+                     objpallet = clsAymasDepot.getDetailByCode(dgvDepositListPL.Rows[i].Cells[clmCode.Index].Value.ToString());
+                     objPltList.Add(objpallet);
+                 }
+             }
+             frmPalletPreShippingPL winSystemConfig = new frmPalletPreShippingPL(objPltList);
+             winSystemConfig.StartPosition = FormStartPosition.Manual;
+             winSystemConfig.Show();
+         }*/
     }
 }
 

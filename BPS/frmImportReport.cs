@@ -71,7 +71,11 @@ namespace BPS
                     
                     dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmPeso.Index].Value = DS.Tables[0].Rows[i]["peso"].ToString();
                     dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmProduct.Index].Value = DS.Tables[0].Rows[i]["producto"].ToString();
-                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmFecha.Index].Value = DS.Tables[0].Rows[i]["ingreso"].ToString();
+                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["Pelicula"].ToString();
+                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmAncho.Index].Value = DS.Tables[0].Rows[i]["Ancho"].ToString();
+                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmDiametro.Index].Value = DS.Tables[0].Rows[i]["Diametro"].ToString();
+                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmCore.Index].Value = DS.Tables[0].Rows[i]["Core"].ToString();
+                    dgvImport.Rows[dgvImport.Rows.Count - 1].Cells[clmFecha.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["ingreso"]).ToString("dd/MM/yyyy");
 			    }
             }
         }
@@ -156,5 +160,9 @@ namespace BPS
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clsExports.createExcel(dgvImport);
+        }
     }
 }

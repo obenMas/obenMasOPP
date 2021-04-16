@@ -72,6 +72,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSalesOrderHistory)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -342,7 +343,7 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 11;
+            this.tableLayoutPanel2.ColumnCount = 12;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
@@ -354,6 +355,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel2.Controls.Add(this.groupBox4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox6, 3, 0);
@@ -364,6 +366,7 @@
             this.tableLayoutPanel2.Controls.Add(this.btnSearch, 8, 0);
             this.tableLayoutPanel2.Controls.Add(this.button2, 10, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupBox1, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.button1, 11, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -501,7 +504,7 @@
             // 
             this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button2.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.button2.Location = new System.Drawing.Point(1210, 3);
+            this.button2.Location = new System.Drawing.Point(1170, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(34, 44);
             this.button2.TabIndex = 0;
@@ -531,6 +534,17 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(88, 21);
             this.cmbStatus.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(1210, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 44);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Ex";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmSalesOrderHistory
             // 
@@ -605,5 +619,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmShippingDate;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbStatus;
+        private System.Windows.Forms.Button button1;
     }
 }

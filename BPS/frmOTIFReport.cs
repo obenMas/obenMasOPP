@@ -57,6 +57,7 @@ namespace BPS
                     }
                     //dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmFechaDespacho.Index].Value = Convert.ToDateTime(DS.Tables[0].Rows[i]["FechaDespacho"]).ToShortDateString();
                     dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmPlanta.Index].Value = DS.Tables[0].Rows[i]["Planta"];
+                    dgvOTIFReport.Rows[dgvOTIFReport.Rows.Count - 1].Cells[clmEsReventa.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["esReventa"]);
                 }
             }
 
@@ -157,5 +158,9 @@ namespace BPS
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            clsExports.createExcel(dgvOTIFReport);
+        }
     }
 }

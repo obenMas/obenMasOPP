@@ -30,10 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBLDetail));
             this.dgvBLDetail = new System.Windows.Forms.DataGridView();
-            this.grbBLDetail = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnExport = new System.Windows.Forms.Button();
             this.clmOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustommer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmOCCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,8 +61,14 @@
             this.clmDateDeliveryMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDateDeliveryYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmObservacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbBLDetail = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBLDetail)).BeginInit();
             this.grbBLDetail.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,42 +114,6 @@
             this.dgvBLDetail.Name = "dgvBLDetail";
             this.dgvBLDetail.Size = new System.Drawing.Size(1100, 401);
             this.dgvBLDetail.TabIndex = 0;
-            // 
-            // grbBLDetail
-            // 
-            this.grbBLDetail.Controls.Add(this.dgvBLDetail);
-            this.grbBLDetail.Location = new System.Drawing.Point(2, -3);
-            this.grbBLDetail.Name = "grbBLDetail";
-            this.grbBLDetail.Size = new System.Drawing.Size(1106, 420);
-            this.grbBLDetail.TabIndex = 1;
-            this.grbBLDetail.TabStop = false;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(5, 414);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1046, 40);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnExport);
-            this.groupBox2.Location = new System.Drawing.Point(1057, 414);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(47, 40);
-            this.groupBox2.TabIndex = 3;
-            this.groupBox2.TabStop = false;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExport.Location = new System.Drawing.Point(11, 9);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(25, 25);
-            this.btnExport.TabIndex = 0;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
             // clmOrder
             // 
@@ -331,6 +297,53 @@
             this.clmObservacion.HeaderText = "Observaciones";
             this.clmObservacion.Name = "clmObservacion";
             // 
+            // grbBLDetail
+            // 
+            this.grbBLDetail.Controls.Add(this.dgvBLDetail);
+            this.grbBLDetail.Location = new System.Drawing.Point(2, -3);
+            this.grbBLDetail.Name = "grbBLDetail";
+            this.grbBLDetail.Size = new System.Drawing.Size(1106, 420);
+            this.grbBLDetail.TabIndex = 1;
+            this.grbBLDetail.TabStop = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(5, 414);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1046, 40);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnExport);
+            this.groupBox2.Location = new System.Drawing.Point(1057, 414);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(47, 40);
+            this.groupBox2.TabIndex = 3;
+            this.groupBox2.TabStop = false;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.btnExport.Location = new System.Drawing.Point(11, 9);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(25, 25);
+            this.btnExport.TabIndex = 0;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(965, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmBLDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -344,6 +357,7 @@
             this.Text = "Detalle de BL";
             ((System.ComponentModel.ISupportInitialize)(this.dgvBLDetail)).EndInit();
             this.grbBLDetail.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -387,5 +401,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDeliveryMonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDateDeliveryYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmObservacion;
+        private System.Windows.Forms.Button button1;
     }
 }

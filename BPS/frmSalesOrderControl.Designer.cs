@@ -103,6 +103,7 @@
             this.btnPriceSalesOrderControl = new System.Windows.Forms.Button();
             this.btnStatusSalesOrderControl = new System.Windows.Forms.Button();
             this.btnNewOrderSalesOrderControl = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmExecutive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmOrder = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -150,6 +151,7 @@
             this.estaCompleto = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.clmPlant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmIsResale = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.clmApproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.gpbFastValuesSalesOrderControl.SuspendLayout();
             this.gpbFiltersSalesOrderControl.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -159,6 +161,7 @@
             // 
             // gpbFastValuesSalesOrderControl
             // 
+            this.gpbFastValuesSalesOrderControl.Controls.Add(this.button1);
             this.gpbFastValuesSalesOrderControl.Controls.Add(this.btnExportExcel);
             this.gpbFastValuesSalesOrderControl.Controls.Add(this.txtKgsSalesOrderControl);
             this.gpbFastValuesSalesOrderControl.Controls.Add(this.label4);
@@ -178,7 +181,7 @@
             // btnExportExcel
             // 
             this.btnExportExcel.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExportExcel.Location = new System.Drawing.Point(1051, 21);
+            this.btnExportExcel.Location = new System.Drawing.Point(1083, 21);
             this.btnExportExcel.Name = "btnExportExcel";
             this.btnExportExcel.Size = new System.Drawing.Size(25, 25);
             this.btnExportExcel.TabIndex = 8;
@@ -553,7 +556,8 @@
             this.clmYearComplecion,
             this.estaCompleto,
             this.clmPlant,
-            this.clmIsResale});
+            this.clmIsResale,
+            this.clmApproved});
             dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -686,6 +690,16 @@
             this.btnNewOrderSalesOrderControl.Text = "Nuevo Pedido";
             this.btnNewOrderSalesOrderControl.UseVisualStyleBackColor = true;
             this.btnNewOrderSalesOrderControl.Click += new System.EventHandler(this.btnNewOrderSalesOrderControl_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1002, 23);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clmCodsec
             // 
@@ -1021,6 +1035,13 @@
             this.clmIsResale.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmIsResale.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // clmApproved
+            // 
+            this.clmApproved.HeaderText = "Aprobado";
+            this.clmApproved.Name = "clmApproved";
+            this.clmApproved.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmApproved.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // frmSalesOrderControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1092,6 +1113,7 @@
         private System.Windows.Forms.ComboBox cmbObs;
         private System.Windows.Forms.ComboBox cmbOCCliente;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmExecutive;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmOrder;
@@ -1139,5 +1161,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn estaCompleto;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPlant;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmIsResale;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn clmApproved;
     }
 }

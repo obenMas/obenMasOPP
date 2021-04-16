@@ -39,6 +39,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblTo = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.chkPallet = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnGenerateSwapRp = new System.Windows.Forms.Button();
             this.btnExport = new System.Windows.Forms.Button();
@@ -48,8 +49,12 @@
             this.clmCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmPeso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAncho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmDiametro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCore = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkPallet = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             this.groupBoxFrom.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -145,6 +150,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.button1);
             this.groupBox5.Controls.Add(this.chkPallet);
             this.groupBox5.Controls.Add(this.label2);
             this.groupBox5.Controls.Add(this.btnGenerateSwapRp);
@@ -156,6 +162,16 @@
             this.groupBox5.TabIndex = 17;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Filtrar por Planta";
+            // 
+            // chkPallet
+            // 
+            this.chkPallet.AutoSize = true;
+            this.chkPallet.Location = new System.Drawing.Point(130, 65);
+            this.chkPallet.Name = "chkPallet";
+            this.chkPallet.Size = new System.Drawing.Size(115, 17);
+            this.chkPallet.TabIndex = 13;
+            this.chkPallet.Text = "Reporte por pallets";
+            this.chkPallet.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -184,9 +200,8 @@
             this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
             this.btnExport.Location = new System.Drawing.Point(6, 59);
             this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(90, 37);
+            this.btnExport.Size = new System.Drawing.Size(31, 37);
             this.btnExport.TabIndex = 12;
-            this.btnExport.Text = "Exportar";
             this.btnExport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExport.UseVisualStyleBackColor = true;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
@@ -218,6 +233,10 @@
             this.clmCode,
             this.clmPeso,
             this.clmProduct,
+            this.clmPelicula,
+            this.clmAncho,
+            this.clmDiametro,
+            this.clmCore,
             this.clmFecha});
             this.dgvImport.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvImport.Location = new System.Drawing.Point(3, 16);
@@ -244,21 +263,48 @@
             this.clmProduct.Name = "clmProduct";
             this.clmProduct.ReadOnly = true;
             // 
+            // clmPelicula
+            // 
+            this.clmPelicula.HeaderText = "Pelicula";
+            this.clmPelicula.Name = "clmPelicula";
+            this.clmPelicula.ReadOnly = true;
+            // 
+            // clmAncho
+            // 
+            this.clmAncho.HeaderText = "Ancho";
+            this.clmAncho.Name = "clmAncho";
+            this.clmAncho.ReadOnly = true;
+            this.clmAncho.Width = 80;
+            // 
+            // clmDiametro
+            // 
+            this.clmDiametro.HeaderText = "Diametro";
+            this.clmDiametro.Name = "clmDiametro";
+            this.clmDiametro.ReadOnly = true;
+            this.clmDiametro.Width = 80;
+            // 
+            // clmCore
+            // 
+            this.clmCore.HeaderText = "Core";
+            this.clmCore.Name = "clmCore";
+            this.clmCore.ReadOnly = true;
+            this.clmCore.Width = 50;
+            // 
             // clmFecha
             // 
             this.clmFecha.HeaderText = "Fecha de Ingreso";
             this.clmFecha.Name = "clmFecha";
             this.clmFecha.ReadOnly = true;
             // 
-            // chkPallet
+            // button1
             // 
-            this.chkPallet.AutoSize = true;
-            this.chkPallet.Location = new System.Drawing.Point(130, 65);
-            this.chkPallet.Name = "chkPallet";
-            this.chkPallet.Size = new System.Drawing.Size(115, 17);
-            this.chkPallet.TabIndex = 13;
-            this.chkPallet.Text = "Reporte por pallets";
-            this.chkPallet.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(44, 59);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(52, 37);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmImportReport
             // 
@@ -308,6 +354,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPeso;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmPelicula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAncho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmDiametro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCore;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFecha;
+        private System.Windows.Forms.Button button1;
     }
 }

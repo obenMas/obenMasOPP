@@ -209,7 +209,14 @@ namespace BPS
                         }
 
                         dgvSalesOrderControl.Rows[fila].Cells[clmIsResale.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["esReventa"]);
+                        dgvSalesOrderControl.Rows[fila].Cells[clmApproved.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["Aprobado"]);
+
+                        if(!(clsGlobal.LoggedUser.codsec == 5199 || clsGlobal.LoggedUser.codsec == 5191))
+                        {
+                            dgvSalesOrderControl.Rows[fila].Cells[clmApproved.Index].ReadOnly = true;
+                        }
                         
+
                         dgvSalesOrderControl.Rows[fila].Cells["clmCustomer"].Value = DS.Tables[0].Rows[i]["Cliente"].ToString();
                         dgvSalesOrderControl.Rows[fila].Cells["clmPurchaseOrder"].Value = DS.Tables[0].Rows[i]["OCCliente"].ToString();
                         dgvSalesOrderControl.Rows[fila].Cells["clmFilm"].Value = DS.Tables[0].Rows[i]["Pelicula"].ToString();
@@ -866,21 +873,14 @@ namespace BPS
         }
         #endregion
 
-        #region Exportar a Excel
 
+        #region Exportar a Excel
+        
         private void btnExportExcel_Click(object sender, EventArgs e)
         {
             List<String> listaFechaIngreso = new List<string>();
             List<String> listaFechasEntrega = new List<string>();
             
-
-          /*  for (int i = 0; i < dgvSalesOrderControl.Rows.Count; i++ )
-            {
-                listaFechaIngreso.Add(dgvSalesOrderControl.Rows[i].Cells[clmCreatedDate.Index].Value.ToString());
-                dgvSalesOrderControl.Rows[i].Cells[clmCreatedDate.Index].Value = Convert.ToDateTime(dgvSalesOrderControl.Rows[i].Cells[clmCreatedDate.Index].Value).ToString("MM/dd/yyyy HH:mm");
-                listaFechasEntrega.Add(dgvSalesOrderControl.Rows[i].Cells[clmCompromiseDate.Index].Value.ToString());
-                dgvSalesOrderControl.Rows[i].Cells[clmCompromiseDate.Index].Value = Convert.ToDateTime(dgvSalesOrderControl.Rows[i].Cells[clmCompromiseDate.Index].Value).ToString("MM/dd/yyyy HH:mm");
-            }*/
 
             string ext = string.Empty;
             dgvSalesOrderControl.Columns["clmExecutive"].Visible = true;
@@ -972,12 +972,6 @@ namespace BPS
             dgvSalesOrderControl.Columns["clmCheck"].Visible = true;
             dgvSalesOrderControl.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithAutoHeaderText;
 
-            /*for (int i = 0; i < dgvSalesOrderControl.Rows.Count; i++)
-            {
-                dgvSalesOrderControl.Rows[i].Cells[clmCreatedDate.Index].Value = Convert.ToDateTime(listaFechaIngreso[i].ToString());
-                dgvSalesOrderControl.Rows[i].Cells[clmCompromiseDate.Index].Value = Convert.ToDateTime(listaFechasEntrega[i].ToString());
-            } */
-
             // Ingreso
             dgvSalesOrderControl.Columns["clmDayIng"].Visible = false;
             dgvSalesOrderControl.Columns["clmMonthIng"].Visible = false;
@@ -1032,6 +1026,84 @@ namespace BPS
             {
                 GC.Collect();
             }
+        }
+        #endregion
+
+        #region nuevo excel
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dgvSalesOrderControl.Columns["clmExecutive"].Visible = true;
+            dgvSalesOrderControl.Columns["clmUnpaletisedQuantity"].Visible = true;
+            dgvSalesOrderControl.Columns["clmPendingMoneyUSD"].Visible = true;
+            dgvSalesOrderControl.Columns["clmCheck"].Visible = false;
+
+            // Ingreso
+            dgvSalesOrderControl.Columns["clmDayIng"].Visible = true;
+            dgvSalesOrderControl.Columns["clmMonthIng"].Visible = true;
+            dgvSalesOrderControl.Columns["clmYearIng"].Visible = true;
+            dgvSalesOrderControl.Columns["clmCreatedDate"].Visible = false;
+
+            // Entrega
+            dgvSalesOrderControl.Columns["clmDayEnt"].Visible = true;
+            dgvSalesOrderControl.Columns["clmMonthEnt"].Visible = true;
+            dgvSalesOrderControl.Columns["clmYearEnt"].Visible = true;
+            dgvSalesOrderControl.Columns["clmCompromiseDate"].Visible = false;
+
+            // Comprometida
+            dgvSalesOrderControl.Columns["clmDayComp"].Visible = true;
+            dgvSalesOrderControl.Columns["clmMonthComp"].Visible = true;
+            dgvSalesOrderControl.Columns["clmYearComp"].Visible = true;
+            dgvSalesOrderControl.Columns["clmCompDate"].Visible = false;
+
+            // Otif
+            dgvSalesOrderControl.Columns["clmDayOtif"].Visible = true;
+            dgvSalesOrderControl.Columns["clmMonthOtif"].Visible = true;
+            dgvSalesOrderControl.Columns["clmYearOtif"].Visible = true;
+            dgvSalesOrderControl.Columns["fechaOtif"].Visible = false;
+
+            // Complecion
+            dgvSalesOrderControl.Columns["clmDayComplecion"].Visible = true;
+            dgvSalesOrderControl.Columns["clmMonthComplecion"].Visible = true;
+            dgvSalesOrderControl.Columns["clmYearComplecion"].Visible = true;
+            dgvSalesOrderControl.Columns["fechaComplecion"].Visible = false;
+
+            clsExports.createExcel(dgvSalesOrderControl);            
+
+            dgvSalesOrderControl.Columns["clmExecutive"].Visible = false;
+            dgvSalesOrderControl.Columns["clmCreatedDate"].Visible = false;
+            dgvSalesOrderControl.Columns["clmUnpaletisedQuantity"].Visible = false;
+            dgvSalesOrderControl.Columns["clmPendingMoneyUSD"].Visible = false;
+            dgvSalesOrderControl.Columns["clmCheck"].Visible = true;
+
+            // Ingreso
+            dgvSalesOrderControl.Columns["clmDayIng"].Visible = false;
+            dgvSalesOrderControl.Columns["clmMonthIng"].Visible = false;
+            dgvSalesOrderControl.Columns["clmYearIng"].Visible = false;
+            dgvSalesOrderControl.Columns["clmCreatedDate"].Visible = true;
+            // Entrega
+            dgvSalesOrderControl.Columns["clmDayEnt"].Visible = false;
+            dgvSalesOrderControl.Columns["clmMonthEnt"].Visible = false;
+            dgvSalesOrderControl.Columns["clmYearEnt"].Visible = false;
+            dgvSalesOrderControl.Columns["clmCompromiseDate"].Visible = true;
+
+            // Comprometida
+            dgvSalesOrderControl.Columns["clmDayComp"].Visible = false;
+            dgvSalesOrderControl.Columns["clmMonthComp"].Visible = false;
+            dgvSalesOrderControl.Columns["clmYearComp"].Visible = false;
+            dgvSalesOrderControl.Columns["clmCompDate"].Visible = true;
+
+            // Otif
+            dgvSalesOrderControl.Columns["clmDayOtif"].Visible = false;
+            dgvSalesOrderControl.Columns["clmMonthOtif"].Visible = false;
+            dgvSalesOrderControl.Columns["clmYearOtif"].Visible = false;
+            dgvSalesOrderControl.Columns["fechaOtif"].Visible = true;
+
+            // Complecion
+            dgvSalesOrderControl.Columns["clmDayComplecion"].Visible = false;
+            dgvSalesOrderControl.Columns["clmMonthComplecion"].Visible = false;
+            dgvSalesOrderControl.Columns["clmYearComplecion"].Visible = false;
+            dgvSalesOrderControl.Columns["fechaComplecion"].Visible = true;
         }
 
         #endregion
@@ -1191,7 +1263,22 @@ namespace BPS
                 }
             }
 
-            if(e.ColumnIndex== clmPurchaseOrder.Index)
+            if (e.ColumnIndex == clmApproved.Index && (clsGlobal.LoggedUser.codsec==5199 || clsGlobal.LoggedUser.codsec == 5191))
+            {
+                clsSalesOrderDetail obj = new clsSalesOrderDetail(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value));
+
+                obj.setAsApproved(Convert.ToBoolean(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmApproved.Index].Value));
+
+                for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
+                {
+                    if (DS.Tables[0].Rows[i]["codsec"].ToString() == dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmCodsec.Index].Value.ToString())
+                    {
+                        DS.Tables[0].Rows[i]["Aprobado"] = Convert.ToBoolean(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmApproved.Index].Value);
+                    }
+                }
+            }
+
+            if (e.ColumnIndex== clmPurchaseOrder.Index)
             {
                 clsSalesOrder obj = new clsSalesOrder(Convert.ToInt32(dgvSalesOrderControl.Rows[e.RowIndex].Cells[clmOrder.Index].Value));
 
@@ -1547,10 +1634,12 @@ namespace BPS
                 populateDataGrid();
             }
         }
+
+
+
         #endregion
 
 
-
-
+       
     }
 }

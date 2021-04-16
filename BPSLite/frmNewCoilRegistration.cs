@@ -28,8 +28,9 @@ namespace BPS.Lite
         static SerialPort sprtBalance = new SerialPort();
         public volatile bool continueReading = true;
         clsBalance balance = new clsBalance();
+        bool isSecundary;
 
-        public frmNewCoilRegistration(string cuttingOrder,string repetition,string position,string customer,string saleorderdetail,string product,string length,string lot, string main,string cuttingstop,string cuttingorderdetail,bool isImported)
+        public frmNewCoilRegistration(string cuttingOrder,string repetition,string position,string customer,string saleorderdetail,string product,string length,string lot, string main,string cuttingstop,string cuttingorderdetail,bool isImported,bool isSecundary)
         {
             InitializeComponent();
             txtCuttingOrder.Text = cuttingOrder;
@@ -54,7 +55,7 @@ namespace BPS.Lite
             {
                 plant = 4;
             }
-
+            this.isSecundary = isSecundary;
             List<clsCuttingQuality> cqlist= clsCuttingQuality.getList();
             cmbQuality.Items.Clear();
             for(int i=0;i<cqlist.Count;i++)
@@ -242,15 +243,33 @@ namespace BPS.Lite
                 objcoil.modifiedBy = clsGlobal.LoggedUser.codsec;
                 objcoil.isExternalCoil = chkImportada.Checked;
                 objcoil.externalLabelPrint = false;
-                objcoil.lotNumber = lote;              
-                
-                objcoil.mainCoilCode = maincoil;
+                objcoil.lotNumber = lote;
                 clsMainCoil objmain = new clsMainCoil(maincoil);
+                clsCoil secCoil = clsCoil.getDetailByCode(maincoil);
+                if (isSecundary)
+                {                    
+                    objmain = new clsMainCoil(secCoil.mainCoilCode);
+                }
+                objcoil.mainCoilCode = objmain.code;
                 objcoil.extrusionDate = objmain.createdDate;
                 clsCoilCellar objcellar = new clsCoilCellar(cmbDepot.Items[cmbDepot.SelectedIndex].ToString());
                 objcoil.cellar = objcellar.codsec;
                 if (objcoil.save(Convert.ToInt32(cstop), Convert.ToInt32(txtSalesOrderDetail.Text), objcellar.codsec, Convert.ToInt32(cuttingod)))
                 {
+                    clsTransactions.addCuttingNotification(objProduct.boppCode+objProduct.castCode+objProduct.coatingCode+objProduct.DiameterAbbreviation+objProduct.CoreValue,
+                            objcoil.code,objcoil.lotNumber,objcellar.codsec,objcoil.netWeight);
+
+                    if(isSecundary)
+                    {
+                        clsProduct secProd = new clsProduct(secCoil.fkProduct);
+                        clsTransactions.addCuttingConsumption(secProd.boppCode + secProd.castCode + secProd.coatingCode + secProd.DiameterAbbreviation+secProd.CoreValue,
+                            secCoil.code, secCoil.lotNumber, secCoil.fkCoilCellar,-objcoil.netWeight);
+                    }
+                    else
+                    {
+                        clsTransactions.addCuttingConsumption(objmain.BoppCode, objmain.code, objmain.lotNumber, 4022, -objcoil.netWeight);
+                    }
+                    
 
                     if (MessageBox.Show("Desea imprimir la etiqueta?", "Registro de Bobina", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign) == DialogResult.Yes)
                     {

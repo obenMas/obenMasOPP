@@ -40,6 +40,7 @@
             this.lblFrom = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dateTPFromCutting = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new System.Windows.Forms.Button();
             this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSoD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEstado = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +62,7 @@
             this.clmFechaEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmInFullDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmFechaDespacho = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmEsReventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOTIFReport)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,7 +107,8 @@
             this.clmPlanningDate,
             this.clmFechaEntrega,
             this.clmInFullDate,
-            this.clmFechaDespacho});
+            this.clmFechaDespacho,
+            this.clmEsReventa});
             this.dgvOTIFReport.Location = new System.Drawing.Point(12, 80);
             this.dgvOTIFReport.Name = "dgvOTIFReport";
             this.dgvOTIFReport.ReadOnly = true;
@@ -191,6 +194,16 @@
             this.dateTPFromCutting.Name = "dateTPFromCutting";
             this.dateTPFromCutting.Size = new System.Drawing.Size(200, 20);
             this.dateTPFromCutting.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(782, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 25);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // clmCodsec
             // 
@@ -340,10 +353,17 @@
             this.clmFechaDespacho.ReadOnly = true;
             this.clmFechaDespacho.Width = 70;
             // 
+            // clmEsReventa
+            // 
+            this.clmEsReventa.HeaderText = "Reventa";
+            this.clmEsReventa.Name = "clmEsReventa";
+            this.clmEsReventa.ReadOnly = true;
+            // 
             // frmOTIFReport
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1279, 489);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dgvOTIFReport);
             this.Controls.Add(this.groupBox3);
@@ -378,6 +398,7 @@
         private System.Windows.Forms.Label lblFrom;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DateTimePicker dateTPFromCutting;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCodsec;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmSoD;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEstado;
@@ -399,5 +420,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaEntrega;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmInFullDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFechaDespacho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmEsReventa;
     }
 }

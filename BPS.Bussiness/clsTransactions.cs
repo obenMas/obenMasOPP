@@ -178,5 +178,89 @@ namespace BPS.Bussiness
             tran.date = DateTime.Now;
             return tran.save() && result;
         }
+
+        public static bool addExtrusionNotification(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "Alta por extrusión";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
+
+        public static bool addCuttingNotification(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "Alta por corte";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
+
+        public static bool addCuttingConsumption(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "baja por corte";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
+
+        public static bool addDispatch(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "baja por despacho";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
+
+        public static bool addPackingNotification(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "alta por empaque";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
+
+        public static bool addPackingConsumption(string codA, string cod, string lot, int cel, double q)
+        {
+            clsTransactions tran = new clsTransactions();
+            tran.codAlfa = codA;
+            tran.code = cod;
+            tran.lotNumber = lot;
+            tran.fkCoilCellar = cel;
+            tran.quantity = q;
+            tran.transaction = "baja por empaque";
+            tran.fkUser = clsGlobal.LoggedUser.codsec;
+            tran.date = DateTime.Now;
+            return tran.save();
+        }
     }
 }

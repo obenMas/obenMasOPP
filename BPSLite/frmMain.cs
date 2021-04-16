@@ -6317,7 +6317,7 @@ namespace BPS.Lite
 
         private void bindingToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmNewPallet winDepotOut = new frmNewPallet();
+            frmImportacionColombia winDepotOut = new frmImportacionColombia();
             winDepotOut.MdiParent = this;
             winDepotOut.StartPosition = FormStartPosition.CenterScreen;
             winDepotOut.Show();

@@ -92,6 +92,18 @@ namespace BPS.Bussiness
             return table;
         }
 
+        public static DataTable getPLCOLOMBIA()
+        {
+            clsConnectionAccess myCon = new clsConnectionAccess();
+
+            OleDbDataAdapter dbDA = myCon.executeQuery("SELECT * FROM PLCOLOMBIA");
+
+            DataTable table = new DataTable();
+            dbDA.Fill(table);
+
+            return table;
+        }
+
         public static DataTable getPL()
         {
             clsConnectionAccess myCon = new clsConnectionAccess();

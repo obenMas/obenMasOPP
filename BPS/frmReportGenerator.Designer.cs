@@ -39,7 +39,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dateTPToCutting = new System.Windows.Forms.DateTimePicker();
             this.dgvReportGenerator = new System.Windows.Forms.DataGridView();
-            this.btnExport = new System.Windows.Forms.Button();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Familia = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +48,8 @@
             this.clmMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmHour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxFrom.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -158,16 +159,6 @@
             this.dgvReportGenerator.Size = new System.Drawing.Size(629, 414);
             this.dgvReportGenerator.TabIndex = 8;
             // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExport.Location = new System.Drawing.Point(610, 35);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(25, 25);
-            this.btnExport.TabIndex = 9;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
@@ -228,11 +219,32 @@
             this.clmHour.ReadOnly = true;
             this.clmHour.Visible = false;
             // 
+            // btnExport
+            // 
+            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.btnExport.Location = new System.Drawing.Point(610, 35);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(25, 25);
+            this.btnExport.TabIndex = 9;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(610, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Ex";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // frmReportGenerator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 498);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnExport);
             this.Controls.Add(this.dgvReportGenerator);
             this.Controls.Add(this.groupBox3);
@@ -276,5 +288,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmHour;
+        private System.Windows.Forms.Button button1;
     }
 }

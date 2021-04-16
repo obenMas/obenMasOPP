@@ -906,6 +906,7 @@ namespace BPS.Lite
                         string coillot;
                         string coilcode;
                         bool isImported = false;
+                        bool isSecundary = false;
 
                         if(objmain.codsec!=0)
                         {
@@ -918,10 +919,11 @@ namespace BPS.Lite
                             coillot = objseccoil.lotNumber;
                             coilcode = objseccoil.code;
                             isImported = Convert.ToBoolean(objseccoil.isExternalCoil); // Le manda el parametro para saber si la bobina es importada o no, para seguir manteniendo ésto y no perderlo.
+                            isSecundary = true;
                         }
 
 
-                        frmNewCoilRegistration winCuttingOrderList = new frmNewCoilRegistration(txtCuttingOrder.Text, cmbRepetitions.Items[cmbRepetitions.SelectedIndex].ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmPosition.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmCustomer.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmOrder.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmProduct.Index].Value.ToString(), metRep.ToString(), coillot, coilcode, cstop, dgvDetail.Rows[e.RowIndex].Cells[clmcuttingorderdetail.Index].Value.ToString(), isImported);
+                        frmNewCoilRegistration winCuttingOrderList = new frmNewCoilRegistration(txtCuttingOrder.Text, cmbRepetitions.Items[cmbRepetitions.SelectedIndex].ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmPosition.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmCustomer.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmOrder.Index].Value.ToString(), dgvDetail.Rows[e.RowIndex].Cells[clmProduct.Index].Value.ToString(), metRep.ToString(), coillot, coilcode, cstop, dgvDetail.Rows[e.RowIndex].Cells[clmcuttingorderdetail.Index].Value.ToString(), isImported,isSecundary);
                         winCuttingOrderList.StartPosition = FormStartPosition.Manual;
                         //winCuttingOrderList.MdiParent = this.MdiParent;
                         winCuttingOrderList.ShowDialog();

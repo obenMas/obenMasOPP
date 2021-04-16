@@ -31,16 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmShippingReport));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.dgvShippingReport = new System.Windows.Forms.DataGridView();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.dtpTo = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.cmbPlants = new System.Windows.Forms.ComboBox();
-            this.btnExport = new System.Windows.Forms.Button();
-            this.btnGenerateReport = new System.Windows.Forms.Button();
             this.clmPallet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCustommerName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmSordNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +48,17 @@
             this.clmDay = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cmbPlants = new System.Windows.Forms.ComboBox();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnGenerateReport = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvShippingReport)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -101,104 +102,6 @@
             this.dgvShippingReport.Name = "dgvShippingReport";
             this.dgvShippingReport.Size = new System.Drawing.Size(906, 398);
             this.dgvShippingReport.TabIndex = 0;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.Controls.Add(this.groupBox2);
-            this.groupBox6.Controls.Add(this.groupBox3);
-            this.groupBox6.Controls.Add(this.cmbPlants);
-            this.groupBox6.Controls.Add(this.btnExport);
-            this.groupBox6.Controls.Add(this.btnGenerateReport);
-            this.groupBox6.Location = new System.Drawing.Point(5, -2);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(909, 90);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.groupBox1);
-            this.groupBox2.Controls.Add(this.dtpFrom);
-            this.groupBox2.Controls.Add(this.groupBox4);
-            this.groupBox2.Controls.Add(this.dtpTo);
-            this.groupBox2.Location = new System.Drawing.Point(7, 10);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(458, 74);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Filtrado Por Fecha";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 15);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(217, 29);
-            this.groupBox1.TabIndex = 15;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Desde:";
-            // 
-            // dtpFrom
-            // 
-            this.dtpFrom.Location = new System.Drawing.Point(6, 49);
-            this.dtpFrom.Name = "dtpFrom";
-            this.dtpFrom.Size = new System.Drawing.Size(217, 20);
-            this.dtpFrom.TabIndex = 2;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(238, 15);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(213, 27);
-            this.groupBox4.TabIndex = 16;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Hasta";
-            // 
-            // dtpTo
-            // 
-            this.dtpTo.Location = new System.Drawing.Point(238, 48);
-            this.dtpTo.Name = "dtpTo";
-            this.dtpTo.Size = new System.Drawing.Size(213, 20);
-            this.dtpTo.TabIndex = 3;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(535, 14);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(168, 27);
-            this.groupBox3.TabIndex = 17;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Planta";
-            // 
-            // cmbPlants
-            // 
-            this.cmbPlants.FormattingEnabled = true;
-            this.cmbPlants.Location = new System.Drawing.Point(535, 46);
-            this.cmbPlants.Name = "cmbPlants";
-            this.cmbPlants.Size = new System.Drawing.Size(168, 21);
-            this.cmbPlants.TabIndex = 12;
-            // 
-            // btnExport
-            // 
-            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
-            this.btnExport.Location = new System.Drawing.Point(806, 49);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(25, 25);
-            this.btnExport.TabIndex = 11;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
-            // 
-            // btnGenerateReport
-            // 
-            this.btnGenerateReport.Location = new System.Drawing.Point(743, 19);
-            this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(88, 24);
-            this.btnGenerateReport.TabIndex = 10;
-            this.btnGenerateReport.Text = "Generar";
-            this.btnGenerateReport.UseVisualStyleBackColor = true;
-            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
             // 
             // clmPallet
             // 
@@ -296,6 +199,115 @@
             this.clmYear.Name = "clmYear";
             this.clmYear.Visible = false;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.button1);
+            this.groupBox6.Controls.Add(this.groupBox2);
+            this.groupBox6.Controls.Add(this.groupBox3);
+            this.groupBox6.Controls.Add(this.cmbPlants);
+            this.groupBox6.Controls.Add(this.btnExport);
+            this.groupBox6.Controls.Add(this.btnGenerateReport);
+            this.groupBox6.Location = new System.Drawing.Point(5, -2);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(909, 90);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox1);
+            this.groupBox2.Controls.Add(this.dtpFrom);
+            this.groupBox2.Controls.Add(this.groupBox4);
+            this.groupBox2.Controls.Add(this.dtpTo);
+            this.groupBox2.Location = new System.Drawing.Point(7, 10);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(458, 74);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Filtrado Por Fecha";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(6, 15);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(217, 29);
+            this.groupBox1.TabIndex = 15;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Desde:";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Location = new System.Drawing.Point(6, 49);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(217, 20);
+            this.dtpFrom.TabIndex = 2;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(238, 15);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(213, 27);
+            this.groupBox4.TabIndex = 16;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Hasta";
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Location = new System.Drawing.Point(238, 48);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(213, 20);
+            this.dtpTo.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(535, 14);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(168, 27);
+            this.groupBox3.TabIndex = 17;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Planta";
+            // 
+            // cmbPlants
+            // 
+            this.cmbPlants.FormattingEnabled = true;
+            this.cmbPlants.Location = new System.Drawing.Point(535, 46);
+            this.cmbPlants.Name = "cmbPlants";
+            this.cmbPlants.Size = new System.Drawing.Size(168, 21);
+            this.cmbPlants.TabIndex = 12;
+            // 
+            // btnExport
+            // 
+            this.btnExport.Image = global::BPS.Properties.Resources.doc_excel_table;
+            this.btnExport.Location = new System.Drawing.Point(806, 49);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(25, 25);
+            this.btnExport.TabIndex = 11;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click_1);
+            // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.Location = new System.Drawing.Point(743, 19);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(88, 24);
+            this.btnGenerateReport.TabIndex = 10;
+            this.btnGenerateReport.Text = "Generar";
+            this.btnGenerateReport.UseVisualStyleBackColor = true;
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(743, 49);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(57, 25);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmShippingReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,5 +357,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDay;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmMonth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmYear;
+        private System.Windows.Forms.Button button1;
     }
 }

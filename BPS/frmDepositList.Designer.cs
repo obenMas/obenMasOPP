@@ -60,6 +60,7 @@
             this.clmLocation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmCheck = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.button1 = new System.Windows.Forms.Button();
             this.tbcDepositList.SuspendLayout();
             this.tbcCampana.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -77,6 +78,7 @@
             // 
             // tbcCampana
             // 
+            this.tbcCampana.Controls.Add(this.button1);
             this.tbcCampana.Controls.Add(this.label3);
             this.tbcCampana.Controls.Add(this.panel1);
             this.tbcCampana.Controls.Add(this.btnExport);
@@ -323,6 +325,16 @@
             this.clmCheck.Name = "clmCheck";
             this.clmCheck.Width = 60;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(597, 458);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Excel";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // frmDepositList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -374,5 +386,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDate;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmCheck;
+        private System.Windows.Forms.Button button1;
     }
 }

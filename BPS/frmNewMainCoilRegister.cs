@@ -412,6 +412,8 @@ namespace BPS
                         }
                     }
 
+                    clsTransactions.addExtrusionNotification(objMainCoil.BoppCode, objMainCoil.code, objMainCoil.lotNumber, 4022, objMainCoil.netWeigth);
+
                     MessageBox.Show("El rollo madre se ha guardado con éxito.", "Registro de Rollo madre", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1, MessageBoxOptions.RightAlign, true);
 
                     if (closeAfterClose == true)
