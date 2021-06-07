@@ -55,6 +55,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
@@ -177,6 +178,7 @@
     <Compile Include="clsLanguage.cs" />
     <Compile Include="clsLayer.cs" />
     <Compile Include="clsLayerThickByNewFormulation.cs" />
+    <Compile Include="clsLDAPAuth.cs" />
     <Compile Include="clsLog.cs" />
     <Compile Include="clsMachine.cs" />
     <Compile Include="clsMachineActivities.cs" />

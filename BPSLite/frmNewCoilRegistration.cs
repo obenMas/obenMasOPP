@@ -249,9 +249,23 @@ namespace BPS.Lite
                 if (isSecundary)
                 {                    
                     objmain = new clsMainCoil(secCoil.mainCoilCode);
+                    if(objmain.codsec==0)
+                    {
+                        objcoil.mainCoilCode = secCoil.mainCoilCode;
+                        objcoil.extrusionDate = secCoil.createdDate;
+                    }
+                    else
+                    {
+                        objcoil.mainCoilCode = objmain.code;
+                        objcoil.extrusionDate = objmain.createdDate;
+                    }
                 }
-                objcoil.mainCoilCode = objmain.code;
-                objcoil.extrusionDate = objmain.createdDate;
+                else
+                {
+                    objcoil.mainCoilCode = objmain.code;
+                    objcoil.extrusionDate = objmain.createdDate;
+                }
+                
                 clsCoilCellar objcellar = new clsCoilCellar(cmbDepot.Items[cmbDepot.SelectedIndex].ToString());
                 objcoil.cellar = objcellar.codsec;
                 if (objcoil.save(Convert.ToInt32(cstop), Convert.ToInt32(txtSalesOrderDetail.Text), objcellar.codsec, Convert.ToInt32(cuttingod)))

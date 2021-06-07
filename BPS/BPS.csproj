@@ -135,12 +135,6 @@
     <Compile Include="ControlC\frmMainCoilQualityReportPL.Designer.cs">
       <DependentUpon>frmMainCoilQualityReportPL.cs</DependentUpon>
     </Compile>
-    <Compile Include="CrystalReport1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReport1.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Extruder\clsReProcessMP.cs" />
     <Compile Include="Extruder\frmBackLoadRaw.cs">
       <SubType>Form</SubType>
@@ -195,6 +189,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmADLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmADLogin.Designer.cs">
+      <DependentUpon>frmADLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAssignmentPlant.cs">
       <SubType>Form</SubType>
@@ -3692,10 +3692,6 @@
       <DependentUpon>frmMainCoilQualityReportPL.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReport1.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Extruder\frmBackLoadRaw.resx">
       <DependentUpon>frmBackLoadRaw.cs</DependentUpon>
     </EmbeddedResource>
@@ -3721,6 +3717,9 @@
     <EmbeddedResource Include="Film\frmNylonFilmForm.resx">
       <DependentUpon>frmNylonFilmForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmADLogin.resx">
+      <DependentUpon>frmADLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAssignmentPlant.resx">
       <DependentUpon>frmAssignmentPlant.cs</DependentUpon>
