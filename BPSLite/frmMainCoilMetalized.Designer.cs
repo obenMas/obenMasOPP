@@ -720,7 +720,7 @@
             this.tbpCoil.Location = new System.Drawing.Point(4, 24);
             this.tbpCoil.Name = "tbpCoil";
             this.tbpCoil.Padding = new System.Windows.Forms.Padding(3);
-            this.tbpCoil.Size = new System.Drawing.Size(876, 450);
+            this.tbpCoil.Size = new System.Drawing.Size(876, 449);
             this.tbpCoil.TabIndex = 0;
             this.tbpCoil.Text = "Peso - Proceso";
             this.tbpCoil.UseVisualStyleBackColor = true;
@@ -732,7 +732,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(3, 169);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(870, 278);
+            this.groupBox1.Size = new System.Drawing.Size(870, 277);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
@@ -772,7 +772,7 @@
             this.grpbProcess.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpbProcess.Location = new System.Drawing.Point(3, 93);
             this.grpbProcess.Name = "grpbProcess";
-            this.grpbProcess.Size = new System.Drawing.Size(864, 182);
+            this.grpbProcess.Size = new System.Drawing.Size(864, 181);
             this.grpbProcess.TabIndex = 1;
             this.grpbProcess.TabStop = false;
             this.grpbProcess.Text = "Proceso";
@@ -810,7 +810,7 @@
             // 
             this.grpbNotes.Controls.Add(this.txtObservations);
             this.grpbNotes.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.grpbNotes.Location = new System.Drawing.Point(3, 120);
+            this.grpbNotes.Location = new System.Drawing.Point(3, 119);
             this.grpbNotes.Name = "grpbNotes";
             this.grpbNotes.Size = new System.Drawing.Size(858, 59);
             this.grpbNotes.TabIndex = 32;

@@ -410,6 +410,12 @@
     <Compile Include="frmNewPalletMovement.Designer.cs">
       <DependentUpon>frmNewPalletMovement.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNewPreShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewPreShipping.Designer.cs">
+      <DependentUpon>frmNewPreShipping.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNewPreShippingList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -1410,7 +1416,7 @@
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="Reports\Pilar\rptMetalizedCoilPL.cs">
+    <Compile Include="Reports\rptMetalizedCoilPL.cs">
       <DependentUpon>rptMetalizedCoilPL.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
@@ -1917,6 +1923,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewPalletMovement.resx">
       <DependentUpon>frmNewPalletMovement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewPreShipping.resx">
+      <DependentUpon>frmNewPreShipping.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewPreShippingList.resx">
       <DependentUpon>frmNewPreShippingList.cs</DependentUpon>
@@ -2466,7 +2475,7 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptCoilLabelObservationPL.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\Pilar\rptMetalizedCoilPL.rpt">
+    <EmbeddedResource Include="Reports\rptMetalizedCoilPL.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rptMetalizedCoilPL.cs</LastGenOutput>
     </EmbeddedResource>

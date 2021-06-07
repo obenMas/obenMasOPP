@@ -452,7 +452,17 @@ namespace BPS.Lite
 
         private void dgv_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex==preparar.Index)
+            if (e.ColumnIndex == ver.Index)
+            {
+                if (e.RowIndex != -1)
+                {
+                    frmNewPreShipping win = new frmNewPreShipping(dgv.Rows[e.RowIndex].Cells[numero.Index].Value.ToString());
+                    win.StartPosition = FormStartPosition.Manual;
+                    win.ShowDialog();
+                }
+            }
+
+            if (e.ColumnIndex==preparar.Index)
             {
                 if(e.RowIndex!=-1)
                 {

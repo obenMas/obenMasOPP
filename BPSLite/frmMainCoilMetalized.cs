@@ -1054,7 +1054,7 @@ namespace BPS.Lite
             {
                 objMainCoilMetal = new clsMainCoilMetal(mainCoilMetal);
 
-                rptMetalizedCoil rptPalletLabel = new rptMetalizedCoil();
+                rptMetalizedCoilPL rptPalletLabel = new rptMetalizedCoilPL();
                 Tables tables;
 
                 tables = rptPalletLabel.Database.Tables;

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BPS.Lite.Reports.Pilar {
+namespace BPS.Lite.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -41,7 +41,7 @@ namespace BPS.Lite.Reports.Pilar {
         
         public override string FullResourceName {
             get {
-                return "BPS.Lite.Reports.Pilar.rptMetalizedCoilPL.rpt";
+                return "BPS.Lite.Reports.rptMetalizedCoilPL.rpt";
             }
             set {
                 // Do nothing
