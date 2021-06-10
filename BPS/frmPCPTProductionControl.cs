@@ -735,10 +735,10 @@ namespace BPS
                     {
                         dgvControl.Rows.Add();
                         int fila = dgvControl.Rows.Count - 1;
-                        dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["pelicula"];
-                        dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Extrusora"];
-                        dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"]) / 1000).ToString("0.00");
-                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["PesoNeto"]) / 1000;
+                        dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["nomScrap"];
+                        dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Maquina"];
+                        dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000).ToString("0.00");
+                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["Peso"]) / 1000;
                     }
                 }
                 txtTotal.Text = total.ToString("0.00");

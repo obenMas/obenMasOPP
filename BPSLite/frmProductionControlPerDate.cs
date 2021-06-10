@@ -1044,5 +1044,11 @@ namespace BPS.Lite
             frmPCPTProductionControl form = new frmPCPTProductionControl(dtpDesde.Value.Date, dtpHasta.Value.Date, "PrimeraDepositoFinalImp");
             form.Show();
         }
+
+        private void txtMermaMetalizadora_DoubleClick_1(object sender, EventArgs e)
+        {
+            frmPCPTProductionControl form = new frmPCPTProductionControl(dtpDesde.Value.Date, dtpHasta.Value.Date, "MetalizadoraMerma");
+            form.Show();
+        }
     }
 }

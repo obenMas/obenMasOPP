@@ -1519,6 +1519,7 @@
             this.txtMermaMetalizadora.Size = new System.Drawing.Size(66, 20);
             this.txtMermaMetalizadora.TabIndex = 3;
             this.txtMermaMetalizadora.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMermaMetalizadora.DoubleClick += new System.EventHandler(this.txtMermaMetalizadora_DoubleClick_1);
             // 
             // txtMetalizadoMetalizadora
             // 
