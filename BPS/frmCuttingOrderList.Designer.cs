@@ -31,17 +31,6 @@ namespace BPS
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCuttingOrderList));
             this.grpbList = new System.Windows.Forms.GroupBox();
             this.dgvCuttingOrder = new System.Windows.Forms.DataGridView();
-            this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmStatus = new System.Windows.Forms.DataGridViewImageColumn();
-            this.clmOrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmFilmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmPositions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmRepetitions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmProgrammedWeigth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmIsSecundaryCut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbEmpty = new System.Windows.Forms.GroupBox();
             this.lblInformationColor1 = new System.Windows.Forms.Label();
             this.lblInformation1 = new System.Windows.Forms.Label();
@@ -52,6 +41,18 @@ namespace BPS
             this.grpbMainCoilButtons = new System.Windows.Forms.GroupBox();
             this.btnReport = new System.Windows.Forms.Button();
             this.grpbCuttingOrderDetail = new System.Windows.Forms.GroupBox();
+            this.clmCodsec = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPrio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmStatus = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clmOrderNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMachineName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmFilmName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmPositions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmRepetitions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmProductCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmProgrammedWeigth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCreatedDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmIsSecundaryCut = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.grpbList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCuttingOrder)).BeginInit();
             this.grpbEmpty.SuspendLayout();
@@ -85,6 +86,7 @@ namespace BPS
             this.clmFilmName,
             this.clmPositions,
             this.clmRepetitions,
+            this.clmProductCode,
             this.clmProgrammedWeigth,
             this.clmCreatedDate,
             this.clmIsSecundaryCut});
@@ -96,81 +98,6 @@ namespace BPS
             this.dgvCuttingOrder.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCuttingOrder_CellEndEdit);
             this.dgvCuttingOrder.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCuttingOrder_CellMouseClick);
             this.dgvCuttingOrder.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvCuttingOrder_KeyDown);
-            // 
-            // clmCodsec
-            // 
-            this.clmCodsec.HeaderText = "Num.";
-            this.clmCodsec.Name = "clmCodsec";
-            this.clmCodsec.ReadOnly = true;
-            this.clmCodsec.Width = 50;
-            // 
-            // clmPrio
-            // 
-            this.clmPrio.HeaderText = "Prioridad";
-            this.clmPrio.Name = "clmPrio";
-            this.clmPrio.Width = 60;
-            // 
-            // clmStatus
-            // 
-            this.clmStatus.HeaderText = "Estado";
-            this.clmStatus.Name = "clmStatus";
-            this.clmStatus.ReadOnly = true;
-            this.clmStatus.Width = 50;
-            // 
-            // clmOrderNumber
-            // 
-            this.clmOrderNumber.HeaderText = "Orden";
-            this.clmOrderNumber.Name = "clmOrderNumber";
-            this.clmOrderNumber.ReadOnly = true;
-            this.clmOrderNumber.Visible = false;
-            this.clmOrderNumber.Width = 60;
-            // 
-            // clmMachineName
-            // 
-            this.clmMachineName.HeaderText = "Máquina";
-            this.clmMachineName.Name = "clmMachineName";
-            this.clmMachineName.ReadOnly = true;
-            this.clmMachineName.Width = 150;
-            // 
-            // clmFilmName
-            // 
-            this.clmFilmName.HeaderText = "Película";
-            this.clmFilmName.Name = "clmFilmName";
-            this.clmFilmName.ReadOnly = true;
-            this.clmFilmName.Width = 150;
-            // 
-            // clmPositions
-            // 
-            this.clmPositions.HeaderText = "Posiciones";
-            this.clmPositions.Name = "clmPositions";
-            this.clmPositions.ReadOnly = true;
-            this.clmPositions.Width = 270;
-            // 
-            // clmRepetitions
-            // 
-            this.clmRepetitions.HeaderText = "Repeticiones";
-            this.clmRepetitions.Name = "clmRepetitions";
-            this.clmRepetitions.ReadOnly = true;
-            // 
-            // clmProgrammedWeigth
-            // 
-            this.clmProgrammedWeigth.HeaderText = "Peso";
-            this.clmProgrammedWeigth.Name = "clmProgrammedWeigth";
-            this.clmProgrammedWeigth.ReadOnly = true;
-            // 
-            // clmCreatedDate
-            // 
-            this.clmCreatedDate.HeaderText = "Creado";
-            this.clmCreatedDate.Name = "clmCreatedDate";
-            this.clmCreatedDate.ReadOnly = true;
-            this.clmCreatedDate.Width = 140;
-            // 
-            // clmIsSecundaryCut
-            // 
-            this.clmIsSecundaryCut.HeaderText = "isSecundary";
-            this.clmIsSecundaryCut.Name = "clmIsSecundaryCut";
-            this.clmIsSecundaryCut.ReadOnly = true;
-            this.clmIsSecundaryCut.Visible = false;
             // 
             // grpbEmpty
             // 
@@ -267,6 +194,86 @@ namespace BPS
             this.grpbCuttingOrderDetail.TabStop = false;
             this.grpbCuttingOrderDetail.Text = "Detalle";
             // 
+            // clmCodsec
+            // 
+            this.clmCodsec.HeaderText = "Num.";
+            this.clmCodsec.Name = "clmCodsec";
+            this.clmCodsec.ReadOnly = true;
+            this.clmCodsec.Width = 50;
+            // 
+            // clmPrio
+            // 
+            this.clmPrio.HeaderText = "Prioridad";
+            this.clmPrio.Name = "clmPrio";
+            this.clmPrio.Width = 60;
+            // 
+            // clmStatus
+            // 
+            this.clmStatus.HeaderText = "Estado";
+            this.clmStatus.Name = "clmStatus";
+            this.clmStatus.ReadOnly = true;
+            this.clmStatus.Width = 50;
+            // 
+            // clmOrderNumber
+            // 
+            this.clmOrderNumber.HeaderText = "Orden";
+            this.clmOrderNumber.Name = "clmOrderNumber";
+            this.clmOrderNumber.ReadOnly = true;
+            this.clmOrderNumber.Visible = false;
+            this.clmOrderNumber.Width = 60;
+            // 
+            // clmMachineName
+            // 
+            this.clmMachineName.HeaderText = "Máquina";
+            this.clmMachineName.Name = "clmMachineName";
+            this.clmMachineName.ReadOnly = true;
+            this.clmMachineName.Width = 150;
+            // 
+            // clmFilmName
+            // 
+            this.clmFilmName.HeaderText = "Película";
+            this.clmFilmName.Name = "clmFilmName";
+            this.clmFilmName.ReadOnly = true;
+            this.clmFilmName.Width = 150;
+            // 
+            // clmPositions
+            // 
+            this.clmPositions.HeaderText = "Posiciones";
+            this.clmPositions.Name = "clmPositions";
+            this.clmPositions.ReadOnly = true;
+            this.clmPositions.Width = 270;
+            // 
+            // clmRepetitions
+            // 
+            this.clmRepetitions.HeaderText = "Repeticiones";
+            this.clmRepetitions.Name = "clmRepetitions";
+            this.clmRepetitions.ReadOnly = true;
+            // 
+            // clmProductCode
+            // 
+            this.clmProductCode.HeaderText = "Producto";
+            this.clmProductCode.Name = "clmProductCode";
+            // 
+            // clmProgrammedWeigth
+            // 
+            this.clmProgrammedWeigth.HeaderText = "Peso";
+            this.clmProgrammedWeigth.Name = "clmProgrammedWeigth";
+            this.clmProgrammedWeigth.ReadOnly = true;
+            // 
+            // clmCreatedDate
+            // 
+            this.clmCreatedDate.HeaderText = "Creado";
+            this.clmCreatedDate.Name = "clmCreatedDate";
+            this.clmCreatedDate.ReadOnly = true;
+            this.clmCreatedDate.Width = 140;
+            // 
+            // clmIsSecundaryCut
+            // 
+            this.clmIsSecundaryCut.HeaderText = "isSecundary";
+            this.clmIsSecundaryCut.Name = "clmIsSecundaryCut";
+            this.clmIsSecundaryCut.ReadOnly = true;
+            this.clmIsSecundaryCut.Visible = false;
+            // 
             // frmCuttingOrderList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -312,6 +319,7 @@ namespace BPS
         private System.Windows.Forms.DataGridViewTextBoxColumn clmFilmName;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmPositions;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmRepetitions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmProductCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmProgrammedWeigth;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmCreatedDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmIsSecundaryCut;

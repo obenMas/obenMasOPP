@@ -59,6 +59,7 @@ namespace BPS
                         dgvCuttingOrder.Rows[i].Cells[clmStatus.Index].Value = global::BPS.Properties.Resources.pause_sharp;
                     }
                     dgvCuttingOrder.Rows[i].Cells[clmIsSecundaryCut.Index].Value = false;
+                    dgvCuttingOrder.Rows[i].Cells[clmProductCode.Index].Value = lstCuttingOrder[i].productCode;
                 }
                 else
                 {
@@ -101,6 +102,7 @@ namespace BPS
                         dgvCuttingOrder.Rows[i].Cells[clmStatus.Index].Value = global::BPS.Properties.Resources.pause_sharp;
                     }
                     dgvCuttingOrder.Rows[i].Cells[clmIsSecundaryCut.Index].Value = true;
+                    dgvCuttingOrder.Rows[i].Cells[clmProductCode.Index].Value = lstCuttingOrder[i].productCode;
                 }
             }
         }
