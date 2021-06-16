@@ -319,26 +319,23 @@ namespace BPS.Lite
             {
                 this.Text = "Detalle de Atlas de calificacion Producto en proceso";
                 dgvControl.Columns[clmPelicula.Index].Visible = true;
-                //dgvControl.Columns[clmExtrusora.Index].Visible = true;
+                dgvControl.Columns[clmExtrusora.Index].Visible = true;
                 dgvControl.Columns[clmSubtotal.Index].Visible = true;
                 DataSet DS = new DataSet();
                 horario = desde.ToShortTimeString();
                 horario2 = hasta.ToShortTimeString();
-                DS = clsConnection.getDataSetResult("CALL spCuttingReportTotalAtlas '" + desde.ToString("dd/MM/yyyy") + " " + horario + "', '" + hasta.ToString("dd/MM/yyyy") + " " + horario2 + "'");
+                DS = clsConnection.getDataSetResult("CALL spCuttingReportObsMetalAtlas '" + desde.ToString("dd/MM/yyyy") + " " + horario + "', '" + hasta.ToString("dd/MM/yyyy") + " " + horario2 + "'");
 
                 if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
                 {
                     for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                     {
-                        if (DS.Tables[0].Rows[i]["Tipo"].ToString() == "Corte Metal" && DS.Tables[0].Rows[i]["Calificacion"].ToString() == "Observación")
-                        {
-                            dgvControl.Rows.Add();
-                            int fila = dgvControl.Rows.Count - 1;
-                            dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["codeFilm"];
-                            //dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Maquina"];
-                            dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000).ToString("0.00");
-                            total += Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000;
-                        }
+                        dgvControl.Rows.Add();
+                        int fila = dgvControl.Rows.Count - 1;
+                        dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["codeFilm"];
+                        dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Maquina"];
+                        dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000).ToString("0.00");
+                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000;
                     }
                 }
                 txtTotal.Text = total.ToString("0.00");
@@ -349,26 +346,23 @@ namespace BPS.Lite
             {
                 this.Text = "Detalle de Atlas de calificacion Segunda";
                 dgvControl.Columns[clmPelicula.Index].Visible = true;
-                //dgvControl.Columns[clmExtrusora.Index].Visible = true;
+                dgvControl.Columns[clmExtrusora.Index].Visible = true;
                 dgvControl.Columns[clmSubtotal.Index].Visible = true;
                 DataSet DS = new DataSet();
                 horario = desde.ToShortTimeString();
                 horario2 = hasta.ToShortTimeString();
-                DS = clsConnection.getDataSetResult("CALL spCuttingReportTotalAtlas '" + desde.ToString("dd/MM/yyyy") + " " + horario + "', '" + hasta.ToString("dd/MM/yyyy") + " " + horario2 + "'");
+                DS = clsConnection.getDataSetResult("CALL spCuttingReportOP1MetalAtlas '" + desde.ToString("dd/MM/yyyy") + " " + horario + "', '" + hasta.ToString("dd/MM/yyyy") + " " + horario2 + "'");
 
                 if (DS.Tables.Count > 0 && DS.Tables[0].Rows.Count > 0)
                 {
                     for (int i = 0; i < DS.Tables[0].Rows.Count; i++)
                     {
-                        if (DS.Tables[0].Rows[i]["Tipo"].ToString() == "Corte Metal" && DS.Tables[0].Rows[i]["Calificacion"].ToString() == "Segunda")
-                        {
-                            dgvControl.Rows.Add();
-                            int fila = dgvControl.Rows.Count - 1;
-                            dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["codeFilm"];
-                            //dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Maquina"];
-                            dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000).ToString("0.00");
-                            total += Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000;
-                        }
+                        dgvControl.Rows.Add();
+                        int fila = dgvControl.Rows.Count - 1;
+                        dgvControl.Rows[fila].Cells[clmPelicula.Index].Value = DS.Tables[0].Rows[i]["codeFilm"];
+                        dgvControl.Rows[fila].Cells[clmExtrusora.Index].Value = DS.Tables[0].Rows[i]["Maquina"];
+                        dgvControl.Rows[fila].Cells[clmSubtotal.Index].Value = (Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000).ToString("0.00");
+                        total += Convert.ToDouble(DS.Tables[0].Rows[i]["CorteTotal"]) / 1000;
                     }
                 }
                 txtTotal.Text = total.ToString("0.00");
