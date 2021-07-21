@@ -40,7 +40,7 @@ namespace BPS.Lite
                 for(int i=0;i<table.Rows.Count;i++)
                 {
                     dgv.Rows.Add();
-                    if (table.Rows[i][0].ToString().StartsWith("ENa") || table.Rows[i][0].ToString().StartsWith("LH") || table.Rows[i][0].ToString().StartsWith("SC") || table.Rows[i][0].ToString().StartsWith("SD") || table.Rows[i][0].ToString().StartsWith("CC") || table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("CMC") || table.Rows[i][0].ToString().StartsWith("CWC") || table.Rows[i][0].ToString().StartsWith("CWLH") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ML") || table.Rows[i][0].ToString().StartsWith("CHb") || table.Rows[i][0].ToString().StartsWith("ELa") || table.Rows[i][0].ToString().StartsWith("EMa") || table.Rows[i][0].ToString().StartsWith("EMk") || table.Rows[i][0].ToString().StartsWith("REM") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RPK") || table.Rows[i][0].ToString().StartsWith("RP"))
+                    if (table.Rows[i][0].ToString().StartsWith("ENa") || table.Rows[i][0].ToString().StartsWith("LH") || table.Rows[i][0].ToString().StartsWith("NH") || table.Rows[i][0].ToString().StartsWith("SC") || table.Rows[i][0].ToString().StartsWith("SD") || table.Rows[i][0].ToString().StartsWith("CC") || table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("CMC") || table.Rows[i][0].ToString().StartsWith("CWC") || table.Rows[i][0].ToString().StartsWith("CWLH") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ML") || table.Rows[i][0].ToString().StartsWith("CHb") || table.Rows[i][0].ToString().StartsWith("ELa") || table.Rows[i][0].ToString().StartsWith("EMa") || table.Rows[i][0].ToString().StartsWith("EMk") || table.Rows[i][0].ToString().StartsWith("REM") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RPK") || table.Rows[i][0].ToString().StartsWith("RP"))
                     {
                         if (table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "760" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "750" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "755" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "665" || table.Rows[i][0].ToString().Substring(table.Rows[i][0].ToString().Length - 3, 3) == "670")
                         {
@@ -70,7 +70,7 @@ namespace BPS.Lite
                         {
                             stringdiam = "E3";
                         }
-                        if (table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().ToUpper().StartsWith("ELA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMK") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RPK") || table.Rows[i][0].ToString().StartsWith("REM") || table.Rows[i][0].ToString().StartsWith("RP") || table.Rows[i][0].ToString().StartsWith("CWLH"))
+                        if (table.Rows[i][0].ToString().StartsWith("CR") || table.Rows[i][0].ToString().StartsWith("NH") || table.Rows[i][0].ToString().StartsWith("EC") || table.Rows[i][0].ToString().StartsWith("ET") || table.Rows[i][0].ToString().StartsWith("AT") || table.Rows[i][0].ToString().ToUpper().StartsWith("ELA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMK") || table.Rows[i][0].ToString().StartsWith("RPL") || table.Rows[i][0].ToString().StartsWith("RPK") || table.Rows[i][0].ToString().StartsWith("REM") || table.Rows[i][0].ToString().StartsWith("RP") || table.Rows[i][0].ToString().StartsWith("CWLH"))
                         {
                             stringtratamiento = table.Rows[i][0].ToString().Substring(9,2);
                         }
@@ -87,7 +87,7 @@ namespace BPS.Lite
                             stringancho = table.Rows[i][0].ToString().Substring(11, 4);
                         }
 
-                        if (table.Rows[i][0].ToString().ToUpper().StartsWith("CHB") || table.Rows[i][0].ToString().ToUpper().StartsWith("CWC") || table.Rows[i][0].ToString().ToUpper().StartsWith("CMC") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ELA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETO"))
+                        if (table.Rows[i][0].ToString().ToUpper().StartsWith("CHB") || table.Rows[i][0].ToString().ToUpper().StartsWith("CWC") || table.Rows[i][0].ToString().ToUpper().StartsWith("CMC") || table.Rows[i][0].ToString().ToUpper().StartsWith("ENA") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETD") || table.Rows[i][0].ToString().ToUpper().StartsWith("ELA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMA") || table.Rows[i][0].ToString().ToUpper().StartsWith("EMK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETK") || table.Rows[i][0].ToString().ToUpper().StartsWith("ETO"))
                         {
                             stringancho = Convert.ToInt32(table.Rows[i][0].ToString().Substring(11,4)).ToString();
                             stringprod = table.Rows[i][0].ToString().Substring(0, 3).ToUpper() + "0" + table.Rows[i][0].ToString().Substring(7, 2) + stringtratamiento + "x" + Convert.ToInt32(stringancho).ToString() + stringdiam;
@@ -294,8 +294,8 @@ namespace BPS.Lite
                     lstPallet[lstPallet.Count - 1].fkStatus = 38;
                     lstPallet[lstPallet.Count - 1].palletNumber = 1;
                     lstPallet[lstPallet.Count - 1].code = dgv.Rows[i].Cells[pallet.Index].Value.ToString();
-                    lstPallet[lstPallet.Count - 1].netWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[netoPallet.Index].Value), 2);
-                    lstPallet[lstPallet.Count - 1].grossWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[brutoPallet.Index].Value), 2);
+                    lstPallet[lstPallet.Count - 1].netWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[netoPallet.Index].Value), 1);
+                    lstPallet[lstPallet.Count - 1].grossWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[brutoPallet.Index].Value), 1);
                     lstPallet[lstPallet.Count - 1].isPrinted = false;
                     lstPallet[lstPallet.Count - 1].createdBy = clsGlobal.LoggedUser.codsec;
                     lstPallet[lstPallet.Count - 1].modifiedBy = clsGlobal.LoggedUser.codsec;
@@ -327,7 +327,7 @@ namespace BPS.Lite
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].diameter = Convert.ToDouble(dgv.Rows[i].Cells[diam.Index].Value.ToString());
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].cuttingPosition = 1;
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].cuttingStop = 1;
-                        lstPallet[lstPallet.Count - 1].lstCoil[lstPos].netWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[netoBobina.Index].Value.ToString()), 2);
+                        lstPallet[lstPallet.Count - 1].lstCoil[lstPos].netWeight = Math.Round(Convert.ToDouble(dgv.Rows[i].Cells[netoBobina.Index].Value.ToString()), 1);
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].density = clsCoil.getCoilDensity(lstPallet[lstPallet.Count - 1].lstCoil[lstPos].netWeight, lstPallet[lstPallet.Count - 1].lstCoil[lstPos].diameter, new clsCore(objProduct.fkCore), objProduct.width);
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].grossWeight = lstPallet[lstPallet.Count - 1].lstCoil[lstPos].netWeight + (objProduct.width * (new clsCore(objProduct.fkCore).weigthPerMilimeter));
                         lstPallet[lstPallet.Count - 1].lstCoil[lstPos].treatmentSide = treatmentSide;
