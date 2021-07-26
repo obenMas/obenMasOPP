@@ -129,6 +129,7 @@ namespace BPS
                         dgv.Rows[dgv.Rows.Count - 1].Cells[planta.Index].Value = DS.Tables[0].Rows[i]["plant"];
                         dgv.Rows[dgv.Rows.Count - 1].Cells[unidades.Index].Value = DS.Tables[0].Rows[i]["units"];
                         dgv.Rows[dgv.Rows.Count - 1].Cells[remito.Index].Value = DS.Tables[0].Rows[i]["Rnumber"];
+                        dgv.Rows[dgv.Rows.Count - 1].Cells[notadeventa.Index].Value = DS.Tables[0].Rows[i]["notadeventa"];
                         dgv.Rows[dgv.Rows.Count - 1].Cells[clmAproved.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["aproved"]);
                         if(Convert.ToBoolean(DS.Tables[0].Rows[i]["aproved"]))
                         {
@@ -466,6 +467,22 @@ namespace BPS
                     {
                         clsNewPreShipping nps = new clsNewPreShipping(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[codsec.Index].Value));
                         if (!nps.setRnumber(dgv.Rows[e.RowIndex].Cells[remito.Index].Value.ToString()))
+                        {
+                            MessageBox.Show("Ocurrió un error y no se pudo grabar el numero de remito. Consulte con el administrador del sistema.", "Listado de pre-despachos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    llenarDgv();
+                }
+            }
+
+            if (e.ColumnIndex == notadeventa.Index)
+            {
+                if (e.RowIndex != -1)
+                {
+                    if (dgv.Rows[e.RowIndex].Cells[remito.Index].Value != null)
+                    {
+                        clsNewPreShipping nps = new clsNewPreShipping(Convert.ToInt32(dgv.Rows[e.RowIndex].Cells[codsec.Index].Value));
+                        if (!nps.setSalesNote(dgv.Rows[e.RowIndex].Cells[notadeventa.Index].Value.ToString()))
                         {
                             MessageBox.Show("Ocurrió un error y no se pudo grabar el numero de remito. Consulte con el administrador del sistema.", "Listado de pre-despachos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }

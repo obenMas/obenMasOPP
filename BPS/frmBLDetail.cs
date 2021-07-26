@@ -75,6 +75,8 @@ namespace BPS
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmDateDeliveryYear.Index].Value = DS.Tables[0].Rows[i]["yearFechaOTIF"];
                 //Termina a aca
                 dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmObservacion.Index].Value = DS.Tables[0].Rows[i]["Observaciones"];
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmReventa.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["esReventa"]);
+                dgvBLDetail.Rows[dgvBLDetail.Rows.Count - 1].Cells[clmAprobado.Index].Value = Convert.ToBoolean(DS.Tables[0].Rows[i]["Aprobado"]);
             }
         }
 

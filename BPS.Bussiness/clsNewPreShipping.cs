@@ -120,7 +120,7 @@ namespace BPS.Bussiness
 
                 if (this.codsec == 0)
                 {
-                    queryString += "INSERT INTO bps_prod_newPreShipping (npship_number, npship_fkEntity, npship_fkUser, npship_shippingDate, npship_fkStatus, npship_createdDate, npship_Rnumber)";
+                    queryString += "INSERT INTO bps_prod_newPreShipping (npship_number, npship_fkEntity, npship_fkUser, npship_shippingDate, npship_fkStatus, npship_createdDate, npship_Rnumber, npship_SalesNote)";
                     queryString += " VALUES ( ";
                     queryString += "'" + this.number + "', ";
                     queryString += "" + this.fkEntity + ", ";
@@ -128,7 +128,8 @@ namespace BPS.Bussiness
                     queryString += "'" + this.shippingDate.ToString("dd/MM/yyyy") + "', ";
                     queryString += "" + this.fkStatus + ", ";
                     queryString += "'" + this.createdDate.ToString("dd/MM/yyyy") + "', ";
-                    queryString += "'" + this.Rnumber + "' ";
+                    queryString += "'" + this.Rnumber + "', ";
+                    queryString += "'" + this.SalesNote + "' ";
                     queryString += ");";
                 }
                 else
@@ -142,6 +143,7 @@ namespace BPS.Bussiness
                     queryString += "npship_fkStatus = " + this.fkStatus + ", ";
                     queryString += "npship_createdDate ='" + this.createdDate.ToString("dd/MM/yyyy") + "', ";
                     queryString += "npship_Rnumber = '" + this.Rnumber + "' ";
+                    queryString += "npship_SalesNote = '" + this.SalesNote + "' ";
                     queryString += " WHERE npship_codsec = " + this.codsec.ToString();
                 }
                 if (clsConnection.executeQuery(queryString))
@@ -296,6 +298,21 @@ namespace BPS.Bussiness
             queryString += "UPDATE bps_prod_newPreShipping";
             queryString += " SET ";
             queryString += "npship_Rnumber = '" + rn + "'";
+            queryString += " WHERE npship_codsec = " + this.codsec.ToString();
+
+            if (clsConnection.executeQuery(queryString))
+                return true;
+            else
+                return false;
+        }
+
+        public bool setSalesNote(string sn)
+        {
+            string queryString = "";
+
+            queryString += "UPDATE bps_prod_newPreShipping";
+            queryString += " SET ";
+            queryString += "npship_SalesNote = '" + sn + "'";
             queryString += " WHERE npship_codsec = " + this.codsec.ToString();
 
             if (clsConnection.executeQuery(queryString))
