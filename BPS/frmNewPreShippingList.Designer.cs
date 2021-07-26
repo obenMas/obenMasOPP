@@ -64,6 +64,7 @@
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.programado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.remito = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notadeventa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.preparar = new System.Windows.Forms.DataGridViewImageColumn();
             this.listaemp = new System.Windows.Forms.DataGridViewImageColumn();
             this.clmAproved = new System.Windows.Forms.DataGridViewCheckBoxColumn();
@@ -97,6 +98,7 @@
             this.estado,
             this.programado,
             this.remito,
+            this.notadeventa,
             this.preparar,
             this.listaemp,
             this.clmAproved});
@@ -400,6 +402,11 @@
             this.remito.ReadOnly = true;
             this.remito.Width = 70;
             // 
+            // notadeventa
+            // 
+            this.notadeventa.HeaderText = "Nota de venta";
+            this.notadeventa.Name = "notadeventa";
+            // 
             // preparar
             // 
             this.preparar.HeaderText = "";
@@ -479,6 +486,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.DataGridViewTextBoxColumn programado;
         private System.Windows.Forms.DataGridViewTextBoxColumn remito;
+        private System.Windows.Forms.DataGridViewTextBoxColumn notadeventa;
         private System.Windows.Forms.DataGridViewImageColumn preparar;
         private System.Windows.Forms.DataGridViewImageColumn listaemp;
         private System.Windows.Forms.DataGridViewCheckBoxColumn clmAproved;

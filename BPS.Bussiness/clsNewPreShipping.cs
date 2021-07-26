@@ -16,6 +16,7 @@ namespace BPS.Bussiness
         private int npship_fkStatus;
         private DateTime npship_createdDate;
         private string npship_Rnumber;
+        private string npship_SalesNote;
         private bool npship_wasAproved;
         private DateTime npship_shippedDate;
         private DateTime npship_paymentDate;
@@ -36,6 +37,8 @@ namespace BPS.Bussiness
         
         public string Rnumber { get { return npship_Rnumber; } set { npship_Rnumber = value; } }
 
+        public string SalesNote { get { return npship_SalesNote; } set { npship_SalesNote = value; } }
+
         public bool wasAproved { get { return npship_wasAproved; } set { npship_wasAproved = value; } }
 
         public DateTime shippedDate { get { return npship_shippedDate; } set { npship_shippedDate = value; } }
@@ -53,6 +56,7 @@ namespace BPS.Bussiness
             fkStatus = 3067;
             createdDate = DateTime.Now;
             Rnumber = "0";
+            SalesNote = "0";
             wasAproved = false;
         }
 
@@ -80,6 +84,7 @@ namespace BPS.Bussiness
                 this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["npship_fkStatus"]);
                 this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_createdDate"]);
                 this.Rnumber = DS.Tables[0].Rows[0]["npship_Rnumber"].ToString();
+                this.SalesNote = DS.Tables[0].Rows[0]["npship_SalesNote"].ToString();
                 this.wasAproved = Convert.ToBoolean(DS.Tables[0].Rows[0]["npship_wasAproved"]);
                 this.shippedDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_shippedDate"]);
                 this.paymentDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_paymentDate"]);
@@ -100,6 +105,7 @@ namespace BPS.Bussiness
                 this.fkStatus = Convert.ToInt32(DS.Tables[0].Rows[0]["npship_fkStatus"]);
                 this.createdDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_createdDate"]);
                 this.Rnumber = DS.Tables[0].Rows[0]["npship_Rnumber"].ToString();
+                this.SalesNote = DS.Tables[0].Rows[0]["npship_SalesNote"].ToString();
                 this.wasAproved = Convert.ToBoolean(DS.Tables[0].Rows[0]["npship_wasAproved"]);
                 this.shippedDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_shippedDate"]);
                 this.paymentDate = Convert.ToDateTime(DS.Tables[0].Rows[0]["npship_paymentDate"]);
