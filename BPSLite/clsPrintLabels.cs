@@ -228,7 +228,7 @@ namespace BPS.Lite
 
             if (isExternalCoil == false)
             {
-                Reports.rptCoilLabel rptCoilLabel = new Reports.rptCoilLabel();
+                Reports.Pilar.rptCoilLabelPL rptCoilLabel = new Reports.Pilar.rptCoilLabelPL();
 
                 Tables tables;
 

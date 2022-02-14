@@ -125,6 +125,9 @@ namespace BPS.Lite
                         case "SC 17":
                             dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;
+                        case "SD 17":
+                            dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SD017x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
+                            break;
                         case "SC 30":
                             dgv.Rows[dgv.Rows.Count - 1].Cells[codOben.Index].Value = "SC030x" + table.Rows[i][6].ToString().Replace(" ", "").Replace("m", "").Replace(".", "") + diam + core;
                             break;

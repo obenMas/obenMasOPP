@@ -30,18 +30,23 @@ namespace BPS.Lite
                 DataSet DS = new DataSet();
                 string texto;
 
-                if(cmbPlant.SelectedIndex==-1)
+            
+            if (cmbPlant.SelectedIndex==-1)
                 {
                     texto = "CALL spCuttingReport '" + dateTPFromCutting.Value.ToString("dd/MM/yyyy") + "', '" + dateTPToCutting.Value.ToString("dd/MM/yyyy") + "';";
-                }
+                
+            }
                 else
                 {
-                    texto = "CALL spCuttingReportByPlant ('" + dateTPFromCutting.Value.ToString("dd/MM/yyyy") + "', '" + dateTPToCutting.Value.ToString("dd/MM/yyyy") + "', " + new clsPlant(cmbPlant.Items[cmbPlant.SelectedIndex].ToString()).codsec.ToString() + ");";
-                }
-                
-                DS = clsConnection.getDataSetResult(texto);
+                    texto = "CALL spCuttingReportByPlant ('" + dateTPFromCutting.Value.ToString("dd/MM/yyyy") + "', '" + dateTPToCutting.Value.ToString("dd/MM/yyyy") + "' , " + new clsPlant(cmbPlant.Items[cmbPlant.SelectedIndex].ToString()).codsec.ToString() + ");";
+                    
+               
 
-                dataGridView1.Rows.Clear();
+            }
+           
+            DS = clsConnection.getDataSetResult(texto);
+            
+            dataGridView1.Rows.Clear();
 
             if(DS.Tables.Count>0 && DS.Tables[0].Rows.Count>0)
             {
@@ -91,7 +96,7 @@ namespace BPS.Lite
             for (int i = 0; i < dataGridView1.Rows.Count;i++ )
             {
                 listaFechas.Add(dataGridView1.Rows[i].Cells[FechaCorte.Index].Value.ToString());
-                dataGridView1.Rows[i].Cells[FechaCorte.Index].Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[FechaCorte.Index].Value).ToString("MM/dd/yyyy HH:mm");
+                dataGridView1.Rows[i].Cells[FechaCorte.Index].Value = Convert.ToDateTime(dataGridView1.Rows[i].Cells[FechaCorte.Index].Value).ToString("dd/MM/yyyy HH:mm");
             }
 
             string ext = string.Empty;

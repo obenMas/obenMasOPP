@@ -50,7 +50,7 @@ namespace BPS
 
         private void ObtenerDS()
         {
-            DS = clsConnection.getDataSetResult("SELECT * FROM vwDepositoProductoTerminado");
+            DS = clsConnection.getDataSetResult("SELECT * FROM vwInventarioCompletoPallets");
         }
 
         private void llenardgv()

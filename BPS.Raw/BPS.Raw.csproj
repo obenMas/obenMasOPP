@@ -62,10 +62,11 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>27C1B8F3469E1F1B0AF9F90BAD068DBC3089345B</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>7A3214DF6ADD25BDFC7DD30C65B289606AA2B010</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>BPS.Raw_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
